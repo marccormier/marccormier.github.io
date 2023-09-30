@@ -1,0 +1,115 @@
+/*
+JSON Array
+The array index begins with 0.
+The square brackets [...] are used to declare JSON array.
+JSON array are ordered list of values.
+JSON arrays can be of multiple data types.
+JSON array can store string , number , boolean , object or other array inside JSON array.
+In JSON array, values must be separated by comma.
+//
+metadata='[
+  {"array":"dataOne", "siteTitle":"McCormier", "url":"https://marc-cormier-ti-website.on.drv.tw/www.info-electro.qc.ca/"},
+	{"contenttype": [
+    {
+      "http-equiv": "Content-Type",
+      "content": "text/html/no-cache",
+      "charset": "utf-8"
+    }
+  ]
+},
+	{"robots": [
+    {
+      "name": "robots",
+      "content": "noindex, nofollow"
+    }
+  ]
+},
+	{"googlebot": [
+    {
+      "name": "googlebot",
+      "content": "noindex, nofollow"
+    }
+  ]
+},
+	{"expires": [
+    {
+      "name": "expires",
+      "content": "never"
+    }
+  ]
+},
+	{"keywords": [
+    {
+      "name": "keywords",
+      "content": "TEXT/HTML/CSS/JavaScript/jQuery/JSON"
+    }
+  ]
+},
+	{"description": [
+    {
+      "name": "description",
+      "content": "Recyclage, Reparation, Entretien Et Maintenance Informatique, Specialiste Internet (Xhtml5, css3, javascript, json, jquery, xml, php, mysql, sql, ajax.). Programmation Information (progiciels operationnel java)."
+    }
+  ]
+},
+	{"locale": [
+    {
+      "name": "locale",
+      "content": "fr_CA"
+    }
+  ]
+},
+	{"distribution": [
+    {
+      "name": "distribution",
+      "content": "global"
+    }
+  ]
+},
+	{"type": [
+    {
+      "name": "type",
+      "content": "website"
+    }
+  ]
+},
+	{"url": [
+    {
+      "name": "url",
+      "content": "https://www.abc.xyx"
+    }
+  ]
+},
+	{"title": [
+    {
+      "name": "title",
+      "content": "McCormier"
+    }
+  ]
+},
+	{"author": [
+    {
+      "name": "author",
+      "content": "MARC CORMIER"
+    }
+  ]
+},
+	{"viewport": [
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1.0"
+    }
+  ]
+},
+	{"class" : {
+	"temp": 282.55,
+	"feels_like": "Blue Sky!",
+	"temp_min": 280.37,
+	"temp_max": 284.26,
+	"pressure": 1023, 
+	"humidity": 100 
+} 
+} 
+]';
+*/
+metadata='[{"array":"dataOne", "siteTitle":"McCormier", "url":"https://marc-cormier-ti-website.on.drv.tw/www.info-electro.qc.ca/"}, {"contenttype": [{"http-equiv": "Content-Type", "content": "text/html/no-cache", "charset": "utf-8"} ] }, {"robots": [{"name": "robots", "content": "noindex, nofollow"} ] }, {"googlebot": [{"name": "googlebot", "content": "noindex, nofollow"} ] }, {"expires": [{"name": "expires", "content": "never"} ] }, {"keywords": [{"name": "keywords", "content": "TEXT/HTML/CSS/JavaScript/jQuery/JSON"} ] }, {"description": [{"name": "description", "content": "Recyclage, Reparation, Entretien Et Maintenance Informatique, Specialiste Internet (Xhtml5, css3, javascript, json, jquery, xml, php, mysql, sql, ajax.). Programmation Information (progiciels operationnel java)."} ] }, {"locale": [{"name": "locale", "content": "fr_CA"} ] }, {"distribution": [{"name": "distribution", "content": "global"} ] }, {"type": [{"name": "type", "content": "website"} ] }, {"url": [{"name": "url", "content": "https://www.abc.xyx"} ] }, {"title": [{"name": "title", "content": "McCormier"} ] }, {"author": [{"name": "author", "content": "MARC CORMIER"} ] }, {"viewport": [{"name": "viewport", "content": "width=device-width, initial-scale=1.0"} ] }, {"class" : {"temp": 282.55, "feels_like": "Blue Sky!", "temp_min": 280.37, "temp_max": 284.26, "pressure": 1023, "humidity": 100 } } ]';

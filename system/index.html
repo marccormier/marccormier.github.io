@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <title>Solar System</title>
+  <style type="text/css">
+body {
+  background-image: url('../content/img/stars-space.gif');
+  background-size: auto auto;
+  background-opacity:0.1;
+  margin: 0;
+  padding: 0;
+}
+
+.object {
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY( 50vmin );
+}
+
+.p-orbit, #m-orbit{
+  opacity: 0.5;
+  background: transparent;
+}
+
+#belt {
+  height: 97vmin;
+  width: 97vmin;
+  animation: spin 50s infinite linear;
+  margin-top: 50vmin;
+}
+
+@keyframes spin{
+  0%{ transform: rotate(0deg) }
+  100%{ transform: rotate(360deg) }
+}
+
+#m-orbit {
+  height: 8vmin;
+  width: 8vmin;
+}
+
+.planet, #moon{
+  z-index: 100;
+}
+
+#sun {
+  height: 12vmin;
+  width: 12vmin;
+}
+
+#moon {
+  height: 1vmin;
+  width: 1vmin;
+}
+
+#mercury {
+  height: 2vmin;
+  width: 2vmin;
+}
+
+#venus {
+  height: 3vmin;
+  width: 3vmin;
+}
+
+#earth {
+  height: 4vmin;
+  width: 4vmin;
+}
+
+#mars {
+  height: 3.5vmin;
+  width: 3.5vmin;
+}
+
+#jupiter {
+  height: 12vmin;
+  width: 12vmin;
+  z-index:1;
+}
+
+#saturn {
+  height: 12vmin;
+  width: 12vmin;
+  border-radius: 0%;
+}
+
+#uranus {
+  height: 5vmin;
+  width: 5vmin;
+}
+
+#neptune {
+  height: 4vmin;
+  width: 4vmin;
+}
+  </style>
+</head>
+<body>
+  <img class="object" src="../content/img/sun.png" alt="Soleil" id="sun">
+  <img class="object planet" src="../content/img/mercure.jpg" alt="Mercure" id="mercury">
+  <img class="object planet" src="../content/img/venus.png" alt="Venus" id="venus">
+  <img class="object planet" src="../content/img/earth.png" alt="Terre" id="earth">
+  <img class="object planet" src="../content/img/mars.png" alt="Mars" id="mars">
+  <img class="object planet" src="../content/img/jupiter.png" alt="Jupiter" id="jupiter">
+  <img class="object planet" src="../content/img/saturn.png" alt="Saturne" id="saturn">
+  <img class="object planet" src="../content/img/uranus.png" alt="Uranus" id="uranus">
+  <img class="object planet" src="../content/img/neptune.png" alt="Neptune" id="neptune">
+  <img class="object" id="moon" alt="Lune" src="../content/img/moon.jpg">
+  <div class="object" id="m-orbit"></div>
+  <img src="../content/img/asteroid.png" class="object" alt="" id="belt">
+</body>
+<script type="text/javascript">
+  const planets = document.querySelectorAll('.planet')
+const p_radii = [22,33,50,70,102,138,165,190]
+let p_radians = new Array(8).fill(0)
+const p_velocities = [1.607, 1.174,1,0.802, 0.434, 0.323, 0.228, 0.182]
+
+const moon = document.querySelector('#moon')
+const m_radius = 8
+let m_radians = 0
+const m_velocity = 10
+
+const sat = document.querySelector('#saturn')
+const sat_radius = 0.7
+let sat_radians = 0
+const sat_velocity = 1
+
+const p_orbits = document.querySelectorAll('.p-orbit')
+const m_orbit = document.querySelector('#m-orbit')
+
+p_orbits.forEach((p_orbit, index)=>{
+  p_orbit.style.height = `${p_radii[index]}vmin`
+  p_orbit.style.width = `${p_radii[index]}vmin`
+})
+
+setInterval( ()=> {
+  planets.forEach( (planet, index)=>{
+    planet.style.left = `${Math.cos(p_radians[index]) * p_radii[index]}vmin`
+    planet.style.top = `${Math.sin(p_radians[index]) * p_radii[index]}vmin`
+    p_radians[index] += p_velocities[index] * 0.02
+  })
+
+  moon.style.left = `${earthX() + (Math.cos(m_radians) * m_radius )}vmin`
+  moon.style.top = `${earthY() + (Math.sin(m_radians) * m_radius )}vmin`
+  m_radians += m_velocity * 0.02
+
+  m_orbit.style.left = `${earthX()}vmin`
+  m_orbit.style.top = `${earthY()}vmin`
+
+  sat.style.left = `${satuX() + (Math.cos(sat_radians) * sat_radius )}vmin`
+  sat.style.top = `${satuY() + (Math.sin(sat_radians) * sat_radius )}vmin`
+  sat_radians += sat_velocity * 3.02
+
+}, 1000/60)
+
+function earthX(){
+  return Number( planets[2].style.left.split('vmin')[0] )
+}
+
+function earthY(){
+  return Number( planets[2].style.top.split('vmin')[0] )
+}
+function satuX(){
+  return Number( planets[5].style.left.split('vmin')[0] )
+}
+
+function satuY(){
+  return Number( planets[5].style.top.split('vmin')[0] )
+}
+</script>
+</html>

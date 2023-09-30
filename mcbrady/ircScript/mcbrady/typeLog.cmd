@@ -1,0 +1,1 @@
+TYPE C:\Users\Marc\AppData\Roaming\mIRC\logs\#MCBrady.UnderNet.log >> \\WIN10-FAM\mcbrady\log.txt

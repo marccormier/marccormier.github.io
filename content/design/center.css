@@ -1,0 +1,24 @@
+/* Method 1: */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Method 2: */
+.container {
+	display: grid;
+	place-items: center
+}
+
+/* Method 3: */
+.center-div {
+	margin: auto;
+}
+
+/* Method 4: */
+.center-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}

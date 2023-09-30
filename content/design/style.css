@@ -1,0 +1,71 @@
+/* unselectable */
+html{
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -o-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+/* unselectable */
+/* design */
+body{padding:0px;}
+h1.header{margin:0px;padding:0px;width:235px;}
+h1.header:hover{text-shadow:-3px 0 4px #FF0000, 3px 0 4px #0000FF;}
+.logo{width:75px;margin:20px;margin-bottom:-10px;}
+.buildImg{width:175px;height:auto;margin-left:575px;}
+.buildImg:hover{cursor:zoom-in;}
+#diplome{width:125px;}
+#diplome:hover{transform:scale(2.5)}
+.wrap{width:90%;margin:auto;}
+#tarif{font-size:2em; margin-left:155px;}
+#tarif-desc{margin-left:150px;line-height:1.9;}
+.couponDiv{width:150px;padding:1px;margin-left:655px;}
+#couponCode{font-size:11px;font-family:Comic Sans MS;}
+#fileOrganizer{margin-left:95px;}
+.homeHtm{width:888px;min-height:450px;margin-top:45px;}
+@media only screen and (max-width: 576px) {
+  .wrap {width:350px;margin:auto;}
+  .logo{width:37px;margin:10px;margin-bottom:-5px;}
+  .buildImg{width:85px;height:auto;margin-left:225px;}
+  #tarif{font-size:2em; margin-left:55px;}
+  #tarif-desc{margin-left:50px;line-height:1.8;}
+  .couponDiv{display:none;}
+  #buildingPage{width:250px;}
+#fileOrganizer{margin-left:6px;width:333px;}
+.homeHtm{width:275px;height:auto;}
+}
+.txtLink{text-decoration:none;color:black;font-size:22px;margin-left:13px;}
+/*
+    .links {}
+    .links.hover{}
+    .links.active{}
+    .links.visited{}
+    .links.focus{}
+*/
+/* design */
+/* Top Button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #E5FFE5;
+  color: darkgreen;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 20px;
+}
+#topBtn:hover {background-color: #00FF33;}
+/* Top Button */
+/* footer */
+.footerLinks{width:20px;height:20px;cursor:pointer;padding:8px;}
+footer{padding-top:12px;border-top:1px solid black;text-align:center;}
+footer a{text-decoration:none;color:black;}
+#obj:hover{cursor:pointer;color:white;}
+/* footer */

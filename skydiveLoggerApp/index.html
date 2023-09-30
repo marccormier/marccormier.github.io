@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Skydive Logger App Data Export Object To Table</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <p class="menuTitle">Conversion</p>
+  <a href="#json">Date.Skydive</a>
+  <a href="#csv">Jumps.CSV</a>
+  <a href="#bundleJumps" style="text-decoration:line-through;">Bundle.jumps</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <h1 class="center"><a href="https://apps.apple.com/sa/app/skydive-logger/id971853125">Skydive Logger</a> Data Table Generator</h1>
+	<h2 id="json" class="center">date.Skydive</h2>
+<input type="file" name="inputfile" id="inputfileJsonSkydive" class="center">
+<p id="outputJsonSkydive" class="center"></p>
+    <textarea id="logJson" class="center">
+      Copiez / COLLEZ les données ICI!
+
+      Copy / PASTE the Data HERE!
+    </textarea><br />
+	<div id="demo"></div>
+    <button id="gen" onclick="jsonSkydive()" class="center">Generate Table</button><hr>
+      <h2 id="csv" class="center">Jumps.CSV</h2>
+	  <input type="file" name="inputfile" id="inputfile" class="center">
+<pre id="output"></pre>
+<hr>
+<h2 id="bundleJumps" class="center">Bundle.jumps</h2>
+<input type="file" name="inputfile" id="inputfile" class="center"><hr>
+<p class="center">&#169 <a href="http://marccormier.github.io/">MarcCormier.GitHub.io</a></p>
+<script type="text/javascript" src="jsonSkydive.js"></script>
+<script type="text/javascript" src="input.js"></script>
+    <script type="text/javascript">
+      function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+    <script type="text/javascript" src="topBtn.js"></script>
+  </body>
+</html>
