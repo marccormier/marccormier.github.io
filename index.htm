@@ -2,65 +2,38 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="refresh" content="20; URL=build.htm">
+<meta http-equiv="refresh" content="6; URL=build.htm">
+<title>OUAIEB</title>
 </head>
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bgimg {
-  background-image: url('../content/img/bg.png');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
+body, html{height: 100%;margin:0;background-color:black;color:white}
+.middle{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 hr {
   margin: auto;
   width: 40%;
 }
 h1:hover{cursor:pointer;}
+img{max-width:325px;height:auto;}
+a{padding:10px;color:blue}
+a:hover{color:white}
+a:visited{color:purple}
 </style>
 <body onclick="alert('Coming Soon !');">
-<div class="bgimg">
-  <div class="topleft">
-    <p></p>
-  </div>
-  <div class="middle">
-    <h1>Création MC<br />info Électro</h1>
+<center>
+<div>
+<h1>Création MC<br />info Électro</h1>
     <hr>
     <p id="demo" style="font-size:30px"></p>
-  </div>
-  <div class="bottomleft">
-    <p></p>
-  </div>
-</div>
+    <img src="content/img/enConstruction.jpg"><br />
+<a href="build.htm">site en construction</a><br />
+<p>&copy 2023 Marc Cormier</p>
+</div></center>
 
 <script type="text/javascript">
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{margin:2px;padding:3px;}
+	</style>
+</head>
+<body>
+	<center>
+		<div>
+			<label>Nombre de sauts</label>
+			<input type="text" id="jumps" name=""><br />
+			<label>Temp de chute</label>
+			<input type="text" id="time" name=""><br />
+			<input type="button" id="calc" onclick="calc()" name="" value="Calculer">
+			<p>Temps de chute total</p>
+			<p id="fft"></p>
+		</div>
+	</center>
+<script type="text/javascript">
+a=document.getElementById("jumps").value;
+b=document.getElementById("time").value;
+c=document.getElementById("fft").innerHTML;
+function calc(){d=a*b;c=d;}
+</script>
+</body>
+</html>
