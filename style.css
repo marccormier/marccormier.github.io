@@ -1,7 +1,7 @@
 body {
 	margin:0px;
 	padding:0px;
-	background-image:url(content/img/mainBg.png);
+	background-image:url("content/img/mainBg.png");
 background-repeat: no-repeat;
   background-size: 100% 100%;
 }
