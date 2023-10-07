@@ -1,7 +1,7 @@
 body {
 	margin:0px;
 	padding:0px;
-	background-image:url("content/img/mainBg.PNG");
+	background-image:url("https://marccormier.github.io/content/img/mainBg.PNG");
 background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -27,6 +27,7 @@ div{margin:11px;}
 	border-radius:15px 15px 15px 15px;
 	background-color:white;
 	opacity:0.6;
+	z-index:0;
 }
 #img {
 	background-color:white;
@@ -74,6 +75,11 @@ h2{
 p {
 	margin:15px;
 }
+.nav a {
+    margin:3px;padding:4px;
+    border:1px solid black;
+}
+.nav a:hover{background-color:lightgrey;color:blue;}
 .sidenav {
   height:100%;
   width: 0;
