@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+  <style type="text/css">body{width:100vw;height:100vh}</style>
+</head>
+<body onload="domNav()"></div>
+<script type="text/javascript">
+/* Navigator Properties */
+  function domNav(){
+    var caracteristiquesNavigateur = "";
+    caracteristiquesNavigateur = "Code du navigateur : "
+    + navigator.appCodeName + "<br>";
+    caracteristiquesNavigateur += "Nom du navigateur : "
+    + navigator.appName + "<br>";
+    caracteristiquesNavigateur += "Version : "
+    + navigator.appVersion + "<br>";
+    caracteristiquesNavigateur += "Support des cookies : "
+    + navigator.cookieEnabled + "</p>";
+    caracteristiquesNavigateur += "Systeme d'exploitation : "
+    + navigator.platform + "<br>";
+    caracteristiquesNavigateur += "User-agent header: "
+    + navigator.userAgent + "<br>";
+    caracteristiquesNavigateur += "User-agent language: "
+    + navigator.systemLanguage + "<br>";
+    //document.getElementById("navInfo").innerHTML = caracteristiquesNavigateur;
+   /*
+    var myWindow = window.open("", "MsgWindow", "width=512,height=300");
+  myWindow.document.write(caracteristiquesNavigateur);
+  */
+    document.write(caracteristiquesNavigateur);
+}
+/* Navigator Properties */
+    </script>
+</body>
+</html>

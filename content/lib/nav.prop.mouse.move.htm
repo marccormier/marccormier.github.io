@@ -4,32 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<style type="text/css">
-		    /* Navigator Properties */
-    .maintenance:hover{background:orange;animation: mySecondmove 2s infinite;cursor:pointer;}
-@keyframes mySecondmove {
-  from {background-color: orange;}
-  to {background-color: yellow;}
-}
-.maintenance{
-  background:orange;
-  border:3px dashed black;
-  box-shadow: 2px 3px 4px #515151;
-  width:115px;
-  height:69px;
-  text-align: center;
-  line-height:1.1;
-  margin:25px;
-  position:absolute;
-  right:15px;
-  top:5px;
-}
-h2:hover{cursor:pointer;}
-    /* Navigator Properties */
-	</style>
 </head>
-<body onmousemove="myFunction(event)" onmouseout="clearCoor()">
-<p id="demo"></p>
+<body onmousemove="showCoor(event)" onmouseout="clearCoor()">
+<p id="dem"></p>
 <ul>
   <li></li>
   <li></li>
@@ -59,40 +36,15 @@ h2:hover{cursor:pointer;}
   <li></li>
 </ul>
 <script>
-function myFunction(e) {
+function showCoor(e) {
   let x = e.clientX;
   let y = e.clientY;
   let coor = "Coordinates: (" + x + "," + y + ")";
-  document.getElementById("demo").innerHTML = coor;
+  document.getElementById("dem").innerHTML = coor;
 }
-
 function clearCoor() {
-  document.getElementById("demo").innerHTML = "";
+  document.getElementById("dem").innerHTML = "";
 }
 </script>
-<script type="text/javascript">
-/* Navigator Properties */
-  function navigateur(){
-    var caracteristiquesNavigateur = "";
-    caracteristiquesNavigateur = "Code du navigateur : "
-    + navigator.appCodeName + "<br>";
-    caracteristiquesNavigateur += "Nom du navigateur : "
-    + navigator.appName + "<br>";
-    caracteristiquesNavigateur += "Version : "
-    + navigator.appVersion + "<br>";
-    caracteristiquesNavigateur += "Support des cookies : "
-    + navigator.cookieEnabled + "</p>";
-    caracteristiquesNavigateur += "Systeme d'exploitation : "
-    + navigator.platform + "<br>";
-    caracteristiquesNavigateur += "User-agent header: "
-    + navigator.userAgent + "<br>";
-    caracteristiquesNavigateur += "User-agent language: "
-    + navigator.systemLanguage + "<br>";
-    //document.getElementById("navInfo").innerHTML = caracteristiquesNavigateur;
-    var myWindow = window.open("", "MsgWindow", "width=512,height=300");
-  myWindow.document.write(caracteristiquesNavigateur);
-}
-/* Navigator Properties */
-    </script>
 </body>
 </html>
