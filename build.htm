@@ -57,7 +57,7 @@
 <input type="color" id="colorpicker" value="#000000" style="margin-left:25%;" />
 <hr><a href="#service">Service</a>
   <a href="#client">Client</a>
-  <a href="#login">Login</a>
+  <a href="#form">Formulaire</a>
   <a href="mailto:marccormier85@outlook.com?subject=github.io">Contact</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -92,6 +92,30 @@
     <a href="https://tinyurl.com/esoGuildWebpage" class="menu">ESO Guild</a>
   </div>
 </div>
+<div class="dropdown">
+  <button onclick="cssBorder()" class="dropbtn">HTML DOM CSS Border</button>
+  <div id="cssBorderBtn" class="dropdown-content">
+<a id="solidBorder" onclick='document.getElementById("dem").style.border = "2px solid black";'>border Solid</a>
+<a id="solidDotted" onclick='document.getElementById("dem").style.border = "2px dotted black";'>border Dotted</a>
+<a id="solidDashed" onclick='document.getElementById("dem").style.border = "2px dashed black";'>border Dashed</a>
+<a id="solidDouble" onclick='document.getElementById("dem").style.border = "2px double black";'>border Double</a>
+<a id="solidGroove" onclick='document.getElementById("dem").style.border = "2px groove black";'>border Groove</a>
+<a id="solidRidge" onclick='document.getElementById("dem").style.border = "2px ridge black";'>border Ridge</a>
+<a id="soliInset" onclick='document.getElementById("dem").style.border = "2px inset black";'>border Inset</a>
+<a id="solidOutset" onclick='document.getElementById("dem").style.border = "2px outset black";'>border Outset</a>
+<a id="solidNone" onclick='document.getElementById("dem").style.border = "2px none black";'>border None</a>
+<a id="solidHidden" onclick='document.getElementById("dem").style.border = "2px hidden black";'>border Hidden</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="jsHTMLdom()" class="dropbtn">JS HTML DOM</button>
+  <div id="jsHTdomBtn" class="dropdown-content">
+<a id="docTitle" onclick='document.getElementById("dem").innerHTML=document.title;'>document.Title</a>
+<a id="docUrl" onclick='document.getElementById("dem").innerHTML=document.URL;'>document.URL</a>
+<a id="docLinksLength" onclick='document.getElementById("dem").innerHTML=document.links.length;'>document.links.length</a>
+  </div>
+</div>
+<!-- -->
 <div id='about'>
 <h2>Information Personnel</h2><hr>
 <p>Mon nom est Marc et j'ai <!-- </p><p id="age"></p><p> -->38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j'affectionne tout particulierement. J'estime que l'age, la couleur, la religion, l'apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n'a pas lieu d'être sur le net. <br/>Je documente tout ce que j'apprends et aide les gens à commencer dans le codage. <br />Mon site n'a pas de publicités, de sponsors ou de 'bullshit'. <br /><br />Je n'aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.
@@ -316,6 +340,12 @@ function porfolio() {
 }
 function blog() {
   document.getElementById("blogBtn").classList.toggle("show");
+}
+function cssBorder() {
+  document.getElementById("cssBorderBtn").classList.toggle("show");
+}
+function jsHTMLdom() {
+  document.getElementById("jsHTdomBtn").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
