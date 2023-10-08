@@ -51,7 +51,6 @@
 		<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <a id="jsChangeHTML" onclick='document.getElementById("dem").innerHTML = "JavaScript!"'>innerHTML</a>
-<a id="CSSstyle" onclick='document.getElementById("dem").style.fontSize="35px";'>style.fontSize</a>
 <a id="hideHTML" onclick="document.getElementById('dem').style.display='none'">hide</a>
 <a id="hideHTML" onclick="document.getElementById('dem').style.display='block'">show</a>
 <input type="color" id="colorpicker" value="#000000" style="margin-left:25%;" />
@@ -93,8 +92,9 @@
   </div>
 </div>
 <div class="dropdown">
-  <button onclick="cssBorder()" class="dropbtn">HTML DOM CSS Border</button>
+  <button onclick="cssBorder()" class="dropbtn">HTML DOM Styles</button>
   <div id="cssBorderBtn" class="dropdown-content">
+<a id="bgColor" onclick='document.getElementById("dem").style.backgroundColor="lightblue";'>background Color</a>
 <a id="solidBorder" onclick='document.getElementById("dem").style.border = "2px solid black";'>border Solid</a>
 <a id="solidDotted" onclick='document.getElementById("dem").style.border = "2px dotted black";'>border Dotted</a>
 <a id="solidDashed" onclick='document.getElementById("dem").style.border = "2px dashed black";'>border Dashed</a>
@@ -105,6 +105,18 @@
 <a id="solidOutset" onclick='document.getElementById("dem").style.border = "2px outset black";'>border Outset</a>
 <a id="solidNone" onclick='document.getElementById("dem").style.border = "2px none black";'>border None</a>
 <a id="solidHidden" onclick='document.getElementById("dem").style.border = "2px hidden black";'>border Hidden</a>
+<a id="boxShadow" onclick='document.getElementById("dem").style.boxShadow = "10px 20px 30px blue";'>box Shadow</a>
+<a id="styleFont" onclick='document.getElementById("dem").style.font = "italic bold 38px arial,serif";'>font</a>
+<a id="styleMargin" onclick='document.getElementById("dem").style.margin = "50px 10px 20px 30px";'>margin</a>
+<a id="stylePadding" onclick='document.getElementById("dem").style.padding = "50px 10px 20px 30px";'>padding</a>
+<a id="textDeco" onclick='document.getElementById("dem").style.textDecoration="underline overline";'>text Decoration</a>
+<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "solid";'>text Decoration style Solid</a>
+<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "double";'>text Decoration style double</a>
+<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "dotted";'>text Decoration style dotted</a>
+<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "dashed";'>text Decoration style dashed</a>
+<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "wavy";'>text Decoration style wavy</a>
+<a id="textShadow" onclick='document.getElementById("dem").style.textShadow="5px 5px 1px #ff0000, 10px 10px 1px #0000ff";'>text Shadow</a>
+
   </div>
 </div>
 <div class="dropdown">
