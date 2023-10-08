@@ -28,21 +28,50 @@ h2:hover{cursor:pointer;}
     /* Navigator Properties */
 	</style>
 </head>
-<body>
-  <div class="maintenance" onmouseover="showCoords(event)" ondblclick="alert('You Double click This Element'), navigateur()" onmouseout="clearCoor()">
-        <p id="cursor" onclick="alert('You clicked an HTML P Element with an id cursor')"></p>
-    </div>
-    <script type="text/javascript">
-    	/* Navigator Properties */
-function showCoords(event) {
-  var x = event.clientX;
-  var y = event.clientY;
-  var coor = "X coords: " + x + ", Y coords: " + y;
-  document.getElementById("cursor").innerHTML = coor;
+<body onmousemove="myFunction(event)" onmouseout="clearCoor()">
+<p id="demo"></p>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<script>
+function myFunction(e) {
+  let x = e.clientX;
+  let y = e.clientY;
+  let coor = "Coordinates: (" + x + "," + y + ")";
+  document.getElementById("demo").innerHTML = coor;
 }
+
 function clearCoor() {
-  document.getElementById("cursor").innerHTML = "";
+  document.getElementById("demo").innerHTML = "";
 }
+</script>
+<script type="text/javascript">
+/* Navigator Properties */
   function navigateur(){
     var caracteristiquesNavigateur = "";
     caracteristiquesNavigateur = "Code du navigateur : "
