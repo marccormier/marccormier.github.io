@@ -67,16 +67,26 @@
 <center>	<div id="img"><img id="pics" src="https://marccormier.github.io/content/img/pics/cookieHelmet-removebg-preview.png"/></div></center>
 <center><h1 id="dem" onclick='document.getElementById("dem").innerHTML="Marc"'>Marc</h1> <h1 id="demB">CORMIER</h1></center>
 <div class="dropdown">
-  <button onclick="dropDownBtn()" class="dropbtn">A Propos</button>
-  <div id="dropDown" class="dropdown-content">
-    <a href="#about">info</a>
+  <button onclick="about()" class="dropbtn">A Propos</button>
+  <div id="aboutBtn" class="dropdown-content">
+    <a href="#about">Marc CORMIER</a>
     <a href="#skill">Compétences</a>
     <a href="#codes">Codes</a>
     <a href="content/gallery/index.html" class="menu">Gallerie</a>
-    <a href="mcbrady" class="menu">#MCBrady</a>
-    <a href="https://tinyurl.com/esoGuildWebpage" class="menu">ESO Guild</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="porfolio()" class="dropbtn">Porfolio</button>
+  <div id="porfolioBtn" class="dropdown-content">
     <a href="#" class="menu">Scope</a>
     <a href="content/snippets" class="menu">Snippet</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="blog()" class="dropbtn">Blog</button>
+  <div id="blogBtn" class="dropdown-content">
+    <a href="mcbrady" class="menu">#MCBrady</a>
+    <a href="https://tinyurl.com/esoGuildWebpage" class="menu">ESO Guild</a>
   </div>
 </div>
 <div id='about'>
@@ -295,8 +305,14 @@ document.getElementById('copy').innerHTML = "&#169 "+year+" <a href='https://mar
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function dropDownBtn() {
-  document.getElementById("dropDown").classList.toggle("show");
+function about() {
+  document.getElementById("aboutBtn").classList.toggle("show");
+}
+function porfolio() {
+  document.getElementById("porfolioBtn").classList.toggle("show");
+}
+function blog() {
+  document.getElementById("blogBtn").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
