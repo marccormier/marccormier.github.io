@@ -5,6 +5,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>OUAIEB</title>
 		<link rel="stylesheet" type="text/css" href="content/design/style.css">
+    <style type="text/css">
+      .dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+    </style>
 	</head>
 	<body onclick="eventTarget(event)">
 <h5><marquee>JAVA, html 1.0, html 4.01, html5, xhtml, xml, JSON, jQuery, DOM, JavaScript, AJAX, CSS3, CANVAS, SVG, PHP, MySQL </marquee></h5>
@@ -26,40 +66,19 @@
 	<div id="profileCard">
 <center>	<div id="img"><img id="pics" src="https://marccormier.github.io/content/img/pics/cookieHelmet-removebg-preview.png"/></div></center>
 <center><h1 id="dem" onclick='document.getElementById("dem").innerHTML="Marc"'>Marc</h1> <h1 id="demB">CORMIER</h1></center>
-<nav>
-  <div class="container">
-  <section>
-    <a id="top1" href="#one">A Propos</a>
-    <a id="top2" href="#two">Porfolio</a>
-    <a id="top3" href="#three">link</a>
-  </section>
-  <section>
-    <a id="one" href="#top1">Back</a>
-    <a href="#oneA">info </a>
-    <a href="#oneB">Link 1b</a>
-    <a href="#oneC">Link 1c</a>
-  </section>
-  <section>
-    <a id="oneA" href="#one">Back</a>
-    <a href="#about">blog</a>
+<div class="dropdown">
+  <button onclick="dropDownBtn()" class="dropbtn">A Propos</button>
+  <div id="dropDown" class="dropdown-content">
+    <a href="#about">info</a>
     <a href="#skill">Compétences</a>
     <a href="#codes">Codes</a>
-    <a href="content/gallery/index.html">Gallerie</a>
-  </section>
-  <section>
-    <a id="two" href="#top2">Back</a>
-    <a href="mcbrady">#MCBrady</a>
-    <a href="https://tinyurl.com/esoGuildWebpage">ESO Guild</a>
-    <a href="#">Link 2c</a>
-  </section>
-  <section>
-    <a id="three" href="#top3">Back</a>
-    <a href="#">Scope</a>
-    <a href="content/snippets">Snippet</a>
-    <a href="#">Link 3c</a>
-  </section>
+    <a href="content/gallery/index.html" class="menu">Gallerie</a>
+    <a href="mcbrady" class="menu">#MCBrady</a>
+    <a href="https://tinyurl.com/esoGuildWebpage" class="menu">ESO Guild</a>
+    <a href="#" class="menu">Scope</a>
+    <a href="content/snippets" class="menu">Snippet</a>
   </div>
-</nav><br /><br />
+</div>
 <div id='about'>
 <h2>Information Personnel</h2><hr>
 <p>Mon nom est Marc et j'ai <!-- </p><p id="age"></p><p> -->38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j'affectionne tout particulierement. J'estime que l'age, la couleur, la religion, l'apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n'a pas lieu d'être sur le net. <br/>Je documente tout ce que j'apprends et aide les gens à commencer dans le codage. <br />Mon site n'a pas de publicités, de sponsors ou de 'bullshit'. <br /><br />Je n'aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.
@@ -273,5 +292,26 @@ document.getElementById('copy').innerHTML = "&#169 "+year+" <a href='https://mar
 </script>
 <script src="content/scripts/copyPasteCheck.js"></script>
 <script src="content/scripts/eventTarget.js"></script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropDownBtn() {
+  document.getElementById("dropDown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
