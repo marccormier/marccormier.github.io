@@ -1,25 +1,24 @@
 /*
 HTML DOM  JS
-docType, xhtml5, meta, title, style, header;
-head, title, body are html tag who doesnt need to be set as js var
-because they already are reconize by the js DOM
-*/
-// JSON
-/* Document Type Declaration (docType) */
+docType, xhtml5, meta, title, style, header,
+window, document, head, title, body 
+are HTML tag who doesnt need to be set as var
+because they already are reconize by the DOM
+// JSON or XML
+DocTYPE declaration
 var html4Trans='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">';
 var xhtml1Strict='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">';
 var html5DocType='<!DOCTYPE html>';
-/* html Tag */
+html 
 var xhtml1='<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" >';
 var html5='<html lang="fr" >';
-/* Encodage */
+Encodage META
 var html4Meta='<meta http:-equiv="Content-Type" content="text/html; charset=UTF-8">';
 var xhtml1Meta='<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 var html5Meta='<meta charset="UTF-8" />';
-// > JSON $?
-//
-doc=document;
-//doc; files; root; node; json;
+*/
+comment=document.createComment()
+// diff between DOM and jsNeedles (propriétés, méthodes)
 /*
 document.getElementById(id) Find an element by element id
 document.getElementsByTagName(name) Find elements by tag name
@@ -37,23 +36,20 @@ document.appendChild(element) Add an HTML element
 document.replaceChild(new, old) Replace an HTML element
 document.write(text)  Write into the HTML output stream
 */
-comment=document.createComment()
-//
-function ulList() {
-const fruits = ["Banana", "Orange", "Mango"];
-ul=document.createElement("ul");
-const dFrag = document.createDocumentFragment();
-for (let x in fruits) {
-  const li = document.createElement('li');
-  li.textContent = fruits[x];
-  dFrag.appendChild(li);
-  ul.appendChild(dFrag);
+function hScript(){
+hScript = doc.createElement("script");
+hScript.type = "text/javascript";
+hScript.src = "http://domain.com/";
+hScript.innerHTML='';
+$("head").append(hScript);
 }
-document.body.appendChild(ul);
+function bScript(){
+bScript = doc.createElement("script");
+bScript.type = "text/javascript";
+bScript.src = "http://domain.com/";
+bScript.innerHTML='';
+$("body").append(bScript);
 }
-/*
-//
-*/
 main=document.createElement('main');
 var header=document.createElement('header');
 var footer=document.createElement('footer');
@@ -62,7 +58,6 @@ var aside=document.createElement('aside');
 var nav=document.createElement('nav');
 var article=document.createElement('article');
 var figure=document.createElement('figure');
-//
 var para=document.createElement('p');
 var div=document.createElement('div');
 var img=document.createElement('img');
@@ -70,66 +65,6 @@ var input=document.createElement('input');
 var hgroup=document.createElement('hgroup');
 var mark=document.createElement('mark');
 var time=document.createElement('time');
-//
-function $(id){
-  return document.getElementById(id)
-}
-//
-const nbreLiens=document.links.length;
-//
-onerror=errorHandler
-function errorHandler(message, url, ligne){
-  out ="Désolé, une erreur s'est produite.\n\n";
-  out += "Erreur : " + message + "\n";
-  out += "URL : " + url + "\n";
-  out += "Ligne : " + ligne + "\n\n";
-  out += "Cliquez sur OK pour continuer.\n\n";
-  alert(out);
-  return true;
-}
-//
-function $(id){return doc.getElementById(id)}
-/*
- zulu=doc.body.innerHTML;
- doc.write(zulu);
- doc.html.appendChild(head, body);
-*/
-/*
- docType=doc.createElement('!DOCTYPE');
- html=doc.createElement('html');
- meta=doc.getElementByTagName('meta');
- STYLE=doc.getElementByTagName('link');
-*/
-//
-/*
- doc.title='eys';
- doc.head.appendChild(title);
-*/
-//
-function hScript(){
-hScript = doc.createElement("script");
-hScript.type = "text/javascript";
-hScript.src = "http://somedomain.com/somescript";
-hScript.innerHTML='';
-$("head").append(hScript);
-}
-function script(){
-script = doc.createElement("script");
-script.type = "text/javascript";
-script.src = "http://somedomain.com/somescript";
-script.innerHTML='';
-$("body").append(script);
-}
-//
-/*
- main=doc.createElement('main');
- div=doc.createElement('div');
- header=doc.createElement('header');
- //
- nav=doc.createElement('nav');
- link=doc.createElement('a');
-/* <object data="img.video.jpg.html.mp4" type="image/jpg" width="400" height="300"></object> */
-//
  object=doc.createElement('object');
  section=doc.createElement('section');
  article=doc.createElement('article');
@@ -154,13 +89,3 @@ $("body").append(script);
  ol=doc.createElement('ol');
  li=doc.createElement('li');
  footer=doc.createElement('footer');
-//
-pre;
-pre.setAttribute('id', 'txtnode');
-pre.innerHTML='eYs';
-doc.body.appendChild(pre);
-//
-let xp=document.createElement('p');
-xp.innerHTML='eys eys';
-document.body.appendChild(xp);
-//
