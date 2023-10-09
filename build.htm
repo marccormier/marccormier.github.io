@@ -50,9 +50,6 @@
 <h5><marquee>JAVA, html 1.0, html 4.01, html5, xhtml, xml, JSON, jQuery, DOM, JavaScript, AJAX, CSS3, CANVAS, SVG, PHP, MySQL </marquee></h5>
 		<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<a id="jsChangeHTML" onclick='document.getElementById("dem").innerHTML = "JavaScript!"'>innerHTML</a>
-<a id="hideHTML" onclick="document.getElementById('dem').style.display='none'">hide</a>
-<a id="hideHTML" onclick="document.getElementById('dem').style.display='block'">show</a>
 <input type="color" id="colorpicker" value="#000000" style="margin-left:25%;" />
 <hr><a href="#service">Service</a>
   <a href="#client">Client</a>
@@ -94,6 +91,8 @@
 <div class="dropdown">
   <button onclick="cssBorder()" class="dropbtn">HTML DOM Styles</button>
   <div id="cssBorderBtn" class="dropdown-content">
+<a id="hideHTML" onclick="document.getElementById('dem').style.display='none'">hide</a>
+<a id="showHTML" onclick="document.getElementById('dem').style.display='block'">show</a>
 <a id="bgColor" onclick='document.getElementById("dem").style.backgroundColor="lightblue";'>background Color</a>
 <a id="solidBorder" onclick='document.getElementById("dem").style.border = "2px solid black";'>border Solid</a>
 <a id="solidDotted" onclick='document.getElementById("dem").style.border = "2px dotted black";'>border Dotted</a>
@@ -122,9 +121,10 @@
 <div class="dropdown">
   <button onclick="jsHTMLdom()" class="dropbtn">JS HTML DOM</button>
   <div id="jsHTdomBtn" class="dropdown-content">
-<a id="docTitle" onclick='document.getElementById("dem").innerHTML=document.title;'>document.Title</a>
-<a id="docUrl" onclick='document.getElementById("dem").innerHTML=document.URL;'>document.URL</a>
-<a id="docLinksLength" onclick='document.getElementById("dem").innerHTML=document.links.length;'>document.links.length</a>
+<a id="docTitle" onclick='document.getElementById("dem").innerHTML=document.title;'>Title</a>
+<a id="docUrl" onclick='document.getElementById("dem").innerHTML=document.URL;'>URL</a>
+<a id="docLinksLength" onclick='document.getElementById("dem").innerHTML=document.links.length;'>links.length</a>
+<a id="jsChangeHTML" onclick='document.getElementById("dem").innerHTML = "JavaScript!"'>innerHTML</a>
   </div>
 </div>
 <div class="dropdown">
@@ -143,6 +143,7 @@ après un peu plus de 20 ans de presence sur le net, j'ai continuer à apprendre
 </div>
 <div id='skill'>
 <h2>Mes Compétences</h2><hr>
+<center>
 <ul>
 <li>HTMl</li>
 <li>CSS</li>
@@ -150,6 +151,7 @@ après un peu plus de 20 ans de presence sur le net, j'ai continuer à apprendre
 <li>PHP</li>
 <li>JAVA</li>
 </ul>
+</center>
 </div>
 <div id='codes'>
 <h2>Codes</h2><hr>
@@ -177,7 +179,7 @@ après un peu plus de 20 ans de presence sur le net, j'ai continuer à apprendre
 <h3>jQuery</h3>
 <ul>
 <li><a href=''>Gestion des mouvements et des boutons de la souris</a></li>
-</u>
+</ul>
 <h3>PHP</h3>
 <ul>
 <li><a href=''>Gestion de fichiers</a></li>
