@@ -4,7 +4,7 @@
 	<meta charset='UTF-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>OUAIEB</title>
-		<link rel="stylesheet" type="text/css" href="content/lib/design/style.css">
+		<link rel="stylesheet" type="text/css" href="content/css/style.css">
     <style type="text/css">
       .dropbtn {
   background-color: #3498DB;
@@ -80,8 +80,8 @@
   <div id="porfolioBtn" class="dropdown-content">
     <a href="#" class="menu">Scope</a>
     <a href="content/snippets" class="menu">Snippet</a>
-    <a href="content/lib/domNav.htm" class="menu">Navigateur</a>
-    <a href="content/lib/nav.prop.mouse.move.htm" class="menu">show Coords</a>
+    <a href="domNav.htm" class="menu">Navigateur</a>
+    <a href="nav.prop.mouse.move.htm" class="menu">show Coords</a>
   </div>
 </div>
 <div class="dropdown">
@@ -126,6 +126,13 @@
 <a id="docUrl" onclick='document.getElementById("dem").innerHTML=document.URL;'>document.URL</a>
 <a id="docLinksLength" onclick='document.getElementById("dem").innerHTML=document.links.length;'>document.links.length</a>
   </div>
+</div>
+<div class="dropdown">
+  <button onclick="compilateur()" class="dropbtn">Compilateurs</button>
+  <div id="compiler" class="dropdown-content">
+<a href="compiler/htmlCompiler.htm">HTML</a>
+<a href="compiler/binaryCompiler.htm">Binaire</a> 
+</div>
 </div>
 <!-- -->
 <div id='about'>
@@ -339,8 +346,8 @@ document.getElementById("time").innerHTML=res;
   var year = new Date().getFullYear();
 document.getElementById('copy').innerHTML = "&#169 "+year+" <a href='https://marccormier.github.io/' style='text-decoration:none;color:black;'>Marc Cormier</a> ";
 </script>
-<script src="content/lib/scripts/copyPasteCheck.js"></script>
-<script src="content/lib/scripts/eventTarget.js"></script>
+<script src="content/js/copyPasteCheck.js"></script>
+<script src="content/js/eventTarget.js"></script>
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -359,7 +366,10 @@ function cssBorder() {
 function jsHTMLdom() {
   document.getElementById("jsHTdomBtn").classList.toggle("show");
 }
-
+function compilateur() {
+  document.getElementById("compiler").classList.toggle("show");
+}
+//
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {

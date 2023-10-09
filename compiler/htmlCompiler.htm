@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Compiler</title>
+</head>
+<style type="text/css">
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+button {
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+#output {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#output.error {
+  color: red;
+}
+</style>
+<body>
+  <textarea id="htmlInput" placeholder="Enter your HTML code here..." rows="10" cols="50"></textarea>
+  <button onclick="compileHTML()">Compile</button>
+  <div id="output"></div>
+  <script>
+	function compileHTML() {
+	  const htmlInput = document.getElementById('htmlInput').value;
+	  const output = document.getElementById('output');
+	  output.innerHTML = '';
+	  try {
+		const fragment = document.createRange().createContextualFragment(htmlInput);
+		output.appendChild(fragment);
+	  } catch (error) {
+		output.innerHTML = 'Error: ' + error.message;
+	  }
+	}
+  </script>
+</body>
+</html>

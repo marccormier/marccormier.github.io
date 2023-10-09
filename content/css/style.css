@@ -123,6 +123,8 @@ span{
 	left:50px;top:100px;
 	z-index:1;
 }
+hr{width:84%;}
+marquee{margin:0px;padding:0px;}
 #topBtn {
   display: none;
   position: fixed;
@@ -142,5 +144,3 @@ span{
 #topBtn:hover {
   background-color: #555;
 }
-hr{width:84%;}
-marquee{margin:0px;padding:0px;}

@@ -4,6 +4,7 @@ docType, xhtml5, meta, title, style, header;
 head, title, body are html tag who doesnt need to be set as js var
 because they already are reconize by the js DOM
 */
+// JSON
 /* Document Type Declaration (docType) */
 var html4Trans='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">';
 var xhtml1Strict='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">';
@@ -15,8 +16,45 @@ var html5='<html lang="fr" >';
 var html4Meta='<meta http:-equiv="Content-Type" content="text/html; charset=UTF-8">';
 var xhtml1Meta='<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 var html5Meta='<meta charset="UTF-8" />';
+// > JSON $?
 //
-var main=document.createElement('main');
+doc=document;
+//doc; files; root; node; json;
+/*
+document.getElementById(id) Find an element by element id
+document.getElementsByTagName(name) Find elements by tag name
+document.getElementsByClassName(name) Find elements by class name
+//
+element.innerHTML =  new html content Change the inner HTML of an element
+element.attribute = new value Change the attribute value of an HTML element
+element.style.property = new style  Change the style of an HTML element
+//
+element.setAttribute(attribute, value)  Change the attribute value of an HTML element
+//
+document.createElement(element) Create an HTML element
+document.removeChild(element) Remove an HTML element
+document.appendChild(element) Add an HTML element
+document.replaceChild(new, old) Replace an HTML element
+document.write(text)  Write into the HTML output stream
+*/
+comment=document.createComment()
+//
+function ulList() {
+const fruits = ["Banana", "Orange", "Mango"];
+ul=document.createElement("ul");
+const dFrag = document.createDocumentFragment();
+for (let x in fruits) {
+  const li = document.createElement('li');
+  li.textContent = fruits[x];
+  dFrag.appendChild(li);
+  ul.appendChild(dFrag);
+}
+document.body.appendChild(ul);
+}
+/*
+//
+*/
+main=document.createElement('main');
 var header=document.createElement('header');
 var footer=document.createElement('footer');
 var section=document.createElement('section');
@@ -24,9 +62,6 @@ var aside=document.createElement('aside');
 var nav=document.createElement('nav');
 var article=document.createElement('article');
 var figure=document.createElement('figure');
-//
-var ul=document.createElement('ul');
-var li=document.createElement('li');
 //
 var para=document.createElement('p');
 var div=document.createElement('div');
@@ -36,34 +71,23 @@ var hgroup=document.createElement('hgroup');
 var mark=document.createElement('mark');
 var time=document.createElement('time');
 //
-elP;
-elP.setAttribute("style", "font-size:4em");
-elP.innerHTML="This is new.";
-dcm.body.appendChild(elP);
-//
-//dcm; dom; files; root; nodeJs; jsons;
-dcm=document;
-elP=dcm.createElement("p");
-elDiv=dcm.createElement("div");
-//
 function $(id){
-	return document.getElementById(id)
+  return document.getElementById(id)
 }
 //
 const nbreLiens=document.links.length;
 //
 onerror=errorHandler
 function errorHandler(message, url, ligne){
-	out ="Désolé, une erreur s'est produite.\n\n";
-	out += "Erreur : " + message + "\n";
-	out += "URL : " + url + "\n";
-	out += "Ligne : " + ligne + "\n\n";
-	out += "Cliquez sur OK pour continuer.\n\n";
-	alert(out);
-	return true;
+  out ="Désolé, une erreur s'est produite.\n\n";
+  out += "Erreur : " + message + "\n";
+  out += "URL : " + url + "\n";
+  out += "Ligne : " + ligne + "\n\n";
+  out += "Cliquez sur OK pour continuer.\n\n";
+  alert(out);
+  return true;
 }
 //
-doc=document;
 function $(id){return doc.getElementById(id)}
 /*
  zulu=doc.body.innerHTML;
@@ -139,3 +163,4 @@ doc.body.appendChild(pre);
 let xp=document.createElement('p');
 xp.innerHTML='eys eys';
 document.body.appendChild(xp);
+//
