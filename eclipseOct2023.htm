@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<main>
+	<center><div>
+		<h1><a href="https://www.asc-csa.gc.ca/fra/astronomie/eclipses/eclipses-solaires.asp" style="text-decoration:none;color:black;">Éclipse Solaire Octobre 2023</a></h1>
+		<img style="max-width:195px;height:auto;" src="https://media1.giphy.com/media/3oEhn4OFaCE9mYv8aI/giphy.gif?cid=6c09b952mpw0q59gm6mqj002pz8zt9ss81cah18qbns3eafi&ep=v1_gifs_search&rid=giphy.gif&ct=g"><br />
+		<p style="color:red;font-weight:bold;">Très important!</p><p>Il ne faut pas regarder le Soleil directement sans protection <a href="https://www.asc-csa.gc.ca/fra/astronomie/eclipses/eclipses-solaires.asp#protection">adéquate.</a><br />Sinon, cela peut entraîner de graves problèmes, jusqu'à la perte partielle ou totale de la vue.</p>
+		<label><b>Début de l'éclipse</b></label>
+		<p id="start">12:12 PM</p><hr>
+		<label><b>Mi-Parcours de l'éclipse</b></label>
+		<p id="mid">1:18 PM</p><hr>
+		<label><b>Finale de l'éclipse</b></label>
+		<p id="ending">2:24 PM</p>
+	</div></center>
+</main>
+<script type="text/javascript">
+	var start = new Date("Oct 14, 2023 12:11:59").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = start - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("start").innerHTML = days + "j " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+	clearInterval(x);
+document.getElementById("start").innerHTML = "Éclipse en cour";
+  }
+}, 1000);
+//
+	var mid = new Date("Oct 14, 2023 13:17:50").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = mid - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("mid").innerHTML = days + "j " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+	clearInterval(x);
+document.getElementById("mid").innerHTML = "Mi-Parcours";
+  }
+}, 1000);
+//
+	var ending = new Date("Oct 14, 2023 14:24:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = ending - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("ending").innerHTML = days + "j " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+	clearInterval(x);
+document.getElementById("ending").innerHTML = "Fin de l'éclipse";
+  }
+}, 1000);
+	</script>
+</body>
+</html>

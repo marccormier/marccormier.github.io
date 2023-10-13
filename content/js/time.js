@@ -1,3 +1,4 @@
+function time() {
 // TIME 
 const time = new Date();
 // date part ///
@@ -28,3 +29,7 @@ time.toLocaleString(); //returns date and time (e.g. "9/12/2015, 6:08:25 PM")
 time.toLocaleTimeString(); //returns time (e.g. "6:08:25 PM")
 time.toLocaleDateString(); //returns date (e.g. "9/12/2015")
 let now = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+//
+window.document.write(now);
+}
+setInterval(time,1000);

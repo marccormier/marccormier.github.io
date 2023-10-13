@@ -1,12 +1,12 @@
-function ulList() {
-const fruits = ["Banana", "Orange", "Mango"];
-ul=document.createElement("ul");
+const fruits = ["Banane", "Orange", "Mangue", "Pomme", "Poire", "Cerise", "Pêche", "Raisin", "Tomate"];
+function genTable() {
+ta=document.createElement("table");
 const dFrag = document.createDocumentFragment();
 for (let x in fruits) {
-  const li = document.createElement('li');
-  li.textContent = fruits[x];
-  dFrag.appendChild(li);
-  ul.appendChild(dFrag);
+  const th = document.createElement('th');
+  th.textContent = fruits[x];
+  dFrag.appendChild(th);
+  ta.appendChild(dFrag);
 }
-document.body.appendChild(ul);
+document.body.appendChild(ta);
 }
