@@ -51,22 +51,9 @@ a {
 	height:30px;
 	padding:13px;
 }
-#about {
-	padding:3px 7% 3px;
-	background-color:#FFFF32;
-	word-wrap:break-word;
-	border:1px solid black;
-	box-shadow:4px 4px 11px grey;
-}
-#skill {
-	background-color:#F0ED73;
-}
-#codes {
+.codes {
 	background-color:#CCEE00;
-}
-#skill, #codes{
-	padding:6px;
-	border:1px solid black;
+	word-wrap:break-word;
 	box-shadow:4px 4px 11px grey;
 }
 h2{
@@ -140,7 +127,5 @@ marquee{margin:0px;padding:0px;}
   padding: 15px;
   border-radius: 4px;
 }
-
-#topBtn:hover {
-  background-color: #555;
-}
+#topBtn:hover {background-color: #555;}
+textarea{width:93vw;height:50vh;}
