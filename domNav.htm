@@ -8,6 +8,16 @@
 </head>
 <body onload="domNav()"></div>
 <script type="text/javascript">
+/*
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition);
+} else {document.write("Geolocation is not supported by this browser.");}
+//
+  function showPosition(position) {
+    var coor="Latitude: " + position.coords.latitude +
+    "Longitude: " + position.coords.longitude+"<br><br>";
+}
+*/
 /* Navigator Properties */
   function domNav(){
     var caracteristiquesNavigateur = "";
@@ -18,18 +28,24 @@
     caracteristiquesNavigateur += "Version : "
     + navigator.appVersion + "<br>";
     caracteristiquesNavigateur += "Support des cookies : "
-    + navigator.cookieEnabled + "</p>";
+    + navigator.cookieEnabled + "<br>";
+    caracteristiquesNavigateur += "Géolocation : "
+    + navigator.geolocation + "<br>";
+//    + coor + "<br>";
+    caracteristiquesNavigateur += "javaEnabled : "
+    + navigator.javaEnabled() + "<br>";
+    caracteristiquesNavigateur += "Language : "
+    + navigator.language + "<br>";
+    caracteristiquesNavigateur += "onLine : "
+    + navigator.onLine + "<br>";
     caracteristiquesNavigateur += "Systeme d'exploitation : "
     + navigator.platform + "<br>";
-    caracteristiquesNavigateur += "User-agent header: "
+    caracteristiquesNavigateur += "Product : "
+    + navigator.product + "<br>";    
+    caracteristiquesNavigateur += "User-agent header : "
     + navigator.userAgent + "<br>";
-    caracteristiquesNavigateur += "User-agent language: "
+    caracteristiquesNavigateur += "User-agent language : "
     + navigator.systemLanguage + "<br>";
-    //document.getElementById("navInfo").innerHTML = caracteristiquesNavigateur;
-   /*
-    var myWindow = window.open("", "MsgWindow", "width=512,height=300");
-  myWindow.document.write(caracteristiquesNavigateur);
-  */
     document.write(caracteristiquesNavigateur);
 }
 /* Navigator Properties */
