@@ -6,8 +6,8 @@
 	<title></title>
   <style type="text/css">body{width:100vw;height:100vh}</style>
 </head>
-<body onload="domNav()"></div>
-<script type="text/javascript">
+<body>
+  <script type="text/javascript">
 /*
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -19,6 +19,7 @@ if (navigator.geolocation) {
 }
 */
 /* Navigator Properties */
+domNav();
   function domNav(){
     var caracteristiquesNavigateur = "";
     caracteristiquesNavigateur = "Code du navigateur : "
@@ -50,5 +51,6 @@ if (navigator.geolocation) {
 }
 /* Navigator Properties */
     </script>
+    <br /><button onclick="window.history.back();">Retour / Back</button>
 </body>
 </html>
