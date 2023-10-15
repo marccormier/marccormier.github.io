@@ -5,19 +5,19 @@
 background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+/**/
 textarea{width:93vw;height:50vh;}
 @media only screen 
 and (min-device-width:320px) 
 and (max-device-width:375px) {
 textarea{width:100px;height:45px;}
 }
-/*
 @media 
 only screen and (-webkit-mi-device-pixel-ration:1.5),
 only screen and (min-device-pixel-ration:1.5) {
-textarea{width:83vw;height:45vh;}
+textarea{width:100px;height:45px;}
 }
-*/
+/**/
 ::-webkit-scrollbar {
   width: 10px;
 }
