@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>html scope</title>
+	<title>htm scope</title>
 	<style type="text/css">
 		textarea{width:97vw;height:75vh;}
 	</style>
@@ -11,12 +11,12 @@
 <body>
 	<center>
 <div>
-	<h1>html Scope</h1>
+	<h1>htm Scope</h1>
 	<textarea>
 <!--
-Nom du fichier : index.html
-NOM DU SCRIPT : HTML SCOPE
-Extention(type) du Fichier : .html
+Nom du fichier : index.htm
+NOM DU SCRIPT : HTM SCOPE
+Extention(type) du Fichier : .htm
 Auteur : 
 OBJET:
 Description:
@@ -47,8 +47,13 @@ Description:
 
 <title></title>
 
+<link rel="stylesheet" type="text/css" href="design.css">
 <style type="text/css"></style>
-<script type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="hScript.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" language="jQuery" src="jQuery.js"></script>
+<script type="text/javascript" src="data.json"></script>
+
 </head>
 <body>
 		<main role="main">
@@ -93,7 +98,7 @@ Description:
       const content = document.querySelector("textarea").value;
       const file = new Blob([content], { type: 'text/plain' });
       link.href = URL.createObjectURL(file);
-      link.download = "index.html";
+      link.download = "index.htm";
       link.click();
       URL.revokeObjectURL(link.href);
 }</script>
