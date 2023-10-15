@@ -8,7 +8,7 @@ background-repeat: no-repeat;
 textarea{width:93vw;height:50vh;}
 @media only handheld
 and (max-width:320px) {
-textarea{width:75vw;height:45vh;}
+textarea{width:280px;height:45vh;}
 }
 /*
 @media 
