@@ -6,9 +6,10 @@ background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 textarea{width:93vw;height:50vh;}
-@media only handheld
-and (max-width:320px) {
-textarea{width:280px;height:45vh;}
+@media only screen 
+and (min-device-width:320px) 
+and (max-device-width:480px) {
+textarea{width:280px;height:145px;}
 }
 /*
 @media 
