@@ -5,6 +5,18 @@
 background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+textarea{width:93vw;height:50vh;}
+@media only handheld
+and (max-width:320px) {
+textarea{width:75vw;height:45vh;}
+}
+/*
+@media 
+only screen and (-webkit-mi-device-pixel-ration:1.5),
+only screen and (min-device-pixel-ration:1.5) {
+textarea{width:83vw;height:45vh;}
+}
+*/
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -128,15 +140,3 @@ marquee{margin:0px;padding:0px;}
   border-radius: 4px;
 }
 #topBtn:hover {background-color: #555;}
-textarea{width:93vw;height:50vh;}
-@media only handheld
-and (max-width:480px) {
-textarea{width:75vw;height:45vh;}
-}
-/*
-@media 
-only screen and (-webkit-mi-device-pixel-ration:1.5),
-only screen and (min-device-pixel-ration:1.5) {
-textarea{width:83vw;height:45vh;}
-}
-*/
