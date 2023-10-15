@@ -23,6 +23,7 @@
 	<meta charset='UTF-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>OUAIEB</title>
+    <script src="content/js/needles.js"></script>
 		<link rel="stylesheet" type="text/css" href="content/css/style.css">
     <style type="text/css">
       .dropbtn {
@@ -63,6 +64,7 @@
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+.dom{display:none;}
     </style>
 	</head>
 	<body onclick="eventTarget(event)">
@@ -79,7 +81,7 @@
 <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 	<div id="profileCard">
 <center>	<div id="img"><img id="pics" src="https://marccormier.github.io/content/img/pics/cookieHelmet-removebg-preview.png"/></div></center>
-<center><h1 id="dem" onclick='document.getElementById("dem").innerHTML="Marc"'>Marc</h1> <h1 id="demB">CORMIER</h1></center>
+<center><h1 id="dom" onclick='document.getElementById("dom").innerHTML="Marc"'>Marc</h1> <h1 id="domB">CORMIER</h1></center>
 <div class="dropdown">
   <button onclick="about()" class="dropbtn">A Propos</button>
   <div id="aboutBtn" class="dropdown-content">
@@ -92,17 +94,17 @@
   </div>
 </div>
 <div class="dropdown">
-  <button onclick="porfolio()" class="dropbtn">Porfolio</button>
-  <div id="porfolioBtn" class="dropdown-content">
-    <a href="#" class="menu">Scope</a>
-    <a href="content/snippets" class="menu">Snippet</a>
-    <a href="domNav.htm" class="menu">Navigateur</a>
-    <a href="nav.prop.mouse.move.htm" class="menu">show Coords</a>
+  <button onclick="snippets()" class="dropbtn">Scopes</button>
+  <div id="snippetsBtn" class="dropdown-content">
+    <a href="content/scopes/htmlScope.htm" class="menu">html</a>
+    <a href="#" class="menu">CSS</a>
+    <a href="#" class="menu">DOM</a>
   </div>
 </div>
 <div class="dropdown">
-  <button onclick="blog()" class="dropbtn">Blog</button>
-  <div id="blogBtn" class="dropdown-content">
+  <button onclick="portFolio()" class="dropbtn">portFolio</button>
+  <div id="portFolioBtn" class="dropdown-content">
+    <a href="content/snippets" class="menu">Snippets</a>
     <a href="mcbrady" class="menu">#MCBrady</a>
     <a href="https://tinyurl.com/esoGuildWebpage" class="menu">ESO Guild</a>
   </div>
@@ -110,40 +112,42 @@
 <div class="dropdown">
   <button onclick="cssBorder()" class="dropbtn">HTML DOM Styles</button>
   <div id="cssBorderBtn" class="dropdown-content">
-<a id="hideHTML" onclick="document.getElementById('dem').style.display='none'">hide</a>
-<a id="showHTML" onclick="document.getElementById('dem').style.display='block'">show</a>
-<a id="bgColor" onclick='document.getElementById("dem").style.backgroundColor="lightblue";'>background Color</a>
-<a id="solidBorder" onclick='document.getElementById("dem").style.border = "2px solid black";'>border Solid</a>
-<a id="solidDotted" onclick='document.getElementById("dem").style.border = "2px dotted black";'>border Dotted</a>
-<a id="solidDashed" onclick='document.getElementById("dem").style.border = "2px dashed black";'>border Dashed</a>
-<a id="solidDouble" onclick='document.getElementById("dem").style.border = "2px double black";'>border Double</a>
-<a id="solidGroove" onclick='document.getElementById("dem").style.border = "2px groove black";'>border Groove</a>
-<a id="solidRidge" onclick='document.getElementById("dem").style.border = "2px ridge black";'>border Ridge</a>
-<a id="soliInset" onclick='document.getElementById("dem").style.border = "2px inset black";'>border Inset</a>
-<a id="solidOutset" onclick='document.getElementById("dem").style.border = "2px outset black";'>border Outset</a>
-<a id="solidNone" onclick='document.getElementById("dem").style.border = "2px none black";'>border None</a>
-<a id="solidHidden" onclick='document.getElementById("dem").style.border = "2px hidden black";'>border Hidden</a>
-<a id="boxShadow" onclick='document.getElementById("dem").style.boxShadow = "10px 20px 30px blue";'>box Shadow</a>
-<a id="styleFont" onclick='document.getElementById("dem").style.font = "italic bold 38px arial,serif";'>font</a>
-<a id="styleMargin" onclick='document.getElementById("dem").style.margin = "50px 10px 20px 30px";'>margin</a>
-<a id="stylePadding" onclick='document.getElementById("dem").style.padding = "50px 10px 20px 30px";'>padding</a>
-<a id="textDeco" onclick='document.getElementById("dem").style.textDecoration="underline overline";'>text Decoration</a>
-<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "solid";'>text Decoration style Solid</a>
-<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "double";'>text Decoration style double</a>
-<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "dotted";'>text Decoration style dotted</a>
-<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "dashed";'>text Decoration style dashed</a>
-<a id="textDeco" onclick='document.getElementById("dem").style.textDecorationStyle = "wavy";'>text Decoration style wavy</a>
-<a id="textShadow" onclick='document.getElementById("dem").style.textShadow="5px 5px 1px #ff0000, 10px 10px 1px #0000ff";'>text Shadow</a>
+<a id="hideHTML" onclick="document.getElementById('dom').style.display='none'">hide</a>
+<a id="showHTML" onclick="document.getElementById('dom').style.display='block'">show</a>
+<a id="bgColor" onclick='document.getElementById("dom").style.backgroundColor="lightblue";'>background Color</a>
+<a id="solidBorder" onclick='document.getElementById("dom").style.border = "2px solid black";'>border Solid</a>
+<a id="solidDotted" onclick='document.getElementById("dom").style.border = "2px dotted black";'>border Dotted</a>
+<a id="solidDashed" onclick='document.getElementById("dom").style.border = "2px dashed black";'>border Dashed</a>
+<a id="solidDouble" onclick='document.getElementById("dom").style.border = "2px double black";'>border Double</a>
+<a id="solidGroove" onclick='document.getElementById("dom").style.border = "2px groove black";'>border Groove</a>
+<a id="solidRidge" onclick='document.getElementById("dom").style.border = "2px ridge black";'>border Ridge</a>
+<a id="soliInset" onclick='document.getElementById("dom").style.border = "2px inset black";'>border Inset</a>
+<a id="solidOutset" onclick='document.getElementById("dom").style.border = "2px outset black";'>border Outset</a>
+<a id="solidNone" onclick='document.getElementById("dom").style.border = "2px none black";'>border None</a>
+<a id="solidHidden" onclick='document.getElementById("dom").style.border = "2px hidden black";'>border Hidden</a>
+<a id="boxShadow" onclick='document.getElementById("dom").style.boxShadow = "10px 20px 30px blue";'>box Shadow</a>
+<a id="styleFont" onclick='document.getElementById("dom").style.font = "italic bold 38px arial,serif";'>font</a>
+<a id="styleMargin" onclick='document.getElementById("dom").style.margin = "50px 10px 20px 30px";'>margin</a>
+<a id="stylePadding" onclick='document.getElementById("dom").style.padding = "50px 10px 20px 30px";'>padding</a>
+<a id="textDeco" onclick='document.getElementById("dom").style.textDecoration="underline overline";'>text Decoration</a>
+<a id="textDeco" onclick='document.getElementById("dom").style.textDecorationStyle = "solid";'>text Decoration style Solid</a>
+<a id="textDeco" onclick='document.getElementById("dom").style.textDecorationStyle = "double";'>text Decoration style double</a>
+<a id="textDeco" onclick='document.getElementById("dom").style.textDecorationStyle = "dotted";'>text Decoration style dotted</a>
+<a id="textDeco" onclick='document.getElementById("dom").style.textDecorationStyle = "dashed";'>text Decoration style dashed</a>
+<a id="textDeco" onclick='document.getElementById("dom").style.textDecorationStyle = "wavy";'>text Decoration style wavy</a>
+<a id="textShadow" onclick='document.getElementById("dom").style.textShadow="5px 5px 1px #ff0000, 10px 10px 1px #0000ff";'>text Shadow</a>
 
   </div>
 </div>
 <div class="dropdown">
   <button onclick="jsHTMLdom()" class="dropbtn">JS HTML DOM</button>
   <div id="jsHTdomBtn" class="dropdown-content">
-<a id="docTitle" onclick='document.getElementById("dem").innerHTML=document.title;'>Title</a>
-<a id="docUrl" onclick='document.getElementById("dem").innerHTML=document.URL;'>URL</a>
-<a id="docLinksLength" onclick='document.getElementById("dem").innerHTML=document.links.length;'>links.length</a>
-<a id="jsChangeHTML" onclick='document.getElementById("dem").innerHTML = "JavaScript!"'>innerHTML</a>
+<a id="docTitle" onclick='document.getElementById("dom").innerHTML=document.title;'>Title</a>
+<a id="docUrl" onclick='document.getElementById("dom").innerHTML=document.URL;'>URL</a>
+<a id="docLinksLength" onclick='document.getElementById("dom").innerHTML=document.links.length;'>links.length</a>
+<a id="jsChangeHTML" onclick='document.getElementById("dom").innerHTML = "JavaScript!"'>innerHTML</a>
+<a href="domNav.htm" class="menu">Navigateur</a>
+<a href="nav.prop.mouse.move.htm" class="menu">show Coords</a>
   </div>
 </div>
 <div class="dropdown">
@@ -153,13 +157,14 @@
 <a href="compiler/binaryCompiler.htm">Binaire</a> 
 </div>
 </div>
-<!-- -->
+<!--
 <div>
-  <details id="about">
+  <details id="about" id="details">
     <summmary>info perso</summmary>
-    <p> some text </p>
+    <p> about </p>
   </details>
 </div>
+-->
 <div id='about'>
 <h2>Information Personnel</h2><hr>
 <p>Mon nom est Marc et j'ai <!-- </p><p id="age"></p><p> -->38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j'affectionne tout particulierement. J'estime que l'age, la couleur, la religion, l'apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n'a pas lieu d'être sur le net. <br/>Je documente tout ce que j'apprends et aide les gens à commencer dans le codage. <br />Mon site n'a pas de publicités, de sponsors ou de 'bullshit'. <br /><br />Je n'aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.
@@ -373,19 +378,19 @@ document.getElementById("time").innerHTML=res;
   var year = new Date().getFullYear();
 document.getElementById('copy').innerHTML = "&#169 "+year+" <a href='https://marccormier.github.io/' style='text-decoration:none;color:black;'>Marc Cormier</a> ";
 </script>
-<script src="content/js/copyPasteCheck.js"></script>
-<script src="content/js/eventTarget.js"></script>
+<script type="text/javascript" src="content/js/copyPasteCheck.js"></script>
+<script type="text/javascript" src="content/js/eventTarget.js"></script>
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function about() {
   document.getElementById("aboutBtn").classList.toggle("show");
 }
-function porfolio() {
-  document.getElementById("porfolioBtn").classList.toggle("show");
+function snippets() {
+  document.getElementById("snippetsBtn").classList.toggle("show");
 }
-function blog() {
-  document.getElementById("blogBtn").classList.toggle("show");
+function portFolio() {
+  document.getElementById("portFolioBtn").classList.toggle("show");
 }
 function cssBorder() {
   document.getElementById("cssBorderBtn").classList.toggle("show");
@@ -395,6 +400,11 @@ function jsHTMLdom() {
 }
 function compilateur() {
   document.getElementById("compiler").classList.toggle("show");
+}
+function htmlSnippets() {
+  var i=document.getElementsById('details');
+  i.firstChild.innerHTML='html snippet';
+  i.lastChild.innerHTML='desc';
 }
 //
 // Close the dropdown if the user clicks outside of it

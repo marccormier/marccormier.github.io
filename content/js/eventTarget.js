@@ -1,4 +1,6 @@
+/* Event Target tagName*/
+//body onload 
 function eventTarget(event) { 
   const element=event.target;
-  document.getElementById("demB").innerHTML = "Triggered by " + element.tagName;
+  document.getElementById("domB").innerHTML = "Triggered by " + element.tagName;
 }

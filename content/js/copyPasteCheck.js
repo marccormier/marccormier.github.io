@@ -1,3 +1,4 @@
+/* ctrl + c OR ctrl + v */
 document.body.addEventListener("keydown", function (ev) {
     // function to check the detection
     ev = ev || window.event;  // Event object 'ev'
@@ -20,3 +21,4 @@ document.body.addEventListener("keydown", function (ev) {
         alert("Ctrl+C is pressed.");
     }
 }, false);
+/**/
