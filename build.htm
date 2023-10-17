@@ -26,6 +26,7 @@
     <title>OUAIEB</title>
     <script type="text/javascript" src="content/js/osc.js"></script>
     <script src="content/js/needles.js"></script>
+    <script src="https://ipinfo.io/json?callback=recordData"></script>
     <link rel="stylesheet" type="text/css" href="content/css/style.css">
     <style type="text/css">
       .dropbtn {
@@ -74,9 +75,10 @@
     <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <input type="color" id="colorpicker" value="#000000" style="margin-left:25%;" />
-<hr><a href="#service">Service</a>
-  <a href="#client">Client</a>
-  <a href="#form">Formulaire</a>
+<hr><a href="#produits">Produits</a>
+  <a href="#service">Service</a>
+  <a href="#clients">Formulaire (Client(s))</a>
+  <a href="#validationUtilisateur">S'inscrire / Se Connecter</a>
   <a href="mailto:marccormier85@outlook.com?subject=github.io">Contact</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -96,19 +98,26 @@
   </div>
 </div>
 <div class="dropdown">
-  <button onclick="snippets()" class="dropbtn">Scopes</button>
-  <div id="snippetsBtn" class="dropdown-content">
+  <button onclick="scopes()" class="dropbtn">Scopes</button>
+  <div id="scopesBtn" class="dropdown-content">
     <a onclick="htmlScope()" class="menu">HTML</a>
     <a href="#" class="menu">CSS</a>
     <a href="#" class="menu">DOM</a>
   </div>
 </div>
 <div class="dropdown">
+  <button onclick="snippets()" class="dropbtn">Snippets</button>
+  <div id="snippetsBtn" class="dropdown-content">
+    <a href="content/snippets" class="menu">Snippets Example</a>
+    <a href="content/snippets/jQuery.html" class="menu">jQuery</a>
+  </div>
+</div>
+<div class="dropdown">
   <button onclick="portFolio()" class="dropbtn">portFolio</button>
   <div id="portFolioBtn" class="dropdown-content">
-    <a href="content/snippets" class="menu">Snippets</a>
     <a href="mcbrady" class="menu">#MCBrady</a>
     <a href="https://tinyurl.com/esoGuildWebpage" class="menu">ESO Guild</a>
+    <a href="skydiveLoggerApp" class="menu">skydiveLoggerApp DATA To HTML Table</a>
   </div>
 </div>
 <div class="dropdown">
@@ -185,6 +194,7 @@
 <a href="compiler/binaryCompiler.htm">Binaire</a> 
 </div>
 </div>
+<a href="tableAdessin.htm" class="dropbtn">Déssiner</a>
 <div id="content" class="codes"></div>
 <center>
 <a href="http://www.linktr.ee/mcormier">
@@ -348,13 +358,16 @@ function skills() {
 }
 function codes() {
   const content=document.getElementById("content");
-  content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p><h3>HTML</h3><ul><li><a href="">PSW Generator</a></li><li><a href="#scope.htm">snippets</a></li></ul><h3>CSS</h3><ul><li><a href="">CSS Needles Library</a></li></ul><h3>JavaScript</h3><ul><li><a href="">AJAX</a></li><li><a href="">Time</a></li><li><a href="">domLib</a></li><li><a href="">Gestion d&#39opérations</a></li><li><a href="">Générateur de Table HTML</a></li><li><a href="">OSC</a></li><li><a href="">needles</a></li></ul><h3>jQuery</h3><ul><li><a href="">Gestion des mouvements et des boutons de la souris</a></li></ul><h3>PHP</h3><ul><li><a href="">Gestion de fichiers</a></li><li><a href="">Appels Système</a></li><li><a href="">Gestion de Formulaire</a></li><li><a href="">Gestion de cookies</a></li><li><a href="">Gestion d&#39utilisateurs</a></li><li><a href="">Gestion de Session</a></li><li><a href="">Gestion d&#39erreurs</a></li></ul><h3>JAVA</h3><ul><li><a href="">Coffee Machine</a></li><li><a href="">Gestion de fichiers</a></li><li><a href="">Gestion de bulletin de notes</a></li><li><a href="">Gestion de comptes bancaire</a></li><li><a href="">Sapin en Swing</a></li></ul><h3>Shell Scripting Language</h3><ul><li><a href="">file Sorting</a></li></ul><h3>mSL</h3><ul><li><a href="">MCBrady</a></li></ul>';
+  content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p><h3>HTML</h3><ul><li><a href="">PSW Generator</a></li><li><a href="#scope.htm">snippets</a></li></ul><h3>CSS</h3><ul><li><a href="">CSS Needles Library</a></li></ul><h3>JavaScript</h3><ul><li><a href="">AJAX</a></li><li><a href="">Time</a></li><li><a href="">domLib</a></li><li><a href="">Gestion d&#39opérations</a></li><li><a href="">Générateur de Table HTML</a></li><li><a href="">OSC</a></li><li><a href="">needles</a></li></ul><h3>jQuery</h3><ul><li><a href="">Gestion des mouvements et des boutons de la souris</a></li></ul><h3>PHP</h3><ul><li><a href="">Gestion de fichiers</a></li><li><a href="">Appels Système</a></li><li><a href="">Gestion de Formulaire</a></li><li><a href="">Gestion de cookies</a></li><li><a href="">Gestion d&#39utilisateurs</a></li><li><a href="">Gestion de Session</a></li><li><a href="">Gestion d&#39erreurs</a></li></ul><h3>JAVA</h3><ul><li><a href="">Coffee Machine</a></li><li><a href="">Gestion de fichiers</a></li><li><a href="">Gestion de bulletin de notes</a></li><li><a href="">Gestion de comptes bancaire</a></li><li><a href="">Sapin en Swing</a></li></ul><h3>Shell Scripting Language</h3><ul><li><a href="">file Sorting</a></li> <li><a href="">List Files In Folder</a></li> <li><a href="">Windows error Fixer</a></li> <li><a href="">Clone File Checker</a></li> <li><a href="">clear Cache</a></li> </ul><h3>mSL</h3><ul><li><a href="">MCBrady</a></li></ul>';
 }
 function htmlScope() {
   const content=document.getElementById("content");
   content.innerHTML='<textarea><!--Nom du fichier : index.htm NOM DU SCRIPT : HTM SCOPE Extention(type) du Fichier : .htm Auteur :  OBJET: Description: --> <!-- Syntaxe d&#39un Commentaire HTML a une ou plusieurs lignes --> <!-- Declaration du type de document en html --> <!DOCTYPE HTML PUBLIC "type_HTML" "adresse_DTD"> <html lang="fr"> <head> <meta http-equiv="Content-Type" content="text/html/no-cache" charset="utf-8" /> <meta name="expires" content="never" /> <meta name="keywords" content="TEXT/HTML/CSS/JavaScript/jQuery/JSON, Website, blog, foo, bar" /> <meta name="locale" content="fr_CA" /> <meta name="distribution" content="global" /> <meta name="type" content="website" /> <meta name="url" content="" /> <meta name="title" content="" /> <meta name="author" content="" /> <meta name="publisher" content=""> <meta name="copyright" content=""> <meta name="description" content="This short description describes the document."> <meta name="page-topic" content=""> <meta name="page-type" content="Blogging"> <meta name="audience" content="Everyone"> <meta name="robots" content="index, follow"> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="icon" type="image/x-icon" href="favicon.ico"> <title></title> <link rel="stylesheet" type="text/css" href="design.css"> <style type="text/css"></style> </head> <body> <main role="main"> <header><h1></h1></header> <nav role="navigation"></nav> <section> <article> <header><h1></h1><h2></h2></header> <p></p> <ol><li></li></ol> <ul><li><a href=""></a></li></ul> <ul><li><ul><li></li></ul></li></ul> <footer><p></p></footer> </article> <aside></aside> </section> <aside> <figure> <img src="" /> <figcaption></figcaption> </figure> </aside> <section></section> <footer></footer> </main> <script type="text/javascript">< /script> </body> </html> </textarea>';
 }
 //
+function scopes() {
+  document.getElementById("scopesBtn").classList.toggle("show");
+}
 function snippets() {
   document.getElementById("snippetsBtn").classList.toggle("show");
 }

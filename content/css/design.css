@@ -17,7 +17,6 @@ body:nth-child(-n+3){}
 body:nth-child(3n){}
 /* cible un enfants sur trois en commencant par le premier */
 body:nth-child(3n+1){}
-
 body:last-child{}
 .unselectable{
   -webkit-touch-callout: none; 
@@ -77,6 +76,7 @@ mark{}
 option{}
 address{}
 p{}
+txt3D{color:black;text-shadow:-3px 0 4px #FF0000, 3px 0 4px #0000FF;}
 pre{}
 b{}
 strong{}
