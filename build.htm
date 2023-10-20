@@ -68,7 +68,51 @@
 
 .show {display: block;}
 .dom{display:none;}
-    </style>
+/**/
+.modal {
+  position: fixed; /* Stay in place */
+  margin:0px;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  padding-top:30px; /* Location of the box */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  opacity:0.92;
+  align-self:center;
+  text-align:center;
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding:3%;
+  font-size: 14px;
+  font-family:serif;
+  line-height:1.3;
+  border: 1px solid #888;
+  box-shadow:3px 4px 5px darkgrey;
+  width: 87%;
+}
+.modal-label{position:absolute;left:42%;font-weight:bold;}
+.txtareaModal{width:50vw;height:auto;}
+/* The Close Button */
+.close {
+  float:right;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
   </head>
   <body onclick="eventTarget(event)">
 <h5><marquee>JAVA, RWD, html 1.0, html 4.01, html5, xhtml, xml, JSON, jQuery, DOM, JavaScript, AJAX, PHP, MySQL, CSS3, CANVAS, SVG</marquee></h5>
@@ -77,10 +121,37 @@
 <input type="color" id="colorpicker" value="#000000" style="margin-left:25%;" />
 <hr><a href="#produits">Produits</a>
   <a href="#service">Service</a>
-  <a href="#clients">Formulaire (Client(s))</a>
-  <a href="#validationUtilisateur">S'inscrire / Connection</a>
+  <a href="#" onclick="dialog.showModal()">S'inscrire / Connection</a>
+<dialog id="dialog" class="modal">
+  <div class="modal-content">
+  <button onclick="dialog.close()" class="close">X</button>
+  <h1>Inscription / Connection</h1>
+  <form id="newUser">
+    <label for="prenom" class="modal-label">Prénom</label><br>
+    <input type="text" id="prenom" placeholder="Prénom" required="required"><br>
+    <label for="prenom" class="modal-label">Nom</label><br>
+    <input type="text" id="nom" placeholder="Nom" required><br>
+    <label for="prenom" class="modal-label">Courriel</label><br>
+    <input type="text" id="mail" placeholder="Courriel" required><br>
+    <label for="prenom" class="modal-label">Téléphone</label><br>
+    <input type="number" id="nom" placeholder="1(234)567-8901" pattern="" required><br>
+
+
+    <label for="prenom" class="modal-label">Nom d'utilisateur</label><br>
+    <input type="text" id="uName" placeholder="Nom d,utilisateur" required><br>
+    <label for="prenom" class="modal-label">Mot de passe</label><br>
+    <input type="password" id="pw" placeholder="Mot de passe" required><br>
+    <label for="prenom" class="modal-label">Age</label>
+    <input type="number" min="13" max="113" step="2" placeholder="100" id="age" /> <br><br>
+<!--
+    <input type="button" onclick='nonVide(nom, prenom, mail, uName, pw, "Saisie obligatoire")' value="Validation saisie" />
+-->
+    <input type="button" onclick='alert("maintenance en cours.")' value="Validation" />
+  </form>
+<textarea form="newUser" class="txtareaModal"></textarea>
+</div>
+</dialog>
   <a href="mailto:marccormier85@outlook.com?subject=github.io">Contact</a>
-  <hr><a onclick='alert("Operation Impossible.")'>webmaster</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>

@@ -1,9 +1,0 @@
-function suppressionCookie(nomCookie, valeurCookie expirationCookie, cheminCookie, domaineCookie, securiteCookie) 
-{
-// body... 
-document.cookie=nomCookie+' = ' +escape(valeurCookie)+' '+((expirationCookie==undefined) ? '' : ('; expires='+expirationCookie.toGMTString()))+((domaineCookie==undefined) ? '' :('; path='+ cheminCookie))+((domaineCookie==undefined)?'':(';domain='+domaineCookie))+((securiteCookie==true)?';securiteCookie':'');
-}
-var dateExpiration=new Date();
-dateExpiration.setTime(dateExpiration.getTime()-1);
-suppressionCookie('monCookie', '', dateExpiration, '/');
-document.write("Le cookie monCookie a normalement été supprimé du disque dur");
