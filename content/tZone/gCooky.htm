@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="content/js/main.js"></script> 
+	<script type="text/javascript" src="content/js/validForm.js"></script> 
+	<script type="text/javascript" src="content/js/cooky.js"></script> 
+	<script type="text/javascript" src="content/js/rdCooky.js"></script> 
+	<script type="text/javascript" src="content/js/supCooky.js"></script>
+</head>
+<body>
+	<form>
+		Nom :
+		<input type="text" id="nom">
+		<input type="button" onclick='nonVide(doc.getId("nom"), "Saisie obligatoire")' value="Validation saisie" />
+	</form>
+
+	<input type="button" name="cooky" value="new" />
+	<input type="button" name="supCooky" value="del" />
+	<input type="button" name="rdCooky" value="read" />
+<script type="text/javascript" name="main" id="gCookies">
+	
+	// stringnify data
+	// cookies
+	creationCookie(un, pw, datetExpiration, '/' );
+</script>
+</body>
+</html>

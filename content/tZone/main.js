@@ -1,0 +1,1 @@
+doc=document;getName=getElementsByName;getId=getElementById;
