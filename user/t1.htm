@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="user.json"></script>
+</head>
+<body>
+	<div id="result"></div>
+  <span id="resulta"></span>
+<script type="text/javascript">
+user = JSON.parse(user);
+obj = JSON.stringify(user);
+//
+document.write("Original string ; "+obj+"<br><br>");
+splits = obj.split(",");
+document.write("str splited ; "+splits);
+/*
+var split = obj.split(" ", ",", '"', "{", "}");
+const res=document.getElementById("resulta");
+res.innerHTML=split;
+*/
+let lName="";
+let fName="";
+let eMail="";
+let uName="";
+let pWord="";
+let hName="";
+let ip="";
+let loc="";
+let uAgent="";
+for (const x in user) {lName += user[x].lName + ", "+"<br>";}
+for (const x in user) {fName += user[x].fName + ", "+"<br>";}
+for (const x in user) {eMail += user[x].eMail + ", "+"<br>";}
+for (const x in user) {uName += user[x].uName + ", "+"<br>";}
+for (const x in user) {pWord += user[x].pWord + ", "+"<br>";}
+for (const x in user) {hName += user[x].hName + ", "+"<br>";}
+for (const x in user) {ip += user[x].ip + ", "+"<br>";}
+for (const x in user) {loc += user[x].loc + ", "+"<br>";}
+for (const x in user) {uAgent += user[x].uAgent + ", "+"<br>";}
+/*
+//	export data to html table (result=th in table)
+var table = document.createElement("table"), row, cellA, cellB;
+document.getElementById("result").appendChild(table);
+  for (let key in user) {
+  row = table.insertRow();
+  cellA = row.insertCell();
+  cellB = row.insertCell();
+  cellA.innerHTML = key;
+  if (key!=null && key != "") {
+    cellB.innerHTML = user[key].join(", ");
+  }
+  else {
+    cellB.innerHTML = user[key];
+    }
+  }
+*/
+document.getElementById("result").innerHTML = "Nom : <b><br>"+lName+"</b><br>Prénom : <b><br>"+fName+"</b><br>Courriel : <b><br>"+eMail+"</b><br>Nom d\'utilisateur : <b><br>"+uName+"</b><br>Mot de passe : <b><br>"+pWord+"</b><br>Nom d\'hote : <b><br>"+hName+"</b><br>ipv4 : <b><br>"+ip+"</b><br>Localisation (latitude,longitude) : <b><br>"+loc+"</b><br>User Agent : <b><br>"+uAgent+"</b>";
+</script>
+</body>
+</html>

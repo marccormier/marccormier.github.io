@@ -1,0 +1,16 @@
+/*
+user='[
+	{
+	"lName":"cormier", 
+"fName":"marc", 
+"eMail":"m@c.com", 
+"uName":"mc", 
+"pWord":"pw", 
+"hName":"", 
+"ip":"", 
+"loc":"", 
+"uAgent":""
+} 
+]';
+*/
+user='[{"lName":"cormier", "fName":"marc", "eMail":"marccormier85@outlook.com", "uName":"admin", "pWord":"admin", "hName":"", "ip":"", "loc":"", "uAgent":""}, {"lName":"cormier", "fName":"marc", "eMail":"m@c.com", "uName":"mc", "pWord":"pw", "hName":"", "ip":"", "loc":"", "uAgent":""} ]';
