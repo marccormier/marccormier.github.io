@@ -7,8 +7,7 @@
 	<!-- -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>loading...</title>
-	<script type="text/javascript" src="content/js/osc.js"></script>
-	<link rel="stylesheet" type="text/css" href="typewriterText.css">
+	<script type="text/javascript" src="content/js/OSC.js"></script>
 	<style type="text/css">
 		#carre{
 			position:absolute;
@@ -17,12 +16,10 @@
 		}
 	</style>
 </head>
-<body>
-	<!-- <div class="typewriter"><h1>Loading...</h1></div> -->
+<body onload="setInterval(animer, 30)">
 <div id="carre"></div>
 <script type="text/javascript">
 TAILLE = GAUCHE = 0
-setInterval(animer, 30)
 function animer()
 {
 	TAILLE += 10
