@@ -1,4 +1,37 @@
-/* doc Frag*/
+/*
+rNode = function() {
+  document.body.innerHTML += this;
+}
+//The window object calls the function:
+window.addEventListener("load", rNode);
+//
+deuxieme = val => "Deuxieme " + val;
+document.body.innerHTML += deuxieme("Univers !");
+//
+troisieme = () => {return "troisieme World!"; }
+document.body.innerHTML += troisieme();
+//
+*/
+doc=document;
+function $(id) {return doc.getElementById(id) }
+//html
+//body
+//main
+obj=[];
+arr={};
+//
+let produits=(a, b) => a+b;
+let soustraction=(a, b) => a-b;
+let multiplication=(a, b) => a*b;
+let division=(a, b) => a/b;
+/*
+let rayon=;
+let perimetre=;
+let sin=;
+let con=;
+*/
+//
+/* doc Frag exemple */
 const fruits = ["Banane", "Orange", "Mangue", "Pomme", "Poire", "Cerise", "Pêche", "Raisin", "Tomate"];
 function dFrag() {
 t=document.createElement("table");

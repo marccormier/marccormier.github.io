@@ -1,4 +1,4 @@
-      function jsonSkydive() {
+function jsonSkydive() {
 let logbook = document.getElementById('logJson').value;
 //let logbook = document.getElementById('outputJsonSkydive').value;
 data = JSON.parse(logbook);
@@ -9,10 +9,10 @@ data = JSON.parse(logbook);
         cellA = row.insertCell();
         cellB = row.insertCell();
         cellA.innerHTML = key;
-        if (key=="Colors") {
+        if (key=="") {
           cellB.innerHTML = data[key].join(", ");
         }
-        else if (key=="Pet") {
+        else if (key=="") {
           cellB.innerHTML = `<div>Name: ${data[key]["Name"]}</div><div>Species: ${data[key]["Species"]}</div>`;
         }
         else {
