@@ -1,60 +1,21 @@
-/*
-for - loops through a block of code a number of times
-for (let i=0;i<5;i++){text+="The number is "+i+"<br>";}
+doc.write('<center> <h1>Interface Node</h1> <h2>DOM</h2> </center> <h3>[Objet Window]</h3>');
+doc.write("<h4>Frames</h4>"); frames(); frames; hr();
+doc.write("<h4>frameElement</h4>"); frame(); hr();
+doc.write("<h4>innerHeight</h4>"); innerHeight(); hr();
+doc.write("<h4>innerWidth</h4>"); innerWidth(); hr();
+doc.write("<h4>outerHeight</h4>"); outerHeight(); hr();
+doc.write("<h4>outerWidth</h4>"); outerWidth(); hr();
+doc.write("<h3>Console</h3>"); hr(); 
+doc.write("<h3>History</h3>"); historyLength(); hr();
+doc.write("<h3>Location</h3>"); hr();
+doc.write("<h3>Navigator</h3>"); hr();
+doc.write("<h3>Screen</h3>"); hr();
+doc.write("<h3>ownerDocument</h3>"); ownDoc(); hr();
+doc.write('<h3>parentNode :</h3>'); parentNode(); hr();
+doc.write("<h4>!DOCTYPE</h4>"); 
 //
-for/in - loops through the properties of an object
-for/of - loops through the values of an iterable object
-while - loops through a block of code while a specified condition is true
-do/while - also loops through a block of code while a specified condition is true
-*/
-doc=document;
-function $(id){return doc.getElementById(id)}
-//
-doc.write("<h1>DOM</h1>");
-doc.write("<h2>Window</h2>");
-doc.write("<h3>Object</h3>");
-//
-wih=window.innerHeight;
-doc.write("<h4>innerHeight</h4>"+wih);
-wiw=window.innerWidth;
-doc.write("<h4>innerWidth</h4>"+wiw);
-//
-woh=window.outerHeight;
-doc.write("<h4>outerHeight</h4>"+woh);
-wow=window.outerWidth;
-doc.write("<h4>outerWidth</h4>"+wow);
-//
-frame=window.frameElement;
-doc.write("<h4>frameElement</h4>"+frame);
-//
-frames=window.frames;
-doc.write("<h4>Frames</h4>"+frames);
-//
-doc.write("<h3>Console</h3>");
-//
-doc.write("<h3>History</h3>");
-whl=window.history.length;
-doc.write("<h4>history.length</h4>"+whl);
-//
-doc.write("<h3>Location</h3>");
-//
-doc.write("<h3>Navigator</h3>");
-//
-doc.write("<h3>Screen</h3>");
-doc.write("<hr>");
-//
-od=doc.body.ownerDocument;
-doc.write("<h2>ownerDocument</h2>"+od.nodeName);
-doc.write("<hr>");
-//
-pn=doc.body.parentNode;
-doc.write("<h2>parentNode</h2>"+pn.nodeName);
-doc.write("<hr>");
-//
-doc.write("<h2>!DOCTYPE</h2>");
 doc.write("!DOCTYPE : "+doc.doctype);
-doc.write("<hr>");
-//
+hr();
 doc.write("<h2>html</h2>");
 doc.write("html : "+doc.documentElement+"<br>"+doc.documentElement.parentNode+"<br>"+doc.documentElement.parentElement);
 doc.write("<hr>");
@@ -146,11 +107,11 @@ doc.write("Images : "+doc.images.length);
 //doc.write("Images 4 Attribut height : "+doc.images[3].height);
 doc.write("<hr>");
 //
-doc.write("<h2>childNodes[i] .nodeName .nodeType .nodeValue</h2>");
+doc.write("<h2>childNodes[i] .nodeName .nodeType .nodeValue</h2><br/>console.log(text);");
 const nodeList=document.body.childNodes;
 let text="";
 for(let i=0;i<nodeList.length;i++){text+=nodeList[i].nodeName+" "+nodeList[i].nodeType+" "+nodeList[i].nodeValue+"<br><br>";}
-doc.write(text);
+console.log(text);
 doc.write("<hr>");
 //
 cec=doc.body.childElementCount;
