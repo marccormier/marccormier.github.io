@@ -1,7 +1,5 @@
-/*
-rNode = function() {
-  document.body.innerHTML += this;
-}
+ /*
+rNode = function() {document.body.innerHTML += this; }
 //The window object calls the function:
 window.addEventListener("load", rNode);
 //
@@ -10,13 +8,14 @@ document.body.innerHTML += deuxieme("Univers !");
 //
 troisieme = () => {return "troisieme World!"; }
 document.body.innerHTML += troisieme();
-//
 */
+win=window;
 doc=document;
 function $(id) {return doc.getElementById(id) }
 //html
 //body
 //main
+hr=function hr() {doc.write("<hr>"); }
 obj=[];
 arr={};
 //
@@ -30,7 +29,6 @@ let perimetre=;
 let sin=;
 let con=;
 */
-//
 /* doc Frag exemple */
 const fruits = ["Banane", "Orange", "Mangue", "Pomme", "Poire", "Cerise", "Pêche", "Raisin", "Tomate"];
 function dFrag() {

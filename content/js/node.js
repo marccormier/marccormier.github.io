@@ -7,14 +7,6 @@ for/of - loops through the values of an iterable object
 while - loops through a block of code while a specified condition is true
 do/while - also loops through a block of code while a specified condition is true
 */
-win=window;
-doc=document;
-function $(id){return doc.getElementById(id) }
-function O(i) {return typeof i == 'object' ? i : document.getElementById(i) }
-function S(i) {return O(i).style }
-function C(i) {return document.getElementsByClassname(i) }
-hr=function hr() {doc.write("<hr>"); }
-//
 winInnerHeight=win.innerHeight;
 innerHeight=function innerHeight() {document.write(innerHeight+"<br/>"+winInnerHeight); }
 winOuterHeight=win.outerHeight;
