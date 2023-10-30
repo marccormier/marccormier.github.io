@@ -1,7 +1,7 @@
  /*
-rNode = function() {document.body.innerHTML += this; }
+premier = function() {document.body.innerHTML += this; }
 //The window object calls the function:
-window.addEventListener("load", rNode);
+window.addEventListener("load", premier);
 //
 deuxieme = val => "Deuxieme " + val;
 document.body.innerHTML += deuxieme("Univers !");
@@ -9,15 +9,59 @@ document.body.innerHTML += deuxieme("Univers !");
 troisieme = () => {return "troisieme World!"; }
 document.body.innerHTML += troisieme();
 */
+// Numbers:
+let number = 38;
+// Strings:
+let color = "Perridot";
+let lastName = "CORMIER";
+// Booleans
+let i = true;
+let j = false;
+// Object:
+const person = {firstName:"Marc", lastName:"Cormier"};
+// Array object:
+const numbers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// Date object:
+const now=new Date();
+const numbersString=["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const alphaNum={a:"", b:"", c:"", d:"", e:"", f:"", g:"", h:"", i:"", j:"", k:"", l:"", m:"", n:"", o:"", p:"", q:"", r:"", s:"", t:"", u:"", v:"", w:"", x:"", y:"", z:"", A:"", B:"", C:"", D:"", E:"", F:"", G:"", H:"", I:"", J:"", K:"", L:"", M:"", N:"", O:"", P:"", Q:"", R:"", S:"", T:"", U:"", V:"", W:"", X:"", Y:"", Z:"", 0:"", 1:"", 2:"", 3:"", 4:"", 5:"", 6:"", 7:"", 8:"", 9:""};
+const alphaAccentuer={à:"", â:"", è:"", ê:"", é:"", î:"", ô:"", û:""};
+// portee des variables
+function varScope() {
+        a = 123               // Portée globale
+    var b = 456               // Portée locale
+    if (a == 123) var c = 789 // Portée locale
+}
 win=window;
 doc=document;
 function $(id) {return doc.getElementById(id) }
+// function $(id){document.getElementById(id) } /* Find an element by element id */
+function $(name){document.getElementsByTagName(name) } /* Find elements by tag name */
+function $(name){document.getElementsByClassName(name) } /* Find elements by class name */
 //html
 //body
 //main
 hr=function hr() {doc.write("<hr>"); }
-obj=[];
-arr={};
+const space = "&nbsp;";
+const comma = ",";
+const dapos = '"';
+const ddots = ":";
+const lcbrk = "{";
+const rcbrk = "}";
+//
+// Arrays use numbers to access arr[0]
+const arr = [];
+// Objects use names to access obj.firstName
+const obj = {};
+//
+function arrLength() {
+let arrLength=arr.length   // Returns the number of elements
+let arrSort=arr.sort()   // Sorts the array
+// looping arr array elements
+let arrLoop="<ul>";
+for (let i = 0; i < arrLength; i++) {arrLoop += "<li>" + arr[i] + "</li>"; }
+arrLoop+="</ul>";
+}
 //
 let produits=(a, b) => a+b;
 let soustraction=(a, b) => a-b;
@@ -42,6 +86,16 @@ for (let x in fruits) {
 }
 document.body.appendChild(t);
 }
+/*
+// nested DOM Structure Fragment
+const fragment = document.createDocumentFragment();
+const li = fragment
+  .appendChild(document.createElement('section'))
+  .appendChild(document.createElement('ul'))
+  .appendChild(document.createElement('li'));
+li.textContent = 'hello world';
+document.body.appendChild(fragment);
+*/
 /**/
 function historyBack() {window.history.back();}
 /* Time */
