@@ -1,22 +1,4 @@
-<!--
-# Nom du fichier : index.html
-# NOM DU SCRIPT : buildding site
-# Extention(type) du Fichier : .html
-# REALISATION : McCormier
-# Auteur : Marc Cormier
-# OBJET:
-# Languages informatique, production web, programmation progiciels operationnel.
-# Description:
-# Reparation, Recyclage, Entretien & Maintenance informatique.
-# Specialiste internet. (XHTML5,CSS3,JavaScript,jQuery,JSON,PHP,mySQL,XML,AJAX).
-# Programmation informatique (JAVA).
-# Formation Personnalisee.
-# http://marcccormier.github.io/
--->
-<!-- Syntaxe d'un Commentaire HTML a une ou plusieurs lignes -->
 
-<!-- Declaration du type de document en html -->
-<!-- XML - RDF(resource docs framework) - OGP.me(Open Graph Protocol) - TTL(turtle) - SVG - W3C -->
 <!DOCTYPE HTML PUBLIC "type_HTML" "adresse_DTD">
 <html lang="fr"> 
   <head>
@@ -24,10 +6,16 @@
   <meta name="viewport" content="width=320" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>OUAIEB</title>
-    <script type="text/javascript" src="content/js/osc.js"></script>
+    <script type="text/javascript" src="content/js/OSC.js"></script>
     <script src="content/js/needles.js"></script>
+    <script type="text/javascript" src="content/js/copyPasteCheck.js"></script>
+<script type="text/javascript" src="content/js/eventTarget.js"></script>
     <script src="https://ipinfo.io/json?callback=recordData"></script>
     <link rel="stylesheet" type="text/css" href="content/css/style.css">
+      <link rel="stylesheet" type="text/css" href="modalStyle.css">
+  <script type="text/javascript" src="add.js"></script>
+  <script type="text/javascript" src="validUser.js"></script>
+<!-- <script src="errorHandler.js"></script> -->
     <style type="text/css">
       .dropbtn {
   background-color: #3498DB;
@@ -50,7 +38,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #dff6b5;
+  background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -64,7 +52,7 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: #ecf3b3;}
+.dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
 .dom{display:none;}
@@ -122,15 +110,59 @@
 <input type="color" id="colorpicker" value="#000000" style="margin-left:25%;" />
 <hr><a href="#produits">Produits</a>
   <a href="#service">Service</a>
-  <a href="#" onclick="dialog.showModal()">S'inscrire / Connection</a>
-<dialog id="dialog" class="modal">
-  <div class="modal-content">
-  <button onclick="dialog.close()" class="close">X</button>
-  <h1>Inscription / Connection</h1>
-    <a href="build"><input type="button" value="jeter un oeil" /></a>
+  <a onclick="inscription.showModal()">Inscription</a>
+  <a onclick="connection.showModal()">Connection</a>
+  <dialog id="inscription" class="modal"> 
+    <div class="modal-content"> 
+      <button onclick="inscription.close()" class="close">X</button> 
+      <h1>Inscription</h1> 
+<form name="form" action="#" onsubmit='add()'>
+<label for="fName">Prénom</label><br/> 
+<input type="text" id="fName" placeholder="Prenom"> <br/>
+
+<label for="lName">nom</label><br/> 
+<input type="text" id="lName" placeholder="Nom"><br/>
+
+<label for="eMail">Courriel</label><br/> 
+<input type="text" id="eMail" placeholder="prenom.nom@courriel.com"><br/>
+
+<label for="age">Age</label><br> 
+<input type="number" min="13" max="113" step="1" placeholder="13" id="age" /> <br>
+
+<label for="tel">Telephone</label><br/> 
+<input type="tel" id="tel" placeholder="1(234)567-8901"><br/>
+
+<label for="uName">Nom d'utilisateur</label><br/> 
+<input type="text" id="uName" placeholder="Nom d'utilisateur"><br/>
+
+<label for="uPw">Mot de passe</label><br/> 
+<input type="password" id="uPw" placeholder="Pa5SWOrd"><br/>
+
+<label for="uCpw">Confirmer votre Mot de passe</label><br/> 
+<input type="password" id="uCpw" placeholder="pas5W0rd" required><br/>
+
+<input type="submit" value="Submit"> 
+</form> 
 </div>
-</dialog>
+</dialog> 
+<!-- -->
+  <dialog id="connection" class="modal"> 
+    <div class="modal-content"> 
+      <button onclick="connection.close()" class="close">X</button> 
+      <h1>Connection</h1> 
+<form name="vForm" action="#" onsubmit='validate()'>
+<label for="uName">Nom d'utilisateur</label><br/> 
+<input type="text" id="vUname" placeholder="userName" required> <br/>
+<label for="uPw">Mot de passe</label><br/> 
+<input type="password" id="vUpw" placeholder="pas5W0rd" required><br/>
+<input type="submit" value="Submit"> 
+</form> 
+</div>
+</dialog> 
+
+
   <a href="mailto:marccormier85@outlook.com?subject=github.io">Contact</a>
+  <a href="admin.htm">webmaster</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
@@ -170,8 +202,8 @@
     <a href="peridotColorPattern.htm" class="menu">Peridot Color Pattern</a>
     <a href="content/dom" class="menu">JS HTML DOM</a>
     <a href="content/node" class="menu">Interface Node DOM</a>
-    <a href="build" class="menu">build.html</a>
     <a href="skydiveLoggerApp" class="menu">skydiveLoggerApp DATA To HTML Table</a>
+    <a href="tableAdessin.htm" class="dropbtn">table à déssiner</a>
     <a href="https://tinyurl.com/esoGuildWebpage" class="menu">ESO Guild</a>
     <a href="mcbrady" class="menu">#MCBrady</a>
   </div>
@@ -179,11 +211,11 @@
 <div class="dropdown">
   <button onclick="windowBtn()" class="dropbtn">Window</button>
   <div id="windowBtn" class="dropdown-content">
-    <a href="#Object" class="menu">Object</a>
+    <a onclick="winObj()" class="menu">Object</a>
     <a href="#Console" class="menu">Console</a>
     <a href="#History" class="menu">History</a>
     <a href="#Location" class="menu">Location</a>
-    <a href="domNav.htm" class="menu">Navigator</a>
+    <a onclick="winNavObj()" class="menu">Navigator</a>
     <a href="#Screen" class="menu">Screen</a>
   </div>
 </div>
@@ -250,8 +282,9 @@
 <a href="compiler/binaryCompiler.htm">Binaire</a> 
 </div>
 </div>
-<a href="tableAdessin.htm" class="dropbtn">Déssiner</a>
-<div id="content" class="codes"></div>
+<div id="content" class="codes">
+    <center><img src="content/img/enConstruction.jpg"></center>
+</div>
 <center>
 <a href="http://www.linktr.ee/mcormier">
 <img id="linktree" src="https://logowik.com/content/uploads/images/linktree-new-2022-favicon8503.logowik.com.webp"/></a>
@@ -396,8 +429,6 @@ document.getElementById("time").innerHTML=res;
   var year = new Date().getFullYear();
 document.getElementById('copy').innerHTML = "&#169 "+year+" <a href='https://marccormier.github.io/' style='text-decoration:none;color:black;'>Marc Cormier</a> ";
 </script>
-<script type="text/javascript" src="content/js/copyPasteCheck.js"></script>
-<script type="text/javascript" src="content/js/eventTarget.js"></script>
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -433,6 +464,17 @@ function portFolio() {
 function windowBtn() {
   document.getElementById("windowBtn").classList.toggle("show");
 }
+//function winObj(){document.getElementById('content').innerHTML+=window.innerHeight;}
+//
+function winNavObj() {
+  var winNavObj=document.createElement("OBJECT");
+  winNavObj.setAttribute("data", "domNav.htm");
+  winNavObj.setAttribute("width", "1000");
+  winNavObj.setAttribute("height", "300");
+  let div=document.getElementById('content');
+  div.append(winNavObj);
+}
+//
 function cssBorder() {
   document.getElementById("cssBorderBtn").classList.toggle("show");
 }

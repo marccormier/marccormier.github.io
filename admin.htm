@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="../../uAdPw.json"></script>
+</head>
+<body>
+<script type="text/javascript">
+admin=JSON.parse(uAdPw);
+adPw=admin[0].adminPass;
+out ="Bonjour, Admin.\n\n";
+out += "Entrez votre mot de passe :\n";
+out += "Cliquez sur OK pour continuer.\n\n";
+const user_input = window.prompt(out);
+if (user_input && user_input.trim() === adPw) {
+//if (user_input && user_input.trim() === "hello") {
+txtObj=document.createElement("OBJECT");
+txtObj.setAttribute("data", "../webMaster.htm");
+txtObj.setAttribute("width", "900");
+txtObj.setAttribute("height", "500");
+document.body.appendChild(txtObj);
+} else {
+  window.alert("Oupss !\nRecommencez ..");
+//  window.location.reload();
+}
+</script>
+</body>
+</html>

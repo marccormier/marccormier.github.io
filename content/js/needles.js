@@ -12,7 +12,7 @@ document.body.innerHTML += troisieme();
 // Numbers:
 let number = 38;
 // Strings:
-let color = "Perridot";
+let color = "Peridot";
 let lastName = "CORMIER";
 // Booleans
 let i = true;
