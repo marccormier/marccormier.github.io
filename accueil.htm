@@ -26,8 +26,8 @@
     @media only screen 
 and (min-device-width:320px) 
 and (max-device-width:480px) {
-#pics {width:50px;height:50px;position:absolute;left:0px;top:0px;}
-#img {width:50px;height:50px;}
+#pics {width:50px;height:50px;}
+#img {width:50px;height:50px;position:absolute;left:0px;top:0px;}
 }
 @media 
 only screen and (-webkit-mi-device-pixel-ration:1.5),
@@ -40,7 +40,7 @@ only screen and (min-device-pixel-ration:1.5) {}
     border:2px solid black;
     box-shadow:2px 3px 4px grey;
     overflow:hidden;
-    position: absolute;left:165px;
+    position:absolute;left:155px;top:7px;
 }
 #pics {
 width:100px;height:100px;
@@ -66,11 +66,10 @@ width:100px;height:100px;
 <body>
     <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
     <h5><marquee>JAVA, RWD, CSS3, CANVAS, SVG, PHP, MySQL, jQuery, AJAX, JSON, DOM, JavaScript, HTML 1.0, HTML 4.01, HTML5, XHTML, XML</marquee></h5>
+            <div id="img"><img id="pics" src="https://marccormier.github.io/content/img/pics/cookieHelmet-removebg-preview.png"/></div>
 <header>
     <nav>
         <h1 class="blog">Marc Cormier</h1>
-            <div id="img"><img id="pics" src="https://marccormier.github.io/content/img/pics/cookieHelmet-removebg-preview.png"/></div>
-
             <ul class="menu">
     <li><a href="#">À Propos</a>
      <ul class="submenu">
