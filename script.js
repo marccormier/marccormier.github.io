@@ -1,0 +1,117 @@
+function about() {
+  const content=document.getElementById("content");
+  content.innerHTML='<h2>Information Personnel</h2><hr><p>Mon nom est Marc et j&#39ai 38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j&#39affectionne tout particulierement. J&#39estime que l&#39age, la couleur, la religion, l&#39apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n&#39a pas lieu d&#39être sur le net. <br/>Je documente tout ce que j&#39apprends et aide les gens à commencer dans le codage. <br />Mon site n&#39a pas de publicités, de sponsors ou de &#39bullshit&#39. <br /><br />Je n&#39aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.<br /><br />J&#39espere que votre consultation répondra a vos attentes. <br /><br />Je suis très intéressé par le codage, après un peu plus de 20 ans de presence sur le net, j&#39ai continuer à apprendre le codage avec <a href="https://www.sololearn.com/">sololearn</a>. Je me suis ensuite inscrit au formations informatique à l&#39<a href="https://www.formation-ifp.com/">institut de formation professionnel</a> (Entretien &#38; Réparation D&#39ordinateur, Spécialiste Internet et Programmation JAVA).<br />Toussent terminer avec une note finale de plus de 80% ainsi j&#39ai aussi choisis de creer un site sans pour autant tout vous devoiler, car le net reste malgre tout un monde virtuel, et j&#39aime garder une petite part du mystere sur ma personalitée.<br /><br />Si vous appréciez mon contenu, pensez à soutenir ce que je fais.</p>';
+}
+function skills() {
+  const content=document.getElementById("content");
+  content.innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>HTMl</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>JAVA</li></ul></center>';
+}
+function codes() {
+  const content=document.getElementById("content");
+  content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p><h3>HTML</h3><ul><li><a href="">PSW Generator</a></li><li><a href="#scope.htm">snippets</a></li></ul><h3>CSS</h3><ul><li><a href="">CSS Needles Library</a></li></ul><h3>JavaScript</h3><ul><li><a href="">AJAX</a></li><li><a href="">Time</a></li><li><a href="">domLib</a></li><li><a href="">Gestion d&#39opérations</a></li><li><a href="">Générateur de Table HTML</a></li><li><a href="">OSC</a></li><li><a href="">needles</a></li></ul><h3>jQuery</h3><ul><li><a href="">Gestion des mouvements et des boutons de la souris</a></li></ul><h3>PHP</h3><ul><li><a href="">Gestion de fichiers</a></li><li><a href="">Appels Système</a></li><li><a href="">Gestion de Formulaire</a></li><li><a href="">Gestion de cookies</a></li><li><a href="">Gestion d&#39utilisateurs</a></li><li><a href="">Gestion de Session</a></li><li><a href="">Gestion d&#39erreurs</a></li></ul><h3>JAVA</h3><ul><li><a href="">Coffee Machine</a></li><li><a href="">Gestion de fichiers</a></li><li><a href="">Gestion de bulletin de notes</a></li><li><a href="">Gestion de comptes bancaire</a></li><li><a href="">Sapin en Swing</a></li></ul><h3>Shell Scripting Language</h3><ul><li><a href="">file Sorting</a></li> <li><a href="">List Files In Folder</a></li> <li><a href="">Windows error Fixer</a></li> <li><a href="">Clone File Checker</a></li> <li><a href="">clear Cache</a></li> </ul><h3>mSL</h3><ul><li><a href="">MCBrady</a></li></ul>';
+}
+//
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  topBtn.style.display = "block";
+  } else {
+  topBtn.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+//
+setInterval(clock, 1);
+function clock() {
+const d = new Date();
+let time = d.getTime();
+let sec = d.getSeconds();
+let min = d.getMinutes();
+let millisec = d.getMilliseconds();
+let hour = d.getHours();
+let fYear = d.getFullYear();
+let date = d.getDate();
+let day;
+
+/*
+const weekday = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+const d = new Date();
+let day = weekday[d.getDay()];
+*/
+
+switch (d.getDay()) {
+  case 0:
+  day = "Dimanche";
+  break;
+  case 1:
+  day = "Lundi";
+  break;
+  case 2:
+  day = "Mardi";
+  break;
+  case 3:
+  day = "Mercredi";
+  break;
+  case 4:
+  day = "Jeudi";
+  break;
+  case 5:
+  day = "Vendredi";
+  break;
+  case  6:
+  day = "Samedi";
+}
+
+let month;
+switch (d.getMonth()) {
+  case 0:
+  month = "Janvier";
+  break;
+  case 1:
+  month = "Février";
+  break;
+  case 2:
+  month = "Mars";
+  break;
+  case 3:
+  month = "Avril";
+  break;
+  case 4:
+  month = "Mai";
+  break;
+  case 5:
+  month = "Juin";
+  break;
+  case  6:
+  month = "Juillet";
+  break;
+  case 7:
+  month = "Août";
+  break;
+  case  8:
+  month = "Septembre";
+  break;
+  case  9:
+  month = "Octobre";
+  break;
+  case  10:
+  month = "Novembre";
+  break;
+  case  11:
+  month = "Décembre";
+}
+hour = hour < 10 ? "0" + hour : hour;
+min = min < 10 ? "0" + min : min;
+sec = sec < 10 ? "0" + sec : sec;
+month = month < 10 ? "0" + month : month;
+day = day < 10 ? "0" + day : day;
+let res=day+", "+date+"&nbsp"+month+"&nbsp"+fYear+"<br/>"+hour+":"+min+":"+sec+"."+millisec;
+document.getElementById("time").innerHTML=res;
+}
+document.getElementById('lastModif').innerHTML = document.lastModified;
+var year = new Date().getFullYear();
+document.getElementById('copy').innerHTML = "&#169 "+year+" <a href='https://marccormier.github.io/' style='text-decoration:none;color:black;'>Marc Cormier</a> ";
