@@ -23,16 +23,11 @@
     background-repeat: no-repeat; 
     background-size: 100% auto;
     }
-    @media only screen 
-and (min-device-width:320px) 
-and (max-device-width:480px) 
-{#picture {width:50px;height:50px;}
-}
-@media 
-only screen and (-webkit-mi-device-pixel-ration:1.5),
+@media only screen and (min-device-width:320px) and (max-device-width:480px)
+{#picture {display:none;} }
+@media only screen and (-webkit-mi-device-pixel-ration:1.5),
 only screen and (min-device-pixel-ration:1.5) 
-{#picture {width:50px;height:50px;}
-}
+{#picture {display:none;} }
 #picture {
     width:100px;height:100px;
     border-radius:50% 50% 50% 50%;
