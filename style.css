@@ -1,5 +1,5 @@
 /*reset*/
-/* html, body {height:100%} */
+html, body {height:100%}
 *{margin:0;padding:0;box-sizing:border-box;}
 ul{list-style:none;}
 body {
@@ -14,13 +14,15 @@ header {
 
 }
 h1{	color:#dff6b5;}
+
 nav {
 	max-width: 1100;
 	margin: 0 auto;
 	display:flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items:center;
 }
+
 .logo {
 	font-size:1.5rem;
 	color:#D5FF0A;
@@ -38,6 +40,7 @@ color:#D5FF0A;
 display:block;
 padding:9px 1.2rem;
 transition: background-color 22s ease, color 22s ease;
+z-index:1;
  }
 .menu a:hover {
 	background-color:#f34949;
@@ -49,6 +52,7 @@ transition: background-color 22s ease, color 22s ease;
 	width:140px;
 	left:0;
 	display: none;
+	z-index:2;
 }
 .submenu2 {
 	position: absolute;
@@ -57,6 +61,7 @@ transition: background-color 22s ease, color 22s ease;
 	top:0;
 	background-color: #2c3e50;
 	display: none;
+	z-index:3;
 }
 .menu li:hover > .submenu {
 	display: block;
