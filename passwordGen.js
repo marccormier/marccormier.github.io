@@ -8,7 +8,7 @@ function passwordGenerator(length) {
     return accumulator + chars[randomIndex];
   }, "");
   console.log(password);
-  let contt=document.getElementById('content');
+  let const=document.getElementById('content');
   contt.innerHTML="<center><h1>Random PassWord Generator</h1>"+"<h2>"+password+"</h2>"+"<input type='button' value='Changer' onclick='passwordGenerator(random_number)'/>";
 /*
   document.body.innerHTML="<center><h1>Random PassWord Generator</h1>"+"<h2>"+password+"</h2>"+"<input type='button' value='Changer' onclick='passwordGenerator(random_number)'/>"+"<br/><br/><input type='button' value='goBack' onclick='window.history.back()'/>"+"</center>";
