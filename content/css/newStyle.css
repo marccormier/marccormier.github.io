@@ -1,5 +1,5 @@
 /*reset*/
-html, body {height:100%;}
+html, body {width:100vw;height:100%;}
 *{margin:0;padding:0;box-sizing:border-box;}
 ul{list-style:none;}
 body {
@@ -23,11 +23,6 @@ nav {
 	align-items:center;
 }
 
-.logo {
-	font-size:1.5rem;
-	color:#D5FF0A;
-	font-weight:700;
-}
 .menu > li, .menu > a {
 	display:inline-block;
 }
@@ -41,7 +36,7 @@ display:block;
 padding:10px 1.5rem;
 transition: background-color 22s ease, color 22s ease;
 z-index:1;
- }
+}
 .menu a:hover {
 	background-color:#f34949;
 	color:#D5FF0A;
@@ -95,5 +90,5 @@ z-index:1;
 	background-color:#CCEE00;
 	word-wrap:break-word;
 	box-shadow:4px 4px 11px grey;
-	margin:30px;
+	margin:8px;
 }

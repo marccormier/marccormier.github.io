@@ -11,8 +11,8 @@ function imgGallery() {
 content.innerHTML='';
 const imgGallery=document.createElement("OBJECT");
 imgGallery.setAttribute("data", "content/gallery/index.html");
-imgGallery.setAttribute("width", "850px");
-imgGallery.setAttribute("height", "200px");
+imgGallery.setAttribute("width", "875px");
+imgGallery.setAttribute("height", "335px");
 imgGallery.setAttribute("id", "imgGallery");
 content.appendChild(imgGallery);
 }
