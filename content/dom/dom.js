@@ -1,4 +1,4 @@
-doc.write('<center> <h1>Interface HTML DOM Node</h1> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>');
+doc.write('<center> <h1>JS HTML DOM Node Interface</h1> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>');
 // Console
 // Document
 doc.write("<h3>Frames</h3>"); frames(); frames;

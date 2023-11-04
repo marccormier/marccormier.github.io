@@ -1,13 +1,70 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="refresh" content="5; URL=accueil.htm">
-<title>OUAIEB</title>
-</head>
-<style>
-body, html{height: 100%;margin:0;background-color:black;color:white;}
+      <meta charset='UTF-8'>
+  <meta name="viewport" content="width=320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="content/js/siteCountDown.js"></script>
+  <script type="text/javascript" src="content/js/needles.js"></script>
+  <script src="https://ipinfo.io/json?callback=recordData"></script>
+  <script type="text/javascript" src="content/js/OSC.js"></script>
+  <script type="text/javascript" src="content/js/copyPasteCheck.js"></script> 
+  <script type="text/javascript" src="content/js/eventTarget.js"></script>
+  <script type="text/javascript" src="content/js/add.js"></script>
+  <script type="text/javascript" src="content/js/validUser.js"></script>
+  <script type="text/javascript" src="content/js/passwordGen.js"></script>
+  <link rel="stylesheet" type="text/css" href="content/css/style.css">
+  <link rel="stylesheet" type="text/css" href="content/css/modalStyle.css">
+  <link rel="stylesheet" type="text/css" href="content/css/newStyle.css">
+  <link rel="stylesheet" type="text/css" href="content/css/loader.css">
+  <title>Marc Cormier</title>
+  <script type="text/javascript">
+loader = setTimeout(showPage, 3000);
+function showPage() {
+  document.getElementById("wrapper").style.display = "none";
+  document.querySelector("main").style.display = "block";
+}
+  </script>
+  <style type="text/css">
+    body{
+    margin:0px;
+    padding:0px;
+    background-image:url("https://marccormier.github.io/content/img/mainBg.PNG"); 
+    background-position: top;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    }
+@media only screen and (min-device-width:320px) and (max-device-width:480px)
+{#picture {display:none;} }
+@media only screen and (-webkit-mi-device-pixel-ration:1.5),
+only screen and (min-device-pixel-ration:1.5) 
+{#picture {display:none;} }
+#picture {
+    width:100px;height:100px;
+    border-radius:50% 50% 50% 50%;
+    border:2px solid black;
+    box-shadow:2px 3px 4px grey;
+    position:absolute;left:76px;top:30px;
+}
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 21px;
+  right: 23px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#topBtn:hover {background-color: #555;}
+.domAlink:hover{cursor:pointer;}
+/**/
+#wrapper{height: 100%;margin:0;background-color:black;color:white;}
 .middle{
   position: absolute;
   top: 50%;
@@ -17,54 +74,126 @@ body, html{height: 100%;margin:0;background-color:black;color:white;}
 }
 hr {margin:auto;width:40%}
 h1:hover{cursor:pointer}
-h1, #demo {margin:3px;padding:4px;}
+h1, #countDown {margin:3px;padding:4px;}
 img{max-width:562px;height:auto;}
-a{padding:4px;color:blue}
-a:hover{color:white}
-a:visited{color:purple}
+
 </style>
-<body onclick="alert('Coming Soon !');">
-<center>
-<div>
-<h1>Création MC<br />info Électro</h1>
+</head>
+<body>
+<div id="wrapper"><center>
+    <h1>Marc Cormier</h1>
     <hr>
-    <p id="demo" style="font-size:30px"></p>
-    <img src="content/img/enConstruction.jpg"><br />
-<a href="loading.htm">site en construction</a><br />
-<p>&copy 2023 Marc Cormier</p>
-</div></center>
+    <p id="countDown" style="font-size:30px"></p>
+    <img src="content/img/enConstruction.jpg"><br /> 
+    <p>&copy 2023 Marc Cormier</p>
+    <div id="loader"></div> 
+</center></div>
+    <main style="display:none;" id="main" class="animate-bottom">
+    <!-- <div id="img"> -->
+        <img id="picture" src="https://marccormier.github.io/content/img/pics/cookieHelmet-removebg-preview.png"/>
+    <!-- </div> -->
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+    <h5><marquee>JAVA, CSS3, RWD, SVG, CANVAS, jQuery, AJAX, PHP, MySQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee></h5>
+<header>
+    <nav>
+        <a href="https:///marccormier.github.io/"><h1 class="blog">Blog</h1></a>
+            <ul class="menu">
+    <li><a href="#">À Propos</a>
+     <ul class="submenu">
+    <li><a class="domAlink" onclick="about()">Marc Cormier</a></li>
+    <li><a class="domAlink" onclick="skills()">Compétences</a></li>
+    <li><a class="domAlink" onclick="codes()">Codes</a></li>
+    <li><a href="https://github.com/marccormier">git</a></li>
+    <li><a href="https://www.sololearn.com/profile/11530812">SoloLearn</a></li>
+    <li><a href="content/gallery/index.html">Gallerie</a></li>
+ </ul>
+ </li>
 
-<script type="text/javascript">
+    <li><a href="#">Projets</a>
+     <ul class="submenu">
+    <li><a href="#">Frontend</a>
+     <ul class="submenu2">
+      <li><a href="#">HTML</a> </li> 
+      <li><a href="#">CSS</a> </li> 
+      <li><a href="#">JAVASCRIPT</a> </li>
+     </ul>
+    </li>
+    <li><a href="#">Backend</a>
+     <ul class="submenu2">
+      <li><a href="#">NodeJS</a> </li> 
+      <li><a href="#">PHP</a> </li> 
+      <li><a href="#">Java</a> </li> 
+     </ul>
+     </li>
+     </ul>
+     </li>
 
-// Set the date we're counting down to
-var countDownDate = new Date("Aug 3, 2025 12:21:39").getTime();
+    <li><a href="#">Produits</a> </li>
 
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-  
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-  
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "<b>d</b> " + hours + "<b>h</b> "
-  + minutes + "<b>m</b> " + seconds + "<b>s</b> ";
-  
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-/*    document.getElementById("demo").innerHTML = "EXPIRED"; */
-    document.getElementById("demo").innerHTML = "<a style='text-decoration:none;font-weight:bold;' href='https://linktr.ee/mcormier'>EXPIRED</a>"; 
-	}
-}, 1000);
-</script>
+    <li><a href="#">Services</a>
+     <ul class="submenu">
+    <li><a href="#">Recyclage</a>
+     <ul class="submenu2">
+      <!-- <li><a href="#"></a> </li> -->
+     </ul>
+    </li>
+    <li><a href="#">Diagnostique</a>
+     <ul class="submenu2">
+      <!-- <li><a href="#"></a> </li> -->
+     </ul>
+    </li>
+    <li><a href="#">Réparation</a>
+     <ul class="submenu2">
+      <!-- <li><a href="#"></a> </li> -->
+     </ul>
+    </li>
+    <li><a href="#">Entretien</a>
+     <ul class="submenu2">
+      <!-- <li><a href="#"></a> </li> -->
+     </ul>
+     </li>
+    <li><a href="#">Maintenance</a>
+     <ul class="submenu2">
+      <!-- <li><a href="#"></a> </li> -->
+     </ul>
+     </li>
+    <li><a href="#">Web Design</a>
+     <ul class="submenu2">
+      <!-- <li><a href="#"></a> </li> -->
+     </ul>
+     </li>
+    <li><a href="#">Progiciel Java</a>
+     <ul class="submenu2">
+      <!-- <li><a href="#"></a> </li> -->
+     </ul>
+     </li>
+     </ul>
+     </li>
+    <li><a href="#">Connection</a> 
+        <ul class="submenu"> 
+            <li><a href="#">Inscription</a></li> 
+            <li><a href="#">Client</a></li> 
+            <li><a href="#">webmaster</a></li> 
+        </ul> 
+    </li>
+    <li><a href="mailto:marccormier85@outlook.com?subject=github.io">Contact</a> </li>
+    </ul>
+    </nav>
+</header>
+    <div id="content" class="content">
+    <center>
+   <img src="content/img/maintenance.jpg">
+    </center>
+</div>
+<footer>
+<center>
+    <h4> Suivez moi sur le ouaieb </h4>
+<p id="lastModif"></p>
+<p id='time'></p>
+<p id="copy"></p>
+</center>
+</footer>
+<script type="text/javascript" src="content/js/newScript.js"></script>
+</main>
 </body>
 </html>
