@@ -35,10 +35,16 @@ function showPage() {
     background-size: cover;
     }
 @media only screen and (min-device-width:320px) and (max-device-width:480px)
-{#picture {display:none;} }
+{
+    #picture {display:none;} 
+    #construction{max-width:50vw;height:auto;}
+}
 @media only screen and (-webkit-mi-device-pixel-ration:1.5),
 only screen and (min-device-pixel-ration:1.5) 
-{#picture {display:none;} }
+{
+    #picture {display:none;} 
+    #construction{max-width:50vw;height:auto;}
+}
 #picture {
     width:100px;height:100px;
     border-radius:50% 50% 50% 50%;
@@ -75,8 +81,7 @@ only screen and (min-device-pixel-ration:1.5)
 hr {margin:auto;width:40%}
 h1:hover{cursor:pointer}
 h1, #countDown {margin:3px;padding:4px;}
-img{max-width:562px;height:auto;}
-
+#construction{max-width:50vw;height:auto;}
 </style>
 </head>
 <body>
@@ -84,7 +89,7 @@ img{max-width:562px;height:auto;}
     <h1>Marc Cormier</h1>
     <hr>
     <p id="countDown" style="font-size:30px"></p>
-    <img src="content/img/enConstruction.jpg"><br /> 
+    <img id="construction" src="content/img/enConstruction.jpg"><br /> 
     <p>&copy 2023 Marc Cormier</p>
     <div id="loader"></div> 
 </center></div>
