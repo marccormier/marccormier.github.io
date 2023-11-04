@@ -12,8 +12,6 @@ function imgGallery() {
 
 const imgGallery=document.createElement("OBJECT");
 imgGallery.setAttribute("data", "content/gallery/index.html");
-imgGallery.setAttribute("width", "600");
-imgGallery.setAttribute("height", "520");
 content.appendChild(imgGallery);
 }
 
