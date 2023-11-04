@@ -1,6 +1,6 @@
 function home() {
   const content=document.getElementById("content");
-  content.innerHTML='<center><img id="maintenance" src="content/img/maintenance.jpg"> <ul> <li><a href="mcbrady">#MCBrady</a></li> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="https://tinyurl.com/esoGuildWebpage">ESO Guild</a></li> </ul> </center>';
+  content.innerHTML='<center><img id="maintenance" style="max-width:50vw;height:auto;" src="content/img/maintenance.jpg"> <ul> <li><a href="mcbrady">#MCBrady</a></li> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="https://tinyurl.com/esoGuildWebpage">ESO Guild</a></li> </ul> </center>';
 }
 function about() {
   const content=document.getElementById("content");
