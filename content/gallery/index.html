@@ -5,12 +5,12 @@
 		<style>
 @media only screen and (min-device-width:320px) and (max-device-width:480px)
 {
-    #container{max-width:25vw;height:auto;}
+    #container{max-width:50vw;height:auto;}
 }
-@media only screen and (-webkit-mi-device-pixel-ration:1.5),
-only screen and (min-device-pixel-ration:1.5) 
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min-device-pixel-ratio:1.5) 
 {
-    #container{max-width:25vw;height:auto;}
+    #container{max-width:50vw;height:auto;}
 }
 body{
 background-color: #F0ED73;
@@ -18,8 +18,8 @@ background-color: #F0ED73;
 #container{
 	background-color:white;
 	margin:auto;
-	height:60vh;
-	width:52vh;
+	height:auto;
+	width:100vh;
 	display:flex;
 	border: 5px solid green;
 	overflow-x:scroll;
@@ -30,7 +30,7 @@ img{
 	padding:10px;
 	scroll-snap-align:center;
 	object-fit:contain;
-	max-width:47vh;
+	max-width:60vw;
 	max-height:55vh;
 }
 </style>
