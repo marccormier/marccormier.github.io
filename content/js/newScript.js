@@ -1,13 +1,27 @@
+function home() {
+  const content=document.getElementById("content");
+  content.innerHTML='<center><img src="content/img/maintenance.jpg"> <ul> <li><a href="mcbrady">#MCBrady</a></li> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="https://tinyurl.com/esoGuildWebpage">ESO Guild</a></li> </ul> </center>';
+}
 function about() {
   const content=document.getElementById("content");
   content.innerHTML='<h2>Information Personnel</h2><hr><p>Mon nom est Marc et j&#39ai 38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j&#39affectionne tout particulierement. J&#39estime que l&#39age, la couleur, la religion, l&#39apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n&#39a pas lieu d&#39être sur le net. <br/>Je documente tout ce que j&#39apprends et aide les gens à commencer dans le codage. <br />Mon site n&#39a pas de publicités, de sponsors ou de &#39bullshit&#39. <br /><br />Je n&#39aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.<br /><br />J&#39espere que votre consultation répondra a vos attentes. <br /><br />Je suis très intéressé par le codage, après un peu plus de 20 ans de presence sur le net, j&#39ai continuer à apprendre le codage avec <a href="https://www.sololearn.com/">sololearn</a>. Je me suis ensuite inscrit au formations informatique à l&#39<a href="https://www.formation-ifp.com/">institut de formation professionnel</a> (Entretien &#38; Réparation D&#39ordinateur, Spécialiste Internet et Programmation JAVA).<br />Toussent terminer avec une note finale de plus de 80% ainsi j&#39ai aussi choisis de creer un site sans pour autant tout vous devoiler, car le net reste malgre tout un monde virtuel, et j&#39aime garder une petite part du mystere sur ma personalitée.<br /><br />Si vous appréciez mon contenu, pensez à soutenir ce que je fais.</p>';
 }
+function imgGallery() {
+  const content=document.getElementById("content");
+  content.innerHTML='';
+
+const imgGallery=document.createElement("OBJECT");
+imgGallery.setAttribute("data", "content/gallery/index.html");
+imgGallery.setAttribute("width", "600");
+imgGallery.setAttribute("height", "520");
+content.appendChild(imgGallery);
+}
+
 function skills() {
   const content=document.getElementById("content");
   content.innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>HTMl</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>JAVA</li></ul></center>';
 }
-
-const htmlCodes='<h3>HTML</h3> <ul>Color Picker <input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a href="#scope.htm">snippets</a></li> <li><a href="compiler/htmlCompiler.htm">Compilateur HTML</a></li> <li><a href="compiler/binaryCompiler.htm">Compilateur Binaire</a></li> <li><a href="peridotColorPattern.htm">Peridot color pattern</a></li> <li><a href="content/dom">JS HTML DOM Node Interface</a></li> <li><a href="#">Window Object</a></li> <li><a href="#">DOM Styles</a></li> <li><a href="#">HTML Events</a></li> <li><a href="https://tinyurl.com/esoGuildWebpage">ESO Guild.html</a></li> <li><a href="skydiveLoggerApp">Skydive Logger APP Data to HTML Table</a></li> </ul> <br/>';
+const htmlCodes='<h3>HTML</h3> <ul>Color Picker <input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a href="#scope.htm">snippets</a></li> <li><a href="compiler/htmlCompiler.htm">Compilateur HTML</a></li> <li><a href="compiler/binaryCompiler.htm">Compilateur Binaire</a></li> <li><a href="peridotColorPattern.htm">Peridot color pattern</a></li> <li><a href="content/dom">JS HTML DOM Node Interface</a></li> <li><a href="#">Window Object</a></li> <li><a href="#">DOM Styles</a></li> <li><a href="#">HTML Events</a></li> </ul> <br/>';
 const cssCodes='<h3>CSS</h3><ul><li><a href="">CSS Needles Library</a></li></ul><br/>';
 const jsCodes='<h3>JavaScript</h3><ul><li><a href="">AJAX</a></li><li><a href="">Time</a></li><li><a href="">domLib</a></li><li><a href="">Gestion d&#39opérations</a></li><li><a href="">Générateur de Table HTML</a></li><li><a href="">OSC</a></li><li><a href="">needles</a></li></ul> <br/>';
 const jQueryCodes='<h3>jQuery</h3> <ul> <li><a href="">Gestion des mouvements et des boutons de la souris</a></li> <li><a href="content/snippets/jQuery.html">jQuery</a></li> </ul> <br/>';
