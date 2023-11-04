@@ -8,10 +8,12 @@ function about() {
 }
 function imgGallery() {
   const content=document.getElementById("content");
-  content.innerHTML='';
-
+content.innerHTML='';
 const imgGallery=document.createElement("OBJECT");
 imgGallery.setAttribute("data", "content/gallery/index.html");
+imgGallery.setAttribute("width", "850px");
+imgGallery.setAttribute("height", "200px");
+imgGallery.setAttribute("id", "imgGallery");
 content.appendChild(imgGallery);
 }
 
