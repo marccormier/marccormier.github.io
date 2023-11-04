@@ -10,11 +10,11 @@
 <script type="text/javascript" src="content/js/eventTarget.js"></script>
     <script src="https://ipinfo.io/json?callback=recordData"></script>
     <link rel="stylesheet" type="text/css" href="content/css/style.css">
-      <link rel="stylesheet" type="text/css" href="modalStyle.css">
-  <script type="text/javascript" src="add.js"></script>
-  <script type="text/javascript" src="validUser.js"></script>
-  <script type="text/javascript" src="passwordGen.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="content/css/modalStyle.css">
+  <script type="text/javascript" src="content/js/add.js"></script>
+  <script type="text/javascript" src="content/js/validUser.js"></script>
+  <script type="text/javascript" src="content/js/passwordGen.js"></script>
+    <link rel="stylesheet" type="text/css" href="content/css/newStyle.css">
     <title>Marc Cormier</title>
     <style type="text/css">
     body{
@@ -53,6 +53,7 @@ only screen and (min-device-pixel-ration:1.5)
   border-radius: 4px;
 }
 #topBtn:hover {background-color: #555;}
+.domAlink:hover{cursor:pointer;}
 </style>
 </head>
 <body>
@@ -67,9 +68,9 @@ only screen and (min-device-pixel-ration:1.5)
             <ul class="menu">
     <li><a href="#">À Propos</a>
      <ul class="submenu">
-    <li><a onclick="about()">Marc Cormier</a></li>
-    <li><a onclick="skills()">Compétences</a></li>
-    <li><a onclick="codes()">Codes</a></li>
+    <li><a class="domAlink" onclick="about()">Marc Cormier</a></li>
+    <li><a class="domAlink" onclick="skills()">Compétences</a></li>
+    <li><a class="domAlink" onclick="codes()">Codes</a></li>
     <li><a href="https://github.com/marccormier">git</a></li>
     <li><a href="https://www.sololearn.com/profile/11530812">SoloLearn</a></li>
     <li><a href="content/gallery/index.html">Gallerie</a></li>
@@ -156,6 +157,6 @@ only screen and (min-device-pixel-ration:1.5)
 <p id="copy"></p>
 </center>
 </footer>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="content/js/newScript.js"></script>
 </body>
 </html>
