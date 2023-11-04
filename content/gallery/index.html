@@ -3,7 +3,16 @@
 	<head>
 		<title>Image Gallery</title>
 		<style>
-		body{
+@media only screen and (min-device-width:320px) and (max-device-width:480px)
+{
+    #container{max-width:25vw;height:auto;}
+}
+@media only screen and (-webkit-mi-device-pixel-ration:1.5),
+only screen and (min-device-pixel-ration:1.5) 
+{
+    #container{max-width:25vw;height:auto;}
+}
+body{
 background-color: #F0ED73;
 }
 #container{
@@ -24,13 +33,9 @@ img{
 	max-width:47vh;
 	max-height:55vh;
 }
-H1, #foot{
-text-align:center;
-}
 </style>
 	</head>
 	<body>
-	<a href="../../" style="text-decoration:none;color:black;"><h1>MarcCormier.GitHub.io</h1></a>
 	<div id="container">
 	<img src="../img/iisstart.png">
 	<img src="../img/windows.jpg">
@@ -51,10 +56,5 @@ text-align:center;
 		<img src="">
 		<img src="">
 </div>
-	<div id="foot">
-	   <h1>
-		  images gallery		  
-	   </h1> 
-	</div>		
 	</body>
 </html>
