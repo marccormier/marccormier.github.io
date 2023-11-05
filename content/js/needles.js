@@ -57,6 +57,7 @@ comment=document.createComment()
 <!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
 <!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+//
 // Stylesheets
 <!--  Internet Explorer 6 -->
 <!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="css/ie/ie6.css" />
@@ -241,7 +242,6 @@ var time=document.createElement('time');
  ul=doc.createElement('ul');
  ol=doc.createElement('ol');
  li=doc.createElement('li');
- footer=doc.createElement('footer');
 //
 // doc Frag loop exemple
 const fruits = ["Banane", "Orange", "Mangue", "Pomme", "Poire", "Cerise", "Pêche", "Raisin", "Tomate"];
