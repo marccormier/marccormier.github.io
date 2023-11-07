@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="data.json"></script>
+<script type="text/javascript">
+	localStorage.clear();
+
+mydata = JSON.parse(data);
+i=mydata[0].needles;
+
+localStorage.setItem('needles', i);
+
+a= localStorage.getItem("needles");
+
+document.write(a+'<br/>localStorage JSON DATA End <<<');
+</script>
+</head>
+</html>
