@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=320" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="content/js/siteCountDown.js"></script>
-  <script type="text/javascript" src="content/js/needles.js"></script>
   <script src="https://ipinfo.io/json?callback=recordData"></script>
-  <script type="text/javascript" src="content/js/OSC.js"></script>
   <script type="text/javascript" src="content/js/copyPasteCheck.js"></script> 
   <script type="text/javascript" src="content/js/eventTarget.js"></script>
   <script type="text/javascript" src="content/js/add.js"></script>
@@ -45,7 +43,7 @@ only screen and (min-device-pixel-ratio:1.5) {}
     border-radius:50% 50% 50% 50%;
     border:2px solid black;
     box-shadow:2px 3px 4px grey;
-    position:absolute;left:76px;top:30px;
+    position:absolute;left:76px;top:32px;
 }
 #topBtn {
   display: none;
@@ -83,7 +81,7 @@ marquee{margin:0px;padding:0px;}
 </head>
 <body>
 <div id="wrapper"><center>
-    <h1>Marc Cormier</h1>
+    <h1>Marc Cormier</h1><span>Programmeur Informatique Indépendant</span>
     <hr>
     <p id="countDown" style="font-size:30px"></p>
     <img id="construction" src="content/img/enConstruction.jpg"><br /> 
@@ -91,9 +89,7 @@ marquee{margin:0px;padding:0px;}
     <div id="loader"></div> 
 </center></div>
     <main style="display:none;" id="main" class="animate-bottom">
-    <!-- <div id="img"> -->
-        <img id="picture" src="https://marccormier.github.io/content/img/pics/cookieHelmet-removebg-preview.png"/>
-    <!-- </div> -->
+        <img id="picture" src="content/img/pics/me.png"/>
     <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
     <h5><marquee>JAVA, CSS3, RWD, SVG, CANVAS, jQuery, AJAX, PHP, SQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee></h5>
 <header>
@@ -111,6 +107,8 @@ marquee{margin:0px;padding:0px;}
     <li><a class="domAlink" onclick="imgGallery()">Photos / Images</a></li>
  </ul>
  </li>
+
+    <li><a class="domAlink" onclick="article()">Acticle</a></li>
 
     <li><a href="#">Projets</a>
      <ul class="submenu">
@@ -196,6 +194,9 @@ marquee{margin:0px;padding:0px;}
 <footer>
 <center>
 <h4> <a href="https://shor.by/mcormier">Suivez moi sur le ouaieb</a> </h4>
+<!--
+<h4> <a href="https://linktr.ee/mcormier">Suivez moi sur le ouaieb</a> </h4>
+-->
 <p id="lastModif"></p>
 <p id='time'></p>
 <p id="copy"></p>
