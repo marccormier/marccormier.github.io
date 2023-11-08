@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Interface</title>
+	<style type="text/css">html, body{font-size:14px};</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+	doc=document;win=window;
+hr=function hr() {doc.body.innerHTML+="<hr>"; }
+</script>
+<script type="text/javascript" src="domNode.js"></script>
+</head>
+<body>
+<meter value="1" max="9" alt="htmlMeterTag"></meter>
+<progress value="8" max="9" alt="htmlProgressTag">
+	<script type="text/javascript">
+doc.body.innerHTML+='<center> <h1>JS HTML DOM Node Interface</h1> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>';
+// Console
+// Document
+doc.body.innerHTML+="<h3>Frames</h3>"; frames(); frames;
+doc.body.innerHTML+="<h3>frameElement</h3>"; frame(); 
+doc.body.innerHTML+="<h3>innerHeight</h3>"; innerHeight(); 
+doc.body.innerHTML+="<h3>innerWidth</h3>"; innerWidth(); 
+doc.body.innerHTML+="<h3>outerHeight</h3>"; outerHeight(); 
+doc.body.innerHTML+="<h3>outerWidth</h3>"; outerWidth(); 
+doc.body.innerHTML+="<h2>Console</h2>"; 
+doc.body.innerHTML+="<h2>History</h2>"; historyLength(); 
+doc.body.innerHTML+="<h2>Location</h2>"; 
+doc.body.innerHTML+="<h2>Navigator</h2>"; 
+doc.body.innerHTML+="<h2>Screen</h2>"; 
+hr();
+doc.body.innerHTML+="<h2>HTML DOM Documents</h2>";
+doc.body.innerHTML+="<h3>doctype</h3>"; docType();
+doc.body.innerHTML+="<h3>URL</h3>"; docUrl();
+doc.body.innerHTML+="<h3>documentElement</h3>"; docElement();
+doc.body.innerHTML+="<h3>URI</h3>"; docUri();
+doc.body.innerHTML+="<h3>Domain</h3>"+document.domain; docDomain();
+/*
+The domain property returns the domain name of the server (the document was loaded from).
+The domain property returns null if the document was created in memory.
+*/
+doc.body.innerHTML+="<h3>Forms</h3>"; docFormsLength();
+//doc.body.innerHTML+="Formulaires 1 name: "+doc.forms[0].name);
+//doc.body.innerHTML+="Formulaires 2 ID: "+doc.forms[1].id);
+doc.body.innerHTML+="<h3>Head</h3>"; docHead();
+doc.body.innerHTML+="<h4>Head tagName</h4>"; docHeadTagName();
+doc.body.innerHTML+="<h4>Head FirstElementChildtagName</h4>"; docHeadFirstElementChildtagName();
+doc.body.innerHTML+="<h3>Images</h3>"; docImagesLength();
+//doc.body.innerHTML+="Images 1 ID : "+doc.images[0].id);
+//doc.body.innerHTML+="Images 2 Attribut border : "+doc.images[1].border);
+//doc.body.innerHTML+="Images 3 Attribut src : "+doc.images[2].src);
+//doc.body.innerHTML+="Images 4 Attribut width : "+doc.images[3].width);
+//doc.body.innerHTML+="Images 4 Attribut height : "+doc.images[3].height);
+doc.body.innerHTML+="<h3>DOM implementation</h3>"; docImplementation();
+doc.body.innerHTML+="<h4>DOMimplementation hasFreature 'DOM' '1.0'</h4>"; docImplementationHasDom();
+doc.body.innerHTML+="<h4>DOMimplementation hasFreature 'TESLA' 'X'</h4>"; docImplementationHasTesla();
+doc.body.innerHTML+="<h3>lastModified</h3>"; docLastModified();
+doc.body.innerHTML+="<h4>lastModified property into a date object</h4>"; docLastModifiedDateObj();
+doc.body.innerHTML+="<h3>Links</h3>";
+//doc.body.innerHTML+="Links 2 ID : "+doc.links[1].id);
+//doc.body.innerHTML+="Links 3 URL : "+doc.links[2].href);
+docLinksLength();
+// querySelector
+doc.body.innerHTML+="<h3>Referrer</h3>"; docReferrer();
+doc.body.innerHTML+="<h3>Scripts length</h3>"; docScriptsLength();
+doc.body.innerHTML+="<h3>Title</h3>"; docTitle();
+doc.body.innerHTML+="<h3>HTML DOM Elements</h3>";
+doc.body.innerHTML+="<h3>childElementCount</h3>"; docChildElementCount();
+doc.body.innerHTML+="<h3>childNodes</h3>"; docChildNodes();
+/*
+cNl=doc.body.childNodes.length;
+doc.body.innerHTML+="<h2>childNodes.length</h2>"+cNl);
+doc.body.innerHTML+="<hr>");
+*/
+doc.body.innerHTML+="<h3>children</h3>"; docChildren();
+doc.body.innerHTML+="<h3>firstChild</h3>"; docFirstChild();
+doc.body.innerHTML+="<h3>firstElementChild</h3>"; docFirstElementChild();
+doc.body.innerHTML+="<h3>lastChild</h3>"; docLastChild();
+doc.body.innerHTML+="<h3>lastElementChild</h3>"; docLastElementChild();
+doc.body.innerHTML+="<h3>nextSibling</h3>"; docNextSibling();
+doc.body.innerHTML+="<h3>nextElementSibling</h3>"; docNextElementSibling();
+doc.body.innerHTML+="<h3>nodeName</h3>"; docNodeName();
+doc.body.innerHTML+="<h3>nodeType</h3>"; docNodeType();
+doc.body.innerHTML+="<h3>nodeValue</h3>"; docNodeValue();
+/*
+offsetHeight  Returns the height of an element, including padding, border and scrollbar
+offsetWidth Returns the width of an element, including padding, border and scrollbar
+offsetLeft  Returns the horizontal offset position of an element
+offsetParent  Returns the offset container of an element
+offsetTop Returns the vertical offset position of an element
+outerHTML Sets or returns the content of an element (including the start tag and the end tag)
+outerText Sets or returns the outer text content of a node and its descendants
+*/
+doc.body.innerHTML+="<h3>ownerDocument</h3>"; ownDoc();
+doc.body.innerHTML+='<h3>parentNode</h3>'; parentNode();
+doc.body.innerHTML+='<h3>parentElement</h3>'; parentElement();
+doc.body.innerHTML+="<h3>previousSibling</h3>"; docPreviousSibling();
+doc.body.innerHTML+="<h3>previousElementSibling</h3>"; docPreviousElementSibling();
+doc.body.innerHTML+="<h3>scrollHeight</h3>"; docScrollHeight();
+doc.body.innerHTML+="<h3>scrollWidth</h3>"; docScrollWidth();
+doc.body.innerHTML+="<h3>Style</h3>"; docStyle();
+hr();
+doc.body.innerHTML+="<h3>HTML DOM Attributes</h3>";
+doc.body.innerHTML+=doc.attributes;
+doc.body.innerHTML+="<h3>NamedNodeMap</h3>";
+doc.body.innerHTML+="<h3>DOM HTMLCollection</h3>";
+doc.body.innerHTML+="<h3>HTML DOM NodeList</h3>";
+doc.body.innerHTML+="<h3>HTML DOMTokenList</h3>";
+doc.body.innerHTML+="<h3>HTML DOM Style Object</h3>";
+hr();
+hr();
+doc.body.innerHTML+="<h2>html</h2>";
+doc.body.innerHTML+=doc.documentElement+
+  "<br>"+doc.documentElement.parentNode+
+  "<br>"+doc.documentElement.parentElement;
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>cookie</h2>";
+doc.body.innerHTML+="cookie : "+doc.cookie.length;
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>Browser Mode</h2>";
+doc.body.innerHTML+="Browser Mode : "+doc.documentMode;
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>input Encoding Character set</h2>";
+doc.body.innerHTML+="input Encoding Charset : "+doc.inputEncoding;
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>Loading status</h2>";
+doc.body.innerHTML+="readyState : "+doc.readyState;
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>error checking is enforced</h2>";
+doc.body.innerHTML+="strict Error Checking : "+doc.strictErrorChecking;
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>Embed</h2>";
+doc.body.innerHTML+="Embed : "+doc.embeds;
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>Ancre</h2>";
+doc.body.innerHTML+="Ancre : "+doc.anchors.length;
+//doc.body.innerHTML+=("Ancre 1 : "+doc.anchors[0].text);
+//doc.body.innerHTML+=("Ancre 2 name: "+doc.anchors[1].name);
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+="<h2>childNodes[i] .nodeName .nodeType .nodeValue</h2><br/>console.log(text);";
+const nodeList=document.body.childNodes;
+let text="";
+for(let i=0;i<nodeList.length;i++){text+=nodeList[i].nodeName+" "+nodeList[i].nodeType+" "+nodeList[i].nodeValue+"<br><br>";}
+console.log(text);
+doc.body.innerHTML+="<hr>";
+//
+doc.body.innerHTML+='<br/><center>&#169 2023 Marc Cormier</center><br/>';
+	</script>
+<noscript>Votre navigateur de supporte pas JavaScript.</noscript>
+</body>
+</html>

@@ -91,4 +91,6 @@ z-index:1;
 	word-wrap:break-word;
 	box-shadow:4px 4px 11px grey;
 	margin:8px;
+	max-width:98vw;
 }
+.subTcodes{font-weight:bold;text-decoration:underline;}

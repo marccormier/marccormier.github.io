@@ -4,15 +4,14 @@
     <meta charset='UTF-8'> 
     <meta name="viewport" content="width=320" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="content/js/siteCountDown.js"></script>
+  <script type="text/javascript" src="js/siteCountDown.js"></script>
   <script src="https://ipinfo.io/json?callback=recordData"></script>
-  <script type="text/javascript" src="content/js/copyPasteCheck.js"></script> 
-  <script type="text/javascript" src="content/js/eventTarget.js"></script>
-  <script type="text/javascript" src="content/js/add.js"></script>
-  <script type="text/javascript" src="content/js/validUser.js"></script>
-  <script type="text/javascript" src="content/js/passwordGen.js"></script>
-  <link rel="stylesheet" type="text/css" href="content/css/newStyle.css">
-  <link rel="stylesheet" type="text/css" href="content/css/loader.css">
+  <script type="text/javascript" src="js/add.js"></script>
+  <script type="text/javascript" src="js/validUser.js"></script>
+  <script type="text/javascript" src="js/passwordGen.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/newStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/loader.css">
+  <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon">
   <title>Marc Cormier</title>
   <script type="text/javascript">
 loader = setTimeout(showPage, 4321);
@@ -25,7 +24,7 @@ function showPage() {
     body{
     margin:0px;
     padding:0px;
-    background-image:url("https://marccormier.github.io/content/img/mainBg.PNG"); 
+    background-image:url("img/mainBg.PNG"); 
     background-position: top;
     background-repeat: no-repeat; 
     background-size: cover;
@@ -84,12 +83,12 @@ marquee{margin:0px;padding:0px;}
     <h1>Marc Cormier</h1><span>Programmeur Informatique Indépendant</span>
     <hr>
     <p id="countDown" style="font-size:30px"></p>
-    <img id="construction" src="content/img/enConstruction.jpg"><br /> 
+    <img id="construction" src="img/enConstruction.jpg"><br /> 
     <p>&copy 2023 Marc Cormier</p>
     <div id="loader"></div> 
 </center></div>
     <main style="display:none;" id="main" class="animate-bottom">
-        <img id="picture" src="content/img/pics/me.png"/>
+        <div id="contPicture"><img id="picture" src="img/pics/me.png"/></div>
     <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
     <h5><marquee>JAVA, CSS3, RWD, SVG, CANVAS, jQuery, AJAX, PHP, SQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee></h5>
 <header>
@@ -104,7 +103,7 @@ marquee{margin:0px;padding:0px;}
     <li><a class="domAlink" onclick="codes()">Codes</a></li>
     <li><a href="https://github.com/marccormier">git</a></li>
     <li><a href="https://www.sololearn.com/profile/11530812">SoloLearn</a></li>
-    <li><a class="domAlink" onclick="imgGallery()">Photos / Images</a></li>
+    <li><a class="domAlink" onclick="imgGallery()">Photos</a></li>
  </ul>
  </li>
 
@@ -183,7 +182,7 @@ marquee{margin:0px;padding:0px;}
 </header>
     <div id="content" class="content">
     <center>
-   <img src="content/img/maintenance.jpg">
+   <img src="img/maintenance.jpg">
      <ul>
       <li><a href="mcbrady">#MCBrady</a></li>
       <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li>
@@ -202,7 +201,7 @@ marquee{margin:0px;padding:0px;}
 <p id="copy"></p>
 <center>
 </footer>
-<script type="text/javascript" src="content/js/newScript.js"></script>
+<script type="text/javascript" src="js/newScript.js"></script>
 </main>
 </body>
 </html>
