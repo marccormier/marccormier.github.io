@@ -22,11 +22,64 @@ htDomStyle.setAttribute("height", "335px");
 content.appendChild(htDomStyle);
 }
 //
+function htmlDOMnode() {
+content.innerHTML='';
+const htDom=document.createElement("OBJECT");
+htDom.setAttribute("data", "htmlDOM.html");
+htDom.setAttribute("width", "875px");
+htDom.setAttribute("height", "335px");
+content.appendChild(htDom);
+}
+//
+function peridotColorPattern() {
+content.innerHTML='';
+const peridotCpattern=document.createElement("OBJECT");
+peridotCpattern.setAttribute("data", "peridotColorPattern.htm");
+peridotCpattern.setAttribute("width", "875px");
+peridotCpattern.setAttribute("height", "335px");
+content.appendChild(peridotCpattern);
+}
+function htmlCompiler() {
+content.innerHTML='';
+const htmlCompil=document.createElement("OBJECT");
+htmlCompil.setAttribute("data", "compiler/htmlCompiler.htm");
+htmlCompil.setAttribute("width", "875px");
+htmlCompil.setAttribute("height", "335px");
+content.appendChild(htmlCompil);
+}
+//
+function binCompiler() {
+content.innerHTML='';
+const binCompil=document.createElement("OBJECT");
+binCompil.setAttribute("data", "compiler/binaryCompiler.htm");
+binCompil.setAttribute("width", "875px");
+binCompil.setAttribute("height", "335px");
+content.appendChild(binCompil);
+}
+//
+function cssSnips() {
+content.innerHTML='';
+const cssSnip=document.createElement("OBJECT");
+cssSnip.setAttribute("data", "cssSnip.htm");
+cssSnip.setAttribute("width", "875px");
+cssSnip.setAttribute("height", "335px");
+content.appendChild(cssSnip);
+}
+//
+function jQuerySnips() {
+content.innerHTML='';
+const jQuerySnip=document.createElement("OBJECT");
+jQuerySnip.setAttribute("data", "jQuerySnip.htm");
+jQuerySnip.setAttribute("width", "875px");
+jQuerySnip.setAttribute("height", "335px");
+content.appendChild(jQuerySnip);
+}
+//
 function skills() {content.innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>HTMl</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>JAVA</li></ul></center>'; }
-const htmlCodes='<h3>HTML</h3> <ul>Color Picker<br/><input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a class="domAlink" onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a href="Snippets/">snippets</a></li> <li><a href="compiler/htmlCompiler.htm">Compilateur HTML</a></li> <li><a href="compiler/binaryCompiler.htm">Compilateur Binaire</a></li> <li><a href="peridotColorPattern.htm">Peridot color pattern</a></li> <li><a href="htmlDOM.html">JS HTML DOM Node Interface</a></li> <li><a class="subTcodes">Window Object</a></li> <li><a class="domAlink" onclick="winNav()">Navigator</a></li> <li><a class="domAlink" onclick="domStyles()">DOM Styles</a></li> <li><a>HTML Events</a></li> </ul> <br/>';
+const htmlCodes='<h3>HTML</h3> <ul>Color Picker<br/><input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a class="domAlink" onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a class="domAlink" onclick="cssSnips()">CSS Snippets</a></li> <li><a class="domAlink" onclick="htmlCompiler()">Compilateur HTML</a></li> <li><a class="domAlink" onclick="binCompiler()">Compilateur Binaire</a></li> <li><a onclick="peridotColorPattern()">Peridot color pattern</a></li> <li><a class="domAlink" onclick="htmlDOMnode()">JS HTML DOM Node Interface</a></li> <li><a class="subTcodes">Window Object</a></li> <li><a class="domAlink" onclick="winNav()">Navigator</a></li> <li><a class="domAlink" onclick="domStyles()">DOM Styles</a></li> <li><a>HTML Events</a></li> </ul> <br/>';
 const cssCodes='<h3>CSS</h3><ul><li><a>CSS Needles Library</a></li></ul><br/>';
 const jsCodes='<h3>JavaScript</h3><ul><li><a>AJAX</a></li><li><a>Time</a></li><li><a>Gestion d&#39opérations</a></li><li><a>Générateur de Table HTML</a></li><li><a>OSC</a></li><li><a>needles</a></li></ul> <br/>';
-const jQueryCodes='<h3>jQuery</h3> <ul> <li><a>Gestion des mouvements et des boutons de la souris</a></li> <li><a href="snippets/jQuery.html">jQuery</a></li> </ul> <br/>';
+const jQueryCodes='<h3>jQuery</h3> <ul> <li><a>Gestion des mouvements et des boutons de la souris</a></li> <li><a class="domAlink" onclick="jQuerySnips()">jQuery Snippets</a></li> </ul> <br/>';
 const phpCodes='<h3>PHP</h3><ul><li><a>Gestion de fichiers</a></li><li><a>Appels Système</a></li><li><a>Gestion de Formulaire</a></li><li><a>Gestion de cookies</a></li><li><a>Gestion d&#39utilisateurs</a></li><li><a>Gestion de Session</a></li><li><a>Gestion d&#39erreurs</a></li></ul><br/>';
 const javaCodes='<h3>JAVA</h3><ul><li><a>Coffee Machine</a></li><li><a>Gestion de fichiers</a></li><li><a>Gestion de bulletin de notes</a></li><li><a>Gestion de comptes bancaire</a></li><li><a>Sapin en Swing</a></li></ul><br/>';
 const shellScriptCodes='<h3>Shell Scripting Language</h3><ul><li><a>file Sorting</a></li> <li><a>List Files In Folder</a></li> <li><a>Windows error Fixer</a></li> <li><a>Clone File Checker</a></li> <li><a>clear Cache</a></li> </ul><br/>';

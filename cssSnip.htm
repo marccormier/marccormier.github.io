@@ -36,14 +36,14 @@
 </head>
 <body>
   <center>
-    <h1><a href="../">MarcCORMIER.gitHub.io</a></h1>
+<h1>CSS Snippet</h1>
 <h2>Flip Card</h2>
   </center>
 <center>
  <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="http://marccormier.github.io/content/img/pics/me.png" alt="photo" style="width:300px;height:300px;">
+      <img src="img/pics/me.png" alt="photo" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
       <h1>Marc Cormier</h1> 
@@ -53,7 +53,7 @@
 </div>
 </center>
 <hr>
-<h2>CSS Media Query</h2>
+<h2>Media Query</h2>
 <!--
 <div>
   <h2>CSS BREAKPOINTS</h2>
@@ -73,11 +73,10 @@
 <textarea style="width:680px;height:45px;" readonly>
 <link media="screen and (max-device-width: 480px)" rel="stylesheet" href="m.css" /> 
 <link media="only screen and (max-device-width: 480px)" rel="stylesheet" href="m.css" /></textarea>
-<p><u>Let's break down your examples one by one.</u><br /><br />
-@media (max-width:632px)<br />
-This one is saying for a window with a max-width of 632px that you want to apply these styles.<br />At that size you would be talking about anything smaller than a desktop screen in most cases.<br /><br />
+<p>@media (max-width:632px)<br />
+is saying for a window with a max-width of 632px that you want to apply these styles.<br />At that size you would be talking about anything smaller than a desktop screen in most cases.<br /><br />
 @media screen and (max-width:632px)<br />
-This one is saying for a device with a screen and a window with max-width of 632px apply the style.<br />This is almost identical to the above except you are specifying screen as opposed to the other available media types the most common other one being print.<br /><br />
+is saying for a device with a screen and a window with max-width of 632px apply the style.<br />This is almost identical to the above except you are specifying screen as opposed to the other available media types the most common other one being print.<br /><br />
 @media only screen and (max-width:632px)<br />
 Here is a quote straight from W3C to explain this one.<br /><br />
 The keyword ‘only’ can also be used to hide style sheets from older user agents. User agents must process media queries starting with ‘only’ as if the ‘only’ keyword was not present.<br /><br />
@@ -87,7 +86,7 @@ As there is no such media type as "only", the style sheet should be ignored by o
 <hr>
 
 
-<h2>Span Parent Node</h2>
+<h2>Span Parent Node</h2><h3>CSS html DOM Style</h3>
 <div id="ezParentNode">
 <span onclick="this.parentNode.style.display='none';" class="closebtn">X</span>
 <p>click X to close.<br />onclick="this.parentNode.style.display='none';"</p>
@@ -147,7 +146,7 @@ Scroll to display the bounding client rect of the element with the border.
 <br/><br/>
 <script type="text/javascript" name="bgColor">
 	docBody=document.body;
-	var bgColor=prompt('background color ?', 'white');
+	var bgColor=prompt('background Color ?', 'orange');
 if (bgColor != null && bgColor === 'black') {
 docBody.style.backgroundColor=bgColor;
 docBody.style.color="white";
