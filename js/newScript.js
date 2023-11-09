@@ -13,15 +13,24 @@ imgGallery.setAttribute("id", "imgGallery");
 content.appendChild(imgGallery);
 }
 //
+function domStyles() {
+content.innerHTML='';
+const htDomStyle=document.createElement("OBJECT");
+htDomStyle.setAttribute("data", "htmlDomStyle.html");
+htDomStyle.setAttribute("width", "875px");
+htDomStyle.setAttribute("height", "335px");
+content.appendChild(htDomStyle);
+}
+//
 function skills() {content.innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>HTMl</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>JAVA</li></ul></center>'; }
-const htmlCodes='<h3>HTML</h3> <ul>Color Picker<br/><input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a class="domAlink" onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a href="snippets/">snippets</a></li> <li><a href="compiler/htmlCompiler.htm">Compilateur HTML</a></li> <li><a href="compiler/binaryCompiler.htm">Compilateur Binaire</a></li> <li><a href="peridotColorPattern.htm">Peridot color pattern</a></li> <li><a href="content/dom">JS HTML DOM Node Interface</a></li> <li><a href="#" class="subTcodes">Window Object</a></li> <li><a class="domAlink" onclick="winNav()">Navigator</a></li> <li><a href="#">DOM Styles</a></li> <li><a href="#">HTML Events</a></li> </ul> <br/>';
-const cssCodes='<h3>CSS</h3><ul><li><a href="">CSS Needles Library</a></li></ul><br/>';
-const jsCodes='<h3>JavaScript</h3><ul><li><a href="">AJAX</a></li><li><a href="">Time</a></li><li><a href="">domLib</a></li><li><a href="">Gestion d&#39opérations</a></li><li><a href="">Générateur de Table HTML</a></li><li><a href="">OSC</a></li><li><a href="">needles</a></li></ul> <br/>';
-const jQueryCodes='<h3>jQuery</h3> <ul> <li><a href="">Gestion des mouvements et des boutons de la souris</a></li> <li><a href="content/snippets/jQuery.html">jQuery</a></li> </ul> <br/>';
-const phpCodes='<h3>PHP</h3><ul><li><a href="">Gestion de fichiers</a></li><li><a href="">Appels Système</a></li><li><a href="">Gestion de Formulaire</a></li><li><a href="">Gestion de cookies</a></li><li><a href="">Gestion d&#39utilisateurs</a></li><li><a href="">Gestion de Session</a></li><li><a href="">Gestion d&#39erreurs</a></li></ul><br/>';
-const javaCodes='<h3>JAVA</h3><ul><li><a href="">Coffee Machine</a></li><li><a href="">Gestion de fichiers</a></li><li><a href="">Gestion de bulletin de notes</a></li><li><a href="">Gestion de comptes bancaire</a></li><li><a href="">Sapin en Swing</a></li></ul><br/>';
-const shellScriptCodes='<h3>Shell Scripting Language</h3><ul><li><a href="">file Sorting</a></li> <li><a href="">List Files In Folder</a></li> <li><a href="">Windows error Fixer</a></li> <li><a href="">Clone File Checker</a></li> <li><a href="">clear Cache</a></li> </ul><br/>';
-const mslCodes='<h3>mSL</h3><ul><li><a href="">MCBrady</a></li></ul>';
+const htmlCodes='<h3>HTML</h3> <ul>Color Picker<br/><input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a class="domAlink" onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a href="Snippets/">snippets</a></li> <li><a href="compiler/htmlCompiler.htm">Compilateur HTML</a></li> <li><a href="compiler/binaryCompiler.htm">Compilateur Binaire</a></li> <li><a href="peridotColorPattern.htm">Peridot color pattern</a></li> <li><a href="htmlDOM.html">JS HTML DOM Node Interface</a></li> <li><a class="subTcodes">Window Object</a></li> <li><a class="domAlink" onclick="winNav()">Navigator</a></li> <li><a class="domAlink" onclick="domStyles()">DOM Styles</a></li> <li><a>HTML Events</a></li> </ul> <br/>';
+const cssCodes='<h3>CSS</h3><ul><li><a>CSS Needles Library</a></li></ul><br/>';
+const jsCodes='<h3>JavaScript</h3><ul><li><a>AJAX</a></li><li><a>Time</a></li><li><a>Gestion d&#39opérations</a></li><li><a>Générateur de Table HTML</a></li><li><a>OSC</a></li><li><a>needles</a></li></ul> <br/>';
+const jQueryCodes='<h3>jQuery</h3> <ul> <li><a>Gestion des mouvements et des boutons de la souris</a></li> <li><a href="snippets/jQuery.html">jQuery</a></li> </ul> <br/>';
+const phpCodes='<h3>PHP</h3><ul><li><a>Gestion de fichiers</a></li><li><a>Appels Système</a></li><li><a>Gestion de Formulaire</a></li><li><a>Gestion de cookies</a></li><li><a>Gestion d&#39utilisateurs</a></li><li><a>Gestion de Session</a></li><li><a>Gestion d&#39erreurs</a></li></ul><br/>';
+const javaCodes='<h3>JAVA</h3><ul><li><a>Coffee Machine</a></li><li><a>Gestion de fichiers</a></li><li><a>Gestion de bulletin de notes</a></li><li><a>Gestion de comptes bancaire</a></li><li><a>Sapin en Swing</a></li></ul><br/>';
+const shellScriptCodes='<h3>Shell Scripting Language</h3><ul><li><a>file Sorting</a></li> <li><a>List Files In Folder</a></li> <li><a>Windows error Fixer</a></li> <li><a>Clone File Checker</a></li> <li><a>clear Cache</a></li> </ul><br/>';
+const mslCodes='<h3>mSL</h3><ul><li><a>MCBrady</a></li></ul>';
 function codes() {content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p>'+ htmlCodes+cssCodes+jsCodes+jQueryCodes+phpCodes+javaCodes+shellScriptCodes+mslCodes; }
 //
   function winNav(){
