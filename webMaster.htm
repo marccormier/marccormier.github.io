@@ -10,11 +10,12 @@ color:#fff
 input{margin:5px;}
 .wrapper{display:none;}
 </style></head>
-<body onload="valid()">
+<!-- <body onload="valid()"> -->
+<body>
 <div id="wrapper">
 <center>
-<h1>web key master</h1>
-<p>Window.localStorage Object[] Key Item Value{[]} is:</p>
+<h1>web master</h1>
+<p>Window.localStorage Object[] Key Item Value{[]} :</p>
 <p id="demo" style="font-weight:bold;"></p>
 <label for="itmKey" style="float:left;margin-left:28vw;">item Key Name</label><br/>
 <input type="text" id="itmKey" placeholder="lastname"> : 
@@ -27,7 +28,8 @@ input{margin:5px;}
 <input type="button" id="lOne" value="Loop Key" onclick="loopOne()"><br/>
 <input type="button" id="lTwo" value="Loop Key and Value" onclick="loopTwo()"><br/>
 <input type="button" id="lThree" value="Loop localStorage Window Object Items Value" onclick="loopThree()"><br/><br/>
-<input type="button" id="clsConsole" value="Clear Console" onclick="console.clear()"><br/>
+<input type="button" id="clsConsole" value="Clear Console" onclick="console.clear()">
+<input type="button" id="cookies" value="Cookies" onclick=""><br/>
 <input type="button" value="System File" onclick="window.open('marccormier.github.io/index.htm')" style="font-weight:bold;">
 <span>< - ></span>
 <input type="button" value="localHost" onclick="window.open('http://127.0.0.1/')" style="font-weight:bold;">
@@ -134,9 +136,7 @@ function lsRemoveItem(keyname) {
 //	Removes that key from the storage
 	document.body.innerHTML+=localStorage.removeItem(keyname);
 }
-function lsClear() {
-	document.body.innerHTML+=localStorage.clear();	
-}
+function lsClear() {document.body.innerHTML+=localStorage.clear(); }
 */
 </script>
 </center>
