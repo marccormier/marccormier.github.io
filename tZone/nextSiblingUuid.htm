@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">*{margin:4px;}input{width:200px;text-align:center;}</style>
+</head>
+<body><center>
+<input type="text" id="uemail" placeholder="courriel@domain.com" /><br/>
+
+<input type="text" id="uName" placeholder="userName" /><br/>
+
+<input type="password" id="uPword" placeholder="Mot de passe" /><br/>
+
+<input type="text" id="fName" placeholder="Prénom" /><br/>
+<input type="text" id="lName" placeholder="Nom de famille" /><br/>
+<button id='createEnemy' onclick='addUser()'>Add Enenmy</button> 
+</center>
+<p id="demo"></p>
+ <script>
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition);
+} else {alert("Geolocation is not supported by this browser."); }
+function showPosition(position) {
+  loc=position.coords.latitude+","+position.coords.longitude;
+}
+  // Class name { ... }
+ users = []; 
+ function addUser() {
+
+y=document.getElementById("demo");
+uName=document.getElementById('uName').value;
+uPword=document.getElementById('uPword').value;
+fName=document.getElementById('fName').value;
+lName=document.getElementById('lName').value;
+uemail=document.getElementById('uemail').value;
+
+function uuId() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+uuId=uuId();
+
+function uFullName(){return fName+" "+lName};
+
+uL="user"+(users.length+1);
+
+localStorage.setItem('usersLength', users.length+1);
+
+const newUser = [
+  {uL : [
+{
+  "email": uemail,
+  "fName":fName,
+  "lName":lName,
+  "name":uFullName(),
+  "uName":uName,
+/* 
+MOT DE PASSE ALÉATOIRE TEMPORAIRE ENVOYEZ PAR COURRIEL 
+(Account Confirmation)
+*/
+  "uPword":uPword,
+  "uuid":uuId,
+  "uTime":Date(Date.now()),
+"city" : "",
+"country" : "",
+"hostname" : "",
+"ip" : "",
+"loc" : loc,
+"org" : "",
+"postal" : "",
+"region" : ""
+} ] } ]
+
+users.push(newUser); 
+
+const uData=JSON.stringify(newUser[0].uL).slice(1, -1);
+
+localStorage.setItem(uL, uData);
+
+y.innerHTML=uData;
+console.log(newUser[0].uL); 
+} 
+</script>
+</body>
+</html>

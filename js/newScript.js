@@ -86,7 +86,7 @@ const shellScriptCodes='<h3>Shell Scripting Language</h3><ul><li><a>file Sorting
 const mslCodes='<h3>mSL</h3><ul><li><a>MCBrady</a></li></ul>';
 function codes() {content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p>'+ htmlCodes+cssCodes+jsCodes+jQueryCodes+phpCodes+javaCodes+shellScriptCodes+mslCodes; }
 //
-  function winNav(){
+function winNav(){
     var caracteristiquesNavigateur = "";
     caracteristiquesNavigateur = "<h2>window.navigator;</h2><br/>";
     caracteristiquesNavigateur += "Code du navigateur : "
