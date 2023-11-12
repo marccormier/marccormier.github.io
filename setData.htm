@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="data.json"></script>
+</head>
+<body>
+<p id="para"></p>
+<script type="text/javascript">
+para=document.getElementById('para');
+const obj=JSON.parse(data);
+
+let abc=obj.slice(1, -1);
+//let abc=JSON.stringify(obj).slice(1, -1);
+
+for (let i=0;i<obj.length;i++) {
+	for(j in abc[i]) {
+//		for(k in abc[i][j]) {}
+			localStorage.setItem(j, abc[i][j]);
+}
+}
+
+// a=localStorage.setItem('needles', obj[1].needles);
+b=localStorage.getItem('needles');
+
+bScript=document.createElement("script");
+bScript.type="text/javascript";
+bScript.innerHTML=b;
+document.body.append(bScript);
+
+//O('para').innerHTML='Hell o jSON<br/>';
+</script>
+</body>
+</html> 
