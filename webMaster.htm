@@ -10,8 +10,11 @@ color:#fff
 input{margin:5px;}
 .wrapper{display:none;}
 </style>
+<body>
+<!--
 <body onload="valid()">
 <div id="wrapper">
+-->
 <center>
 <h1>web key master</h1>
 <p>Window.localStorage Object[] Key Item Value{[]} is:</p>
@@ -34,7 +37,7 @@ input{margin:5px;}
 <input type="button" value="php Admin" onclick="window.open('http://127.0.0.1/phpMyAdmin')" style="font-weight:bold;">
 <span>< - ></span>
 <input type="button" value="gitHub webSite" onclick="window.open('https://marccormier.github.io/')" style="font-weight:bold;">
-</div>
+<!-- </div> -->
 <script>
 lspw=localStorage.getItem('master');
 function showPage() {document.getElementById("wrapper").style.display = "block"; }
