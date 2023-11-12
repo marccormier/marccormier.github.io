@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/newStyle.css">
   <link rel="stylesheet" type="text/css" href="css/loader.css">
   <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon">
-  <title>Marc Cormier</title>
+  <title>MC info Électro | Marc Cormier</title>
   <script type="text/javascript">
 loader = setTimeout(showPage, 4321);
 function showPage() {
@@ -81,7 +81,7 @@ marquee{margin:0px;padding:0px;}
 </head>
 <body>
 <div id="wrapper"><center>
-    <h1>Marc Cormier</h1><span>Programmeur Informatique Indépendant</span>
+    <h1>Marc Cormier</h1><span>Programmeur Informatique</span>
     <hr>
     <p id="countDown" style="font-size:30px"></p>
     <img id="construction" src="img/enConstruction.jpg"><br /> 
@@ -131,7 +131,7 @@ marquee{margin:0px;padding:0px;}
 
     <li><a href="#">Produits</a> </li>
 
-    <li><a href="#">Services</a>
+    <li><a onclick="services()">Services</a>
      <ul class="submenu">
     <li><a href="#">Recyclage</a>
      <ul class="submenu2">
@@ -170,13 +170,7 @@ marquee{margin:0px;padding:0px;}
      </li>
      </ul>
      </li>
-    <li><a href="#">Connection</a> 
-        <ul class="submenu"> 
-            <li><a href="#">Inscription</a></li> 
-            <li><a href="#">Client</a></li> 
-            <li><a href="webMaster.htm">webmaster</a></li> 
-        </ul> 
-    </li>
+    <li><a onclick="login()">Connection</a></li>
     <li><a href="mailto:cormiermac.mc85@gmail.com?subject=gitHub">Contact</a> </li>
     </ul>
     </nav>
@@ -200,6 +194,7 @@ marquee{margin:0px;padding:0px;}
 <p id="lastModif"></p>
 <p id='time'></p>
 <p id="copy"></p>
+<a href="webMaster.htm"><i>webMaster</i></a>
 <center>
 </footer>
 <script type="text/javascript" src="js/newScript.js"></script>

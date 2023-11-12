@@ -38,7 +38,7 @@ transition: background-color 22s ease, color 22s ease;
 z-index:1;
 }
 .menu a:hover {
-	background-color:#f34949;
+	background-color:#FFA500;
 	color:#D5FF0A;
 }
 .submenu {
