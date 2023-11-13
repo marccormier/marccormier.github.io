@@ -35,7 +35,6 @@ function showPage() {
     #picture {display:none;} 
     #construction{max-width:50vw;height:auto;}
     #imgGallery{width:85vw;min-height:200px;}
-    /**
     .submenu {
     position:absolute;
     background-color: #2c3e50;
@@ -53,7 +52,14 @@ function showPage() {
     display: none;
     z-index:3;
     }
-    **/
+    .menu li:hover > .submenu {
+    display: block;
+    animation: slideup .3s ease; 
+} 
+.submenu li:hover > .submenu2 {
+    display: block; 
+    animation: slideright .3s ease; 
+}
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 only screen and (min-device-pixel-ratio:1.5) {}
