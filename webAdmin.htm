@@ -10,7 +10,7 @@ color:#fff
 input{margin:5px;}
 .wrapper{display:none;}
 </style></head>
-<body onload="valid()">
+<body>
 <div id="wrapper">
 <center>
 <h1>web master</h1>
@@ -30,11 +30,8 @@ input{margin:5px;}
 <input type="button" id="clsConsole" style="font-weight:bold;" value="Clear Console" onclick="console.clear()">
 <input type="button" id="cookies" value="Cookies" onclick=""><br/>
 <input type="button" value="System File" onclick="window.open('marccormier.github.io/index.htm')" style="font-weight:bold;">
-<span>< - ></span>
 <input type="button" value="localHost" onclick="window.open('http://127.0.0.1/')" style="font-weight:bold;">
-<span>< - ></span>
 <input type="button" value="php Admin" onclick="window.open('http://127.0.0.1/phpMyAdmin')" style="font-weight:bold;">
-<span>< - ></span>
 <input type="button" value="gitHub webSite" onclick="window.open('https://marccormier.github.io/')" style="font-weight:bold;">
 </div>
 <script>
@@ -45,7 +42,7 @@ lspw=localStorage.getItem('master');
 function showPage() {document.getElementById("wrapper").style.display = "block"; }
 function valid(){
 let text=prompt("Password :");
-if (text === lspw) {showPage(); } else {alert(`Wrong password : ${text}`);document.body.innerHTML='<center><h1>Bonjour.</h1></center>'; } }
+if (text == lspw) {showPage(); } else {alert(`Wrong password : ${text}`);document.body.innerHTML='<center><h1>Bonjour.</h1></center>'; } }
 
 storage=localStorage.length;
 localStorage.setItem('Storage', storage);

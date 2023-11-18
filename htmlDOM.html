@@ -10,11 +10,19 @@
 hr=function hr() {doc.body.innerHTML+="<hr>"; }
 </script>
 <script type="text/javascript" src="domNode.js"></script>
+
+<script type="text/javascript" src="dom/console.js"></script>
+<script type="text/javascript" src="dom/consoleEverything.js"></script>
+<script type="text/javascript" src="dom/document.js"></script>
+<script type="text/javascript" src="dom/eventHandler.js"></script>
+<script type="text/javascript" src="dom/location.js"></script>
+<script type="text/javascript" src="dom/screen.js"></script>
+<script type="text/javascript" src="dom/window.js"></script>
 </head>
 <body>
 	<script type="text/javascript">
 dBodyTxt=doc.body;
-dBodyTxt.innerHTML='<center> <h1>JS HTML DOM Node Interface</h1> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>';
+dBodyTxt.innerHTML='<center> <h1>JS HTML DOM Node Interface</h1><p>Press F12 to Open DevTools and Click on Console..</p> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>';
 // Console
 // Document
 dBodyTxt.innerHTML+="<h3>Frames</h3>"; frames(); frames;

@@ -88,7 +88,7 @@ function codes() {content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, 
 //
 function winNav(){
     var caracteristiquesNavigateur = "";
-    caracteristiquesNavigateur = "<h2>window.navigator;</h2><br/>";
+    caracteristiquesNavigateur = "<h2>navigator;</h2><br/>";
     caracteristiquesNavigateur += "Code du navigateur : "
     + navigator.appCodeName + "<br>";
     caracteristiquesNavigateur += "Nom du navigateur : "
