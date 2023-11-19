@@ -100,6 +100,13 @@ console.info(messageEvent.lastEventId);
 console.info(messageEvent.source);
 console.info(messageEvent.ports);
 } 
-window.addEventListener("resize", function(){
-  console.info('Window rezized');
+window.addEventListener("resize", function(){ console.log('resize : '+window) });
+/*
+window.addEventListener("resize", () => {
+		// CODE
 });
+// Cross-browser solution (IE support)
+var resizeEvent = window.document.createEvent('UIEvents'); 
+resizeEvent.initUIEvent('resize', true, false, window, 0); 
+window.dispatchEvent(resizeEvent);
+*/

@@ -119,6 +119,7 @@ function winNav(){
 //
 function login() {
   O('content').innerHTML="<h2>Tableau de bord</h2>";
+  /*
 let storedText;
 fetch('https://ipinfo.io/json?callback') .then(function(response) {
   response.text().then(function(text) {
@@ -128,6 +129,7 @@ fetch('https://ipinfo.io/json?callback') .then(function(response) {
     O('content').innerHTML+=dt;
   });
 });
+*/
 bientot();
 }
 //

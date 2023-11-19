@@ -7,6 +7,7 @@ for/of - loops through the values of an iterable object
 while - loops through a block of code while a specified condition is true
 do/while - also loops through a block of code while a specified condition is true
 */
+dBodyTxt=doc.body;
 winInnerHeight=win.innerHeight;
 innerHeight=function innerHeight() {
 	document.write(innerHeight+"<br/>"+winInnerHeight); 
