@@ -119,8 +119,18 @@ function winNav(){
 //
 function login() {
   O('content').innerHTML="<h2>Tableau de bord</h2>";
-  bientot();
+let storedText;
+fetch('https://ipinfo.io/json?callback') .then(function(response) {
+  response.text().then(function(text) {
+    let storedText = text;
+    let str=storedText.toString();
+    let dt=str.slice(1, -48);
+    O('content').innerHTML+=dt;
+  });
+});
+bientot();
 }
+//
 function bientot() {
   out += "BIENTOT / SOON"+"\n";
   out += "Contacter moi par courriel au besoin."+"\n";

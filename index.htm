@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=320" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="js/siteCountDown.js"></script>
-  <script src="https://ipinfo.io/json?callback=recordData"></script>
   <script type="text/javascript" src="js/add.js"></script>
   <script type="text/javascript" src="js/validUser.js"></script>
   <script type="text/javascript" src="js/passwordGen.js"></script>
@@ -173,7 +172,11 @@ marquee{
      </li>
      </ul>
      </li>
-    <li><a onclick="login()">Connection</a></li>
+    <li><a onclick="login()">Connection</a>
+        <ul class="submenu">
+            <li><a href="storage.htm"><i>webAdmin</i></a></li>
+        </ul>
+    </li>
     <li><a href="mailto:cormiermac.mc85@gmail.com?subject=gitHub">Contact</a> </li>
     </ul>
     </nav>
@@ -197,7 +200,6 @@ marquee{
 <p id="lastModif"></p>
 <p id='time'></p>
 <p id="copy"></p>
-<a href="webAdmin.htm"><i>webMaster</i></a>
 <center>
 </footer>
 <script type="text/javascript" src="js/newScript.js"></script>
