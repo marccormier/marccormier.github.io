@@ -17,7 +17,7 @@ hr=function hr() {doc.body.innerHTML+="<hr>"; }
 <body>
 	<script type="text/javascript">
 dBodyTxt=doc.body;
-dBodyTxt.innerHTML='<center> <h1>JS HTML DOM Node Interface</h1><p>Press F12 to Open DevTools and Click on Console..</p> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>';
+dBodyTxt.innerHTML='<center> <h1>JS HTML DOM Node Interface</h1><p>Press F12 to Open DevTools and Click on Console.. (refresh page)</p> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>';
 // Console
 // Document
 dBodyTxt.innerHTML+="<h3>Frames</h3>"; frames(); frames;
@@ -148,12 +148,14 @@ dBodyTxt.innerHTML+="Ancre : "+doc.anchors.length;
 //dBodyTxt.innerHTML+=("Ancre 2 name: "+doc.anchors[1].name);
 dBodyTxt.innerHTML+="<hr>";
 //
+/*
 dBodyTxt.innerHTML+="<h2>childNodes[i] .nodeName .nodeType .nodeValue</h2><br/>console.log(text);";
 const nodeList=document.body.childNodes;
 let text="";
 for(let i=0;i<nodeList.length;i++){text+=nodeList[i].nodeName+" "+nodeList[i].nodeType+" "+nodeList[i].nodeValue+"<br><br>";}
 console.log(text);
 dBodyTxt.innerHTML+="<hr><br/>";
+*/
 //
 </script>
 	<span>html Meter Tag</span><br/>

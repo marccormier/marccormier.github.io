@@ -84,9 +84,10 @@ elem.addEventListener('volumechange', eventHandler);
 elem.addEventListener('waiting', eventHandler);
 elem.addEventListener('wheel', eventHandler);
 function eventHandler(event) {
+	console.log('event : '+event.target.tagName);
+	console.groupCollapsed('event event.target event.target.tagName');
 	console.log(event);
 	console.log(event.target);
-	console.log(event.target.tagName);
 	//event(event);
 }
 function mouseEvent(event) {console.info('mouseEvent'); }
