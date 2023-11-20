@@ -4,17 +4,18 @@
     <meta charset='UTF-8'> 
     <meta name="viewport" content="width=320" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/lStorage.js"></script>
   <script type="text/javascript" src="js/siteCountDown.js"></script>
   <script type="text/javascript" src="js/add.js"></script>
   <script type="text/javascript" src="js/validUser.js"></script>
   <script type="text/javascript" src="js/passwordGen.js"></script>
-  <script type="text/javascript" src="visitorCount.js"></script>
+  <script type="text/javascript" src="js/views.js"></script>
   <link rel="stylesheet" type="text/css" href="css/newStyle.css">
   <link rel="stylesheet" type="text/css" href="css/loader.css">
   <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon">
   <title>MC info Électro | Marc Cormier</title>
   <script type="text/javascript">
-loader = setTimeout(showPage, 4321);
+loader = setTimeout(showPage, 3210);
 function showPage() {
   document.getElementById("wrapper").style.display = "none";
   document.querySelector("main").style.display = "block";
@@ -103,7 +104,6 @@ marquee{
      <ul class="submenu">
     <li><a class="domAlink" onclick="about()">Marc Cormier</a></li>
     <li><a class="domAlink" onclick="skills()">Compétences</a></li>
-    <li><a class="domAlink" onclick="codes()">Codes</a></li>
     <li><a href="https://github.com/marccormier">git</a></li>
     <li><a href="https://www.sololearn.com/profile/11530812">SoloLearn</a></li>
     <li><a class="domAlink" onclick="imgGallery()">Photos</a></li>
@@ -130,6 +130,7 @@ marquee{
       <li><a href="#">Java</a> </li> 
      </ul>
      </li>
+    <li><a class="domAlink" onclick="codes()">Codes</a></li>
      </ul>
      </li>
 

@@ -76,7 +76,7 @@ content.appendChild(jQuerySnip);
 }
 //
 function skills() {content.innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>HTMl</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>JAVA</li></ul></center>'; }
-const htmlCodes='<h3>HTML</h3> <ul>Color Picker<br/><input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a class="domAlink" onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a class="domAlink" onclick="cssSnips()">CSS html DOM Snippets</a></li> <li><a class="domAlink" onclick="htmlCompiler()">Compilateur HTML</a></li> <li><a class="domAlink" onclick="binCompiler()">Compilateur Binaire</a></li> <li><a onclick="peridotColorPattern()">Peridot color pattern</a></li> <li><a class="domAlink" onclick="htmlDOMnode()">JS HTML DOM Node Interface</a></li> <li><a class="subTcodes">Window Object</a></li> <li><a class="domAlink" onclick="winNav()">Navigator</a></li> <li><a class="domAlink" onclick="domStyles()">DOM Styles</a></li> <li><a>HTML Events</a></li> </ul> <br/>';
+const htmlCodes='<h3>HTML</h3> <ul>Color Picker<br/> <input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a class="domAlink" onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a class="domAlink" onclick="winNav()">Navigator Properties</a></li> <li><a class="domAlink" onclick="cssSnips()">CSS html DOM Snippets</a></li> <li><a class="domAlink" onclick="domStyles()">JS html DOM Styles</a></li> <li><a class="domAlink" onclick="htmlDOMnode()">JS HTML DOM Interface</a></li> <li><a onclick="peridotColorPattern()">Peridot color pattern</a></li> <li><a class="domAlink" onclick="htmlCompiler()">Compilateur HTML</a></li> <li><a class="domAlink" onclick="binCompiler()">Compilateur Binaire</a></li> <li><a class="subTcodes">Window Object</a></li> <li><a>HTML Events</a></li> </ul> <br/>';
 const cssCodes='<h3>CSS</h3><ul><li><a>CSS Needles Library</a></li></ul><br/>';
 const jsCodes='<h3>JavaScript</h3><ul><li><a>AJAX</a></li><li><a>Time</a></li><li><a>Gestion d&#39opérations</a></li><li><a>Générateur de Table HTML</a></li><li><a>OSC</a></li><li><a>needles</a></li></ul> <br/>';
 const jQueryCodes='<h3>jQuery</h3> <ul> <li><a>Gestion des mouvements et des boutons de la souris</a></li> <li><a class="domAlink" onclick="jQuerySnips()">jQuery Snippets</a></li> </ul> <br/>';
@@ -88,7 +88,7 @@ function codes() {content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, 
 //
 function winNav(){
     var caracteristiquesNavigateur = "";
-    caracteristiquesNavigateur = "<h2>navigator;</h2><br/>";
+    caracteristiquesNavigateur = "<h2>navigator Properties</h2><br/>";
     caracteristiquesNavigateur += "Code du navigateur : "
     + navigator.appCodeName + "<br>";
     caracteristiquesNavigateur += "Nom du navigateur : "
@@ -99,7 +99,7 @@ function winNav(){
     + navigator.cookieEnabled + "<br>";
     caracteristiquesNavigateur += "Géolocation : "
     + navigator.geolocation + "<br>";
-//    + coor + "<br>";
+/* + coor + "<br>"; */
     caracteristiquesNavigateur += "javaEnabled : "
     + navigator.javaEnabled() + "<br>";
     caracteristiquesNavigateur += "Language : "
@@ -119,7 +119,13 @@ function winNav(){
 //
 function login() {
   O('content').innerHTML="<h2>Tableau de bord</h2>";
-  /*
+/*
+const uInfo=document.createElement("OBJECT");
+uInfo.setAttribute("data", "https://ipinfo.io/json?callback");
+uInfo.setAttribute("width", "875px");
+uInfo.setAttribute("height", "335px");
+O('content').append(uInfo);
+*/
 let storedText;
 fetch('https://ipinfo.io/json?callback') .then(function(response) {
   response.text().then(function(text) {
@@ -129,7 +135,6 @@ fetch('https://ipinfo.io/json?callback') .then(function(response) {
     O('content').innerHTML+=dt;
   });
 });
-*/
 bientot();
 }
 //
@@ -146,6 +151,7 @@ function services() {
 O('content').innerHTML="<h2>Services</h2>"+
 "ENTRETIEN & RÉPARATION D'ORDINATEUR<br/>"+ 
 "Diagnostique des problèmes matériel ou logiciel, Récupération de mots de passe, Récupération et sauvegarde de données, Nettoyage à l'air de vos équipements électroniques et ordinateurs, Remplacement de disque dur, Installation et configuration d’imprimante, Élimination de virus, nettoyage d’ordinateur Formatage, installation de Windows<br/><br/>"+
+"<center><img id='maintenance' style='max-width:50vw;height:auto;' src='img/maintenance.jpg'><br/>"+
 "MAINTENANCE & DÉPANNAGE RÉSEAUX<br/>"+
 "Configuration de réseau sans-fil, Câblages, Codage des données, topologie, protocoles, adressage<br/><br/>"+
 "CONCEPTION GRAPHIQUE & WEBDESIGN<br/>"+
@@ -176,13 +182,15 @@ function tarif() {O('content').innerHTML="<h2>Tarif</h2>"+
 "** prix minimum pour un déplacement: 1 heure selon tarif.<br/>"+
 "* Minimum 1 heure  *<br/><br/>"+
 "* peut varier en fonction des certifications et/ou compétences du technicien ou administrateur reseaux.<br/><br/>"+
-"** prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement.<br/><br/>";
+"** prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement.<br/><br/>"+
+"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>";
 }
 function zone() {O('content').innerHTML="<h2>Zone de service</h2>"+
 "<p style='text-decoration:line-through;'>Rive-Nord</p>"+
 "Laval<br/>"+
 "Montréal<br/>"+
-"<p style='text-decoration:line-through;'>Rive-Sud</p>";
+"<p style='text-decoration:line-through;'>Rive-Sud</p>"+
+"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />";
 }
 //
 let topBtn = document.getElementById("topBtn");
