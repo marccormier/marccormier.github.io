@@ -9,7 +9,10 @@ color:#fff
 }
 input{margin:5px;}
 .wrapper{display:none;}
-</style></head>
+</style>
+<script type="text/javascript" src="js/lStorage.js"></script>
+<script type="text/javascript" src="js/views.js"></script>
+</head>
 <body>
 <div id="wrapper">
 <center>
@@ -22,29 +25,21 @@ input{margin:5px;}
 <input type="button" id="get" value="Get Item value by Item Key name" onclick="get()"><br/>
 <input type="button" id="rem" style="font-weight:bold;color:darkorange;" value="Remove item and Value" onclick="rem()"><br/>
 <input type="button" id="cls" style="color:red;border:2px solid red;font-weight:bold;" value="Clear All Items" onclick="clearLs()"><br/>
-<input type="button" id="lsLength" value="localStorage Length" onclick="lsLength()"><br/>
-<input type="button" id="lOne" value="Loop Key" onclick="loopOne()"><br/>
-<input type="button" id="lTwo" value="Loop Key and Value" onclick="loopTwo()"><br/>
-<input type="button" id="lThree" value="Loop localStorage Window Object Items Value" onclick="loopThree()"><br/><br/>
-<input type="button" id="clsConsole" style="font-weight:bold;" value="Clear Console" onclick="console.clear()">
-<input type="button" id="cookies" value="Cookies" onclick=""><br/>
+<input type="button" id="lsLength" value="Length" onclick="lsLength()"><br/>
+<input type="button" id="lOne" value="Loop Key" onclick="loopKey()"><br/>
+<input type="button" id="lTwo" value="Loop Items" onclick="loopItems()"><br/>
+<input type="button" id="lThree" value="Loop Storage Object Items Value" onclick="loopObjects()"><br/><br/>
 <input type="button" value="System File" onclick="window.open('marccormier.github.io/index.htm')" style="font-weight:bold;">
 <input type="button" value="localHost" onclick="window.open('http://127.0.0.1/')" style="font-weight:bold;">
 <input type="button" value="php Admin" onclick="window.open('http://127.0.0.1/phpMyAdmin')" style="font-weight:bold;"><br/><br/>
-<input type="button" value="retour" onclick="window.open('https://marccormier.github.io/')" style="font-weight:bold;">
+<input type="button" value="retour" onclick="history.go(-1);">
 </div>
 <script>
-needles="doc=document; win=window; function $(id){return doc.getElementById(id)}; function $(name){document.getElementsByTagName(name)}; function $(name){document.getElementsByClassName(name)}; function O(i){return typeof i==\'object\' ? i : document.getElementById(i)}; function S(i){return O(i).style}; function C(i){return document.getElementsByClassname(i)};";
-localStorage.setItem('needles', needles);
-
 lspw=localStorage.getItem('admin');
 function showPage() {document.getElementById("wrapper").style.display = "block"; }
 function valid(){
 let text=prompt("Password :");
 if (text == lspw) {showPage(); } else {alert(`Wrong password : ${text}`);document.body.innerHTML='<center><h1>Bonjour.</h1></center>'; } }
-
-storage=localStorage.length;
-localStorage.setItem('storageLength', storage);
 
 demoDiv=document.getElementById('demo');
 
@@ -55,12 +50,6 @@ function confirmClear() {
 } else if (confirmCLR == 'Yes') {localStorage.clear();alert('localStorage cleared !');
 }
 }
-//
-const tdList = {"email":"cormiermac.mc85@gmail.com","fName":"Marc","lName":"CORMIER","name":"Marc CORMIER","uName":"Admin","uPword":"","uuid":"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx","uTime":"","city":"Laval","country":"CA","hostname":"","ip":"","loc":"45.5606272,-73.6886784","org":"","postal":"H7G","region":"Quebec"};
-const todoList = JSON.stringify(tdList);
-localStorage.setItem("master",todoList);
-const retrieved= JSON.parse(localStorage.getItem("master")); // changing string to object.
-//demoDiv.innerHTML=retrieved;
 //
 var users=[];
 function set()
@@ -80,59 +69,53 @@ function rem() {
 }
 function clearLs() {confirmClear(); }
 //
-function loopOne() {
+function loopKey() {
+	console.clear();
+	console.info('localStorage : ');
 const alphaNumRegEx = /^[-0-9a-zA-Z]+$/;
 	Object.keys(localStorage).forEach(function (key) {
 		if (key.match(alphaNumRegEx)) {
 			console.log(key);
 		} 
 	}); 
+//
+	console.info('sessionStorage : ');
+	Object.keys(sessionStorage).forEach(function (key) {
+		if (key.match(alphaNumRegEx)) {
+			console.log(key);
+		} 
+	}); 
 }
 //
-function loopTwo() {
+function loopItems() {
+	console.clear();
+  		console.info('localStorage : ');
   	for (const [key, value] of Object.entries(localStorage)) {
    		console.log(`${key}: ${value}`); 
    	}
+  		console.info('sessionStorage : ');
+   	for (const [key, value] of Object.entries(sessionStorage)) {
+   		console.log(`${key}: ${value}`); 
+   	}
 }
-function loopThree(){
+function loopObjects(){
+	console.clear();
+	console.info('localStorage : ');
 	for(i in localStorage) {
 		console.log(localStorage[i]);
 	} 
-}
-function lsLength() {
-//	Returns the number of data items stored in the Storage object
-	console.log(localStorage.length);
-}
-// anciennement
-/*
-function lsLoop() 
-{
-	for(i in localStorage) {
-		document.body.innerHTML+=localStorage[i]+"<br/>";
+	console.info('sessionStorage : ');
+	for(i in sessionStorage) {
+		console.log(sessionStorage[i]);
 	} 
 }
-function lsKey(n) {
-//	Returns the name of the nth key in the storage
-	document.body.innerHTML+=localStorage.key(n);
-}
 function lsLength() {
-//	Returns the number of data items stored in the Storage object
-	document.body.innerHTML+=localStorage.length();
+	console.clear();
+	console.info('localStorage : ');
+	console.log(localStorage.length);
+	console.info('sessionStorage : ');
+	console.log(sessionStorage.length);
 }
-function lsGetItem(keyname) {
-//	Returns the value of the specified key name
-	document.body.innerHTML+=localStorage.getItem(keyname);
-}
-function lsSetItem(keyname, value) {
-//	Adds a key to the storage, or updates a key value (if it already exists)
-	document.body.innerHTML+=localStorage.setItem(keyname, value);
-}
-function lsRemoveItem(keyname) {
-//	Removes that key from the storage
-	document.body.innerHTML+=localStorage.removeItem(keyname);
-}
-function lsClear() {document.body.innerHTML+=localStorage.clear(); }
-*/
 </script>
 </center>
 </body>
