@@ -56,6 +56,7 @@ function set()
 x=document.getElementById("itmKey").value;
 y=document.getElementById("itmVal").value;
 localStorage.setItem(x, y);
+demoDiv.innerHTML=x+' : '+y;
 }
 function get() {
 let x=document.getElementById("itmKey").value;
@@ -75,6 +76,7 @@ const alphaNumRegEx = /^[-0-9a-zA-Z]+$/;
 	Object.keys(localStorage).forEach(function (key) {
 		if (key.match(alphaNumRegEx)) {
 			console.log(key);
+			demoDiv.innerHTML+=key+', ';
 		} 
 	}); 
 //
@@ -82,6 +84,7 @@ const alphaNumRegEx = /^[-0-9a-zA-Z]+$/;
 	Object.keys(sessionStorage).forEach(function (key) {
 		if (key.match(alphaNumRegEx)) {
 			console.log(key);
+			demoDiv.innerHTML+=key+', ';
 		} 
 	}); 
 }
@@ -91,10 +94,12 @@ function loopItems() {
   		console.info('localStorage : ');
   	for (const [key, value] of Object.entries(localStorage)) {
    		console.log(`${key}: ${value}`); 
+   		demoDiv.innerHTML+=`${key}: ${value}`; 
    	}
   		console.info('sessionStorage : ');
    	for (const [key, value] of Object.entries(sessionStorage)) {
    		console.log(`${key}: ${value}`); 
+   		demoDiv.innerHTML+=`${key}: ${value}`; 
    	}
 }
 function lsLength() {
@@ -103,6 +108,10 @@ function lsLength() {
 	console.log(localStorage.length);
 	console.info('sessionStorage : ');
 	console.log(sessionStorage.length);
+	demoDiv.innerHTML+='localStorage : ';
+	demoDiv.innerHTML+=localStorage.length+'<br/>';
+	demoDiv.innerHTML+='sessionStorage : ';
+	demoDiv.innerHTML+=sessionStorage.length;
 }
 </script>
 </center>

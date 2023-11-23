@@ -67,6 +67,7 @@ const cssSnip=document.createElement("OBJECT");
 cssSnip.setAttribute("data", "cssSnip.htm");
 cssSnip.setAttribute("width", "875px");
 cssSnip.setAttribute("height", "335px");
+cssSnip.setAttribute("class", "cssSnip");
 content.appendChild(cssSnip);
 }
 //
