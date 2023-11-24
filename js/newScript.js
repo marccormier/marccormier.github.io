@@ -4,8 +4,6 @@ S(subMenus).display='none';
 */
 function O(i) { return typeof i == 'object' ? i : document.getElementById(i) }
 content=O('content');
-objContt=content.firstChild();
-objContt.setAttribute('class', 'objCont');
 function home() {content.innerHTML='<center><img id="maintenance" style="max-width:50vw;height:auto;" src="img/maintenance.jpg"> <ul> <li><a href="mcbrady">#MCBrady</a></li> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="https://tinyurl.com/esoGuildWebpage">ESO Guild</a></li> </ul> </center>'; }
 function about() {O('content').innerHTML='<h2>Information Personnel</h2><hr><p>Mon nom est Marc et j&#39ai 38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j&#39affectionne tout particulierement. J&#39estime que l&#39age, la couleur, la religion, l&#39apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n&#39a pas lieu d&#39être sur le net. <br/>Je documente tout ce que j&#39apprends et aide les gens à commencer dans le codage. <br />Mon site n&#39a pas de publicités, de sponsors ou de &#39bullshit&#39. <br /><br />Je n&#39aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.<br /><br />J&#39espere que votre consultation répondra a vos attentes. <br /><br />Je suis très intéressé par le codage, après un peu plus de 20 ans de presence sur le net, j&#39ai continuer à apprendre le codage avec <a href="https://www.sololearn.com/">sololearn</a>. Je me suis ensuite inscrit au formations informatique à l&#39<a href="https://www.formation-ifp.com/">institut de formation professionnel</a> (Entretien &#38; Réparation D&#39ordinateur, Spécialiste Internet et Programmation JAVA).<br />Toussent terminer avec une note finale de plus de 80% ainsi j&#39ai aussi choisis de creer un site sans pour autant tout vous devoiler, car le net reste malgre tout un monde virtuel, et j&#39aime garder une petite part du mystere sur ma personalitée.<br /><br />Si vous appréciez mon contenu, pensez à soutenir ce que je fais.</p>'; }
 function article() {content.innerHTML='<h2>Fix time.h on 32 bit machines to work past the year 2038 bug</h2><hr><br/><p>time.h POSIX implementation can<br/>solves the year 2038 bug on systems<br/>where time_t is only 32 bits.<br/>It is implemented in bog-standard ANSI C.</p><br/>'; }
@@ -25,6 +23,7 @@ const htDomStyle=document.createElement("OBJECT");
 htDomStyle.setAttribute("data", "htmlDomStyle.html");
 htDomStyle.setAttribute("width", "875px");
 htDomStyle.setAttribute("height", "335px");
+htDomStyle.setAttribute("class", "htDomStyle");
 content.appendChild(htDomStyle);
 }
 //
@@ -34,6 +33,7 @@ const htDom=document.createElement("OBJECT");
 htDom.setAttribute("data", "htmlDOM.html");
 htDom.setAttribute("width", "875px");
 htDom.setAttribute("height", "335px");
+htDom.setAttribute("class", "htDom");
 content.appendChild(htDom);
 }
 //
@@ -43,6 +43,7 @@ const peridotCpattern=document.createElement("OBJECT");
 peridotCpattern.setAttribute("data", "peridotColorPattern.htm");
 peridotCpattern.setAttribute("width", "875px");
 peridotCpattern.setAttribute("height", "335px");
+peridotCpattern.setAttribute("class", "peridotCpattern");
 content.appendChild(peridotCpattern);
 }
 function htmlCompiler() {
@@ -51,6 +52,7 @@ const htmlCompil=document.createElement("OBJECT");
 htmlCompil.setAttribute("data", "compiler/htmlCompiler.htm");
 htmlCompil.setAttribute("width", "875px");
 htmlCompil.setAttribute("height", "335px");
+htmlCompil.setAttribute("class", "htmlCompil");
 content.appendChild(htmlCompil);
 }
 //
@@ -60,6 +62,7 @@ const binCompil=document.createElement("OBJECT");
 binCompil.setAttribute("data", "compiler/binaryCompiler.htm");
 binCompil.setAttribute("width", "875px");
 binCompil.setAttribute("height", "335px");
+binCompil.setAttribute("class", "binCompil");
 content.appendChild(binCompil);
 }
 //
@@ -79,6 +82,7 @@ const jQuerySnip=document.createElement("OBJECT");
 jQuerySnip.setAttribute("data", "jQuerySnip.htm");
 jQuerySnip.setAttribute("width", "875px");
 jQuerySnip.setAttribute("height", "335px");
+jQuerySnip.setAttribute("class", "jQuerySnip");
 content.appendChild(jQuerySnip);
 }
 //
