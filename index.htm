@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="css/loader.css">
   <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon">
   <title>MC info Électro | Marc Cormier</title>
+  <!--
   <script type="text/javascript">
 loader = setTimeout(showPage, 3210);
 function showPage() {
@@ -22,8 +23,10 @@ function showPage() {
   document.querySelector("main").style.display = "block";
 }
   </script>
+-->
 </head>
 <body>
+    <!--
 <div id="wrapper"><center>
     <h1>Marc Cormier</h1><span>Programmeur Informatique</span>
     <hr>
@@ -34,11 +37,12 @@ function showPage() {
 </center></div>
     <main style="display:none;" id="main" class="animate-bottom">
         <div id="contPicture"><img id="picture" src="img/logo/logo.png"/></div>
+-->
     <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-<marquee behavior="scroll" direction="left" scrollamount="25">JAVA, CSS3, RWD, SVG, CANVAS, jQuery, AJAX, PHP, SQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee>
+<marquee behavior="scroll" direction="left" scrollamount="15">JAVA, CSS3, RWD, SVG, CANVAS, jQuery, AJAX, PHP, SQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee>
 <header>
     <nav>
-        <a href="https:///marccormier.github.io/"><h1 class="blog">Blog</h1></a>
+        <a href="https://marccormier.github.io/"><h1 class="blog">Blog</h1></a>
             <ul class="menu">
     <li><a class="domAlink" onclick="home()">Accueil</a></li>
     <li><a onclick="about()">À Propos</a>
@@ -50,7 +54,12 @@ function showPage() {
  </ul>
  </li>
 
-    <li><a class="domAlink" href="https://www.w3.org/DOM/DOMTR" onclick="article()">Acticle</a></li>
+    <li><a class="domAlink">Acticle</a>
+     <ul class="submenu">
+    <li><a class="domAlink" href="https://www.w3.org/DOM/DOMTR">Document Object Model (DOM)</a></li>
+    <li><a class="domAlink" onclick="article()">Naviger en sécurité</a></li>
+</ul>
+    </li>
 
     <li><a href="#">Produits</a> </li>
 
