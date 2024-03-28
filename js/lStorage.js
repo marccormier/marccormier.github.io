@@ -8,4 +8,4 @@ const todoList = JSON.stringify(tdList);
 localStorage.setItem("master",todoList);
     } else {
 alert('web Storage not supported by your browser.');
-}
+} 

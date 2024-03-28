@@ -1,9 +1,58 @@
-/*reset*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+  const doc = document.implementation.createDocument(
+  "http://www.w3.org/1999/xhtml",
+  "html",
+  null,
+);
+const body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
+body.setAttribute("id", "abc");
+doc.documentElement.appendChild(body);
+alert(doc.getElementById("abc")); // [object HTMLBodyElement]
+//
+const fragRoot = ["h1", "pre", "li"];
+const dFrag = document.createDocumentFragment();
+for (let x in fragRoot) {
+  const li = document.createElement(fragRoot[x]);
+  li.textContent = fragRoot[x];
+  dFrag.appendChild(li);
+}
+//
+/*
+const root=document;
+const firstTier=root.childNodes;
+// firstTier is a NodeList of the direct children of the root element
+// such as <head> and <body>
+  for (const child of firstTier) {
+  // do something with each direct child of the root element
+  console.info(firstTier);
+}
+*/
+//document.body.appendChild(dFrag);
+//
+const person = {
+  firstName: "Marc",
+  lastName : "Cormier",
+  id       : 7796,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+	/*reset*/
+window.onload = function() {
 txt="Remember to open the console (Press F12).";
 window.document.body.append(txt);
 /*dom html obj*/
-/* window obj (console)*/
-console.clear();
+/* window obj (console) */
+// console.clear();
 //
 console.groupCollapsed('screen : [object screen]');
 console.log('screen.availHeight : '+screen.availHeight);
@@ -181,3 +230,7 @@ for (let i=0;i<elements.length;i++) {
 console.log(elements[i]);
 }
 console.groupEnd();
+}
+</script>
+</body>
+</html>
