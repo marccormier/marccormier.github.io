@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="refresh" content="0;URL='https://marccormier.github.io/'" />
 	<title></title>
 	<style type="text/css">
 		*{}
@@ -33,7 +34,7 @@
 /**/
 #rgba{font-size:2em;width:50%}
 /* The slider itself */
-label{margin:135px;font-size:17px;font-weight:bold;padding:0px;}
+label{margin:11%;font-size:17px;font-weight:bold;padding:0px;}
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
@@ -75,6 +76,7 @@ label{margin:135px;font-size:17px;font-weight:bold;padding:0px;}
 .grid16{background-color:rgba(255, 99, 71, 0.6);}
 .grid17{background-color:rgba(255, 99, 71, 0.8);}
 .grid18{background-color:rgba(255, 99, 71, 1);}
+/**/
 </style>
 </head>
 <body>
@@ -94,11 +96,13 @@ label{margin:135px;font-size:17px;font-weight:bold;padding:0px;}
 <div id="grid" class="grid12">rgb(240, 240, 240)</div>
 <hr>
 <center><div id="rgba"></div></center>
-<label>Red</label><label>Green</label><label>Blue</label><label>Alpha</label><br />
+<div id="sliderLabel">
+	<label>Red</label><label>Green</label><label>Blue</label><label>Alpha</label><br />
 <input type="range" min="0" max="255" value="255" class="slider" id="red">
 <input type="range" min="0" max="255" value="99" class="slider" id="green">
 <input type="range" min="0" max="255" value="71" class="slider" id="blue">
 <input type="range" min="0" max="1.0" step="0.1" value="0.5" class="slider" id="alpha">
+</div>
 
 <div id="grid" class="grid13">rgba(255, 99, 71, 0)</div>
 <div id="grid" class="grid14">rgba(255, 99, 71, 0.2)</div>
