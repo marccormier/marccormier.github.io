@@ -62,7 +62,7 @@ z-index:1;
 }
 .submenu li:hover > .submenu2 {
 	display: block;
-	animation: slideright .3s ease;
+	animation: slideleft .3s ease;
 }
 /**/
 @media only screen and (min-device-width:320px) and (max-device-width:480px)
@@ -90,13 +90,15 @@ z-index:1;
     display: none;
     z-index:3;
 }
+/*
 .menu li:hover > .submenu {
 	display: block;
 	animation: slideup .3s ease;
 }
+*/
 .submenu li:hover > .submenu2 {
     display: block;
-    animation: slideleft .3s ease;
+    animation: slideright .3s ease;
 }
 }
 /**/
