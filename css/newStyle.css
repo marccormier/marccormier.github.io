@@ -90,18 +90,7 @@ z-index:1;
     display: none;
     z-index:3;
 }
-/*
-.menu li:hover > .submenu {
-	display: block;
-	animation: slideup .3s ease;
 }
-*/
-.submenu li:hover > .submenu2 {
-    display: block;
-    animation: slideright .3s ease;
-}
-}
-/**/
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 only screen and (min-device-pixel-ratio:1.5) {}
 /**/
