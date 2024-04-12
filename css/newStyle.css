@@ -64,6 +64,71 @@ z-index:1;
 	display: block;
 	animation: slideleft .3s ease;
 }
+/**/
+@media only screen and (min-device-width:320px) and (max-device-width:480px)
+{
+    #picture {display:none;} 
+    #construction{max-width:50vw;height:auto;}
+    #imgGallery{width:85vw;min-height:200px;}
+    .cssSnip, .htDomStyle, .htDom, .peridotCpattern, .htmlCompil, .binCompil, .jQuerySnip{
+        width:85vw;max-height:320px;
+    }
+    .submenu {
+    position:absolute;
+    background-color: #2c3e50;
+    width:140px;
+    left:0;
+    display: none;
+    z-index:2;
+}
+    .submenu2 {
+    position: absolute;
+    left:100%;
+    left: 140px;
+    top:0;
+    background-color: #2c3e50;
+    display: none;
+    z-index:3;
+}
+.menu li:hover > .submenu {
+	display: block;
+	animation: slideup .3s ease;
+}
+.submenu li:hover > .submenu2 {
+    display: block;
+    animation: slideright .3s ease;
+}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min-device-pixel-ratio:1.5) 
+{
+    .submenu {
+    position:absolute;
+    background-color: #2c3e50;
+    width:140px;
+    left:0;
+    display: none;
+    z-index:2;
+}
+    .submenu2 {
+    position: absolute;
+    left:100%;
+    left: 140px;
+    top:0;
+    background-color: #2c3e50;
+    display: none;
+    z-index:3;
+}
+.menu li:hover > .submenu {
+	display: block;
+	animation: slideup .3s ease;
+}
+.submenu li:hover > .submenu2 {
+    display: block;
+    animation: slideright .3s ease;
+}
+}
+/**/
 @keyframes slideup {
 	0% {
 		opacity: 0;
