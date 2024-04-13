@@ -10,13 +10,16 @@ color:#fff
 input{margin:5px;}
 .wrapper{display:none;}
 </style>
-<script type="text/javascript" src="js/lStorage.js"></script>
-<script type="text/javascript" src="js/views.js"></script>
 </head>
 <body>
 <div id="wrapper">
+
 <center>
-<h1>Storage Object[] Items Key and Value{[]} Manager</h1>
+	<h1>Storage</h1>
+<input type="button" name="storage" id="sStorage" onclick="sStorage()" value="Session">
+<input type="button" name="storage" id="lStorage" onclick="lStorage()" value="Local">
+<h2>Object[] Items Key and Value{[]}</h2>
+
 <p id="demo" style="font-weight:bold;"></p>
 <label for="itmKey" style="float:left;margin-left:28vw;">item Key Name</label><br/>
 <input type="text" id="itmKey" placeholder="lastname"> : 
@@ -28,17 +31,21 @@ input{margin:5px;}
 <input type="button" id="lsLength" value="Length" onclick="lsLength()"><br/>
 <input type="button" id="lOne" value="Loop Key" onclick="loopKey()"><br/>
 <input type="button" id="lTwo" value="Loop Items" onclick="loopItems()"><br/><br/>
-<input type="button" value="System File" onclick="window.open('marccormier.github.io/index.htm')" style="font-weight:bold;">
-<input type="button" value="localHost" onclick="window.open('http://127.0.0.1/')" style="font-weight:bold;">
-<input type="button" value="php Admin" onclick="window.open('http://127.0.0.1/phpMyAdmin')" style="font-weight:bold;"><br/><br/>
-<input type="button" value="retour" onclick="history.go(-1);">
+<input type="button" value="Accueil" onclick="window.open('marccormier.github.io/')" style="font-weight:bold;">
+<input type="button" value="localHost" onclick="window.open('localhost://')" style="font-weight:bold;">
+<input type="button" value="php Admin" onclick="window.open('localhost/phpMyAdmin')" style="font-weight:bold;"><br/><br/>
+<input type="button" value="Retour" onclick="history.go(-1);">
 </div>
 <script>
 lspw=localStorage.getItem('admin');
 function showPage() {document.getElementById("wrapper").style.display = "block"; }
-function valid(){
 let text=prompt("Password :");
-if (text == lspw) {showPage(); } else {alert(`Wrong password : ${text}`);document.body.innerHTML='<center><h1>Bonjour.</h1></center>'; } }
+if (text===lspw) {showPage();} 
+else 
+{
+	alert(`Wrong password : ${text}`);
+	document.body.innerHTML='<center><h1>403. Acces Interdit</h1></center>';
+}
 
 demoDiv=document.getElementById('demo');
 
