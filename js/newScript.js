@@ -99,7 +99,7 @@ const phpCodes='<h3>PHP</h3><ul><li><a>Gestion de fichiers</a></li><li><a>Appels
 const javaCodes='<h3>JAVA</h3><ul><li><a>Coffee Machine</a></li><li><a>Gestion de fichiers</a></li><li><a>Gestion de bulletin de notes</a></li><li><a>Gestion de comptes bancaire</a></li><li><a>Sapin en Swing</a></li><li><a>Local Storage JSON Array Object to JAVA WebEngine html DOM Core</a></li></ul><br/>';
 const shellScriptCodes='<h3>Shell Scripting Language</h3><ul><li><a>file Sorting</a></li> <li><a>List Files In Folder</a></li> <li><a>Windows error Fixer</a></li> <li><a>Clone File Checker</a></li> <li><a>clear Cache</a></li> </ul><br/>';
 const mslCodes='<h3>mSL</h3><ul><li><a>MCBrady</a></li></ul>';
-function codes() {content.innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p>'+ htmlCodes+cssCodes+jsCodes+jQueryCodes+phpCodes+javaCodes+shellScriptCodes+mslCodes; }
+function codes() {O('content').innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p>'+ htmlCodes+cssCodes+jsCodes+jQueryCodes+phpCodes+javaCodes+shellScriptCodes+mslCodes; }
 //
 function winNav(){
     var caracteristiquesNavigateur = "";
