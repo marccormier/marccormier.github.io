@@ -4,7 +4,8 @@ S(subMenus).display='none';
 */
 function O(i) { return typeof i == 'object' ? i : document.getElementById(i) }
 content=O('content');
-function home() {O('content').innerHTML='<center><img id="maintenance" style="max-width:50vw;height:auto;" src="img/maintenance.jpg"> <ul> <li><a href="mcbrady">#MCBrady</a></li> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="https://tinyurl.com/esoGuildWebpage">ESO Guild</a></li> </ul> </center>'; }
+let accueil=' <center> <img src="img/maintenance.jpg"> <h3 style="text-decoration:underline;">Last Updated Scripts</h3> <ul> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="storage.htm">Wweb Storage (JAVA webEngine lOCAL data Storage)</a></li> <li><a href="RGBAcolors.htm">RGBA Colors</a></li> <li><p>navigation</p></li> </ul> </center>';
+function home() {O('content').innerHTML=accueil; }
 function about() {O('content').innerHTML='<h2>Information Personnel</h2><hr><p>Mon nom est Marc et j&#39ai 38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j&#39affectionne tout particulierement. J&#39estime que l&#39age, la couleur, la religion, l&#39apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n&#39a pas lieu d&#39être sur le net. <br/>Je documente tout ce que j&#39apprends et aide les gens à commencer dans le codage. <br />Mon site n&#39a pas de publicités, de sponsors ou de &#39bullshit&#39. <br /><br />Je n&#39aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.<br /><br />J&#39espere que votre consultation répondra a vos attentes. <br /><br />Je suis très intéressé par le codage, après un peu plus de 20 ans de presence sur le net, j&#39ai continuer à apprendre le codage avec <a href="https://www.sololearn.com/">sololearn</a>. Je me suis ensuite inscrit au formations informatique à l&#39<a href="https://www.formation-ifp.com/">institut de formation professionnel</a> (Entretien &#38; Réparation D&#39ordinateur, Spécialiste Internet et Programmation JAVA).<br />Toussent terminer avec une note finale de plus de 80% ainsi j&#39ai aussi choisis de creer un site sans pour autant tout vous devoiler, car le net reste malgre tout un monde virtuel, et j&#39aime garder une petite part du mystere sur ma personalitée.<br /><br />Si vous appréciez mon contenu, pensez à soutenir ce que je fais.</p>'; }
 //
 function article() {
@@ -162,51 +163,9 @@ function bientot() {
   return true;
 }
 //
-function services() {
-O('content').innerHTML="<h2>Services</h2>"+
-"ENTRETIEN & RÉPARATION D'ORDINATEUR<br/>"+ 
-"Diagnostique des problèmes matériel ou logiciel, Récupération de mots de passe, Récupération et sauvegarde de données, Nettoyage à l'air de vos équipements électroniques et ordinateurs, Remplacement de disque dur, Installation et configuration d’imprimante, Élimination de virus, nettoyage d’ordinateur Formatage, installation de Windows<br/><br/>"+
-"<center><img id='maintenance' style='max-width:50vw;height:auto;' src='img/maintenance.jpg'><br/>"+
-"MAINTENANCE & DÉPANNAGE RÉSEAUX<br/>"+
-"Configuration de réseau sans-fil, Câblages, Codage des données, topologie, protocoles, adressage<br/><br/>"+
-"CONCEPTION GRAPHIQUE & WEBDESIGN<br/>"+
-"Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...<br/><br/>"+
-"INTÉGRATION (X)HTML / CSS<br/>"+
-"Codage à la main respectueux des standards du Web<br/><br/>"+
-"GESTION DE PROJETS WEB<br/>"+
-"Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.<br/><br/>"+
-"APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION<br/><br/>"+
-"DYNAMISE DES PAGES PAR JAVASCRIPT<br/><br/>"+
-"VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO<br/>"+
-"Accessibilité & ergonomie des pages web<br/><br/>"+
-"CONCEPTION MULTI-PLATEFORMES<br/>"+
-"Compatible tous supports, tablette & application mobile<br/><br/>"+
-"FORMATION PERSONALISÉE<br/>"+
-"Débutant - Intermédiaire - Expert<br/><br/>"+
-"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
-"Service à domicile sur rendez-vous.<br/><br>"+
-"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"+
-"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>";
-}
-function tarif() {O('content').innerHTML="<h2>Tarif</h2>"+
-"Estimation à partir de 20$ * <br/><br/>"+  
-"Tarif à partir de 45$ de l'heure <br/><br/>"+  
-"*** Service commercial: a partir de 75$ de l'heure *** <br/><br/>"+  
-"Service d'assistance en ligne pour 15$ jusqu'à 30 minutes!<br/><br/>"+
-"Service rapide à partir de $85<br/>"+
-"** prix minimum pour un déplacement: 1 heure selon tarif.<br/>"+
-"* Minimum 1 heure  *<br/><br/>"+
-"* peut varier en fonction des certifications et/ou compétences du technicien ou administrateur reseaux.<br/><br/>"+
-"** prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement.<br/><br/>"+
-"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>";
-}
-function zone() {O('content').innerHTML="<h2>Zone de service</h2>"+
-"<p style='text-decoration:line-through;'>Rive-Nord</p>"+
-"Laval<br/>"+
-"Montréal<br/>"+
-"<p style='text-decoration:line-through;'>Rive-Sud</p>"+
-"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />";
-}
+function services() {O('content').innerHTML="<h2>Services</h2>"+ "ENTRETIEN & RÉPARATION D'ORDINATEUR<br/>"+ "Diagnostique des problèmes matériel ou logiciel, Récupération de mots de passe, Récupération et sauvegarde de données, Nettoyage à l'air de vos équipements électroniques et ordinateurs, Remplacement de disque dur, Installation et configuration d’imprimante, Élimination de virus, nettoyage d’ordinateur Formatage, installation de Windows<br/><br/>"+ "<center><img id='maintenance' style='max-width:50vw;height:auto;' src='img/maintenance.jpg'><br/>"+ "MAINTENANCE & DÉPANNAGE RÉSEAUX<br/>"+ "Configuration de réseau sans-fil, Câblages, Codage des données, topologie, protocoles, adressage<br/><br/>"+ "CONCEPTION GRAPHIQUE & WEBDESIGN<br/>"+ "Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...<br/><br/>"+ "INTÉGRATION (X)HTML / CSS<br/>"+ "Codage à la main respectueux des standards du Web<br/><br/>"+ "GESTION DE PROJETS WEB<br/>"+ "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.<br/><br/>"+ "APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION<br/><br/>"+ "DYNAMISE DES PAGES PAR JAVASCRIPT<br/><br/>"+ "VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO<br/>"+ "Accessibilité & ergonomie des pages web<br/><br/>"+ "CONCEPTION MULTI-PLATEFORMES<br/>"+ "Compatible tous supports, tablette & application mobile<br/><br/>"+ "FORMATION PERSONALISÉE<br/>"+ "Débutant - Intermédiaire - Expert<br/><br/>"+ "Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+ "Service à domicile sur rendez-vous.<br/><br>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>"; }
+function tarif() {O('content').innerHTML="<h2>Tarif</h2>"+ "Estimation à partir de 20$ * <br/><br/>"+ "Tarif à partir de 45$ de l'heure <br/><br/>"+ "*** Service commercial: a partir de 75$ de l'heure *** <br/><br/>"+ "Service d'assistance en ligne pour 15$ jusqu'à 30 minutes!<br/><br/>"+ "Service rapide à partir de $85<br/>"+ "** prix minimum pour un déplacement: 1 heure selon tarif.<br/>"+ "* Minimum 1 heure  *<br/><br/>"+ "* peut varier en fonction des certifications et/ou compétences du technicien ou administrateur reseaux.<br/><br/>"+ "** prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement.<br/><br/>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>"; }
+function zone() {O('content').innerHTML="<h2>Zone de service</h2>"+ "<p style='text-decoration:line-through;'>Rive-Nord</p>"+ "Laval<br/>"+ "Montréal<br/>"+ "<p style='text-decoration:line-through;'>Rive-Sud</p>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"; }
 //
 let topBtn = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};

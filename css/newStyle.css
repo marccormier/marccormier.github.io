@@ -18,7 +18,7 @@ marquee{
     margin:0px;
     font-size:1em;
 }
-.content {
+.contentDiv {
 	background-color:#CCEE00;
 	word-wrap:break-word;
 	box-shadow:4px 4px 11px grey;
