@@ -5,8 +5,10 @@ oncontextmenu = (e) => {
   menu.style = `top:${e.pageY-10}px;left:${e.pageX-40}px`
   menu.onmouseleave = () => ctxmenu.outerHTML = ''
   mTitle="Menu<br><hr>";
-  opt0="<p onclick='alert(`Option`)'>Option</p>";
-  opt1="<p onclick='alert(`you click option 1`)'>Option1</p>";
-  menu.innerHTML = mTitle+opt0;
-  document.body.appendChild(menu)
+  opt="<p onclick='alert(`Option`)'>Option</p>";
+  webStorage="<p onclick='window.open(`storage.htm`, `_self`)'>Web Storage</p>";
+  //codes="<p onclick='codes()'>Codes</p>";
+  //alert="<p onclick='alert(`you click option alert`)'>alert</p>";
+  menu.innerHTML = mTitle+opt+webStorage;
+  document.body.appendChild(menu);
 }

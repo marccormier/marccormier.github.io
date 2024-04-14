@@ -1,4 +1,4 @@
-    body{margin:15px;}
+body{margin:15px;}
     .menuTitle{
       color:white;
       font-size:2em;
@@ -71,3 +71,4 @@ table, th, tr, td {border:1px solid black;margin:5px;padding:7px;}
 	word-spacing:normal;
 	warp:break-word;
 }
+input{margin:7px;}

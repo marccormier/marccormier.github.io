@@ -25,4 +25,4 @@ EventListener listener = new EventListener() {
 Document doc = webEngine.getDocument();
 Element el = doc.getElementById("exit-app");
 ((EventTarget) el).addEventListener("click", listener, false);
-//
+// https://www.oracle.com/technical-resources/articles/java/json.html

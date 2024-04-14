@@ -31,7 +31,7 @@ input{margin:5px;}
 <input type="button" id="lsLength" value="Length" onclick="lsLength()"><br/>
 <input type="button" id="lOne" value="Loop Key" onclick="loopKey()"><br/>
 <input type="button" id="lTwo" value="Loop Items" onclick="loopItems()"><br/><br/>
-<input type="button" value="Accueil" onclick="window.open('marccormier.github.io/')" style="font-weight:bold;">
+<input type="button" value="Accueil" onclick="window.open('marccormier.github.io/', '_self')" style="font-weight:bold;">
 <input type="button" value="localHost" onclick="window.open('localhost://')" style="font-weight:bold;">
 <input type="button" value="php Admin" onclick="window.open('localhost/phpMyAdmin')" style="font-weight:bold;"><br/><br/>
 <input type="button" value="Retour" onclick="history.go(-1);">
@@ -44,7 +44,7 @@ if (text===lspw) {showPage();}
 else 
 {
 	alert(`Wrong password : ${text}`);
-	document.body.innerHTML='<center><h1>403. Acces Interdit</h1></center>';
+	document.body.innerHTML='<center><h1>403. Acces Interdit</h1><br><input type="button" value="Retour" onclick="history.go(-1);"></center>';
 }
 
 demoDiv=document.getElementById('demo');
