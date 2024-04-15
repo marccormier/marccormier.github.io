@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=320" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="js/lStorage.js"></script>
+  <script type="text/javascript" src="js/topBtn.js"></script>
   <script type="text/javascript" src="js/newScript.js"></script>
   <script type="text/javascript" src="js/add.js"></script>
   <script type="text/javascript" src="js/validUser.js"></script>
@@ -20,30 +21,8 @@
   <link rel="stylesheet" type="text/css" href="css/othStyle.css">
   <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon">
   <title>Marc Cormier</title>
-<!--
-  <script type="text/javascript">
-loader = setTimeout(showPage, 3210);
-function showPage() {
-  document.getElementById("wrapper").style.display = "none";
-  document.querySelector("main").style.display = "block";
-}
-  </script>
--->
 </head>
 <body>
-    <!--
-<div id="wrapper"><center>
-    <h1>Marc Cormier</h1><span>Programmeur Informatique</span>
-    <hr>
-    <p id="countDown" style="font-size:30px"></p>
-    <img id="construction" src="img/enConstruction.jpg"><br /> 
-    <p>&copy 2023 Marc Cormier</p>
-    <div id="loader"></div> 
-</center></div>
-    <main style="display:none;" id="main" class="animate-bottom">
-        <div id="contPicture"><img id="picture" src="img/logo/logo.png"/></div>
--->
-    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
     <a href="https://marccormier.github.io/"><h1 class="blog">Blog</h1></a>
     <h2 style="margin-left:15vw;"></h2>
 <header>
@@ -138,7 +117,7 @@ function showPage() {
     </nav>
 </header>
 <marquee behavior="scroll" direction="left" scrollamount="10">JAVA, CSS3, RWD, SVG, CANVAS, jQuery, AJAX, PHP, SQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee>
-    <div id="content" class="contentDiv">
+    <div id="content" class="content">
     <center>
    <img src="img/maintenance.jpg">
      <h3 style="text-decoration:underline;">Last Updated Scripts</h3>
@@ -148,19 +127,25 @@ function showPage() {
       <li><a href="RGBAcolors.htm">RGBA Colors</a></li>
       <li><p>navigation</p></li>
      </ul>
-    </center>
+     <h3 style="text-decoration:underline;"></h3>
+     <ul>
+         <li></li>
+     </ul>
+     </center>
 </div>
 <footer>
 <center>
 <h4> <a href="https://shor.by/mcormier">Suivez moi sur le ouaieb</a> </h4>
-<!--
-<h4> <a href="https://linktr.ee/mcormier">Suivez moi sur le ouaieb</a> </h4>
--->
 <p id="lastModif"></p>
 <p id='time'></p>
 <p id="copy"></p>
 <center>
 </footer>
 </main>
+<script type="text/javascript">
+document.getElementById('lastModif').innerHTML = document.lastModified;
+var year = new Date().getFullYear();
+document.getElementById('copy').innerHTML = "&#169 "+year+" marccormier.github.io <br/>Réalisé par Marc Cormier";
+</script>
 </body>
 </html>
