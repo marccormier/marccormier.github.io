@@ -1,7 +1,3 @@
-/*
-subMenus=document.querySelector(.submenu.submenu2);
-S(subMenus).display='none';
-*/
 function O(i) { return typeof i == 'object' ? i : document.getElementById(i) }
 content=O('content');
 let accueil=' <center> <img src="img/maintenance.jpg"> <h3 style="text-decoration:underline;">Last Updated Scripts</h3> <ul> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="storage.htm">Wweb Storage (JAVA webEngine lOCAL data Storage)</a></li> <li><a href="RGBAcolors.htm">RGBA Colors</a></li> <li><p>navigation</p></li> </ul> </center>';
@@ -168,6 +164,7 @@ let sec = d.getSeconds();
 let min = d.getMinutes();
 let millisec = d.getMilliseconds();
 let hour = d.getHours();
+let utc = d.toUTCString();
 let fYear = d.getFullYear();
 let date = d.getDate();
 let day;
@@ -245,5 +242,7 @@ sec = sec < 10 ? "0" + sec : sec;
 month = month < 10 ? "0" + month : month;
 day = day < 10 ? "0" + day : day;
 let res=day+", "+date+"&nbsp"+month+"&nbsp"+fYear+"<br/>"+hour+":"+min+":"+sec+"."+millisec;
+let utcTime=utc;
 document.getElementById("time").innerHTML=res;
+document.getElementById("uTime").innerHTML=utcTime;
 }

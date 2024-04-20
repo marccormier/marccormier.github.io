@@ -8,7 +8,7 @@
 # Last update:  2021-12-16 19:02.21
 # OBJET:  Languages informatique, navigateurs, antivirus, logiciels.
 # Description:
-# 
+#
 # Cours informatique par correspondance IFP
 # Entretien et Reparation informatique,
 # Specialiste internet (html5,css3,javascript,json,xml,AJAX),
@@ -30,19 +30,20 @@
   <meta name="locale" content="fr_CA" />
   <meta name="distribution" content="global" />
   <meta name="type" content="website" /> 
-  <meta name="url" content="http://www.pcinfoelectro.wix.com/blog" /> 
+  <meta name="url" content="http://www.marcinformatique.wix.com/mc-brady" /> 
   <meta name="title" content="Marc Cormier" /> 
   <meta name="author" content="Marc Cormier" />
     <!-- CSS @media screen width ... -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <!-- <meta http-equiv="refresh" content="60"> -->
-  <title>#MCBrady Undernet mIRC Channel</title>
+  <title>Marc Cormier</title>
   <script type="text/javascript">
       // UPDATE
   var upDate="30 Dec. 2021";
   var strDate="Dec 30, 2021 14:24:12";
   </script>
   <link rel="icon" type="image/ico" href="img/logo.ico" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script>// jQuery 
 $(document).ready(function(){
@@ -350,22 +351,26 @@ a.refNav{
 <div id="navbar">
   <input type="button" class="navbar" value="Accueil" onclick="index()">
   <input type="button" class="navbar" value="A propos" onclick="about()">
+<!--
   <input type="button" class="navbar" value="Ma  Mission" onclick="mission()">
+-->
   <input type="button" class="navbar" value="Service" onclick="service()">
   <input type="button" id="sandBox" class="navbar" value="SandBox" onclick="sandbox()">
   <input type="button" class="navbar" value="#MCBrady" onclick="ircChannel()">
+  <!-- -->
     <input type="button" class="navbar" value="References" onclick="root()">
     <input type="button" class="navbar" value="Chat" onclick="Chat()">
     <a id='webmaster';><b>Navigator Properties</b></a><br/>
   <input type="button" class="navbar" value="Contact" onclick="contact()">
   <input type="button" id="steveBtn" value="Liste de film" onclick="listeFilm()">
-
+<!--
 <div class="dropdown">
   <input type="button" value="Service" id="srv" class="dropbtn" onmouseover="mouseOverSrv()" onmouseout="mouseOutSrv()"></button>
     <div id="dropdownSrv" class="dropdown-content" onmouseover="mouseOverSrv()" onmouseout="mouseOutSrv()">
     <a onclick="handyman()">Handyman</a>
     <a onclick="informatique()">Informatique</a>
 </div>
+-->
   <input type="button" value="Inscription / Connexion" id="axs" class="dropbtn" onmouseover="mouseOverAxs()" onmouseout="mouseOutAxs()"></button>
   <div id="dropdownAxs" class="dropdown-content" onmouseover="mouseOverAxs()" onmouseout="mouseOutAxs()">
     <a onclick="newAccount()">new account</a>
@@ -376,7 +381,6 @@ a.refNav{
     </div></div>
   </div>
       <div id="wMaster" style="width:1px;height:1px;border:1px solid black;background-color:red;"></div>
--->
 </div>
 <div class="header"><h1 id="header"></h1><h2 id="header"></h2></div>
 <div class="maintenance" id="OBJET" onmousemove="showCoords(event)" onmouseout="clearCoor()"><p id="maintenance"><p id="cursor"></p><p></p><a onclick="navigateur()"><u>Navigator.properties</u></a><br/><p id="upDate"></p></p></div>
@@ -391,7 +395,7 @@ Your browser does not support the canvas element.
     <script>
     // JSON
 var Obj, x;
-Obj = {"prenom":"#MCBrady", "nom":""};
+Obj = {"prenom":"Marc", "nom":"<u>Informatique"};
 for (x in Obj) {
   document.getElementById("header").innerHTML += Obj[x] + "<br>";
 }
@@ -525,7 +529,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-  var mailto="<a href=mailto:marccormierpro@gmail.com>marccormierpro@gmail.com</a>";
+  var mailto="<a href=mailto:cormiermac.mc85@gmail.com>cormiermac.mc85@gmail.com</a>";
   /*
 subject="objet du courriel"
 body="corps du courriel
@@ -611,7 +615,7 @@ var x = setInterval(function() {
   var dateDuJour = new Date();
   var dateLocale = dateDuJour.toLocaleDateString();
   var maReferenceTemps = new Date();
-  var annees = maReferenceTemps.getFullYear();
+  var annees = maReferenceTemps.getFullYear()-3;
   var hhmmss = maReferenceTemps.toLocaleTimeString();
   // maintenance
   //
@@ -645,11 +649,10 @@ var x = setInterval(function() {
 "<img alt='' border='0' src='https://www.paypal.com/fr_CA/i/scr/pixel.gif' width='1' height='1' />"+
 "</form>"+
 //
-/* "<a id='subTitle' href='https://www.skype.com/en/'>Skype</a><br/>"+ */
+"<a id='subTitle' href='https://www.skype.com/en/'>Skype</a><br/>"+
 "<a href='https://www.teamviewer.com/en-us/download/windows/'>Team Viewer</a><br/>"+
-/* "<a href='https://www.rapidtables.com/'>rapidTables</a><br/><hr><hr>"+ */
+"<a href='https://www.rapidtables.com/'>rapidTables</a><br/><hr><hr>"+
 //
-/*
 "<br/><a id='subTitle' href='http://besoindunentrepreneur.com'>besoinDunEntrepreneur.com</a> (<a id='subTitle' href='https://www.construction411.com/'>construction411.com</a>)<br/>"+
 "<a id='subTitle' href='http://www.gestionmpm.ca/'>Démolition</a><br/>"+
 "<a id='subTitle' href='http://www.ebenisterierichardtanguay.ca/'>Ebenisterie</a><br/>"+
@@ -663,18 +666,7 @@ var x = setInterval(function() {
 "<br/><a id='subTitle' href='https://www.lightspeedhq.com/trial/?main-nav'>Ignite your business with lightSpped</a><br/>"+
 "<a id='subTitle' href='https://optilog.ca/'>Go with optilog</a><br/>"+
 "<a id='subTitle' href='https://www.godaddy.com/en-ca'>Go daddy !</a><br/><hr>"+
-*/
 //
-/*
-"<a href='https://parachutemontreal.ca/en/skydive-jump/'>Jump from a plane !</a><br/><br/>"+
-"<a href='https://cargair.com/en/pilot-for-a-day-promo/'>Take off and land the plane yourself</a><br/>"+
-"<a href='https://dorvalaviation.com/'>Dorval Aviation</a><br/><br/>"+
-"<a href='http://www.anemonesbleues.com/cours-plongee/'>diving</a>"+
-"<a href='https://plongeecepsum.com/'> into</a>"+
-"<a href='https://www.nepteau.com/'> the depths</a>"+
-"<br/><br/><a href='https://ruisseaunoir.ca/initiation-au-tir-sur-cible/'>INITIATION AU TIR À LA CIBLE</a><br/><br/><br/>"+
-"<a href='http://www.justrun.org/'>Just Run</a> or "+
-"<a href='https://justmove.com/'>Just Move</a><br/><br/>"+
 "<a href='https://www.apf.com.au/'>Australian Parachute Federation (APF)</a><br/>"+
 "<a href='https://www.cspa.ca/en'>C.S.P.A.</a><br/>"+
 "<a href='https://uspa.org/'>U.S.P.A.</a><br/>"+
@@ -684,15 +676,11 @@ var x = setInterval(function() {
 "<a href='https://www.nfl.com/'>NFL</a><br/>"+
 "<a href='https://www.formula1.com/en.html'>F1</a><br/>"+
 "<hr>"+
-*/
-//
-"<a href='https://undernet.org/'>undernet</a><br/>"+
-"<a href='https://cservice.undernet.org/live/'>undernet login</a><br/><hr><br/>"+
 //
 "<a href='https://www.iana.org/'>Internet Assigned Numbers Authority (IANA)</a><br/>"+
 "<a href='https://www.icann.org/'>Internet Corporation for Assigned Names and Numbers (ICANN)</a><br/>"+
 "Canadian Internet Registration Authority (CIRA) "+
-" <a href='https://www.cira.ca/ca-domains/registrar-list'>Current registrar list</a><br/>"+
+"<a href='https://www.cira.ca/ca-domains/registrar-list'>Current registrar list</a><br/>"+
 "<br/>Programmation<br/>Conception et Design de Progiciel Operationnel<br/>Developpement Web<br/>Referencement et Positionnement<br/>e-marketing & e-commerce<br/>Maintenance et Depannage<br/>Entretien et Reparation<br/>Assistance & Support Technique<br/>Recyclage et References<br/><br/>"+
 mailto;
 //
@@ -709,14 +697,14 @@ mailto;
   "<a href=''>AJAX</a> "+
   */
   "et <a href='https://html.spec.whatwg.org/multipage/'>HTML5</a>, "+
-  "<a href='https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model'>DOM</a>"+
+  "<a href='https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model'>DOM </a>"+
 //"<a href='https://ogp.me/'>OGP</a>"+
 //
 // "This page was last edited on 18 October 2021, at 12:53 (UTC)."+
 // "Cette page a été modifiée pour la dernière fois le 18 octobre 2021, à 12:53 (UTC)."+
   "sur <a href='https://www.wix.com/'>WIX.COM</a><br/>"+
-  "Réalisé par<b><a href='https://facebook.com/marcinformatique'> Marc Cormier Informatique</a>.</b><br/>"+
-  "&copy;&nbsp"+annees;
+  "Réalisé par<b><a href='https://marccormier.github.io/'> Marc Cormier</a>.</b><br/>"+
+  "&copy;&nbsp"+"2021"/*annees*/;
 //
 var newPara=document.createElement('p');
 newPara.setAttribute('id', 'addedPara');
@@ -730,6 +718,42 @@ xa.appendChild(newPara);
   imgx.setAttribute("alt", "");
   //
   // Home page Text
+  var homePageTxt= 
+  "<b>Qu'est-ce qu'un service</b><br>Un service d'expertise professionnelle est une prestation qui consiste en la mise ? disposition d'une capacite technique ou intellectuelle ou en la founiture d'un travail directement utile pour l'usager, sans transformation de matiere. Fournir un service correspond a une production economique de nature particuliere puisqu'elle ne consiste pas en la fourniture d'un bien tangible a un client. En ce sens, un coiffeur, un cabinet d'avocat, un hopital, un restaurant, un commerce, une entreprise de transport ou une banque produisent des service et non pas des biens. l'expertise designe l'examen de quelques chose en vue de son estimation, de son evaluation. Elle fait appel a un ensemble de savoirs specialises, generalement orientes vers l'application pratique. Le proffessionnalisme caracterise la qualite du travail de quelqu'un ayant de l'experience.<br/><br/>";
+  var About=
+  "Bonjour,<br/>je suis Marc Cormier. Je documente tout ce que j'apprends et aide les gens à commencer leur carrière dans le codage. Mon site n'a pas de publicités, de sponsors ou de 'bullshit'. Si vous appréciez mon contenu, pensez à soutenir ce que je fais.<br/><br/>Apres un peu plus de 20 ans de presence sur le net, j'ai pris la decision de m'inscrire a trois formations informatique offerte par correspondance chez IFP l'Institut de Formations Professionnelle dont Entretien et Reparation d'ordinateurs, Specialiste internet et Programmation informatique ainsi j'ai aussi choisis de creer un site sans pour autant tout vous devoiler, car le net reste malgre tout un monde virtuel, et j'aime garder une petite part du mystere sur ma personalitee...<br/><br/> J'habite presentement une grande ville de plus ou moins 423 000 habitants, situee au Quebec. Magnifique region, que j'affectionne tout particulierement. J'estime que l'age, la couleur, la religion, l'apparence physique, tout ce qui nous distingue (et nous separe souvent aussi) au quotidien n'a pas lieu d'etre sur le net. J'espere que votre consultation repondra a vos attentes. Je n'aime pas parler de moi, mais quand je visite un site et que je vois une rubrique consacree au webmaster, je clique sur le lien, et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.<br/><br/> Ainsi, voici les formations dont j'ai reussis chaqu'un des examen finale a plus de 80 %";
+  //
+  var maMission="La lettre de mission n'est pas un document obligatoire, dans le sens où son utilisation n'est pas imposée par le Code du Travail. Il s'agit d'un document fréquemment utilisé dans le cadre des prestations de services et plus particulièrement auprès des professionnels libéraux, les indépendants ou les consultants (comptable, avocat, auditeur).<br/>Partant du principe que la lettre de mission est formée par la rencontre d'une proposition d'offre par un prestataire et d'un client qui l'accepte et qui ont tous les deux manifestés leur volonté libre et éclairée de s'engager<br/>"+
+  "C'est toutefois un contrat qui permet de formaliser de manière écrite l'accord entre un client et un prestataire de services. Ce document signé par les deux parties évite les mauvaises surprises au moment du règlement de la facture.<br/>";
+  var maMission2="D'une part : <br/>Nom,<br/>adresse complète,<br/>ci-dessous désigné(e) 'le prestataire'.<br/><br/>Et d'autre part : <br/>Nom,<br/>adresse complète,<br/>ci-dessous désigné(e) 'le client'.<br/><br/>"+
+"<b>Il a été convenu et arrêté ce qui suit</b> :<br/><br/>"+
+"– <b>Contexte et Objet de la mission</b><br/>"+
+"Préciser ici le domaine d'activité du client, ses besoins, ses projets ainsi que l'objet de la mission qui vient répondre à l'une de ses problématiques.<br/><br/>"+
+"– <b>Périmètre de la mission</b><br/>"+
+"Lister ici toutes les tâches et l'ensemble des travaux qui seront réalisés par le prestataire et les objectifs à atteindre. Indiquer si besoin les lieux ou les services concernés.<br/><br/>"+
+"– <b>Moyens mis à disposition</b><br/>"+
+"Moyens matériels et humains mis à dispositions par le prestataire et le client pour mener à bien les missions : nombre de collaborateurs, type de support, outils, locaux, etc.<br/><br/>"+
+"– <b>Délais et fin de mission</b><br/>"+
+"Délais dans lesquels la mission devra être réalisée par le prestataire (date prévisionnelle, date intermédiaire de réalisation). Préciser la possibilité de proroger un terme fixe ou prévoir une tacite reconduction si nécessaire.<br/><br/>"+
+"– <b>Frais et Honoraires</b><br/>"+
+"Méthode de calcul des honoraires du prestataire (forfait, taux horaires) et modalités pour le remboursement des frais professionnels engagés.<br/><br/>"+
+"– <b>Responsabilité et obligation</b><br/>"+
+"Obligations des parties, superviseur du projet et hiérarchie, recours en cas de litige, etc.<br/><br/>"+
+"– <b>Annexes</b><br/>"+
+"Documents annexés à la lettre de mission, conditions générales d'interventions, etc.<br/><br/>"+
+"Fait en deux exemplaires a [Ville], le [date]<br/><br/>"+
+"[Signature et cachet du prestataire]<br/>[Signature et cachet du client]";
+//
+var Formations="<b>ENTRETIEN & REPARATION D'ORDINATEUR, DEPANNAGE RESEAUX INFORMATIQUE</b><br/>"+"Diagnostique des problemes materiel ou logiciel, Recuperation de mots de passe, Recuperation et sauvegarde de donnees, Nettoyage a l'air de vos equipements electroniques et ordinateurs, Remplacement de disque dur, Installation et configuration d'imprimante, elimination de virus, nettoyage d'ordinateur Formatage, installation de Windows & IOS, installation des produits Office, installation d'antivirus<br/><br/>"+
+"<b>Referencement et Positionnement (moteur de recherche, annuaires, reseaux sociaux, e-commerce)</b><br>"+
+"SEO, SMO, SEM, SEA, SERP, E-CRM<br/><br/>"+
+"<b>Developpement Web</b><br/>"+
+"PHP, MySQL, AJAX, JQuery, BootStrap4, DOM, XML, JSON, JAVASCRIPT, HTML5, XHTML<br/><br/>"+
+"<b>WebDesign</b><br/>"+
+"CSS3, SVG, CANVAS<br/><br/>"+
+"<b>Conception de Progiciel</b><br/>"+
+"JAVA<br/><br/>";
+var FormationSuite="Taikyoku<br/> Sono Ichi, Sono Ni, Sono San<br/>Sokugi Taikyoku<br/>Sono Ichi, Sono Ni, Sono San<br/>Pinan<br/>Sono Ichi, Sono Ni, Sono San<br/><b>Kyokushin Karate Brown Belt</b><br/><br/>Tandem Jump<br/>AFF - PAC (Progression Assist? en Chute-libre)<br/>FS - VR (Vol Relatif, PostPAC)<br/><b>C.S.P.A. Skydiver</b><br/><br/>Cours de Sant? et Securite Generale sur les Chantiers de Construction<br/>Nacelle Aerienne et Plateforme elevatrice<br/>Techniques de d?contamination de moisissures<br/>Techniques d'enl?vement d'amiante<br/><b>Demolition Worker</b>";
 var IRCscript = document.createTextNode("");
   var IRCchannel = "IRC is one of the oldest and largest IRC networks.<br>"+
   "To connect to IRC, you need to install a <a href='https://www.mirc.com/get.html'>client</a> and choose a <a href='https://www.mirc.com/servers.html'>server</a>. For quick access, you can also use the <a href='https://chat.undernet.org/'>webchat</a>.<br>"+
@@ -815,7 +839,7 @@ var IRCscript = document.createTextNode("");
 /*  */
   title.innerHTML="#MCBrady IRC Channel";
   para1.innerHTML=IRCchannel;
-  para2.innerHTML="<b><u>Scripts</u></b><br/><u>MCBrady.cmd</u><br/>Réinitialise la valeur de la variable UpDate dans le fichier mIRC.mrc<br/>Réinitialise la valeur de la variable lastRun dans RegEdit.exe<br/><br/><u>MCBrady.ini</u>";
+  para2.innerHTML="<b><u>Scripts</u></b><br/>";
   para3.innerHTML="[Alias]<br/>[Popups]<br/>[Remote]<br/>[script]<br/>"+
 "Dialog Config {<br/>}<br/>"+
 "on *:load:{}<br/>on *:start:{}<br/>on *:connect:{}<br/>";
@@ -862,8 +886,7 @@ function mission() {
 }
 function contact() {
   title.innerHTML="Contact";
-para1.innerHTML = "<b>Reseaux Sociaux</b><br/><a href='http://www.facebook.com/cormiermac'>Facebook</a><br/><a href='http://www.youtube.com/scramlermite'>Youtube</a><br/><a href='http://www.instagram.com/mc_skydiver'>Instagram</a><br/><br/>Par courriel:<br/>"+mailto;
-para2.innerHTML = " ";
+para1.innerHTML = "<b>Reseaux Sociaux</b><br/> <a href='http://www.youtube.com/scramlermite'>Youtube</a><br/>Par courriel:<br/>"+mailto; para2.innerHTML = " ";
 /*
 +
 "71, Rue de Berri,<br/>"+
@@ -1185,7 +1208,11 @@ para2.innerHTML = "<b>ENTRETIEN & RÉPARATION D'ORDINATEUR</b><br/>"+
 "Débutant - Intermédiaire - Expert<br/><br/><br/>"+
 "Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/><br/>"+
 "<b>Service à domicile sur rendez-vous.</b><br/><br/>"+
-"<u>Tarif</u>:<br/>Estimation à partir de 20$ *<br/>Tarif à partir de 40$ de l'heure **<br/>Service commercial: a partir de 60$ de l'heure**<br/>Service d'assistance en ligne pour 15$ jusqu'à 30 minutes!<br/>Service rapide à partir de $85<br/>* <i>prix minimum pour un déplacement: 1 heure selon tarif</i>.<br/>* <i>Minimum 1 heure</i><br/><br/>** <i>peut varier en fonction des certifications et/ou compétences du technicien ou administrateur reseaux. des frais de 1,88$ du Km. sappliquent</i>.<br/><br/><center>dim.: Ouvert 24h/24<br/>lun.: Ouvert 24h/24<br/>mar.: Ouvert 24h/24<br/>mer.: Ouvert 24h/24<br/>jeu.: Ouvert 24h/24<br/>ven.: Ouvert 24h/24<br/>sam.: Ouvert 24h/24</center><br/><br/>** <i>prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement</i>.<br/><br/>";
+"<u>Tarif</u>:<br/>Estimation à partir de 20$ *<br/>"+
+/*
+Tarif à partir de 40$ de l'heure **<br/>Service commercial: a partir de 60$ de l'heure**<br/>Service d'assistance en ligne pour 15$ jusqu'à 30 minutes!<br/>Service rapide à partir de $85<br/>* <i>prix minimum pour un déplacement: 1 heure selon tarif</i>.<br/>* <i>Minimum 1 heure</i><br/><br/>** <i>peut varier en fonction des certifications et/ou compétences du technicien ou administrateur reseaux. des frais de 1,88$ du Km. sappliquent</i>.<br/><br/>
+*/
+"<center>dim.: Ouvert 24h/24<br/>lun.: Ouvert 24h/24<br/>mar.: Ouvert 24h/24<br/>mer.: Ouvert 24h/24<br/>jeu.: Ouvert 24h/24<br/>ven.: Ouvert 24h/24<br/>sam.: Ouvert 24h/24</center><br/><br/>** <i>prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement</i>.<br/><br/>";
 para3.innerHTML = " ";
 }
 function liens() {
@@ -1251,7 +1278,7 @@ para1.innerHTML = "<b>Template Wix</b><br/><br/>"+
 "<a onclick='wixOne()'>- index 1</a><br/>"+
 "<a onclick='wixTwo()'>- index 2</a><br/><br/>"+"<b>Tool</b><br/>"
 "<a href='https://www.fontspace.com/category/script'>- font</a><br/>"+
-"<br/>Question ?<br/><a href=mailto:marccormierpro@gmail.com>marccormierpro@gmail.com</a>";
+"<br/>Question ?<br/><a href=mailto:cormiermac.mc85@gmail.com>cormiermac.mc85@gmail.com</a>";
 para2.innerHTML = " ";
 para3.innerHTML = " ";
 }
