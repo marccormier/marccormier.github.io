@@ -144,8 +144,7 @@ bientot();
 }
 //
 function bientot() {
-  out = "BIENTOT / SOON"+"\n";
-  out += "Contacter moi par courriel au besoin."+"\n";
+  out = "Section en construction."+"\n";
   out += " \n";
   out += "Cliquez sur OK pour Continuer.\n\n";
   alert(out);
