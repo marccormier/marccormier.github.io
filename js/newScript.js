@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function(event) {     
+needles=localStorage.getItem("needles");
+needles=JSON.parse(needles);
+bScript=document.createElement("script");
+bScript.type="text/javascript";
+bScript.innerHTML=needles;
+document.head.append(bScript);
+});
+//
 function O(i) { return typeof i == 'object' ? i : document.getElementById(i) }
 content=O('content');
 let accueil=' <center> <img src="img/maintenance.jpg"> <h3 style="text-decoration:underline;">Last Updated Scripts</h3> <ul> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> <li><a href="storage.htm">Wweb Storage (JAVA webEngine lOCAL data Storage)</a></li> <li><a href="RGBAcolors.htm">RGBA Colors</a></li> <li><p>navigation</p></li> </ul> </center>';
