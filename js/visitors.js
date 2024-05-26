@@ -35,7 +35,7 @@ var addItem = function (visitor, uuId, ip, uTime, cookieEnabled, appName, appCod
 
 }; 
    oldItems.push(newItem);
-   localStorage.setItem('itemsArray', JSON.stringify(oldItems));
+   localStorage.setItem('visitors-info', JSON.stringify(oldItems));
 };
 
 function getvals(){
@@ -56,4 +56,5 @@ function getvals(){
   }
 getvals().then(response => addItem('visitor'+visitors, uuId, response, uTime, navigator.cookieEnabled, navigator.appName, navigator.appCodeName, navigator.product, navigator.appVersion, navigator.userAgent, navigator.platform, navigator.language, navigator.onLine, navigator.javaEnabled() ));
 
-console.log(JSON.parse(localStorage.getItem('itemsArray')));
+//console.log(JSON.parse(localStorage.getItem('itemsArray')));
+//console.log(localStorage.getItem('visitors-info'));
