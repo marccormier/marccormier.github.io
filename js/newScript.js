@@ -146,7 +146,7 @@ fetch('https://ipinfo.io/json?callback') .then(function(response) {
     let storedText = text;
     let str=storedText.toString();
     let dt=str.slice(1, -48);
-    O('content').innerHTML+=dt+"<img src='img/enConstruction.jpg'>";
+    O('content').innerHTML+=dt+"<img style='width:300px;height:auto;' src='img/enConstruction.jpg'>";
   });
 });
 setTimeout(function(){
