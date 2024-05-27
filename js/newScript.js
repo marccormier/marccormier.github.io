@@ -146,7 +146,7 @@ fetch('https://ipinfo.io/json?callback') .then(function(response) {
     let storedText = text;
     let str=storedText.toString();
     let dt=str.slice(1, -48);
-    O('content').innerHTML+=dt;
+    O('content').innerHTML+=dt+"<img src='img/enConstruction.jpg'>";
   });
 });
 setTimeout(function(){
@@ -174,7 +174,46 @@ function bientot() {
 }
 //
 //function services() {window.open('Service')};
-function services() {O('content').innerHTML="<h2>Services</h2>"+ "ENTRETIEN & RÉPARATION D'ORDINATEUR<br/>"+ "Diagnostique des problèmes matériel ou logiciel, Récupération de mots de passe, Récupération et sauvegarde de données, Nettoyage à l'air de vos équipements électroniques et ordinateurs, Remplacement de disque dur, Installation et configuration d’imprimante, Élimination de virus, nettoyage d’ordinateur Formatage, installation de Windows<br/><br/>"+ "<center><img id='maintenance' style='max-width:50vw;height:auto;' src='img/maintenance.jpg'><br/>"+ "MAINTENANCE & DÉPANNAGE RÉSEAUX<br/>"+ "Configuration de réseau sans-fil, Câblages, Codage des données, topologie, protocoles, adressage<br/><br/>"+ "CONCEPTION GRAPHIQUE & WEBDESIGN<br/>"+ "Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...<br/><br/>"+ "INTÉGRATION (X)HTML / CSS<br/>"+ "Codage à la main respectueux des standards du Web<br/><br/>"+ "GESTION DE PROJETS WEB<br/>"+ "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.<br/><br/>"+ "APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION<br/><br/>"+ "DYNAMISE DES PAGES PAR JAVASCRIPT<br/><br/>"+ "VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO<br/>"+ "Accessibilité & ergonomie des pages web<br/><br/>"+ "CONCEPTION MULTI-PLATEFORMES<br/>"+ "Compatible tous supports, tablette & application mobile<br/><br/>"+ "FORMATION PERSONALISÉE<br/>"+ "Débutant - Intermédiaire - Expert<br/><br/>"+ "Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+ "Service à domicile sur rendez-vous.<br/><br>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>"; }
+function services() {O('content').innerHTML=
+"<h2>Services</h2>"+
+
+"ENTRETIEN & RÉPARATION D'ORDINATEUR<br/>"+
+"Diagnostique des problèmes matériel ou logiciel, Récupération de mots de passe, Récupération et sauvegarde de données, Nettoyage à l'air de vos équipements électroniques et ordinateurs, Remplacement de disque dur, Installation et configuration d’imprimante, Élimination de virus, nettoyage d’ordinateur Formatage, installation de Windows<br/><br/>"+
+"<center><img id='maintenance' style='max-width:50vw;height:auto;' src='img/maintenance.jpg'><br/>"+
+
+"MAINTENANCE & DÉPANNAGE RÉSEAUX<br/>"+
+"Configuration de réseau sans-fil, Câblages, Codage des données, topologie, protocoles, adressage<br/><br/>"+
+
+"CONCEPTION GRAPHIQUE & WEBDESIGN<br/>"+
+"Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...<br/><br/>"+
+
+"INTÉGRATION (X)HTML / CSS<br/>"+
+"Codage à la main respectueux des standards du Web<br/><br/>"+
+
+"GESTION DE PROJETS WEB<br/>"+
+"Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.<br/><br/>"+
+
+"APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION<br/><br/>"+
+
+"DYNAMISE DES PAGES PAR JAVASCRIPT<br/><br/>"+
+
+"VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO<br/>"+
+
+"Accessibilité & ergonomie des pages web<br/><br/>"+
+
+"CONCEPTION MULTI-PLATEFORMES<br/>"+
+"Compatible tous supports, tablette & application mobile<br/><br/>"+
+
+"FORMATION PERSONALISÉE<br/>"+
+"Débutant - Intermédiaire - Expert<br/><br/>"+
+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>"+
+
+"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"+
+"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>"
+;}
+//
 function tarif() {O('content').innerHTML="<h2>Tarif</h2>"+ "Estimation à partir de 20$ * <br/><br/>"+ "Tarif à partir de 45$ de l'heure <br/><br/>"+ "*** Service commercial: a partir de 75$ de l'heure *** <br/><br/>"+ "Service d'assistance en ligne pour 15$ jusqu'à 30 minutes!<br/><br/>"+ "Service rapide à partir de $85<br/>"+ "** prix minimum pour un déplacement: 1 heure selon tarif.<br/>"+ "* Minimum 1 heure  *<br/><br/>"+ "* peut varier en fonction des certifications et/ou compétences du technicien ou administrateur reseaux.<br/><br/>"+ "** prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement.<br/><br/>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>"; }
 function zone() {O('content').innerHTML="<h2>Zone de service</h2>"+ "<p style='text-decoration:line-through;'>Rive-Nord</p>"+ "Laval<br/>"+ "Montréal<br/>"+ "<p style='text-decoration:line-through;'>Rive-Sud</p>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"; }
 //
