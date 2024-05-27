@@ -1,4 +1,4 @@
-let tBtn=document.createElement('tBtn');
+let tBtn=document.createElement('BUTTON');
 tBtn.setAttribute('id', 'topBtn');
 tBtn.setAttribute('value', 'Top');
 tBtn.setAttribute('onclick', 'topFunction');

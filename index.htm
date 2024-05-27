@@ -109,12 +109,14 @@
 </header>
 <marquee behavior="scroll" direction="left" scrollamount="10">JAVA, CSS3, SVG, CANVAS, RWD, jQuery, AJAX, PHP, mySQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee>
     <div id="content" class="contentDiv">
-    <center> <img src="img/maintenance.jpg"> </center>
+    <center> 
+        <img src="img/maintenance.jpg">
+        <p id="lastModif"></p>
+    </center>
 </div>
 <footer style="background-color:black;color:white;">
 <center>
 <h4> <a href="https://shor.by/mcormier">Suivez moi sur le ouaieb</a> </h4>
-<p id="lastModif"></p>
 <p id='time'></p>
 <p id='uTime'></p>
 <img style="width:100px;height:auto;" src="img/teamViewerID.png">
@@ -215,7 +217,7 @@ document.getElementById("time").innerHTML=res;
 document.getElementById("uTime").innerHTML=utcTime;
 }
 //    
-document.getElementById('lastModif').innerHTML = document.lastModified;
+document.getElementById('lastModif').innerHTML ="<i>lastModified</i> :"+document.lastModified;
 var year = new Date().getFullYear();
 document.getElementById('copy').innerHTML = "&#169 "+year+" marccormier.github.io <br/>Réalisé par Marc Cormier";
 </script>
