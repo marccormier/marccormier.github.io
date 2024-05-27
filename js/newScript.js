@@ -176,47 +176,171 @@ function bientot() {
   return true;
 }
 //
+let introService="<center><h2>Services</h2><input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' /><input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /></center><hr>";
 //function services() {window.open('Service')};
 function services() {O('content').innerHTML=
-"<h2>Services</h2>"+
-
-"ENTRETIEN & RÉPARATION D'ORDINATEUR<br/>"+
-"Diagnostique des problèmes matériel ou logiciel, Récupération de mots de passe, Récupération et sauvegarde de données, Nettoyage à l'air de vos équipements électroniques et ordinateurs, Remplacement de disque dur, Installation et configuration d’imprimante, Élimination de virus, nettoyage d’ordinateur Formatage, installation de Windows<br/><br/>"+
-"<center><img id='maintenance' style='max-width:50vw;height:auto;' src='img/maintenance.jpg'><br/>"+
-
-"MAINTENANCE & DÉPANNAGE RÉSEAUX<br/>"+
-"Configuration de réseau sans-fil, Câblages, Codage des données, topologie, protocoles, adressage<br/><br/>"+
-
-"CONCEPTION GRAPHIQUE & WEBDESIGN<br/>"+
-"Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...<br/><br/>"+
-
-"INTÉGRATION (X)HTML / CSS<br/>"+
-"Codage à la main respectueux des standards du Web<br/><br/>"+
-
-"GESTION DE PROJETS WEB<br/>"+
-"Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.<br/><br/>"+
-
-"APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION<br/><br/>"+
-
-"DYNAMISE DES PAGES PAR JAVASCRIPT<br/><br/>"+
-
-"VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO<br/>"+
-
-"Accessibilité & ergonomie des pages web<br/><br/>"+
-
-"CONCEPTION MULTI-PLATEFORMES<br/>"+
-"Compatible tous supports, tablette & application mobile<br/><br/>"+
-
-"FORMATION PERSONALISÉE<br/>"+
-"Débutant - Intermédiaire - Expert<br/><br/>"+
-
+introService+
+"<h3><a onclick='reparation()'>ENTRETIEN & RÉPARATION D'ORDINATEUR</a></h3><br/>"+
+"<h3><a onclick='reseau()'>MAINTENANCE & DÉPANNAGE RÉSEAUX</a></h3><br>"+
+"<h3><a onclick='graph()'>CONCEPTION GRAPHIQUE & WEBDESIGN</a></h3><br/>"+
+"<h3><a onclick='integ()'>INTÉGRATION (X)HTML / CSS</a></h3><br/>"+
+"<h3><a onclick='proWeb()'>GESTION DE PROJETS WEB</a></h3><br/>"+
+"<h3><a onclick='valRef()'>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</a></h3><br/>"+
+"<h3><a onclick='multiFrame()'>CONCEPTION MULTI-PLATEFORMES</a></h3><br/>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
 "Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
-"Service à domicile sur rendez-vous.<br/><br>"+
-
-"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"+
-"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>"
-;}
-//
+"Service à domicile sur rendez-vous.<br/><br>";
+}
+function reparation() {O('content').innerHTML=
+introService+
+"<h3>ENTRETIEN & RÉPARATION D'ORDINATEUR</h3>"+
+"<li>Diagnostique des problèmes matériel ou logiciel</li>"+
+"<li>Récupération de mots de passe</li>"+
+"<li>Récupération et sauvegarde de données</li>"+
+"<li>Nettoyage à l'air de vos équipements électroniques et ordinateurs</li>"+
+"<li>Remplacement de disque dur</li>"+
+"<li>Installation et configuration d’imprimante</li>"+
+"<li>Élimination de virus</li>"+
+"<li>nettoyage d’ordinateur Formatage</li>"+
+"<li>installation de Windows</li>"+
+"<br>"+
+"<h3><a onclick='reseau()'>MAINTENANCE & DÉPANNAGE RÉSEAUX</a></h3><br>"+
+"<h3><a onclick='graph()'>CONCEPTION GRAPHIQUE & WEBDESIGN</a></h3><br/>"+
+"<h3><a onclick='integ()'>INTÉGRATION (X)HTML / CSS</a></h3><br/>"+
+"<h3><a onclick='proWeb()'>GESTION DE PROJETS WEB</a></h3><br/>"+
+"<h3><a onclick='valRef()'>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</a></h3><br/>"+
+"<h3><a onclick='multiFrame()'>CONCEPTION MULTI-PLATEFORMES</a></h3><br/>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>";
+}
+function reseau() {O('content').innerHTML=
+introService+
+"<h3><a onclick='reparation()'>ENTRETIEN & RÉPARATION D'ORDINATEUR</a></h3><br/>"+
+"<h3>MAINTENANCE & DÉPANNAGE RÉSEAUX</h3>"+
+"<li>Configuration de réseau sans-fil</li>"+
+"<li>Câblages</li>"+
+"<li>Codage des données</li>"+
+"<li>topologie</li>"+
+"<li>protocoles</li>"+
+"<li>adressage</li>"+
+"<br>"+
+"<h3><a onclick='graph()'>CONCEPTION GRAPHIQUE & WEBDESIGN</a></h3><br/>"+
+"<h3><a onclick='integ()'>INTÉGRATION (X)HTML / CSS</a></h3><br/>"+
+"<h3><a onclick='proWeb()'>GESTION DE PROJETS WEB</a></h3><br/>"+
+"<h3><a onclick='valRef()'>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</a></h3><br/>"+
+"<h3><a onclick='multiFrame()'>CONCEPTION MULTI-PLATEFORMES</a></h3><br/>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>";
+}
+function graph() {O('content').innerHTML=
+introService+
+"<h3><a onclick='reparation()'>ENTRETIEN & RÉPARATION D'ORDINATEUR</a></h3><br/>"+
+"<h3><a onclick='reseau()'>MAINTENANCE & DÉPANNAGE RÉSEAUX</a></h3><br>"+
+"<h3>CONCEPTION GRAPHIQUE & WEBDESIGN</h3>"+
+"<li>Logos</li>"+
+"<li>templates Web</li>"+
+"<li>plaquettes publicitaires</li>"+
+"<li>cartes de visite</li>"+
+"<li>newsletters...</li>"+
+"<br>"+
+"<h3><a onclick='integ()'>INTÉGRATION (X)HTML / CSS</a></h3><br/>"+
+"<h3><a onclick='proWeb()'>GESTION DE PROJETS WEB</a></h3><br/>"+
+"<h3><a onclick='valRef()'>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</a></h3><br/>"+
+"<h3><a onclick='multiFrame()'>CONCEPTION MULTI-PLATEFORMES</a></h3><br/>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>";
+}
+function integ() {O('content').innerHTML=
+introService+
+"<h3><a onclick='reparation()'>ENTRETIEN & RÉPARATION D'ORDINATEUR</a></h3><br/>"+
+"<h3><a onclick='reseau()'>MAINTENANCE & DÉPANNAGE RÉSEAUX</a></h3><br>"+
+"<h3><a onclick='graph()'>CONCEPTION GRAPHIQUE & WEBDESIGN</a></h3><br/>"+
+"<h3>INTÉGRATION (X)HTML / CSS</h3>"+
+"<li>Codage à la main respectueux des standards du Web</li>"+
+"<br>"+
+"<h3><a onclick='proWeb()'>GESTION DE PROJETS WEB</a></h3><br/>"+
+"<h3><a onclick='valRef()'>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</a></h3><br/>"+
+"<h3><a onclick='multiFrame()'>CONCEPTION MULTI-PLATEFORMES</a></h3><br/>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>";
+}
+function proWeb() {O('content').innerHTML=
+introService+
+"<h3><a onclick='reparation()'>ENTRETIEN & RÉPARATION D'ORDINATEUR</a></h3><br/>"+
+"<h3><a onclick='reseau()'>MAINTENANCE & DÉPANNAGE RÉSEAUX</a></h3><br>"+
+"<h3><a onclick='graph()'>CONCEPTION GRAPHIQUE & WEBDESIGN</a></h3><br/>"+
+"<h3><a onclick='integ()'>INTÉGRATION (X)HTML / CSS</a></h3><br/>"+
+"<h3>GESTION DE PROJETS WEB</h3>"+
+"<li>Site vitrine</li>"+
+"<li>corporate</li>"+
+"<li>évènementiel</li>"+
+"<li>e-commerce</li>"+
+"<li>intranet</li>"+
+"<li>application mobile</li>"+
+"<br>"+
+"<h3><a onclick='valRef()'>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</a></h3><br/>"+
+"<h3><a onclick='multiFrame()'>CONCEPTION MULTI-PLATEFORMES</a></h3><br/>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>";
+}
+function valRef() {O('content').innerHTML=
+introService+
+"<h3><a onclick='reparation()'>ENTRETIEN & RÉPARATION D'ORDINATEUR</a></h3><br/>"+
+"<h3><a onclick='reseau()'>MAINTENANCE & DÉPANNAGE RÉSEAUX</a></h3><br>"+
+"<h3><a onclick='graph()'>CONCEPTION GRAPHIQUE & WEBDESIGN</a></h3><br/>"+
+"<h3><a onclick='integ()'>INTÉGRATION (X)HTML / CSS</a></h3><br/>"+
+"<h3><a onclick='proWeb()'>GESTION DE PROJETS WEB</a></h3><br/>"+
+"<h3>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</h3>"+
+"<li>Accessibilité & ergonomie des pages web</li>"+
+"<br>"+
+"<h3><a onclick='multiFrame()'>CONCEPTION MULTI-PLATEFORMES</a></h3><br/>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>";
+}
+function multiFrame() {O('content').innerHTML=
+introService+
+"<h3><a onclick='reparation()'>ENTRETIEN & RÉPARATION D'ORDINATEUR</a></h3><br/>"+
+"<h3><a onclick='reseau()'>MAINTENANCE & DÉPANNAGE RÉSEAUX</a></h3><br>"+
+"<h3><a onclick='graph()'>CONCEPTION GRAPHIQUE & WEBDESIGN</a></h3><br/>"+
+"<h3><a onclick='integ()'>INTÉGRATION (X)HTML / CSS</a></h3><br/>"+
+"<h3><a onclick='proWeb()'>GESTION DE PROJETS WEB</a></h3><br/>"+
+"<h3><a onclick='valRef()'>VALIDATION W3C, WAI & RÉFÉRENCEMENT NATUREL SEO</a></h3><br/>"+
+"<h3>CONCEPTION MULTI-PLATEFORMES</h3>"+
+"<li>Compatible tous supports, tablette & application mobile</li>"+
+"<br>"+
+"<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
+"<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
+"<h4>FORMATION PERSONALISÉE</h4>"+
+"Débutant - Intermédiaire - Expert<br><br>"+
+"Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
+"Service à domicile sur rendez-vous.<br/><br>";
+}
 function tarif() {O('content').innerHTML="<h2>Tarif</h2>"+ "Estimation à partir de 20$ * <br/><br/>"+ "Tarif à partir de 45$ de l'heure <br/><br/>"+ "*** Service commercial: a partir de 75$ de l'heure *** <br/><br/>"+ "Service d'assistance en ligne pour 15$ jusqu'à 30 minutes!<br/><br/>"+ "Service rapide à partir de $85<br/>"+ "** prix minimum pour un déplacement: 1 heure selon tarif.<br/>"+ "* Minimum 1 heure  *<br/><br/>"+ "* peut varier en fonction des certifications et/ou compétences du technicien ou administrateur reseaux.<br/><br/>"+ "** prix sujet à changement sans préavis. pour plus de détails visitez notre site web régulièrement.<br/><br/>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /><br/><br/>"; }
 function zone() {O('content').innerHTML="<h2>Zone de service</h2>"+ "<p style='text-decoration:line-through;'>Rive-Nord</p>"+ "Laval<br/>"+ "Montréal<br/>"+ "<p style='text-decoration:line-through;'>Rive-Sud</p>"+ "<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' />"; }
-//
