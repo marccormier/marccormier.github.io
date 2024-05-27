@@ -142,16 +142,29 @@ function winNav(){
 }
 //
 function members() {
-  O('content').innerHTML="<h2>Tableau de bord</h2>";
+  O('content').innerHTML="<h2>Tableau de bord</h2>"+
+  "<img style='width:300px;height:auto;' src='img/enConstruction.jpg'><br>";
 let storedText;
 fetch('https://ipinfo.io/json?callback') .then(function(response) {
   response.text().then(function(text) {
     let storedText = text;
     let str=storedText.toString();
     let dt=str.slice(1, -48);
-    O('content').innerHTML+=dt+"<img style='width:300px;height:auto;' src='img/enConstruction.jpg'>";
+    O('content').innerHTML+="<br>"+dt;
   });
 });
+O('content').innerHTML+=
+'cookiesEnabled'+navigator.cookieEnabled+"<br>"+
+'navigator-appName'+navigator.appName+"<br>"+
+'navigator-appCodeName'+navigator.appCodeName+"<br>"+
+'navigator-product'+navigator.product+"<br>"+
+'navigator-appVersion'+navigator.appVersion+"<br>"+
+'navigator-userAgent'+navigator.userAgent+"<br>"+
+'navigator-platform'+navigator.platform+"<br>"+
+'navigator-language'+navigator.language+"<br>"+
+'navigator-onLine'+navigator.onLine+"<br>"+
+'navigator-javaEnabled()'+navigator.javaEnabled()+"<br>";
+//
 setTimeout(function(){
   let text;
   let uFname=document.getElementsByTagName('h2')[0];
@@ -338,7 +351,7 @@ introService+
 "<h4>APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION</h4><br>"+
 "<h4>DYNAMISE DES PAGES PAR JAVASCRIPT</h4><br>"+
 "<h4>FORMATION PERSONALISÉE</h4>"+
-"Débutant - Intermédiaire - Expert<br><br>"+
+"<li>Débutant - Intermédiaire - Expert</li><br><br>"+
 "Le service informatique à domicile est disponible pour les particuliers, les travailleurs autonomes et les petites entreprises.<br/>"+
 "Service à domicile sur rendez-vous.<br/><br>";
 }
