@@ -31,72 +31,72 @@ O('content').appendChild(imgGallery);
 }
 //
 function domStyles() {
-content.innerHTML='';
+O('content').innerHTML='';
 const htDomStyle=document.createElement("OBJECT");
 htDomStyle.setAttribute("data", "htmlDomStyle.html");
 htDomStyle.setAttribute("width", "875px");
 htDomStyle.setAttribute("height", "335px");
 htDomStyle.setAttribute("class", "htDomStyle");
-content.appendChild(htDomStyle);
+O('content').appendChild(htDomStyle);
 }
 //
 function htmlDOMnode() {
-content.innerHTML='';
+O('content').innerHTML='';
 const htDom=document.createElement("OBJECT");
 htDom.setAttribute("data", "htmlDOM.html");
 htDom.setAttribute("width", "875px");
 htDom.setAttribute("height", "335px");
 htDom.setAttribute("class", "htDom");
-content.appendChild(htDom);
+O('content').appendChild(htDom);
 }
 //
 function peridotColorPattern() {
-content.innerHTML='';
+O('content').innerHTML='';
 const peridotCpattern=document.createElement("OBJECT");
 peridotCpattern.setAttribute("data", "peridotColorPattern.htm");
 peridotCpattern.setAttribute("width", "875px");
 peridotCpattern.setAttribute("height", "335px");
 peridotCpattern.setAttribute("class", "peridotCpattern");
-content.appendChild(peridotCpattern);
+O('content').appendChild(peridotCpattern);
 }
 function htmlCompiler() {
-content.innerHTML='';
+O('content').innerHTML='';
 const htmlCompil=document.createElement("OBJECT");
 htmlCompil.setAttribute("data", "compiler/htmlCompiler.htm");
 htmlCompil.setAttribute("width", "875px");
 htmlCompil.setAttribute("height", "335px");
 htmlCompil.setAttribute("class", "htmlCompil");
-content.appendChild(htmlCompil);
+O('content').appendChild(htmlCompil);
 }
 //
 function binCompiler() {
-content.innerHTML='';
+O('content').innerHTML='';
 const binCompil=document.createElement("OBJECT");
 binCompil.setAttribute("data", "compiler/binaryCompiler.htm");
 binCompil.setAttribute("width", "875px");
 binCompil.setAttribute("height", "335px");
 binCompil.setAttribute("class", "binCompil");
-content.appendChild(binCompil);
+O('content').appendChild(binCompil);
 }
 //
 function cssSnips() {
-content.innerHTML='';
+O('content').innerHTML='';
 const cssSnip=document.createElement("OBJECT");
 cssSnip.setAttribute("data", "cssSnip.htm");
 cssSnip.setAttribute("width", "875px");
 cssSnip.setAttribute("height", "335px");
 cssSnip.setAttribute("class", "cssSnip");
-content.appendChild(cssSnip);
+O('content').appendChild(cssSnip);
 }
 //
 function jQuerySnips() {
-content.innerHTML='';
+O('content').innerHTML='';
 const jQuerySnip=document.createElement("OBJECT");
 jQuerySnip.setAttribute("data", "jQuerySnip.htm");
 jQuerySnip.setAttribute("width", "875px");
 jQuerySnip.setAttribute("height", "335px");
 jQuerySnip.setAttribute("class", "jQuerySnip");
-content.appendChild(jQuerySnip);
+O('content').appendChild(jQuerySnip);
 }
 //
 function skills() {O('content').innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>HTMl</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>JAVA</li></ul></center>'; }
@@ -143,7 +143,8 @@ function winNav(){
 //
 function members() {
   O('content').innerHTML="<h2>Tableau de bord</h2>"+
-  "<img style='width:300px;height:auto;' src='img/enConstruction.jpg'><br>";
+  "<img style='width:300px;height:auto;' src='img/enConstruction.jpg'><br>"+
+  "<center> <input type='button' value='inscription / connexion' onclick='')'> </center>";
 let storedText;
 fetch('https://ipinfo.io/json?callback') .then(function(response) {
   response.text().then(function(text) {
