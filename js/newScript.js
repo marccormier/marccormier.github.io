@@ -31,7 +31,7 @@ O('content').appendChild(imgGallery);
 }
 //
 function domStyles() {
-O('content').innerHTML='';
+content.innerHTML='';
 const htDomStyle=document.createElement("OBJECT");
 htDomStyle.setAttribute("data", "htmlDomStyle.html");
 htDomStyle.setAttribute("width", "875px");
