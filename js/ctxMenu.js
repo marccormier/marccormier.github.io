@@ -15,6 +15,6 @@ oncontextmenu = (e) => {
   //
   //codes="<p onclick='codes()'>Codes</p>";
   //alert="<p onclick='alert(`you click option alert`)'>alert</p>";
-  menu.innerHTML = mTitle+opt+webStorage+mcbrady+esoGuild+extLinks+scopes+olderVersion;
+  menu.innerHTML = mTitle+opt+webStorage+mcbrady+esoGuild;
   document.body.appendChild(menu);
 }
