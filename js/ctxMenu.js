@@ -1,8 +1,12 @@
+ctxMenu=document.createElement('style');
+ctxMenu.innerHTML="#ctxmenu {position: fixed; background: ghostwhite; color: black; cursor: pointer; border: 1px black solid; padding:2px; } #ctxmenu > p {padding: 0 1rem; margin: 0 } #ctxmenu > p:hover {background: black; color: ghostwhite }";
+document.head.appendChild(ctxMenu);
+//
 oncontextmenu = (e) => {
   e.preventDefault()
   let menu = document.createElement("div")
   menu.id = "ctxmenu"
-  menu.style = `top:${e.pageY-10}px;left:${e.pageX-40}px`
+  menu.style = `top:${e.pageY-10}px;left:${e.pageX-40}px`;
   menu.onmouseleave = () => ctxmenu.outerHTML = ''
   mTitle="Menu<br><hr>";
   opt="<p onclick='alert(`Option`)'>Option</p>";
