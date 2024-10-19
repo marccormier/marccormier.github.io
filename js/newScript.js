@@ -99,7 +99,7 @@ jQuerySnip.setAttribute("class", "jQuerySnip");
 O('content').appendChild(jQuerySnip);
 }
 //
-function skills() {O('content').innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>HTMl</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>JAVA</li></ul></center>'; }
+function skills() {O('content').innerHTML='<h2>Mes Compétences</h2><hr><center><ul><li>JAVA</li><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>jQuery</li><li>CSS3</li><li>HTMl5</li></ul></center>'; }
 const htmlCodes='<h3>HTML (.htm - .html)</h3> <ul>Color Picker<br/> <input type="color" id="colorpicker" value="#000000" style="margin-left:0px;" /> <li><a class="domAlink" onclick="passwordGenerator(random_number)">Générateur de mot de passe</a></li> <li><a class="domAlink" onclick="winNav()">Navigator Properties</a></li> <li><a class="domAlink" onclick="cssSnips()">CSS html DOM Snippets</a></li> <li><a class="domAlink" onclick="domStyles()">JS html DOM Styles</a></li> <li><a class="domAlink" onclick="htmlDOMnode()">JS HTML DOM Interface</a></li> <li><a onclick="peridotColorPattern()">Peridot color pattern</a></li> <li><a class="domAlink" onclick="htmlCompiler()">Compilateur HTML</a></li> <li><a class="domAlink" onclick="binCompiler()">Compilateur Binaire</a></li> <li><a class="subTcodes">Window Object</a></li> <li><a>HTML Events</a></li> <li><a href="storage.htm"><i>web Storage</i></a></li> <li><a href="RGBAcolors.htm"><i>RGBA Colors</i></a></li> <li><a href="skydiveLoggerApp">Skydive Logger APP Data To HTML Table</a></li> </ul> <br/>';
 const cssCodes='<h3>CSS (.css)</h3><ul><li><a>CSS Needles Library</a></li></ul><br/>';
 const jsCodes='<h3>JavaScript (.js)</h3><ul><li><a>AJAX</a></li><li><a>Time</a></li><li><a>Gestion d&#39opérations</a></li><li><a>Générateur de Table HTML</a></li><li><a>OSC</a></li><li><a>needles</a></li></ul> <br/>';
@@ -109,6 +109,40 @@ const javaCodes= ' <h3>JAVA (.java)</h3> <ul> <li><a>Coffee Machine</a></li> <li
 const shellScriptCodes='<h3>Shell Scripting Language (.bat - .cmd - .exe)</h3><ul><li><a>file Sorting</a></li> <li><a>List Files In Folder</a></li> <li><a>Windows error Fixer</a></li> <li><a>Clone File Checker</a></li> <li><a>clear Cache</a></li> </ul><br/>';
 const mslCodes='<h3>mSL (.ini)</h3><ul><li><a>MCBrady</a></li></ul>';
 function codes() {O('content').innerHTML='<h2>Codes</h2><hr><p>Jusqu&#39à présent, j&#39ai écrit quelques codes :</p>'+ htmlCodes+cssCodes+jsCodes+jQueryCodes+phpCodes+javaCodes+shellScriptCodes+mslCodes; }
+//
+function Products() {
+   O('content').innerHTML="<h2>Produits</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+function HTML() {
+   O('content').innerHTML="<h2>HTML</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+function CSS() {
+   O('content').innerHTML="<h2>CSS</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+function JAVASCRIPT() {
+   O('content').innerHTML="<h2>JAVASCRIPT</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+function NodeJS() {
+   O('content').innerHTML="<h2>NodeJS</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+function PHP() {
+   O('content').innerHTML="<h2>PHP</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+function SQL() {
+   O('content').innerHTML="<h2>SQL</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+function JAVA() {
+   O('content').innerHTML="<h2>JAVA</h2><center> <img src='img/maintenance.jpg'> <p id='lastModif'></p> </center> "; 
+   document.getElementById('lastModif').innerHTML="<i>lastModified</i> :"+document.lastModified;
+ }
+
 //
 function winNav(){
     var caracteristiquesNavigateur = "";
@@ -174,6 +208,7 @@ setTimeout(function(){
 //if (sessionStorage.uFname){uFname.innerHTML=sessionStorage.uFname;}
   let person = prompt("S'il vous plaît entrez votre nom:", "");
   if (person == null || person == "") {text = "Cancelled prompt.";}
+  else if(person == "marc") {window.open("https://marccormier.github.io/storage.htm");}
    else {text = "Bonjour "+person+"!";}
   uFname.innerHTML = text;
   sessionStorage.setItem('uFname', text);
