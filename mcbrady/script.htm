@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>#MCBrady.ini</title>
+</head>
+<body>
+<div>
+	<h1> <marquee>Écriture en cour ...</marquee></h1>
+		<textarea style="width:95vw;height:444px;">
+;-------------------------------------
+; MCBrady Simple mIRC Remote Script (1.0\mIRC7.72\Win10)
+; by MCBrady Alias Politicien.
+; Contact:
+; /Server -m irc.undernet.org:6667 -jn #MCBrady yourNick
+; irc.mcbrady@gmail.com
+; https://marccormier.github.io/mcbrady
+;--------------------------------------------------------------------------
+; Content ;
+; ------------------------------------
+; Description :
+; Dialog ( ())
+; Events 
+; Remote Script
+; Popups
+; Alias
+;--------------------------------------------------------------------------
+; Description :
+;-------------------------------------
+; Ceci est un commentaire dune ligne dans un fichier dextention (initiate).ini
+/* 
+Ceci est un 
+commentaire de 
+plusieurs lignes
+*/
+;
+; Nom du fichier :           Mcbrady.txt.cmd.ini
+; Description :              mIRC Remote Script
+; Extention du fichier :     (initiate).ini
+;
+;--------------------------------------------------------------------------
+;-------------
+; Dialog ( ())
+;-------------
+;
+;--------------------------------------------------------------------------
+;-------------
+; Event(s)
+;-------------
+raw *:*:{  }
+ctcp *:*:*:{  }
+Off *:*:*:{ Echo -s $Nick $network $uLevel $Event $target $1- }
+;--------------------------------------------------------------------------
+;-------------
+; Remote
+;-------------
+on *:load:{ echo -a Script Loaded, getting connected. | getConnection }
+on *:Start:{ getConnection }
+on *:Connect:{ if ($network != undernet) { getConnection } }
+on *:Join:#:{  }
+on *:voice:#:{  }
+on *:devoice:#:{  }
+on *:op:#:{  }
+on *:deop:#:{  }
+on *:kick:#:{  }
+on *:ban:#:{  }
+on *:unban:#:{  }
+on *:Part:#:{  }
+on *:Quit:{  }
+on *:mode:#:{  }
+on *:Nick:{  }
+on *:Notice:*:*:{  }
+on *:Text:*:*:{  }
+;----------------------------------------------------
+;-------------
+; Alias
+;-------------
+alias getConnection { /server -m ca.undernet.org:6667 -jn #MCBrady }
+;----------------------------------------------------
+;--------------
+; Popups
+;--------------
+menu menubar {
+  Mcbrady
+  .Scripts
+  ..incoming
+}
+menu status {}
+menu channel {}
+menu nicklist {
+C commands
+.Request Op:/Msg C requestop $chan
+X commands
+.1000
+..Quote
+.900
+..Shutdown
+.800
+..Server Notice
+.750
+..Purge
+..Register
+.600
+..Remove ignore
+..Add comment
+..Scan hostname
+.501
+.500
+..Channel Owner
+.450
+..Channel Admin
+.400
+..Channel Member
+.100
+..Channel Operator
+.75
+.50
+.1
+.0
+..All User
+}
+menu query {}
+</textarea>
+<a href="https://marccormier.github.io/mcbrady/" style="font-weight:bold;">Back &nbsp<<<</a>
+</div>
+</body>
+</html>

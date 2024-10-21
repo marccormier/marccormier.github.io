@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Image Gallery</title>
+		<style>
+@media only screen and (min-device-width:320px) and (max-device-width:480px)
+{
+    #container{max-width:87vw;max-height:50vh;}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min-device-pixel-ratio:1.5) {}
+body{
+background-color: #F0ED73;
+}
+#container{
+	background-color:white;
+	margin:auto;
+	height:auto;
+	width:85vw;
+	display:flex;
+	border: 5px solid green;
+	overflow-x:scroll;
+	scroll-snap-type:x mandatory;
+}
+img{
+	margin:10px;
+	padding:10px;
+	scroll-snap-align:center;
+	object-fit:contain;
+	max-width:80vw;
+	max-height:250px;
+}
+</style>
+	</head>
+	<body>
+	<div id="container">
+	<img src="img/iisstart.png">
+	<img src="img/windows.jpg">
+	 <img src="img/2020-12-10.jpg">
+	 <img src="img/scripting.png">
+	 <img src="img/keyboardType.png">
+	 <img src="img/programmation.jpg">
+	 <img src="img/reparationEntretien.jpg">
+	 <img src="img/specialisteInternet.jpg">
+	 <img src="img/maintenance.jpg">
+	 <img src="img/PC1.jpg">
+	 <img src="img/pc2.jpg">
+	 <img src="img/phone.png">
+	 <a href="https://discord.gg/ZPT6RJASUe"><img src="img/discord.png"></a>
+	 <img src="img/mailto.png">
+	 <img src="img/logo/logo.png">
+	 <img src="img/pics/me.png">
+</div>
+	</body>
+</html>

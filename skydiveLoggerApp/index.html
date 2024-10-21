@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Skydive Logger App Data Export To html Table</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="topBtn.js"></script>
+ </head>
+  <body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<h2 class="center">Skydive Logger APP</h2>
+<h3 class="center">
+  <a href="https://apps.apple.com/sa/app/skydive-logger/id971853125">( Download - Télécharger )</a>
+</h3>
+<h1 class="center">data to html Table for</h1>
+<h3 class="center" id="subT"></h3>
+<h3 class="center">date.Skydive</h3>
+<h3 class="center" style="text-decoration:line-through;">jumps.CSV</h3>
+<h3 class="center" style="text-decoration:line-through;">bundle.jumps</h3>
+<input type="file" class="center" id="datafile">
+<p id="dem" class="center"></p>
+<hr>
+<p class="center">&#169<a href="http://marccormier.github.io/">MarcCormier.GitHub.io</a></p>
+<script type="text/javascript">
+function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+input=document.getElementById('datafile');
+input.addEventListener('change', function() {
+var fr = new FileReader();
+fr.onload = function() {
+document.getElementById('dem')
+.textContent = fr.result;
+frResult=fr.result;
+genTab(frResult);
+}
+fr.readAsText(this.files[0]);
+})
+function genTab(frResult){
+data = JSON.parse(frResult);
+var table = document.createElement("table"), row, cellA, cellB;
+document.getElementById("dem").appendChild(table);
+for (let key in data) {
+  row = table.insertRow();
+  cellA = row.insertCell();
+  cellB = row.insertCell();
+  cellA.textContent = key;
+  if (key=="") {
+    cellB.textContent = data[key].join(", ");
+  }
+  else if (key=="") {
+    cellB.textContent = `<div>Name: ${data[key]["Name"]}</div><div>Species: ${data[key]["Species"]}</div>`;
+  }
+  else {
+    cellB.textContent = data[key];
+  }
+}
+}
+</script>
+</body>
+</html>

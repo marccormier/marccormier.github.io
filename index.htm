@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+<meta http-equiv="refresh" content="0;URL='https://marccormier.github.io/maintenance.html'" />
+-->
+    <meta charset='UTF-8'> 
+    <meta name="viewport" content="width=320" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/lStorage.js"></script>
+  <script type="text/javascript" src="js/newScript.js"></script>
+  <script type="text/javascript" src="js/visitors.js"></script>
+  <script type="text/javascript" src="js/passwordGen.js"></script>
+  <script type="text/javascript" src="js/ctxMenu.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/newStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/othStyle.css">
+  <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon">
+  <style type="text/css">
+  a:hover{cursor: pointer;}
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey;}
+::-webkit-scrollbar-thumb {background: red;}
+::-webkit-scrollbar-thumb:hover {background: greenyellow;}
+</style>
+  <title>Marc Cormier</title>
+</head>
+<body>
+    <a href="https://marccormier.github.io/"><h1 class="blog">Blog</h1></a>
+    <h2 style="margin-left:15vw;"></h2>
+<header>
+    <nav>
+    <ul class="menu">
+    <li><a class="domAlink" onclick="home()">Accueil</a></li>
+    <li><a onclick="about()">À Propos</a>
+     <ul class="submenu">
+    <li><a class="domAlink" onclick="skills()">Compétences</a></li>
+    <li><a class="domAlink" onclick="imgGallery()">Photos</a></li>
+ </ul>
+ </li>
+
+     <li><a class="domAlink" onclick="codes()">Codes</a></li>
+
+     <li><a class="domAlink" onclick="Products()">Produits</a></li>
+
+    <li><a href="#">Projets</a>
+     <ul class="submenu">
+    <li><a href="#">Frontend</a>
+     <ul class="submenu2">
+     <li><a class="domAlink" onclick="HTML()">HTML</a></li>
+     <li><a class="domAlink" onclick="CSS()">CSS</a></li>
+     <li><a class="domAlink" onclick="JAVASCRIPT()">JAVASCRIPT</a></li>
+     </ul>
+    </li>
+    <li><a href="#">Backend</a>
+     <ul class="submenu2">
+     <li><a class="domAlink" onclick="NodeJS()">NodeJS</a></li>
+     <li><a class="domAlink" onclick="PHP()">PHP</a></li>
+     <li><a class="domAlink" onclick="SQL()">SQL</a></li>
+     <li><a class="domAlink" onclick="JAVA()">JAVA</a></li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+
+    <li><a onclick="services()">Services</a></li>
+    <li><a onclick="members()">Membre(s)</a></li>
+    <li><a href="mailto:cormiermac.mc85@gmail.com?subject=gitHub">Contact</a> </li>
+    </ul>
+    </nav>
+</header>
+<marquee behavior="scroll" direction="left" scrollamount="10">JAVA, CSS3, SVG, CANVAS, RWD, jQuery, AJAX, PHP, mySQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee>
+    <div id="content" class="contentDiv">
+    <center> 
+        <img src="img/maintenance.jpg">
+        <p id="lastModif"></p>
+    </center>
+</div>
+<footer style="background-color:black;color:white;">
+<center>
+<h4> <a href="https://shor.by/mcormier">Suivez moi sur le ouaieb</a> </h4>
+<p id='time'></p>
+<p id='uTime'></p>
+<img style="width:100px;height:auto;" src="img/teamViewerID.png">
+<img style="width:50px;height:auto;margin-left:10px;margin-right:10px;" src="img/zoom.jpg">
+<p id="copy"></p>
+<center>
+</footer>
+</main>
+<script type="text/javascript">
+setInterval(clock, 1);
+function clock() {
+const d = new Date();
+let time = d.getTime();
+let sec = d.getSeconds();
+let min = d.getMinutes();
+let millisec = d.getMilliseconds();
+let hour = d.getHours();
+let utc = d.toUTCString();
+let fYear = d.getFullYear();
+let date = d.getDate();
+let day;
+
+/*
+const weekday = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+const d = new Date();
+let day = weekday[d.getDay()];
+*/
+
+switch (d.getDay()) {
+  case 0:
+  day = "Dimanche";
+  break;
+  case 1:
+  day = "Lundi";
+  break;
+  case 2:
+  day = "Mardi";
+  break;
+  case 3:
+  day = "Mercredi";
+  break;
+  case 4:
+  day = "Jeudi";
+  break;
+  case 5:
+  day = "Vendredi";
+  break;
+  case  6:
+  day = "Samedi";
+}
+
+let month;
+switch (d.getMonth()) {
+  case 0:
+  month = "Janvier";
+  break;
+  case 1:
+  month = "Février";
+  break;
+  case 2:
+  month = "Mars";
+  break;
+  case 3:
+  month = "Avril";
+  break;
+  case 4:
+  month = "Mai";
+  break;
+  case 5:
+  month = "Juin";
+  break;
+  case  6:
+  month = "Juillet";
+  break;
+  case 7:
+  month = "Août";
+  break;
+  case  8:
+  month = "Septembre";
+  break;
+  case  9:
+  month = "Octobre";
+  break;
+  case  10:
+  month = "Novembre";
+  break;
+  case  11:
+  month = "Décembre";
+}
+hour = hour < 10 ? "0" + hour : hour;
+min = min < 10 ? "0" + min : min;
+sec = sec < 10 ? "0" + sec : sec;
+month = month < 10 ? "0" + month : month;
+day = day < 10 ? "0" + day : day;
+let res=day+", "+date+"&nbsp"+month+"&nbsp"+fYear+"<br/>"+hour+":"+min+":"+sec+"."+millisec;
+let utcTime=utc;
+document.getElementById("time").innerHTML=res;
+document.getElementById("uTime").innerHTML=utcTime;
+}
+//    
+document.getElementById('lastModif').innerHTML ="<i>lastModified</i> :"+document.lastModified;
+var year = new Date().getFullYear();
+document.getElementById('copy').innerHTML = "&#169 "+year+" marccormier.github.io <br/>Réalisé par Marc Cormier";
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{}
+		html{}
+		body{}
+#grid {text-align:center;font-size:18px;}
+.grid1{background-color:rgb(255, 0, 0);}
+.grid2{background-color:rgb(0, 0, 255);}
+.grid3{background-color:rgb(60, 179, 113);}
+.grid4{background-color:rgb(238, 130, 238);}
+.grid5{background-color:rgb(255, 165, 0);}
+.grid6{background-color:rgb(106, 90, 205);}
+.grid7{background-color:rgb(60, 60, 60);color:white;}
+.grid8{background-color:rgb(90, 90, 90);color:white;}
+.grid9{background-color:rgb(120, 120, 120);color:white;}
+.grid10{background-color:rgb(180, 180, 180);}
+.grid11{background-color:rgb(210, 210, 210);}
+.grid12{background-color:rgb(240, 240, 240);}
+#rgba{font-size:2em;width:50%}
+label{margin:11%;font-size:17px;font-weight:bold;padding:0px;}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 20%; /* Full-width */
+  margin:25px;
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+.grid13{background-color:rgba(255, 99, 71, 0);}
+.grid14{background-color:rgba(255, 99, 71, 0.2);}
+.grid15{background-color:rgba(255, 99, 71, 0.4);}
+.grid16{background-color:rgba(255, 99, 71, 0.6);}
+.grid17{background-color:rgba(255, 99, 71, 0.8);}
+.grid18{background-color:rgba(255, 99, 71, 1);}
+</style>
+</head>
+<body>
+<div id="grid" class="grid1">rgb(255, 0, 0)</div>
+<div id="grid" class="grid2">rgb(0, 0, 255)</div>
+<div id="grid" class="grid3">rgb(60, 179, 113)</div>
+<div id="grid" class="grid4">rgb(238, 130, 238)</div>
+<div id="grid" class="grid5">rgb(255, 165, 0)</div>
+<div id="grid" class="grid6">rgb(106, 90, 205)</div>
+<hr>
+<div id="grid" class="grid7">rgb(60, 60, 60)</div>
+<div id="grid" class="grid8">rgb(90, 90, 90)</div>
+<div id="grid" class="grid9">rgb(120, 120, 120)</div>
+<div id="grid" class="grid10">rgb(180, 180, 180)</div>
+<div id="grid" class="grid11">rgb(210, 210, 210)</div>
+<div id="grid" class="grid12">rgb(240, 240, 240)</div>
+<hr>
+<center><div id="rgba"></div></center>
+<div id="sliderLabel">
+	<label>Red</label><label>Green</label><label>Blue</label><label>Alpha</label><br />
+<input type="range" min="0" max="255" value="255" class="slider" id="red">
+<input type="range" min="0" max="255" value="99" class="slider" id="green">
+<input type="range" min="0" max="255" value="71" class="slider" id="blue">
+<input type="range" min="0" max="1.0" step="0.1" value="0.5" class="slider" id="alpha">
+</div>
+<div id="grid" class="grid13">rgba(255, 99, 71, 0)</div>
+<div id="grid" class="grid14">rgba(255, 99, 71, 0.2)</div>
+<div id="grid" class="grid15">rgba(255, 99, 71, 0.4)</div>
+<div id="grid" class="grid16">rgba(255, 99, 71, 0.6)</div>
+<div id="grid" class="grid17">rgba(255, 99, 71, 0.8)</div>
+<div id="grid" class="grid18">rgba(255, 99, 71, 1)</div>
+<script type="text/javascript">
+	var r = document.getElementById("red");
+	var g = document.getElementById("green");
+	var b = document.getElementById("blue");
+	var alpha = document.getElementById("alpha");
+var rgba = document.getElementById("rgba");
+rgba.innerHTML = "RGBA("+r.value+","+g.value+","+b.value+","+alpha.value+")"; 
+	rgba.style.backgroundColor="rgba("+r.value+","+g.value+","+b.value+","+alpha.value+")";
+r.oninput = function() {
+	rgba.innerHTML = "RGBA("+this.value+","+g.value+","+b.value+","+alpha.value+")";
+		rgba.style.backgroundColor="rgba("+r.value+","+g.value+","+b.value+","+alpha.value+")";
+	 }
+g.oninput = function() {
+	rgba.innerHTML = "RGBA("+r.value+","+this.value+","+b.value+","+alpha.value+")"; 
+	rgba.style.backgroundColor="rgba("+r.value+","+g.value+","+b.value+","+alpha.value+")";
+}
+b.oninput = function() {
+	rgba.innerHTML = "RGBA("+r.value+","+g.value+","+this.value+","+alpha.value+")"; 
+	rgba.style.backgroundColor="rgba("+r.value+","+g.value+","+b.value+","+alpha.value+")";
+}
+alpha.oninput = function() {
+	rgba.innerHTML = "RGBA("+r.value+","+g.value+","+b.value+","+this.value+")"; 
+	rgba.style.backgroundColor="rgba("+r.value+","+g.value+","+b.value+","+alpha.value+")";
+}
+</script>
+</body>
+</html>

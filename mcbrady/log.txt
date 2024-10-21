@@ -1,0 +1,25 @@
+03[11:48:00] * DUTvacances (DUT@DUT.users.undernet.org) has joined #MCBrady
+01[11:48:00] <MCBrady> Bienvenue sur #MCBrady DUTvacances. Vous êtes le 7 utilisateurs à joindre le canal en ce 20 2023.
+01[11:48:00] <MCBrady> Welcome to #MCBrady DUTvacances. You are the 7 users to join the channel on Sunday 20 August 2023.
+[11:48:03] <DUTvacances> 'lut
+01[11:48:09] <MCBrady> !joinCount On - Off
+03[11:48:15] * X sets mode: +o DUTvacances
+03[11:48:26] * DUTvacances sets mode: +v MCBrady
+02[16:32:33] * @DUTvacances (DUT@DUT.users.undernet.org) Quit (Quit)
+03[11:48:00] * DUTvacances (DUT@DUT.users.undernet.org) has joined #MCBrady
+01[11:48:00] <MCBrady> Bienvenue sur #MCBrady DUTvacances. Vous êtes le 7 utilisateurs à joindre le canal en ce 20 2023.
+01[11:48:00] <MCBrady> Welcome to #MCBrady DUTvacances. You are the 7 users to join the channel on Sunday 20 August 2023.
+[11:48:03] <DUTvacances> 'lut
+01[11:48:09] <MCBrady> !joinCount On - Off
+03[11:48:15] * X sets mode: +o DUTvacances
+03[11:48:26] * DUTvacances sets mode: +v MCBrady
+02[16:32:33] * @DUTvacances (DUT@DUT.users.undernet.org) Quit (Quit)
+02[17:42:10] * /load: no such file 'C:\script\mcbrady\bot\interAction.ini'
+02[17:42:21] * /load: no such file 'C:\Users\Marc\AppData\Roaming\mIRC\script\mcbrady\bot\interAction.ini'
+02[17:42:30] * Loaded script 'C:\Users\Marc\AppData\Roaming\mIRC\scripts\mcbrady\bot\interAction.ini'
+02[17:44:20] * Loaded script 'C:\Users\Marc\AppData\Roaming\mIRC\scripts\mcbrady\bot\bot.ini'
+02[17:45:24] * Loaded script 'C:\Users\Marc\AppData\Roaming\mIRC\scripts\mcbrady\favcolor\favcolor.ini'
+02[17:45:39] * Loaded script 'C:\Users\Marc\AppData\Roaming\mIRC\scripts\mcbrady\colornick\colornick.ini'
+02[17:46:16] * Loaded script 'C:\Users\Marc\AppData\Roaming\mIRC\scripts\mcbrady\channels\otherChannels.ini'
+06[18:49:01] * +MCBrady >>> Hceliba39 was previously known as Hcleba39
+06[19:35:46] * +MCBrady >>> ][P-kDoR][ was previously known as Sean|

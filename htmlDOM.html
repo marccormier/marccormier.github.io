@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>JS HTML DOM Node Interface</title>
+	<style type="text/css">html, body{font-size:14px};</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+	doc=document;win=window;
+hr=function hr() {doc.body.innerHTML+="<hr>"; }
+</script>
+<script type="text/javascript" src="domNode.js"></script>
+
+<script type="text/javascript" src="js/console.js"></script>
+<script type="text/javascript" src="js/eventHandler.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+dBodyTxt=doc.body;
+dBodyTxt.innerHTML='<center> <h1>JS HTML DOM</h1><a href="nodeList.htm"><h1>Node Interface</h1></a><p>Press F12 to Open DevTools and Click on Console..</p> </center> <h2>Proprietes</h2><h2>Methodes</h2><hr><h2>[Objet Window]</h2>';
+// Console
+// Document
+dBodyTxt.innerHTML+="<h3>Frames</h3>"; frames(); frames;
+dBodyTxt.innerHTML+="<h3>frameElement</h3>"; frame(); 
+dBodyTxt.innerHTML+="<h3>innerHeight</h3>"; innerHeight(); 
+dBodyTxt.innerHTML+="<h3>innerWidth</h3>"; innerWidth(); 
+dBodyTxt.innerHTML+="<h3>outerHeight</h3>"; outerHeight(); 
+dBodyTxt.innerHTML+="<h3>outerWidth</h3>"; outerWidth(); 
+dBodyTxt.innerHTML+="<h2>Console</h2>"; 
+dBodyTxt.innerHTML+="<h2>History</h2>"; historyLength(); 
+dBodyTxt.innerHTML+="<h2>Location</h2>"; 
+dBodyTxt.innerHTML+="<h2>Navigator</h2>"; 
+dBodyTxt.innerHTML+="<h2>Screen</h2>"; 
+hr();
+dBodyTxt.innerHTML+="<h2>HTML DOM Documents</h2>";
+dBodyTxt.innerHTML+="<h3>doctype</h3>"; docType();
+dBodyTxt.innerHTML+="<h3>URL</h3>"; docUrl();
+dBodyTxt.innerHTML+="<h3>documentElement</h3>"; docElement();
+dBodyTxt.innerHTML+="<h3>URI</h3>"; docUri();
+dBodyTxt.innerHTML+="<h3>Domain</h3>"+document.domain; docDomain();
+/*
+The domain property returns the domain name of the server (the document was loaded from).
+The domain property returns null if the document was created in memory.
+*/
+dBodyTxt.innerHTML+="<h3>Forms</h3>"; docFormsLength();
+//dBodyTxt.innerHTML+="Formulaires 1 name: "+doc.forms[0].name);
+//dBodyTxt.innerHTML+="Formulaires 2 ID: "+doc.forms[1].id);
+dBodyTxt.innerHTML+="<h3>Head</h3>"; docHead();
+dBodyTxt.innerHTML+="<h4>Head tagName</h4>"; docHeadTagName();
+dBodyTxt.innerHTML+="<h4>Head FirstElementChildtagName</h4>"; docHeadFirstElementChildtagName();
+dBodyTxt.innerHTML+="<h3>Images</h3>"; docImagesLength();
+//dBodyTxt.innerHTML+="Images 1 ID : "+doc.images[0].id);
+//dBodyTxt.innerHTML+="Images 2 Attribut border : "+doc.images[1].border);
+//dBodyTxt.innerHTML+="Images 3 Attribut src : "+doc.images[2].src);
+//dBodyTxt.innerHTML+="Images 4 Attribut width : "+doc.images[3].width);
+//dBodyTxt.innerHTML+="Images 4 Attribut height : "+doc.images[3].height);
+dBodyTxt.innerHTML+="<h3>DOM implementation</h3>"; docImplementation();
+dBodyTxt.innerHTML+="<h4>DOMimplementation hasFreature 'DOM' '1.0'</h4>"; docImplementationHasDom();
+dBodyTxt.innerHTML+="<h4>DOMimplementation hasFreature 'TESLA' 'X'</h4>"; docImplementationHasTesla();
+dBodyTxt.innerHTML+="<h3>lastModified</h3>"; docLastModified();
+dBodyTxt.innerHTML+="<h4>lastModified property into a date object</h4>"; docLastModifiedDateObj();
+dBodyTxt.innerHTML+="<h3>Links</h3>";
+//dBodyTxt.innerHTML+="Links 2 ID : "+doc.links[1].id);
+//dBodyTxt.innerHTML+="Links 3 URL : "+doc.links[2].href);
+docLinksLength();
+// querySelector
+dBodyTxt.innerHTML+="<h3>Referrer</h3>"; docReferrer();
+dBodyTxt.innerHTML+="<h3>Scripts length</h3>"; docScriptsLength();
+dBodyTxt.innerHTML+="<h3>Title</h3>"; docTitle();
+dBodyTxt.innerHTML+="<h3>HTML DOM Elements</h3>";
+dBodyTxt.innerHTML+="<h3>childElementCount</h3>"; docChildElementCount();
+dBodyTxt.innerHTML+="<h3>childNodes</h3>"; docChildNodes();
+/*
+cNl=dBodyTxt.childNodes.length;
+dBodyTxt.innerHTML+="<h2>childNodes.length</h2>"+cNl);
+dBodyTxt.innerHTML+="<hr>");
+*/
+dBodyTxt.innerHTML+="<h3>children</h3>"; docChildren();
+dBodyTxt.innerHTML+="<h3>firstChild</h3>"; docFirstChild();
+dBodyTxt.innerHTML+="<h3>firstElementChild</h3>"; docFirstElementChild();
+dBodyTxt.innerHTML+="<h3>lastChild</h3>"; docLastChild();
+dBodyTxt.innerHTML+="<h3>lastElementChild</h3>"; docLastElementChild();
+dBodyTxt.innerHTML+="<h3>nextSibling</h3>"; docNextSibling();
+dBodyTxt.innerHTML+="<h3>nextElementSibling</h3>"; docNextElementSibling();
+dBodyTxt.innerHTML+="<h3>nodeName</h3>"; docNodeName();
+dBodyTxt.innerHTML+="<h3>nodeType</h3>"; docNodeType();
+dBodyTxt.innerHTML+="<h3>nodeValue</h3>"; docNodeValue();
+/*
+offsetHeight  Returns the height of an element, including padding, border and scrollbar
+offsetWidth Returns the width of an element, including padding, border and scrollbar
+offsetLeft  Returns the horizontal offset position of an element
+offsetParent  Returns the offset container of an element
+offsetTop Returns the vertical offset position of an element
+outerHTML Sets or returns the content of an element (including the start tag and the end tag)
+outerText Sets or returns the outer text content of a node and its descendants
+*/
+dBodyTxt.innerHTML+="<h3>ownerDocument</h3>"; ownDoc();
+dBodyTxt.innerHTML+='<h3>parentNode</h3>'; parentNode();
+dBodyTxt.innerHTML+='<h3>parentElement</h3>'; parentElement();
+dBodyTxt.innerHTML+="<h3>previousSibling</h3>"; docPreviousSibling();
+dBodyTxt.innerHTML+="<h3>previousElementSibling</h3>"; docPreviousElementSibling();
+dBodyTxt.innerHTML+="<h3>scrollHeight</h3>"; docScrollHeight();
+dBodyTxt.innerHTML+="<h3>scrollWidth</h3>"; docScrollWidth();
+dBodyTxt.innerHTML+="<h3>Style</h3>"; docStyle();
+hr();
+dBodyTxt.innerHTML+="<h3>HTML DOM Attributes</h3>";
+dBodyTxt.innerHTML+=doc.attributes;
+dBodyTxt.innerHTML+="<h3>NamedNodeMap</h3>";
+dBodyTxt.innerHTML+="<h3>DOM HTMLCollection</h3>";
+dBodyTxt.innerHTML+="<h3>HTML DOM NodeList</h3>";
+dBodyTxt.innerHTML+="<h3>HTML DOMTokenList</h3>";
+dBodyTxt.innerHTML+="<h3>HTML DOM Style Object</h3>";
+hr();
+hr();
+dBodyTxt.innerHTML+="<h2>html</h2>";
+dBodyTxt.innerHTML+=doc.documentElement+
+  "<br>"+doc.documentElement.parentNode+
+  "<br>"+doc.documentElement.parentElement;
+dBodyTxt.innerHTML+="<hr>";
+//
+dBodyTxt.innerHTML+="<h2>cookie</h2>";
+dBodyTxt.innerHTML+="cookie : "+doc.cookie.length;
+dBodyTxt.innerHTML+="<hr>";
+//
+dBodyTxt.innerHTML+="<h2>Browser Mode</h2>";
+dBodyTxt.innerHTML+="Browser Mode : "+doc.documentMode;
+dBodyTxt.innerHTML+="<hr>";
+//
+dBodyTxt.innerHTML+="<h2>input Encoding Character set</h2>";
+dBodyTxt.innerHTML+="input Encoding Charset : "+doc.inputEncoding;
+dBodyTxt.innerHTML+="<hr>";
+//
+dBodyTxt.innerHTML+="<h2>Loading status</h2>";
+dBodyTxt.innerHTML+="readyState : "+doc.readyState;
+dBodyTxt.innerHTML+="<hr>";
+//
+dBodyTxt.innerHTML+="<h2>error checking is enforced</h2>";
+dBodyTxt.innerHTML+="strict Error Checking : "+doc.strictErrorChecking;
+dBodyTxt.innerHTML+="<hr>";
+//
+dBodyTxt.innerHTML+="<h2>Embed</h2>";
+dBodyTxt.innerHTML+="Embed : "+doc.embeds;
+dBodyTxt.innerHTML+="<hr>";
+//
+dBodyTxt.innerHTML+="<h2>Ancre</h2>";
+dBodyTxt.innerHTML+="Ancre : "+doc.anchors.length;
+//dBodyTxt.innerHTML+=("Ancre 1 : "+doc.anchors[0].text);
+//dBodyTxt.innerHTML+=("Ancre 2 name: "+doc.anchors[1].name);
+dBodyTxt.innerHTML+="<hr>";
+//
+/*
+dBodyTxt.innerHTML+="<h2>childNodes[i] .nodeName .nodeType .nodeValue</h2><br/>console.log(text);";
+const nodeList=document.body.childNodes;
+let text="";
+for(let i=0;i<nodeList.length;i++){text+=nodeList[i].nodeName+" "+nodeList[i].nodeType+" "+nodeList[i].nodeValue+"<br><br>";}
+console.log(text);
+dBodyTxt.innerHTML+="<hr><br/>";
+*/
+//
+</script>
+	<span>html Meter Tag</span><br/>
+<meter value="1" max="9" alt="htmlMeterTag"></meter><br/>
+<span>html Progress Tag</span><br/>
+<progress value="8" max="9" alt="htmlProgressTag">
+<noscript>Votre navigateur de supporte pas JavaScript.</noscript>
+</body>
+</html>

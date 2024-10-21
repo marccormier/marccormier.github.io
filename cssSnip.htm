@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MarcCORMIER.gitHub.io | Snippets</title>
+	<style type="text/css">
+		textarea{width:400px;height:300px;}
+#ezParentNode {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
+  background-color: red;
+  color: #fff;
+  font-size: 30px;
+}
+.closebtn {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+.closebtn:hover {
+  color: #000;
+}
+/* Flip Card */
+    .flip-card {background-color: transparent; width: 300px; height: 300px; perspective: 1000px; }
+.flip-card-inner {position: relative; width: 100%; height: 100%;
+  text-align: center; transition: transform 0.6s; transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); }
+.flip-card:hover .flip-card-inner {transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {position: absolute; width: 100%; height: 100%;
+  -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.flip-card-front {background-color: #bbb; color: black; }
+.flip-card-back {background-color: #2980b9; color: white; transform: rotateY(180deg); font-size:21px; }
+/* Flip Card */
+</style>
+</head>
+<body>
+  <center>
+<h1>CSS html DOM Snippet</h1>
+<h2>Flip Card</h2>
+  </center>
+<center>
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/pics/me.png" alt="photo" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Marc Cormier</h1> 
+      <p>Programmeur Informatique<br/>Indépendant<br/><br/>(Freelancer)</p>
+    </div>
+  </div>
+</div>
+</center>
+<hr>
+<h2>Media Query</h2>
+<!--
+<div>
+  <h2>CSS BREAKPOINTS</h2>
+  <p>Min-width: 320px (smaller phone viewpoints)<br />
+    <p style="margin-left:35px;">
+      <b>Set Your Media Query Ranges (Responsive Breakpoints)</b> <br />
+    <u>576px for portrait phones. (Orientation:landscape OR portrait)</u></p>
+    Min-width: 480px (small devices and most phones)<br />
+    Min-width: 768px (most tablets)<br />
+    Min-width: 992px (smaller desktop viewpoints)<br />
+    Min-width: 1200px (large devices and wide screens)<br /></p>
+</div>
+<hr>
+-->
+  <h2>difference between "screen" and "only screen" in media queries</h2>
+<div style="width:900px;margin:auto;">
+<textarea style="width:680px;height:45px;" readonly>
+<link media="screen and (max-device-width: 480px)" rel="stylesheet" href="m.css" /> 
+<link media="only screen and (max-device-width: 480px)" rel="stylesheet" href="m.css" /></textarea>
+<p>@media (max-width:632px)<br />
+is saying for a window with a max-width of 632px that you want to apply these styles.<br />At that size you would be talking about anything smaller than a desktop screen in most cases.<br /><br />
+@media screen and (max-width:632px)<br />
+is saying for a device with a screen and a window with max-width of 632px apply the style.<br />This is almost identical to the above except you are specifying screen as opposed to the other available media types the most common other one being print.<br /><br />
+@media only screen and (max-width:632px)<br />
+Here is a quote straight from W3C to explain this one.<br /><br />
+The keyword ‘only’ can also be used to hide style sheets from older user agents. User agents must process media queries starting with ‘only’ as if the ‘only’ keyword was not present.<br /><br />
+As there is no such media type as "only", the style sheet should be ignored by older browsers.
+</p>
+</div>
+<hr>
+
+<h2>Span Parent Node</h2><h3>CSS html DOM Style</h3>
+<div id="ezParentNode">
+<span onclick="this.parentNode.style.display='none';" class="closebtn">X</span>
+<p>click X to close.<br/>onclick="this.parentNode.style.display='none';"</p>
+</div>
+<hr>
+<h2>Cursor Property</h2>
+<center>
+<p>Mouse over the words to change the cursor.</p>
+<span style="cursor:auto">auto</span><br>
+<span style="cursor:crosshair">crosshair</span><br>
+<span style="cursor:default">default</span><br>
+<span style="cursor:e-resize">e-resize</span><br>
+<span style="cursor:help">help</span><br>
+<span style="cursor:move">move</span><br>
+<span style="cursor:n-resize">n-resize</span><br>
+<span style="cursor:ne-resize">ne-resize</span><br>
+<span style="cursor:nw-resize">nw-resize</span><br>
+<span style="cursor:pointer">pointer</span><br>
+<span style="cursor:progress">progress</span><br>
+<span style="cursor:s-resize">s-resize</span><br>
+<span style="cursor:se-resize">se-resize</span><br>
+<span style="cursor:sw-resize">sw-resize</span><br>
+<span style="cursor:text">text</span><br>
+<span style="cursor:w-resize">w-resize</span><br>
+<span style="cursor:wait">wait</span><br>
+<p><strong>Tip:</strong> The cursor: hand is often used on links.</p>
+<textarea>
+<span style="cursor:auto">auto</span>
+<span style="cursor:crosshair">crosshair</span>
+<span style="cursor:default">default</span>
+<span style="cursor:e-resize">e-resize</span>
+<span style="cursor:help">help</span>
+<span style="cursor:move">move</span>
+<span style="cursor:n-resize">n-resize</span>
+<span style="cursor:ne-resize">ne-resize</span>
+<span style="cursor:nw-resize">nw-resize</span>
+<span style="cursor:pointer">pointer</span>
+<span style="cursor:progress">progress</span>
+<span style="cursor:s-resize">s-resize</span>
+<span style="cursor:se-resize">se-resize</span>
+<span style="cursor:sw-resize">sw-resize</span>
+<span style="cursor:text">text</span>
+<span style="cursor:w-resize">w-resize</span>
+<span style="cursor:wait">wait</span>
+</textarea>
+</center>
+<hr>
+<h2>getBoundingClientRect()</h2>
+<div onscroll="clientRectMethod()" style="height:200px; width:300px; overflow:auto;">
+<div id="crm" style="width:250px; height:150px; padding:16px; border:1px solid black;">
+Scroll to display the bounding client rect of the element with the border.
+</div>
+<div style="width:1000px; height:1000px;"></div>
+</div>
+<p id="crmDemo"></p>
+<hr>
+<br/><br/>
+<script type="text/javascript" name="bgColor">
+	docBody=document.body;
+	var bgColor=prompt('background Color ?', 'orange');
+if (bgColor != null && bgColor === 'black') {
+docBody.style.backgroundColor=bgColor;
+docBody.style.color="white";
+}
+else if (bgColor != null && bgColor === 'Black') {
+docBody.style.backgroundColor=bgColor;
+docBody.style.color="white";
+}
+else {  
+docBody.style.backgroundColor=bgColor;
+}
+</script>
+<script>
+function clientRectMethod() {
+  const element = document.getElementById("crm");
+  const rect = element.getBoundingClientRect();
+
+  document.getElementById("crmDemo").innerHTML =
+"Left: " + rect.left.toFixed() + ", Top: " + rect.top.toFixed() + ", Width: " + rect.width + ", Height: " + rect.height;
+}
+</script>
+</body>
+</html>

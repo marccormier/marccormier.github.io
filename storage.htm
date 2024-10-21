@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head> <title></title> <style>
+body{
+box-shadow:1px 2px 3px 2px black;
+border:2px solid black;
+background-color:grey;
+color:#fff
+}
+input{margin:5px;}
+.wrapper{display:none;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+<center>
+	<h1>Storage</h1>
+<input type="button" name="storage" id="sStorage" onclick="sStorage()" value="Session">
+<input type="button" name="storage" id="lStorage" onclick="lStorage()" value="Local">
+<h2>Object[] Items Key and Value{[]}</h2>
+
+<p id="demo" style="font-weight:bold;"></p>
+<label for="itmKey" style="float:left;margin-left:28vw;">item Key Name</label><br/>
+<input type="text" id="itmKey" placeholder="lastname"> : 
+<input type="text" id="itmVal" placeholder="item Value"><br/>
+<input type="button" id="set" value="Set or Change Item Value" onclick="set()"><br/>
+<input type="button" id="get" value="Get Item value by Item Key name" onclick="get()"><br/>
+<input type="button" id="rem" style="font-weight:bold;color:darkorange;" value="Remove item and Value" onclick="rem()"><br/>
+<input type="button" id="cls" style="color:red;border:2px solid red;font-weight:bold;" value="Clear All Items" onclick="clearLs()"><br/>
+<input type="button" id="lsLength" value="Length" onclick="lsLength()"><br/>
+<input type="button" id="lOne" value="Loop Key" onclick="loopKey()"><br/>
+<input type="button" id="lTwo" value="Loop Items" onclick="loopItems()"><br/><br/>
+<input type="button" value="Accueil" onclick="window.open('marccormier.github.io/', '_self')" style="font-weight:bold;">
+<input type="button" value="localHost" onclick="window.open('localhost://')" style="font-weight:bold;">
+<input type="button" value="php Admin" onclick="window.open('localhost/phpMyAdmin')" style="font-weight:bold;"><br/><br/>
+<input type="button" value="Retour" onclick="history.go(-1);">
+</div>
+<script>
+lspw=localStorage.getItem('admin');
+function showPage() {document.getElementById("wrapper").style.display = "block"; }
+let text=prompt("Password :");
+if (text===lspw) {showPage();} 
+else 
+{
+	alert(`Wrong password : ${text}`);
+	document.body.innerHTML='<center><h1>403. Acces Interdit</h1><br><input type="button" value="Retour" onclick="history.go(-1);"></center>';
+}
+
+demoDiv=document.getElementById('demo');
+
+function confirmClear() {
+  let confirmCLR = prompt("Yes or No", "No");
+  if (confirmCLR != 'Yes') {
+    alert('Confirm that you wanna clear the localStorage data.');
+} else if (confirmCLR == 'Yes') {localStorage.clear();alert('localStorage cleared !');
+}
+}
+//
+var users=[];
+function set()
+{
+x=document.getElementById("itmKey").value;
+y=document.getElementById("itmVal").value;
+localStorage.setItem(x, y);
+demoDiv.innerHTML=x+' : '+y;
+}
+function get() {
+let x=document.getElementById("itmKey").value;
+let y=localStorage.getItem(x);
+demoDiv.innerHTML=y;
+}
+function rem() {
+	y=document.getElementById("itmKey").value; 
+	localStorage.removeItem(y);
+}
+function clearLs() {confirmClear(); }
+//
+function loopKey() {
+	console.clear();
+	console.info('localStorage : ');
+const alphaNumRegEx = /^[-0-9a-zA-Z]+$/;
+	Object.keys(localStorage).forEach(function (key) {
+		if (key.match(alphaNumRegEx)) {
+			console.log(key);
+			demoDiv.innerHTML+=key+', ';
+		} 
+	}); 
+//
+	console.info('sessionStorage : ');
+	Object.keys(sessionStorage).forEach(function (key) {
+		if (key.match(alphaNumRegEx)) {
+			console.log(key);
+			demoDiv.innerHTML+=key+', ';
+		} 
+	}); 
+}
+//
+function loopItems() {
+	console.clear();
+  		console.info('localStorage : ');
+  	for (const [key, value] of Object.entries(localStorage)) {
+   		console.log(`${key}: ${value}`); 
+   		demoDiv.innerHTML+=`${key}: ${value}`; 
+   	}
+  		console.info('sessionStorage : ');
+   	for (const [key, value] of Object.entries(sessionStorage)) {
+   		console.log(`${key}: ${value}`); 
+   		demoDiv.innerHTML+=`${key}: ${value}`; 
+   	}
+}
+function lsLength() {
+	console.clear();
+	console.info('localStorage : ');
+	console.log(localStorage.length);
+	console.info('sessionStorage : ');
+	console.log(sessionStorage.length);
+	demoDiv.innerHTML+='localStorage : ';
+	demoDiv.innerHTML+=localStorage.length+'<br/>';
+	demoDiv.innerHTML+='sessionStorage : ';
+	demoDiv.innerHTML+=sessionStorage.length;
+}
+</script>
+</center>
+</body>
+</html>
