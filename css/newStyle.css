@@ -83,9 +83,9 @@ only screen and (min-device-pixel-ratio:1.5) {}
 {
     #picture {display:none;} 
     #construction{max-width:50vw;height:auto;}
-    #imgGallery{max-width:85vw;min-height:200px;}
+    #imgGallery{min-height:200px;/* max-width:85vw; */}
     .cssSnip, .htDomStyle, .htDom, .peridotCpattern, .htmlCompil, .binCompil, .jQuerySnip{
-        max-width:85vw;max-height:320px;
+        max-height:320px;/* max-width:85vw; */
     }
 }
 @keyframes slideup {
