@@ -25,7 +25,7 @@ function imgGallery() {
 O('content').innerHTML='';
 const imgGallery=document.createElement("OBJECT");
 imgGallery.setAttribute("data", "gallery.html");
-imgGallery.setAttribute("width", "875px");
+imgGallery.setAttribute("width", "1200vw"); // 875px
 imgGallery.setAttribute("height", "335px");
 imgGallery.setAttribute("id", "imgGallery");
 O('content').appendChild(imgGallery);
@@ -35,7 +35,7 @@ function domStyles() {
 O('content').innerHTML='';
 const htDomStyle=document.createElement("OBJECT");
 htDomStyle.setAttribute("data", "htmlDomStyle.html");
-htDomStyle.setAttribute("width", "875px");
+htDomStyle.setAttribute("width", "1200vw");
 htDomStyle.setAttribute("height", "335px");
 htDomStyle.setAttribute("class", "htDomStyle");
 O('content').appendChild(htDomStyle);
@@ -45,7 +45,7 @@ function htmlDOMnode() {
 O('content').innerHTML='';
 const htDom=document.createElement("OBJECT");
 htDom.setAttribute("data", "htmlDOM.html");
-htDom.setAttribute("width", "875px");
+htDom.setAttribute("width", "1200vw");
 htDom.setAttribute("height", "335px");
 htDom.setAttribute("class", "htDom");
 O('content').appendChild(htDom);
@@ -55,7 +55,7 @@ function peridotColorPattern() {
 O('content').innerHTML='';
 const peridotCpattern=document.createElement("OBJECT");
 peridotCpattern.setAttribute("data", "peridotColorPattern.htm");
-peridotCpattern.setAttribute("width", "875px");
+peridotCpattern.setAttribute("width", "1200vw");
 peridotCpattern.setAttribute("height", "335px");
 peridotCpattern.setAttribute("class", "peridotCpattern");
 O('content').appendChild(peridotCpattern);
@@ -64,7 +64,7 @@ function htmlCompiler() {
 O('content').innerHTML='';
 const htmlCompil=document.createElement("OBJECT");
 htmlCompil.setAttribute("data", "compiler/htmlCompiler.htm");
-htmlCompil.setAttribute("width", "875px");
+htmlCompil.setAttribute("width", "1200vw");
 htmlCompil.setAttribute("height", "335px");
 htmlCompil.setAttribute("class", "htmlCompil");
 O('content').appendChild(htmlCompil);
@@ -74,7 +74,7 @@ function binCompiler() {
 O('content').innerHTML='';
 const binCompil=document.createElement("OBJECT");
 binCompil.setAttribute("data", "compiler/binaryCompiler.htm");
-binCompil.setAttribute("width", "875px");
+binCompil.setAttribute("width", "1200vw");
 binCompil.setAttribute("height", "335px");
 binCompil.setAttribute("class", "binCompil");
 O('content').appendChild(binCompil);
@@ -84,7 +84,7 @@ function cssSnips() {
 O('content').innerHTML='';
 const cssSnip=document.createElement("OBJECT");
 cssSnip.setAttribute("data", "cssSnip.htm");
-cssSnip.setAttribute("width", "875px");
+cssSnip.setAttribute("width", "1200vw");
 cssSnip.setAttribute("height", "335px");
 cssSnip.setAttribute("class", "cssSnip");
 O('content').appendChild(cssSnip);
@@ -94,7 +94,7 @@ function jQuerySnips() {
 O('content').innerHTML='';
 const jQuerySnip=document.createElement("OBJECT");
 jQuerySnip.setAttribute("data", "jQuerySnip.htm");
-jQuerySnip.setAttribute("width", "875px");
+jQuerySnip.setAttribute("width", "1200vw");
 jQuerySnip.setAttribute("height", "335px");
 jQuerySnip.setAttribute("class", "jQuerySnip");
 O('content').appendChild(jQuerySnip);
