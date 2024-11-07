@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Budget Tracker | CodingNepal</title>
+    <title>Budget Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="headerBar">
         <header>
-            <h1 class="title">My Budget Tracker</h1>
-            <h2 class="topbar">Your Current Balance</h2>
+            <h1 class="title">Budget Tracker</h1>
+            <h2 class="topbar">Votre solde actuel</h2>
             <p>
                 <span class="currency">$</span>
                 <span class="balance"></span>
@@ -16,27 +16,27 @@
             <header>
     </div>
     <div class="content">
-        <h3 class="secondTitle">Add a new transaction: </h3>
+        <h3 class="secondTitle">Ajouter une nouvelle transaction: </h3>
         <div class="form">
             <form id="expForm">
                 <div class="formLine left">
                     <span for="type">Type:</span>
                     <select id="type">
-                        <option value="chooseOne">Choose one...</option>
-                        <option value="income">Income</option>
-                        <option value="expense">Expense</option>
+                        <option value="chooseOne">Choisissez-en un...</option>
+                        <option value="income">Revenu</option>
+                        <option value="expense">Frais</option>
                     </select>
                 </div>
                 <div class="formLine right">
-                    <span for="name">Name:</span>
+                    <span for="name">Description:</span>
                     <input type="text" id="name">
                 </div>
 
                 <div class="formLine right">
-                    <span for="amount">Amount:</span>
+                    <span for="amount">Montant:</span>
                     <input type="text" id="amount">
                 </div>
-                <button type="submit" class="buttonSave">Add to transactions</button>
+                <button type="submit" class="buttonSave">Ajouter aux transactions</button>
             </form>
         </div>
     </div>
@@ -45,8 +45,8 @@
             <thead>
                 <tr>
                     <th>Type</th>
-                    <th>Name</th>
-                    <th>Amount</th>
+                    <th>Nom</th>
+                    <th>Montant</th>
                     <th>Options</th>
                 </tr>
             </thead>
