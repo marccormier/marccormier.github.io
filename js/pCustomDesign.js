@@ -9,7 +9,7 @@ div.appendChild(title);
 
 var closeBtn=document.createElement('p');
 closeBtn.innerHTML='X';
-closeBtn.setAttribute('style', 'font-size:2em;font-weight:bold;position:absolute;top:-10px;right:0px;color:black;');
+closeBtn.setAttribute('style', 'font-size:2em;position:absolute;top:-10px;right:0px;color:black;');
 closeBtn.setAttribute('onclick', 'hidePageCustomDesign()');
 div.appendChild(closeBtn);
 
@@ -33,12 +33,11 @@ input.setAttribute('type', 'color');
 input.setAttribute('id', 'color');
 div.appendChild(input);
 
-
 document.body.appendChild(div);
 }
 document.getElementById('select').addEventListener('change', function() {x=this.value; });
 document.getElementById('color').addEventListener('change', function() {
-
+//x=select.value;
   if (x==='bgC') {document.body.style.backgroundColor=this.value;}
   else if (x==='txtC') {document.body.style.color=this.value;} });
 

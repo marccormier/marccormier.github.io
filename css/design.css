@@ -1,5 +1,10 @@
 :root{}
 html{}
+.example{
+  &:hover{}
+  &:focus{}
+  &:active{}
+}
 *{margin:1px;}
 *:focus{}
 body{}

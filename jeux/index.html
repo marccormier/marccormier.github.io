@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jeux</title>
+</head>
+<body>
+<center>
+<h2>Jeux</h2>
+<div>
+	<a href="w3sExample.htm">w3sExample</a><br>
+	<a href="memory.htm">Dinosaur Memory Game &#129430;</a><br>
+	<a href="ticTacToc.htm">tic tac toc</a><br>
+	<a href="platformGameEngine.htm">Platform Game Engine</a><br>
+	<a href="numberGuessing.htm">Number Guessing</a><br>
+	<a href="wordGuessing.htm">Word Guessing</a><br>
+	<a href="rockPaperScissors.htm"></a><br>
+</div>
+</center>
+<footer style="background-color:black;color:white;">
+<center>
+<p id='time'></p>
+<p id='uTime'></p>
+<p id="copy"></p>
+<center>
+</footer>
+</main>
+<script type="text/javascript">
+setInterval(clock, 1);
+function clock() {
+const d = new Date();
+let time = d.getTime();
+let sec = d.getSeconds();
+let min = d.getMinutes();
+let millisec = d.getMilliseconds();
+let hour = d.getHours();
+let utc = d.toUTCString();
+let fYear = d.getFullYear();
+let date = d.getDate();
+let day;
+
+/*
+const weekday = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+const d = new Date();
+let day = weekday[d.getDay()];
+*/
+
+switch (d.getDay()) {
+  case 0:
+  day = "Dimanche";
+  break;
+  case 1:
+  day = "Lundi";
+  break;
+  case 2:
+  day = "Mardi";
+  break;
+  case 3:
+  day = "Mercredi";
+  break;
+  case 4:
+  day = "Jeudi";
+  break;
+  case 5:
+  day = "Vendredi";
+  break;
+  case  6:
+  day = "Samedi";
+}
+
+let month;
+switch (d.getMonth()) {
+  case 0:
+  month = "Janvier";
+  break;
+  case 1:
+  month = "Février";
+  break;
+  case 2:
+  month = "Mars";
+  break;
+  case 3:
+  month = "Avril";
+  break;
+  case 4:
+  month = "Mai";
+  break;
+  case 5:
+  month = "Juin";
+  break;
+  case  6:
+  month = "Juillet";
+  break;
+  case 7:
+  month = "Août";
+  break;
+  case  8:
+  month = "Septembre";
+  break;
+  case  9:
+  month = "Octobre";
+  break;
+  case  10:
+  month = "Novembre";
+  break;
+  case  11:
+  month = "Décembre";
+}
+hour = hour < 10 ? "0" + hour : hour;
+min = min < 10 ? "0" + min : min;
+sec = sec < 10 ? "0" + sec : sec;
+month = month < 10 ? "0" + month : month;
+day = day < 10 ? "0" + day : day;
+let res=day+", "+date+"&nbsp"+month+"&nbsp"+fYear+"<br/>"+hour+":"+min+":"+sec+"."+millisec;
+let utcTime=utc;
+document.getElementById("time").innerHTML=res;
+document.getElementById("uTime").innerHTML=utcTime;
+}
+var year = new Date().getFullYear();
+document.getElementById('copy').innerHTML = "&#169 "+year+" <a href='https://marccormier.github.io' style='color:white;text-decoration:none;'>marccormier.github.io</a> <br/>Réalisé par Marc Cormier";
+</script>
+</body>
+</html>
