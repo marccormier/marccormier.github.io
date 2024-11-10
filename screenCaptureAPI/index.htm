@@ -14,7 +14,7 @@ var recordingToggle = document.getElementById("recording-toggle"); // The button
 recordingToggle.addEventListener("click", function(){
     RECORDING_ONGOING = !RECORDING_ONGOING; // Start / Stop recording
     if(RECORDING_ONGOING){
-        recordingToggle.innerHTML = "Stop Recording";
+        recordingToggle.innerHTML = "Stop Recording and Save";
         startRecording(); // Start the recording
     } else {
         recordingToggle.innerHTML = "Start Recording";
@@ -26,6 +26,8 @@ var chunks = [];
 
 async function startRecording(){
     var stream =  await navigator.mediaDevices.getDisplayMedia({video: {mediaSource: "screen"}, audio: true})
+
+dumpOptionsInfo();
 
     deviceRecorder = new MediaRecorder(stream, {mimeType: "video/webm"});
     deviceRecorder.ondataavailable = (e) => {
@@ -58,6 +60,14 @@ function stopRecording(){
     
     URL.revokeObjectURL(dataDownloadUrl)
 
+}
+function dumpOptionsInfo() {
+  const videoTrack = deviceRecorder;
+
+  console.log("Track settings:");
+  console.log(JSON.stringify(videoTrack.getSettings(), null, 2));
+  console.log("Track constraints:");
+  console.log(JSON.stringify(videoTrack.getConstraints(), null, 2));
 }
 </script>
 </body>
