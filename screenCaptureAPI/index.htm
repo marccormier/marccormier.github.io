@@ -10,7 +10,7 @@
 <button type ="button" onclick="viewSource()">Code Complet</button>
 <script defer>
 function viewSource(){;
-    var source = "<!DOCTYPE html>\n<html lang='en'>";
+    var source = "<!--screenCaptureAPI.html-->\n<!DOCTYPE html>\n<html lang='en'>";
     source += document.getElementsByTagName('html')[0].innerHTML;
     source += "</html>";
     source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
