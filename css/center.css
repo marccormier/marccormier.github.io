@@ -6,18 +6,18 @@
 }
 
 /* Method 2: */
-.container {
+#container {
 	display: grid;
 	place-items: center
 }
 
 /* Method 3: */
-.center-div {
+.center {
 	margin: auto;
 }
 
 /* Method 4: */
-.center-div {
+#center {
   position: absolute;
   left: 50%;
   top: 50%;
