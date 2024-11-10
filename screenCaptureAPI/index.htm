@@ -8,6 +8,7 @@
 <body>
     <button id="recording-toggle">Start recording</button>
 <button type ="button" onclick="viewSource()">Code Complet</button>
+<h3>ENJOY !!</h3>
 <script defer>
 function viewSource(){;
     var source = "<!--screenCaptureAPI.html-->\n<!DOCTYPE html>\n<html lang='en'>";
@@ -27,7 +28,7 @@ var recordingToggle = document.getElementById("recording-toggle"); // The button
 recordingToggle.addEventListener("click", function(){
     RECORDING_ONGOING = !RECORDING_ONGOING; // Start / Stop recording
     if(RECORDING_ONGOING){
-        recordingToggle.innerHTML = "Stop Recording and Save";
+        recordingToggle.innerHTML = "<b>Stop Recording and Save</b>";
         startRecording(); // Start the recording
     } else {
         recordingToggle.innerHTML = "Start Recording";
