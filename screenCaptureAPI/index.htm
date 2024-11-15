@@ -19,7 +19,7 @@
 
 <script defer>
 function viewSource(){;
-    var source = "<!--\nscreenCaptureAPI.html\n-->\n<!DOCTYPE html>\n<html lang='en'>";
+    var source = "<!--COPIER-COLLER\nENREGISTRER SOUS\nscreenCaptureAPI.html\n-->\n<!DOCTYPE html>\n<html lang='en'>";
     source += document.getElementsByTagName('html')[0].innerHTML;
     source += "</html>";
     source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -48,8 +48,6 @@ var chunks = [];
 
 async function startRecording(){
     var stream =  await navigator.mediaDevices.getDisplayMedia({video: {mediaSource: "screen"}, audio: true})
-
-dumpOptionsInfo();
 
     deviceRecorder = new MediaRecorder(stream, {mimeType: "video/webm"});
     deviceRecorder.ondataavailable = (e) => {
@@ -82,14 +80,6 @@ function stopRecording(){
     
     URL.revokeObjectURL(dataDownloadUrl)
 
-}
-function dumpOptionsInfo() {
-  const videoTrack = deviceRecorder;
-
-  console.log("Track settings:");
-  console.log(JSON.stringify(videoTrack.getSettings(), null, 2));
-  console.log("Track constraints:");
-  console.log(JSON.stringify(videoTrack.getConstraints(), null, 2));
 }
 </script>
 </body>
