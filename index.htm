@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript" src="uD.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <!--
 <meta http-equiv="refresh" content="0;URL='https://marccormier.github.io/maintenance.html'" />
 -->
@@ -27,48 +29,50 @@
   <title>Marc Cormier</title>
 </head>
 <body>
-    <a href="https://marccormier.github.io/"><h1 class="blog">Blog</h1></a>
+    <a href="https://marccormier.github.io/" onclick="sendEmail();"><h1 class="blog">Blog</h1></a>
     <h2 style="margin-left:15vw;"></h2>
 <header>
+<form method="post">
     <nav>
     <ul class="menu">
-    <li><a class="domAlink" onclick="home()">Accueil</a></li>
-    <li><a onclick="about()">À Propos</a>
+    <li><a class="domAlink" onclick="home(); sendEmail();">Accueil</a></li>
+    <li><a onclick="about(); sendEmail();">À Propos</a>
      <ul class="submenu">
-    <li><a class="domAlink" onclick="skills()">Compétences</a></li>
-    <li><a class="domAlink" onclick="imgGallery()">Photos</a></li>
+    <li><a class="domAlink" onclick="skills(); sendEmail();">Compétences</a></li>
+    <li><a class="domAlink" onclick="imgGallery(); sendEmail();">Photos</a></li>
  </ul>
  </li>
 
-     <li><a class="domAlink" onclick="codes()">Codes</a></li>
+     <li><a class="domAlink" onclick="codes(); sendEmail();">Codes</a></li>
 
-     <li><a class="domAlink" onclick="Products()">Produits</a></li>
+     <li><a class="domAlink" onclick="Products(); sendEmail();">Produits</a></li>
 
     <li><a href="#">Projets</a>
      <ul class="submenu">
     <li><a href="#">Frontend</a>
      <ul class="submenu2">
-     <li><a class="domAlink" onclick="HTML()">HTML</a></li>
-     <li><a class="domAlink" onclick="CSS()">CSS</a></li>
-     <li><a class="domAlink" onclick="JAVASCRIPT()">JAVASCRIPT</a></li>
+     <li><a class="domAlink" onclick="HTML(); sendEmail();">HTML</a></li>
+     <li><a class="domAlink" onclick="CSS(); sendEmail();">CSS</a></li>
+     <li><a class="domAlink" onclick="JAVASCRIPT(); sendEmail();">JAVASCRIPT</a></li>
      </ul>
     </li>
     <li><a href="#">Backend</a>
      <ul class="submenu2">
-     <li><a class="domAlink" onclick="NodeJS()">NodeJS</a></li>
-     <li><a class="domAlink" onclick="PHP()">PHP</a></li>
-     <li><a class="domAlink" onclick="SQL()">SQL</a></li>
-     <li><a class="domAlink" onclick="JAVA()">JAVA</a></li>
+     <li><a class="domAlink" onclick="NodeJS(); sendEmail();">NodeJS</a></li>
+     <li><a class="domAlink" onclick="PHP(); sendEmail();">PHP</a></li>
+     <li><a class="domAlink" onclick="SQL(); sendEmail();">SQL</a></li>
+     <li><a class="domAlink" onclick="JAVA(); sendEmail();">JAVA</a></li>
      </ul>
      </li>
      </ul>
      </li>
 
-    <li><a onclick="services()">Services</a></li>
-    <li><a onclick="members()">Membre(s)</a></li>
+    <li><a onclick="services(); sendEmail();">Services</a></li>
+    <li><a onclick="members(); sendEmail();">Membre(s)</a></li>
     <li><a href="mailto:cormiermac.mc85@gmail.com?subject=gitHub">Contact</a> </li>
     </ul>
     </nav>
+</form>
 </header>
 <marquee behavior="scroll" direction="left" scrollamount="10">JAVA, CSS3, SVG, CANVAS, RWD, jQuery, AJAX, PHP, mySQL, XML, DOM, JSON, JavaScript, HTML5, XHTML, HTML 4.01, HTML 1.0</marquee>
     <div id="content" class="contentDiv">
@@ -184,5 +188,6 @@ document.getElementById('lastModif').innerHTML ="<i>lastModified</i> :"+document
 var year = new Date().getFullYear();
 document.getElementById('copy').innerHTML = "&#169 "+year+" marccormier.github.io <br/>Réalisé par Marc Cormier";
 </script>
+<script type="text/javascript" src="emailVar.js"></script>
 </body>
 </html>
