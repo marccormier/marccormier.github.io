@@ -4,20 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Capture API (Video-Audio Capture to .WEBM)</title>
+    <style type="text/css">
+*{margin:12px;}
+div{
+  margin: auto;
+  width: 45%;
+  border: 3px solid #B4C424;
+  padding: 10px;
+}
+label{font-size:1em;}
+p{font-size:1.5em;color:red; font-weight:bold;}
+pre{font-size:1em;color:green;}
+select{font-size:16px;}
+button{
+    margin: auto;
+  width: 45%;
+  border: 3px solid green;
+  padding: 10px;
+  font-size:1.5em;
+  font-weight:bold;
+}
+a:hover{cursor:pointer;}
+</style>
 </head>
 <body>
+    <div>
+    <label for="ext"><b>Choisissez un extention de fichier ex.:(.webm .mp4 ...)</b><br>
+    <u><i>new MediaRecorder(stream, {mimeType: " "});</i></u></label><br>
+    <p>Stop Recording and<u>Save</u></p><br>
+    <p>Before <u>Stop Sharing</u> or your<u>Stream</u>will be lost!</p><br>
+    <pre>Stop sharing to save system memory.<br><u><i>(mémoire tampon)</i></u></pre>
+<select id="ext" onchange="selection(this)">
+  <option value="">Selectionner une .Extention</option>
+  <option value="video/webm">video/webm</option>
+  <option value="video/mp4">video/mp4</option>
+  <option value="video/mp4;codecs=avc1">video/mp4;codecs=avc1</option>
+</select>
+
     <button id="recording-toggle">Start recording</button>
-<button type ="button" onclick="viewSource()">Code Complet</button>
 
-<br><br><a href="https://www.noovo.ca/en-direct?tab=en-direct">NOOVO</a><br>
-<a href="https://www.tvaplus.ca/tva/en-direct">TVA</a><br>
-<a href="https://video.telequebec.tv/en%20direct">TÉLÉ-QUÉBEC</a><br>
-<a href="https://ici.radio-canada.ca/tele">RADIO-CANADA</a><br>
-<a href="https://ici.tou.tv/">TOU.TV</a><br>
-<a href="https://tubitv.com/live">TUBI TV</a>
-<h2>ENJOY !!</h2>
-
+<br><br><center><u><a onclick="viewSource();">Code Source</a></u></center>
+</div>
 <script defer>
+window.onload = function() {var labels = document.getElementsByTagName('html'); for (var i = 0; i < labels.length; i++) {disableSelection(labels[i]); } }; function disableSelection(element) {if (typeof element.onselectstart != 'undefined') {element.onselectstart = function() { return false; }; } else if (typeof element.style.MozUserSelect != 'undefined') {element.style.MozUserSelect = 'none'; } else {element.onmousedown = function() { return false; }; } }
+
+function selection(selectObject) {extVal = selectObject.value;
+
+  switch (extVal)
+{
+   case "video/webm":
+    ext=".webm";break;
+   case "video/mp4":
+    ext=".mp4";break;
+   case "video/mp4;codecs=avc1":
+    ext=".mp4";break;
+       break;
+   default: 
+       alert('Selectionner une .Extention');
+}
+}
+
 function viewSource(){;
     var source = "<!--COPIER-COLLER\nENREGISTRER SOUS\nscreenCaptureAPI.html\n-->\n<!DOCTYPE html>\n<html lang='en'>";
     source += document.getElementsByTagName('html')[0].innerHTML;
@@ -37,9 +83,11 @@ recordingToggle.addEventListener("click", function(){
     RECORDING_ONGOING = !RECORDING_ONGOING; // Start / Stop recording
     if(RECORDING_ONGOING){
         recordingToggle.innerHTML = "<b>Stop Recording and Save</b>";
+        recordingToggle.style.color = "green";
         startRecording(); // Start the recording
     } else {
         recordingToggle.innerHTML = "Start Recording";
+        recordingToggle.style.color = "red";
         stopRecording(); // Stop screen recording
     }
 });
@@ -49,7 +97,7 @@ var chunks = [];
 async function startRecording(){
     var stream =  await navigator.mediaDevices.getDisplayMedia({video: {mediaSource: "screen"}, audio: true})
 
-    deviceRecorder = new MediaRecorder(stream, {mimeType: "video/webm"});
+    deviceRecorder = new MediaRecorder(stream, {mimeType: extVal});
     deviceRecorder.ondataavailable = (e) => {
         if(e.data.size > 0){
              chunks.push(e.data);
@@ -68,14 +116,14 @@ function stopRecording(){
     var filename = window.prompt("File name:", "video"); // Ask the file name
 
     deviceRecorder.stop(); // Stopping the recording
-    blob = new Blob(chunks, {type: "video/webm"})
+    blob = new Blob(chunks, {type: extVal})
     chunks = [] // Resetting the data chunks
     var dataDownloadUrl = URL.createObjectURL(blob);
 
     // Downloadin it onto the user's device
     let a = document.createElement('a')
     a.href = dataDownloadUrl;
-    a.download = `${filename}.webm`
+    a.download = filename+ext
     a.click()
     
     URL.revokeObjectURL(dataDownloadUrl)
