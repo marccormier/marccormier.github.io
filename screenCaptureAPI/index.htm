@@ -6,7 +6,7 @@
     <title>Screen Capture API (Video-Audio Capture to .WEBM)</title>
     <style type="text/css">
 *{margin:12px;}
-div{
+#form{
   margin: auto;
   width: 45%;
   border: 3px solid #B4C424;
@@ -25,10 +25,22 @@ button{
   font-weight:bold;
 }
 a:hover{cursor:pointer;}
+#supportDev{
+margin: auto;
+  width: 92%;
+  border: 1px solid black;
+
+text-align:center;
+color:black;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: normal!important;
+}}
 </style>
 </head>
 <body>
-    <div>
+    <div id='form'>
     <label for="ext"><b>Choisissez un extention de fichier ex.:(.webm .mp4 ...)</b><br>
     <u><i>new MediaRecorder(stream, {mimeType: " "});</i></u></label><br>
     <p>Stop Recording and<u>Save</u></p><br>
@@ -37,7 +49,27 @@ a:hover{cursor:pointer;}
 <select id="ext" onchange="selection(this)">
   <option value="">Selectionner une .Extention</option>
   <option value="video/webm">video/webm</option>
+  <option value="video/webm;codecs=vp9">video/webm;codecs=vp9</option>
   <option value="video/mp4">video/mp4</option>
+
+
+<!--
+video/webm
+video/webm;codecs=vp8
+video/webm;codecs=vp8.0
+video/webm;codecs=vp9.0
+video/webm;codecs=h264
+video/webm;codecs=H264
+video/webm;codecs=avc1
+video/webm;codecs=vp8,opus
+video/WEBM;codecs=VP8,OPUS
+video/webm;codecs=vp9,opus
+video/webm;codecs=vp8,vp9,opus
+video/webm;codecs=h264,opus
+video/webm;codecs=h264,vp9,opus
+video/x-matroska;codecs=avc1
+-->
+
   <option value="video/mp4;codecs=avc1">video/mp4;codecs=avc1</option>
 </select>
 
@@ -45,14 +77,52 @@ a:hover{cursor:pointer;}
 
 <br><br><center><u><a onclick="viewSource();">Code Source</a></u></center>
 </div>
+<div>
+    <p id="supportDev"></p>
+</div>
 <script defer>
-window.onload = function() {var labels = document.getElementsByTagName('html'); for (var i = 0; i < labels.length; i++) {disableSelection(labels[i]); } }; function disableSelection(element) {if (typeof element.onselectstart != 'undefined') {element.onselectstart = function() { return false; }; } else if (typeof element.style.MozUserSelect != 'undefined') {element.style.MozUserSelect = 'none'; } else {element.onmousedown = function() { return false; }; } }
+function getSupportedMimeTypes(media, types, codecs) {
+  const isSupported = MediaRecorder.isTypeSupported;
+  const supported = [];
+  types.forEach((type) => {
+    const mimeType = `${media}/${type}`;
+    codecs.forEach((codec) => [
+        `${mimeType};codecs=${codec}`,
+        `${mimeType};codecs=${codec.toUpperCase()}`,
+        // /!\ false positive /!\
+        // `${mimeType};codecs:${codec}`,
+        // `${mimeType};codecs:${codec.toUpperCase()}` 
+      ].forEach(variation => {
+        if(isSupported(variation)) 
+            supported.push(variation);
+    }));
+    if (isSupported(mimeType))
+      supported.push(mimeType);
+  });
+  return supported;
+};
+
+// Usage ------------------
+
+const videoTypes = ["webm", "ogg", "mp4", "x-matroska"];
+const audioTypes = ["webm", "ogg", "mp3", "x-matroska"];
+const codecs = ["should-not-be-supported","vp9", "vp9.0", "vp8", "vp8.0", "avc1", "av1", "h265", "h.265", "h264", "h.264", "opus", "pcm", "aac", "mpeg", "mp4a"];
+
+const supportedVideos = getSupportedMimeTypes("video", videoTypes, codecs);
+const supportedAudios = getSupportedMimeTypes("audio", audioTypes, codecs);
+
+var supportedDev=document.getElementById('supportDev');
+supportedDev.innerHTML+='-- Top supported Video : '+ supportedVideos[0]+
+'<br>-- Top supported Audio : '+ supportedAudios[0]+
+'<br><br>-- All supported Videos : '+ supportedVideos+
+'<br><br>-- All supported Audios : '+ supportedAudios;
 
 function selection(selectObject) {extVal = selectObject.value;
-
   switch (extVal)
 {
    case "video/webm":
+    ext=".webm";break;
+case "video/webm;codecs=vp9":
     ext=".webm";break;
    case "video/mp4":
     ext=".mp4";break;
@@ -108,9 +178,9 @@ async function startRecording(){
     }
     deviceRecorder.start(250)
 }
-console.log(deviceRecorder.isTypeSupported("video/webm"))
-console.log(deviceRecorder.isTypeSupported("video/mp4"))
-console.log(deviceRecorder.isTypeSupported("video/mp4;codecs=avc1"))
+console.log(deviceRecorder.isTypeSupported("video/webm"));
+console.log(deviceRecorder.isTypeSupported("video/mp4"));
+console.log(deviceRecorder.isTypeSupported("video/mp4;codecs=avc1"));
 
 function stopRecording(){
     var filename = window.prompt("File name:", "video"); // Ask the file name
