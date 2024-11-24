@@ -6,37 +6,15 @@
     <title>Screen Capture API (Video-Audio Capture to .WEBM)</title>
     <style type="text/css">
 *{margin:12px;}
-#form{
-  margin: auto;
-  width: 45%;
-  border: 3px solid #B4C424;
-  padding: 10px;
-}
+#form{margin: auto; width: 45%; border: 3px solid #B4C424; padding: 10px; }
 label{font-size:1em;}
 p{font-size:1.5em;color:red; font-weight:bold;}
 pre{font-size:1em;color:green;}
 select{font-size:16px;}
-button{
-    margin: auto;
-  width: 45%;
-  border: 3px solid green;
-  padding: 10px;
-  font-size:1.5em;
-  font-weight:bold;
-}
+button{margin: auto; width: 45%; border: 3px solid green; padding: 10px; font-size:1.5em; font-weight:bold; }
 a:hover{cursor:pointer;}
-#supportDev{
-margin: auto;
-  width: 92%;
-  border: 1px solid black;
-
-text-align:center;
-color:black;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  white-space: normal!important;
-}}
+#lModif{font-size:13px;margin: auto; width: 50%; text-align:center; color:black;}
+#supportDev{margin: auto; width: 92%; border: 1px solid black; text-align:center; color:black; overflow-wrap: break-word; word-wrap: break-word; hyphens: auto; white-space: normal!important; }}
 </style>
 </head>
 <body>
@@ -51,8 +29,7 @@ color:black;
   <option value="video/webm">video/webm</option>
   <option value="video/webm;codecs=vp9">video/webm;codecs=vp9</option>
   <option value="video/mp4">video/mp4</option>
-
-
+<option value="video/mp4;codecs=avc1">video/mp4;codecs=avc1</option>
 <!--
 video/webm
 video/webm;codecs=vp8
@@ -69,8 +46,6 @@ video/webm;codecs=h264,opus
 video/webm;codecs=h264,vp9,opus
 video/x-matroska;codecs=avc1
 -->
-
-  <option value="video/mp4;codecs=avc1">video/mp4;codecs=avc1</option>
 </select>
 
     <button id="recording-toggle">Start recording</button>
@@ -79,8 +54,11 @@ video/x-matroska;codecs=avc1
 </div>
 <div>
     <p id="supportDev"></p>
+    <br><p id="lModif"></p>
 </div>
 <script defer>
+lastModif= new Date(document.lastModified);
+document.getElementById('lModif').innerHTML="document.lastModified;<br>"+lastModif;
 function getSupportedMimeTypes(media, types, codecs) {
   const isSupported = MediaRecorder.isTypeSupported;
   const supported = [];
