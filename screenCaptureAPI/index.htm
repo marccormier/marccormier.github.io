@@ -59,7 +59,10 @@ video/x-matroska;codecs=avc1
     <br><p id="lModif"></p>
 </div>
 <script defer>
-//
+/*
+* navigator.mediaDevices.getDisplayMedia({video: {mediaSource: "screen"}, audio: true})
+* new MediaRecorder(stream, {mimeType: extVal});
+*/
 lastModif= new Date(document.lastModified);
 document.getElementById('lModif').innerHTML="document.lastModified;<br>"+lastModif;
 
@@ -114,8 +117,8 @@ var chunks = [];
 async function startRecording(){
 //
     var stream =  await navigator.mediaDevices.getDisplayMedia({video: {mediaSource: "screen"}, audio: true})
-    deviceRecorder = new MediaRecorder(stream, {mimeType: extVal});
 // verifie if file extention is set ... (ext - extVal)
+    deviceRecorder = new MediaRecorder(stream, {mimeType: extVal});
     deviceRecorder.ondataavailable = (e) => {
         if(e.data.size > 0){
              chunks.push(e.data);
