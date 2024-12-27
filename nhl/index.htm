@@ -1,10 +1,22 @@
+<!--
+https://medium.com/analytics-vidhya/building-an-nhl-game-prediction-model-part-1-1ee7596ff91b
+
+https://gsstats.medium.com/building-an-nhl-game-prediction-model-part-2-9932bf914ed
+
+https://github.com/gschwaeb/NHL_Game_Prediction
+
+https://www.kaggle.com/code/yortroy/nhl-data-analysis-and-predictions
+-->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<style type="text/css">div{font-size:1.5em;</style>
+	<style type="text/css">
+	div{font-size:1.5em;}
+	input, #mise{width:25%;font-size:1em;}
+</style>
 </head>
 <body><center>
 <h1>pas terminé !</h1>
@@ -13,10 +25,12 @@
 <h3>
 	code Javascript de prédiction match Montréal NhL<br>
 	<a href="https://miseojeu.lotoquebec.com/fr/offre-de-paris/hockey/nationale-lnh/matchs">Mise au jeux (Loto-Québec)</a>
-</h3>
+</h3><hr>
 <div>
-	<label for="cote">Cote totale :</label>
-	<input type="text" id="cote" readonly><br>
+	<label for="nParis">Nombre de paris pour ce match</label>
+	<input type="number" id="nParis" placeholder="Nombre de paris"><br>
+	<label for="cote">Cote totale :</label> <p id="cote">
+	<p id="diffCote"></p>
 	<label for="mise">Votre mise ($) :</label>
 	<select id="mise">
 		<option>2$</option>
@@ -37,8 +51,21 @@
 <pre><a href="https://www.javascript.com/">JavaScript</a></pre>
 <script type="text/javascript">
 	/* obj Cote, change selon l'equipe contre qui ils jouents */
-	var gain;
-	const cote={
+	const nhl={
+		equipes: {
+			montreal: {
+				joueurs:{};
+			}
+		}
+	};
+	const lotoQuebec={
+		gain:'',
+	const mise:['2$', '3$', '4$', '5$', '10$', '15$', '20$', '25$', '50$', '100$'],
+	/* 
+	il semble possible que la cote d'un equipe augmente selon le nombre de parie placer pour ce match 
+	*/
+	const nombreDeParis=[];
+	const cote:{
 		'Montreal':'2,10', 
 		/* 
 		mtl contre utah = 2$ - gain 4,20 (mise utah 1.65)
@@ -49,12 +76,13 @@
 		'Boston':'1,70',
 		'Minnesota':'1,65',
 		'Buffalo':'1,85',
+	}
+};
+	/* calcul la difference de cote */
+	function cCote() {
+		this.diffCote=()=>{};
 	};
-	const mise=['2$', '3$', '4$', '5$', '10$', '15$', '20$', '25$', '50$', '100$'];
-	function calcGain() {
-
-	};
-	const equipes=[];
+	function cGain() {};
 	/* 5 de 7 ?? */
 </script>
 </center></body>

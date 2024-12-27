@@ -166,6 +166,9 @@ console.log(deviceRecorder.isTypeSupported("video/mp4"));
 console.log(deviceRecorder.isTypeSupported("video/mp4;codecs=avc1"));
 
 function stopRecording(){
+
+// verifie if file extention is set ... (ext - extVal)
+
     var filename = window.prompt("File name:", "video"); // Ask the file name
 
     deviceRecorder.stop(); // Stopping the recording
