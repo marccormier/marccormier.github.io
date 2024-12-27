@@ -12,23 +12,19 @@ https://www.youtube.com/watch?v=6EoIxfjVXe0
     <style type="text/css">
 *{margin:12px;}
 #form{margin: auto; width: 45%; border: 3px solid #B4C424; padding: 10px; }
-label{font-size:1em;}
-p{font-size:1.5em;color:red; font-weight:bold;}
-pre{font-size:1em;color:green;}
+label{font-size:1.4em;}
+.strmSave{font-size:14px;color:red; font-weight:bold;}
+.memSave{font-size:1em;color:green;}
 select{font-size:16px;}
 button{margin: auto; width: 45%; border: 3px solid green; padding: 10px; font-size:1.5em; font-weight:bold; }
 a:hover{cursor:pointer;}
 #lModif{font-size:13px;margin: auto; width: 50%; text-align:center; color:black;}
-#supportDev{margin: auto; width: 92%; border: 1px solid black; text-align:center; color:black; overflow-wrap: break-word; word-wrap: break-word; hyphens: auto; white-space: normal!important; }}
 </style>
 </head>
 <body>
     <div id='form'>
     <label for="ext"><b>Choisissez un extention de fichier ex.:(.webm .mp4 ...)</b><br>
     <u><i>new MediaRecorder(stream, {mimeType: " "});</i></u></label><br>
-    <p>Stop Recording and<u>Save</u></p><br>
-    <p>Before <u>Stop Sharing</u> or your<u>Stream</u>will be lost!</p><br>
-    <pre>Stop sharing to save system memory.<br><u><i>(mémoire tampon)</i></u></pre>
 <select id="ext" onchange="selection(this)">
   <option value="">Selectionner une .Extention</option>
   <option value="video/webm">video/webm</option>
@@ -52,53 +48,20 @@ video/webm;codecs=h264,vp9,opus
 video/x-matroska;codecs=avc1
 -->
 </select>
-
+<input type="button" value="Supported Type" onclick="window.location.href='mimeSupported.htm';">
+<p class="strmSave">Click <u>Stop Recording and Save</u> Before <u>Stop Sharing</u> or your Stream will be lost!</p><br>
+<p class="memSave">Stop sharing to save system memory.<br><u><i>(mémoire tampon)</i></u></p>
     <button id="recording-toggle">Start recording</button>
 
 <br><br><center><u><a onclick="viewSource();">Code Source</a></u></center>
 </div>
 <div>
-    <p id="supportDev"></p>
     <br><p id="lModif"></p>
 </div>
 <script defer>
+//
 lastModif= new Date(document.lastModified);
 document.getElementById('lModif').innerHTML="document.lastModified;<br>"+lastModif;
-function getSupportedMimeTypes(media, types, codecs) {
-  const isSupported = MediaRecorder.isTypeSupported;
-  const supported = [];
-  types.forEach((type) => {
-    const mimeType = `${media}/${type}`;
-    codecs.forEach((codec) => [
-        `${mimeType};codecs=${codec}`,
-        `${mimeType};codecs=${codec.toUpperCase()}`,
-        // /!\ false positive /!\
-        // `${mimeType};codecs:${codec}`,
-        // `${mimeType};codecs:${codec.toUpperCase()}` 
-      ].forEach(variation => {
-        if(isSupported(variation)) 
-            supported.push(variation);
-    }));
-    if (isSupported(mimeType))
-      supported.push(mimeType);
-  });
-  return supported;
-};
-
-// Usage ------------------
-
-const videoTypes = ["webm", "ogg", "mp4", "x-matroska"];
-const audioTypes = ["webm", "ogg", "mp3", "x-matroska"];
-const codecs = ["should-not-be-supported","vp9", "vp9.0", "vp8", "vp8.0", "avc1", "av1", "h265", "h.265", "h264", "h.264", "opus", "pcm", "aac", "mpeg", "mp4a"];
-
-const supportedVideos = getSupportedMimeTypes("video", videoTypes, codecs);
-const supportedAudios = getSupportedMimeTypes("audio", audioTypes, codecs);
-
-var supportedDev=document.getElementById('supportDev');
-supportedDev.innerHTML+='-- Top supported Video : '+ supportedVideos[0]+
-'<br>-- Top supported Audio : '+ supportedAudios[0]+
-'<br><br>-- All supported Videos : '+ supportedVideos+
-'<br><br>-- All supported Audios : '+ supportedAudios;
 
 function selection(selectObject) {extVal = selectObject.value;
   switch (extVal)
@@ -128,6 +91,7 @@ function viewSource(){;
     sourceWindow.document.close(); 
     if(window.focus) sourceWindow.focus();
 }  /* sourceWindow.focus() */
+//
 
 var RECORDING_ONGOING = false;
 var recordingToggle = document.getElementById("recording-toggle"); // The button
@@ -148,17 +112,16 @@ var blob, deviceRecorder = null;
 var chunks = [];
 
 async function startRecording(){
+//
     var stream =  await navigator.mediaDevices.getDisplayMedia({video: {mediaSource: "screen"}, audio: true})
-
     deviceRecorder = new MediaRecorder(stream, {mimeType: extVal});
+// verifie if file extention is set ... (ext - extVal)
     deviceRecorder.ondataavailable = (e) => {
         if(e.data.size > 0){
              chunks.push(e.data);
         }
     }
-    deviceRecorder.onstop = () => {
-        chunks = [];
-    }
+    deviceRecorder.onstop=()=>{chunks=[];}
     deviceRecorder.start(250)
 }
 console.log(deviceRecorder.isTypeSupported("video/webm"));
@@ -167,7 +130,6 @@ console.log(deviceRecorder.isTypeSupported("video/mp4;codecs=avc1"));
 
 function stopRecording(){
 
-// verifie if file extention is set ... (ext - extVal)
 
     var filename = window.prompt("File name:", "video"); // Ask the file name
 
