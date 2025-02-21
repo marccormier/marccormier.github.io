@@ -77,7 +77,7 @@ img{
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 19px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -119,6 +119,7 @@ span{
 #topBtn:hover {
   background-color: #555;
 }
+.checkboxLabel {margin-right:25px;}
 </style>
 	</head>
 	<body>
@@ -131,9 +132,11 @@ span{
 <a href='#conseil'>Conseil(s)</a>
 <a href='#rang'>Rang(s)</a>
 <a href='#rules'>Règlements</a>
+<a href='#activity'>Activités</a>
+<a href='#vote'>Vote</a>
+<a href='#GuildFriends'>Amis de la guilde</a>
 <a href='https://t.me/+ACsi6LPeStVmNTAx'>Telegram</a>
 <a href='https://discord.gg/ANGzmJnMwc'>Discord</a>
-<a href='#vote'>Vote</a>
 <hr><a href="#">Suggestion ....</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -167,10 +170,13 @@ Merci de partager vestige et bon jeux!</p>
 <li>3. Récupérer vos récompenses journalières avec différents perssonnage...</li>
 <br></div><hr>
 <div id='rules'><h1>Règlements</h1>
-<li>1. Online > 1 (fois par semaine) time per week'S += ++</li>
-<li>2. Offline > ... += -- 1 Rank</li>
-<li>3. non respect des règlements ou des membres += -- Rank'S.</li>
-<li>4. Invite > 2 Joueurs/Player's += ++ 1 Rank</li>
+<ul>Respect and Kindness is Key.</ul>
+<li>1. Non Respect des Règlements ou des Membres += -- Rank'S.</li>
+<li>2. Invite > 2 Joueurs/Player's += ++ 1 Rank.</li>
+<li>3. Online > 1 (fois par semaine) time per week'S += ++</li>
+<ul>Restriction de la période du délai d'inactivité.</ul>
+<li>4. Offline > ... += -- 1 Rank</li>
+<ul>Politique de suppression d'inactivité 48 mois, Réappliquer à tout moment!</ul>
 <li>5. Undefined</li>
 <br></div><hr>
 <div id='vote'><h1>Vote</h1>
@@ -197,15 +203,80 @@ select.addEventListener("change", onOptionChange);
   <h3>Vampire & Loup-Garou une fois par Semaine.</h3>
 <br></div><hr>
 <div id='starterKit'><h1>Kit de Départ</h1>
-  <p>Vérifier dans la banque de Guilde ou avec un Membre(s) de la Guilde.)</p>
+  <p>Vérifier dans la banque de Guilde ou avec un Membre(s) de la Guilde.</p>
+<br></div><hr>
+<div id='activity'><h1>Activité de la semaine du ...</h1>
 <br></div><hr>
 <div id='rang'><h1>Rang(s)</h1>
-  <h2>Nom des Grade(s), Privilèges & Devoirs..</h2>
-  <img src="" alt="No picture here ...">
-  <img src="" alt="No picture here ether ..">
-  <img src="" alt="No picture here too.">
-  <img src="" alt="Picture here SOON..">
+  <h2>Nom des Grade(s), Privilèges & Tâches..</h2>
+<ul><b>Rangs</b></ul>
+<ol>
+  <li>Maître de guilde <input type="text" placeholder="Pape"></li>
+  <li><input type="text" placeholder="Pères Céleste"></li>
+  <li><input type="text" placeholder="Patriarches"></li>
+  <li><input type="text" placeholder="Archevêque"></li>
+  <li><input type="text" placeholder="Empereurs"></li>
+  <li><input type="text" placeholder="Roi - Fou"></li>
+  <li><input type="text" placeholder="Aristocrates"></li>
+  <li><input type="text" placeholder="Gladiateur"></li>
+  <li><input type="text" placeholder="Asservisseurs"></li>
+  <li><input type="text" placeholder="Mendiant (Mendi-Artisant)"></li>
+</ol>
+<ul><b>Voix et Texte</b></ul>
+<input type="checkbox">
+<label class="checkboxLabel">Parler dans le canal de guilde</label>
+<input type="checkbox">
+<label>Parler dans le canal des officiers</label><br>
+<input type="checkbox">
+<label class="checkboxLabel">Lire le canal des officiers</label>
+<ul><b>Membre</b></ul>
+<input type="checkbox">
+<label class="checkboxLabel">Gérer le candidatures</label>
+<input type="checkbox">
+<label class="checkboxLabel">Lire les notes des membres</label><br>
+<input type="checkbox">
+<label class="checkboxLabel">Inviter des membres</label>
+<input type="checkbox">
+<label class="checkboxLabel">Modifier les notes des membres</label><br>
+<input type="checkbox">
+<label class="checkboxLabel">Gérer la liste noire</label>
+<input type="checkbox">
+<label class="checkboxLabel">Promouvoir des membres</label><br>
+<input type="checkbox">
+<label class="checkboxLabel">Renvoyer des membres</label>
+<input type="checkbox">
+<label class="checkboxLabel">Rétrograder des membres</label><br>
+<ul><b>Commerce et banque de guilde</b></ul>
+<input type="checkbox">
+<label class="checkboxLabel">Retrait de la banque de guilde</label>
+<input type="checkbox">
+<label class="checkboxLabel">Retrait d'or de la banque de guilde</label><br>
+<input type="checkbox">
+<label class="checkboxLabel">Dépôt dans la banque de guilde</label>
+<input type="checkbox">
+<label class="checkboxLabel">Voir or dans la banque de guilde</label><br>
+<input type="checkbox">
+<label class="checkboxLabel">Vente dans la boutique de guilde</label>
+<input type="checkbox">
+<label class="checkboxLabel">Acheter des marchands de guilde</label>
+<ul><b>Information sur la guilde</b></ul>
+<input type="checkbox">
+<label class="checkboxLabel">Modifier le message du jour</label>
+<input type="checkbox">
+<label class="checkboxLabel">Modifier la description</label>
+<ul><b>Guerre d'alliances</b></ul>
+<input type="checkbox">
+<label class="checkboxLabel">Capturer ressource d'alliance</label>
+<input type="checkbox">
+<label class="checkboxLabel">Libérer ressource d'alliance</label>
 <br></div><hr>
+<!-- -->
+<div id='GuildFriends'><h1>Guild Friend's</h1>
+  <ul>Hearthfire Homes</ul>
+  <ul>Les Lames d'elsweyr</ul>
+  <ul>Les exilés de Tamriel Qc</ul>
+<br></div><hr>
+<!-- -->
 <!--
 <div id='draw'>
 	<h1>Concours / Tirage</h1>
@@ -218,7 +289,7 @@ select.addEventListener("change", onOptionChange);
 <br/></br/>
 <hr>
 -->
-<p id='copy'>+Real life comes first. &#169 DragonBorn Comes ESO Guild</p>
+<p id='copy'>+Real life comes first.<br>&#169 DragonBorn Comes ESO Guild</p>
 <script>
 	function openNav() {
 document.getElementById("sideNav").style.width = "250px";
