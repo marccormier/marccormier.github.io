@@ -8,7 +8,7 @@
 body {
 font-size:17px;
 }
-#copy {
+.copy {
 text-align:center;
 }
 div{
@@ -165,7 +165,7 @@ Nous recommandons de garder vos objets précieux et votre or dans votre banque p
 Merci de partager vestige et bon jeux!</p>
 <br></div><hr>
 <div id='rang'><h1>Rang(s)</h1>
-  <h2>Nom des Grade(s), Privilèges & Tâches..</h2>
+  <h2>Nom des Grade(s), Privilèges, Permissions & Tâches ..</h2>
 <ul><b>Rangs</b></ul>
 <ul><b><u>( Bientôt ... )</u></b></ul>
 <ol>
@@ -180,6 +180,7 @@ Merci de partager vestige et bon jeux!</p>
   <li><input type="text" placeholder="Asservisseurs"></li>
   <li><input type="text" placeholder="Mendiant (Mendi-Artisant)"></li>
 </ol>
+<hr>
 <ul><b>Voix et Texte</b></ul>
 <input type="checkbox">
 <label class="checkboxLabel">Parler dans le canal de guilde</label>
@@ -248,6 +249,8 @@ Merci de partager vestige et bon jeux!</p>
 <li> Offline < 7 Jour(s) (Day's) += ++ 1 Rang.</li>
 <ul><b>Politique de suppression d'inactivité 48 mois, Réappliquer à tout moment! (ReApply at anytime!)</b></ul>
 <li> Offline > 48 Mois (Month) += -- .</li>
+<p><b> * </b> Nous devrons modifier les Rangs et leurs Permissions si les Membre(s) souhaitent créer un Conseil Administratif.<br>
+<b> * </b> We will have to modify the Ranks and their Permissions if Members wish to create an Administrative Council.</p>
 <br></div><hr>
 <!-- -->
 <div id='conseil'><h1>Conseil(s)</h1>
@@ -301,7 +304,13 @@ select.addEventListener("change", onOptionChange);
 <br/></br/>
 <hr>
 -->
-<p id='copy'>+Real life comes first.<br>&#169 DragonBorn Comes ESO Guild</p>
+<p class='copy'>+Real life comes first.</p>
+<p id="lModif" class="copy"></p>
+<p class="copy"> &#169 DragonBorn Comes ESO Guild</p>
+<script type="text/javascript">
+const lastModif = new Date(document.lastModified);
+document.getElementById("lModif").innerHTML = lastModif;
+</script>
 <script type="text/javascript">
   var countDownDate = new Date("Mar 11, 2025 06:37:25").getTime();
 
