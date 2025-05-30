@@ -5,22 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>DragonBorn Comes ESO Guild - Concours / Tirage</title>
 <style type="text/css">
-body {
-font-size:17px;
-}
-.copy {
-text-align:center;
-}
-div{
-	margin-left:11px;
-}
+body {font-size:17px; }
+.copy {text-align:center; }
+div{margin-left:11px; }
 p#details {
 font-size:11px;
 margin:24px;
 }
-h4#countDown{
-	margin-left:35px;
-}
+h4#countDown{margin-left:35px; }
 #nextDraw, #participant, #prix{
 	text-align:center;
 	font-weight:bold;
@@ -43,9 +35,7 @@ img{
   margin-left:auto;
   margin-right:auto;
 }
-.guild:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
+.guild:hover {box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); }
 .logo{
 		width:50px;
 		display:block;
@@ -127,6 +117,8 @@ span{
 	<div id="sideNav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <a href='#about'>A Propos</a>
+<a href='https://t.me/+ACsi6LPeStVmNTAx'>Telegram</a>
+<a href='https://disboard.org/fr/server/1025483607965454377'>Discord</a>
 <a href='#rituel'>Rituel(s)</a>
 <!-- <a href='#draw'>Draw / Tirage</a> -->
 <a href='#starterKit'>Starter-Kit</a>
@@ -136,11 +128,6 @@ span{
 <a href='#activity'>Activités</a>
 <a href='#vote'>Vote</a>
 <a href='#GuildFriends'>Amis de la guilde</a>
-<!--
-<a href='https://t.me/+ACsi6LPeStVmNTAx'>Telegram</a>
-<a href='https://discord.gg/9kzVK4McsW'>Discord</a>
-<hr><a href="https://t.me/+ACsi6LPeStVmNTAx">Suggestion ....</a>
--->
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
@@ -236,6 +223,8 @@ Merci de partager vestige et bon jeux!</p>
   <h3>Vampire & Loup-Garou une fois par Semaine.</h3>
   <ul><h2 id="WwVpRituel"></h2><ul>
 
+    <input type="button" onclick="testBtn()" id="testBtn" value="test Btn">
+
 <input type="button" value="Demande / Request" onclick="window.open('https://t.me/+ACsi6LPeStVmNTAx')">
 
 <br></div><hr>
@@ -313,6 +302,16 @@ select.addEventListener("change", onOptionChange);
 <p id="lModif" class="copy"></p>
 <p class="copy">2022. &#169 DragonBorn Comes ESO Guild</p>
 <script type="text/javascript">
+/*test Btn */
+var testBtn=document.getElementById("testBtn");
+testBtn.addEventListener("click", tBtn);
+testBtn.style.visibility='hidden';
+//
+ function tBtn(){
+ var cdd = new Date();/*.getTime();*/ 
+  console.log(cdd); 
+ }
+ /** */
 const lastModif = new Date(document.lastModified);
 document.getElementById("lModif").innerHTML = lastModif;
 </script>
