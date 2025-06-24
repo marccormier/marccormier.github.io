@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mécavol</title>
+	<style>
+		#horizonLine{display:block;border:1px dashed yellow;width:98vw;position:absolute;top:50vh;}
+		#horizontal{color:yellow;position:absolute;top:46vh;margin-left:15px;}
+	</style>
+</head>
+<body>
+<a href="https://www.youtube.com/watch?v=PxBVzB6A_CU">lien youtube (à 20:00.00)</a><br><hr>
+<label for="checkbox"></label>
+<div>
+<input type="checkbox" id="" value="vitesses">vitesses
+<input type="checkbox" id="" value="horizon">horizon
+<input type="checkbox" id="" value="aide pour tracer">aide pour Tracer
+<p id="finesse"> finesse = </p>
+<input type="checkbox" id="" value="incidence">incidence
+<input type="checkbox" id="" value="angle de plané">angle de plané
+<input type="checkbox" id="" value="assietteCheck">assiette
+<p>assiette = </p><input type="range" id="assiette" value="" min="" max="">
+<p>masse = </p><input type="range" id="masse" value="" min="" max="">
+</div>
+<p id="horizontal" style="color:yellow;">Horizon</p><hr id="horizonLine">
+<p id="corde" style="color:blue;">corde</p><hr id="horizonLine">
+<script>
+	const dBody=document.body;
+	dBody.addEventlistener(change){checkBox(box)}
+	//
+	var vitesse = document.getElementById('vitesse');
+	var ventSol, rafale, vitesseSol, vitesseAir, trajectoire, poids, ForceAero, PTV, chargeAllaire, Portence;
+	var horizon = document.getElementById('horizon');
+	var apTracer = document.getElementById('');
+	var finesse = document.getElementById('finesse');
+	var incidence = document.getElementById('incidence');
+	var anglePlane = document.getElementById('anglePlane');
+	var assietteCheck = document.getElementById('assietteCheck');
+	var assiette = document.getElementById('assiette');
+	function vector(a,b) {
+		let this a = ;
+	}
+	function checkBox(box) {box=document.getElementById('').state;console.log(box);}
+	var masse = document.getElementById('masse');
+</script>
+</body>
+</html>
