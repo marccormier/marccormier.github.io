@@ -5,44 +5,145 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mécavol</title>
 	<style>
-		#horizonLine{display:block;border:1px dashed yellow;width:98vw;position:absolute;top:50vh;}
-		#horizontal{color:yellow;position:absolute;top:46vh;margin-left:15px;}
+		*{margin:0px;padding:0px;}
+		canvas{margin:4px;padding:4px;width:620px;height:480px;border:1px solid black;display:block;}
 	</style>
 </head>
 <body>
-<a href="https://www.youtube.com/watch?v=PxBVzB6A_CU">lien youtube (à 20:00.00)</a><br><hr>
-<label for="checkbox"></label>
+<a href="https://www.youtube.com/watch?v=PxBVzB6A_CU" style="margin-left:15px;">project source</a><br>
 <div>
-<input type="checkbox" id="" value="vitesses">vitesses
-<input type="checkbox" id="" value="horizon">horizon
-<input type="checkbox" id="" value="aide pour tracer">aide pour Tracer
-<p id="finesse"> finesse = </p>
-<input type="checkbox" id="" value="incidence">incidence
-<input type="checkbox" id="" value="angle de plané">angle de plané
-<input type="checkbox" id="" value="assietteCheck">assiette
-<p>assiette = </p><input type="range" id="assiette" value="" min="" max="">
-<p>masse = </p><input type="range" id="masse" value="" min="" max="">
+<input type="checkbox" id="" name="checkbox" value="vitesses"> vitesses
+<input type="checkbox" id="horizon" name="checkbox" value="horizon"> horizon
+<input type="checkbox" id="" name="checkbox" value="aide pour tracer"> aide pour Tracer
+<input type="checkbox" id="" name="checkbox" value="incidence"> incidence
+<input type="checkbox" id="" name="checkbox" value="angle de plané"> angle de  plané
+<input type="checkbox" id="" name="checkbox" value="assietteCheck"> assiette
+<input type="range" id="assiette" value="" min="" max="">
+<input type="range" id="masse" value="" min="" max="">
 </div>
-<p id="horizontal" style="color:yellow;">Horizon</p><hr id="horizonLine">
-<p id="corde" style="color:blue;">corde</p><hr id="horizonLine">
-<script>
-	const dBody=document.body;
-	dBody.addEventlistener(change){checkBox(box)}
-	//
-	var vitesse = document.getElementById('vitesse');
-	var ventSol, rafale, vitesseSol, vitesseAir, trajectoire, poids, ForceAero, PTV, chargeAllaire, Portence;
-	var horizon = document.getElementById('horizon');
-	var apTracer = document.getElementById('');
-	var finesse = document.getElementById('finesse');
-	var incidence = document.getElementById('incidence');
-	var anglePlane = document.getElementById('anglePlane');
-	var assietteCheck = document.getElementById('assietteCheck');
-	var assiette = document.getElementById('assiette');
-	function vector(a,b) {
-		let this a = ;
+<hr>
+<canvas id="canvas"> Your browser do not support Canvas. </canvas>
+<script type="text/javascript" name="vecteur">
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.lineWidth = 1;
+
+// Select all checkboxes with the name 'settings' using querySelectorAll.
+var checkboxes = document.querySelectorAll("input[type=checkbox][name=checkbox]");
+let enabledSettings = []
+
+/*
+For IE11 support, replace arrow functions with normal functions and
+use a polyfill for Array.forEach:
+https://vanillajstoolkit.com/polyfills/arrayforeach/
+*/
+
+// Use Array.forEach to add an event listener to each checkbox.
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+  	enabledSettings = 
+      Array.from(checkboxes) // Convert checkboxes to an array to use filter and map.
+      .filter(i => i.checked) // Use Array.filter to remove unchecked checkboxes.
+      .map(i => i.value) // Use Array.map to extract only the checkbox values from the array of objects.
+
+    console.clear();
+  	console.log(this.value);
+  	console.log("Checked : "+this.checked);
+    console.log(enabledSettings.length);
+    console.log(enabledSettings);
+
+    enabledSettings.forEach(draw);
+    //enabledSettings.forEach(draw(this.value));
+
+		if (this.checked == false) {clearStroke(this.value)};
+  })
+});
+function doStuff() { console.log("OK"); };
+function err() { console.log("err"); };
+function clearStroke(itm) {console.log(itm+" Unchecked");};
+
+function draw() {
+//		ctx.clearRect(0, 0, 620, 480);
+	// push ctx.beginPath() with prop. in the obj array
+	// for each enabled
+	
+
+	//obj.v.display();
+
+
+		ctx.beginPath();
+		ctx.moveTo(0, 0);
+		ctx.lineTo(Math.random() * 100, Math.random() * 100);
+		//ctx.strokeStyle=color #FFFF00;
+		ctx.stroke();
+
+
+doStuff();
+};
+
+var obj={
+	curentlyChecked:["CheckedOBJECT"],
+	itm:["x", "y", "z", "a", "b", "c"],
+	point:{
+		points:"",
+		basePoint:{},
+		startPoint:{},
+		p0:["p0 = {x: 0, y: 0 };"],
+		p1:["p1 = {x: 20, y: 20 };"],
+		tempPoint:"startPoint + vector1",
+		lastPoint:{},
+		endPoint:"tempPoint + vector2 (lastPoint)"
+	},
+	vectors:{vector:"point2 - point1",vector2:"point4 - point3"},
+	horizon:{x:"", y:"",
+	display:function () {
+		ctx.beginPath();
+		ctx.moveTo(240, 0);
+		ctx.lineTo(240, 680);
+		ctx.strokeStyle("border:1px solid dashed yellow");
+		ctx.stroke();
 	}
-	function checkBox(box) {box=document.getElementById('').state;console.log(box);}
-	var masse = document.getElementById('masse');
+},
+	vent:["ventSol", ""],
+	rafale:{},
+	vitesse:["vitesse", "vitesseSol", "vitesseAir"],
+	corde:{},
+	finesse:{},
+	incidence:{},
+	angle:["angles", "anglePlane"],
+	trajectoire:{},
+	chargeAllaire:{PTV:"", poids:""},
+	portence:{},
+	assiette:{
+		assietteCheck:"",
+ 		assiette:document.getElementById('assiette')
+	},
+	force:{
+		velocity:{},
+		forceAero:{},
+		gravity:{}
+	},
+	coor:{x:"", y:""},
+	offSet:{x:"", y:""},
+	apTracer:{},
+	length:"",
+	masse: document.getElementById('masse')
+};
+
+
+/*
+// angle in radians
+var angleRadians = Math.atan2(p2.y - p1.y, p2.x - p1.x);
+// angle in degrees
+var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+function getRelativeVector(angle, length, xOffset, yOffset) {
+    angle = angle * Math.PI / 180; 
+    return { 
+        X:length * Math.sin(angle) + xOffset, 
+        Y:length * Math.cos(angle) + yOffset 
+    };
+}
+*/
 </script>
 </body>
 </html>

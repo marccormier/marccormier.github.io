@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .agenda-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .agenda-day {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .agenda-day h2 {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 0;
+            color: #555;
+        }
+        .agenda-event {
+            display: flex;
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+        .agenda-time {
+            flex: 0 0 100px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .agenda-details {
+            flex-grow: 1;
+        }
+        .agenda-details h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+        .agenda-details p {
+            margin: 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="agenda-container">
+        <h1>My Daily Agenda</h1>
+
+        <div class="agenda-day">
+            <h2>August 15, 2025</h2>
+            <div class="agenda-event">
+                <div class="agenda-time">9:00 AM</div>
+                <div class="agenda-details">
+                    <h3>Team Meeting</h3>
+                    <p>Discuss Q3 project progress.</p>
+                </div>
+            </div>
+            <div class="agenda-event">
+                <div class="agenda-time">11:00 AM</div>
+                <div class="agenda-details">
+                    <h3>Client Presentation</h3>
+                    <p>Present new marketing strategy to ABC Corp.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="agenda-day">
+            <h2>August 16, 2025</h2>
+            <div class="agenda-event">
+                <div class="agenda-time">10:30 AM</div>
+                <div class="agenda-details">
+                    <h3>Project Brainstorm</h3>
+                    <p>Generate ideas for upcoming product launch.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
