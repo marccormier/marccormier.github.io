@@ -1,0 +1,12 @@
+//mode $me +wix
+/msg x@channels.undernet.org login mcbrady mIRCchanM4rc
+
+/join #MCBrady
+/join #panem
+/join #Astuces&Trucs
+/join #Pc-Maintenance
+/join #trois-rivieres
+/join #Chasse&Peche
+/join #Laval
+/join #Terrebonne
+/join #dvdPassion

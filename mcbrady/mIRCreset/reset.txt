@@ -1,0 +1,22 @@
+﻿;------------------------------------
+; try reset trial
+;------------------------------------
+;off *:disconnect:{if (onlineTime >= ... ) {resetTrial} }
+; /resetTrial {}
+alias resetTrial {
+  ; write resetTrial.bat TASKKILL /IM mirc.exe /T /F
+  ; write resetTrial.bat cd "C:\Program Files\mIRC\"
+  ; write resetTrial.bat uninstall.exe
+  ; write resetTrial.bat RD /S /Q "C:\Program Files\mIRC\"
+  ; write resetTrial.bat RD /S /Q "%userprofile%\%appdata%\mIRC"
+  ; write resetTrial.bat REG DELETE [ROOT\]HKCU\Software\mIRC\lastRun /V [/F]
+  ; write resetTrial.bat reg delete hkey_local_machine\software\mIRC\LastRun
+  ; write resetTrial.bat reg delete hkey_current_user\software\mIRC\LastRun
+  write resetTrial.bat TYPE C:\Users\Marc\AppData\Roaming\mIRCreset\channels.ini >  C:\Users\Marc\AppData\Roaming\mIRC\channels.ini
+; write resetTrial.bat pause
+  write resetTrial.bat EXIT /b 1
+  write resetTrial.bat goto :eof
+  ; write resetTrial.bat 
+  echo -a Reseting mIRC !
+  timer 1 4 run resetTrial.bat
+}
