@@ -261,10 +261,12 @@ Merci de partager vestige et bon jeux!</p>
 <!-- -->
 <div id='vote'><h1>Vote</h1>
 <h2>Pierre de Mundus</h2>
-<li><a href='https://poll-maker.com/poll5699307xB7136e6E-167'>Quel est la pierre de Mundus que vous aimeriez voir être ajouté à la maison de Guilde ?</a></li>
+<li><a href='https://poll-maker.com/poll5699307xB7136e6E-167'>Quel est la prochaine pierre de Mundus que vous aimeriez voir être ajouté à la maison de Guilde ?</a></li>
+<!--
 <h2>Campagnes</h2>
 <h3>Horde Grise (Alliance Verrouillée)</h3>
   <li><a href="https://poll-maker.com/poll5707386x445443F5-167">Quel Alliance aimeriez vous voir être Verrouillée ?</a></li>
+-->
 </div><hr>
 <!-- -->
 <div id='GuildFriends'><h1>Guild Friend's (<u>Have access to our Guild Home</u>.)</h1>
@@ -293,8 +295,8 @@ const lastModif = new Date(document.lastModified);
 document.getElementById("lModif").innerHTML = lastModif;
 </script>
 <script type="text/javascript">
-  // AVAILABLE TIME
-  var countDownDate = new Date("Jan 31, 2026 15:00:00").getTime();
+  // RITUEL AVAILABLE TIME
+  var countDownDate = new Date("Feb 23, 2026 10:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -312,8 +314,9 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  let dhms=days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
-document.getElementById("rituelBtn").value =dhms;
+document.getElementById("rituelBtn").value = 
+"DISPONIBLE"; /* days+"d "+hours+"h "+minutes+"m "+seconds+"s "; */
+
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
