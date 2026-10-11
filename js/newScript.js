@@ -16,8 +16,49 @@ function home() {
  }
 function about() {O('content').innerHTML='<h2>Information Personnel</h2><hr><p>Mon nom est Marc et j&#39ai 38 ans.  Je vie dans une grande ville de plus ou moins 423 000 habitants, située au Québec, Canada. <br />Magnifique region, que j&#39affectionne tout particulierement. J&#39estime que l&#39age, la couleur, la religion, l&#39apparence physique, tout ce qui nous distingue (et nous sépare souvent aussi) au quotidien n&#39a pas lieu d&#39être sur le net. <br/>Je documente tout ce que j&#39apprends et aide les gens à commencer dans le codage. <br />Mon site n&#39a pas de publicités, de sponsors ou de &#39bullshit&#39. <br /><br />Je n&#39aime pas parler de moi, mais quand je visite un site et que je vois une <a href="#" onclick="alert("Les Recherches de Marc. Page En Construction.")"> rubrique consacree au webmaster, je clique sur le lien,</a> et donc Merci de sacrifie de votre precieux temps afin de visite mon site, je souhaite exprimer ma gratitude a mes visiteurs.<br /><br />J&#39espere que votre consultation répondra a vos attentes. <br /><br />Je suis très intéressé par le codage, après un peu plus de 20 ans de presence sur le net, j&#39ai continuer à apprendre le codage avec <a href="https://www.sololearn.com/">sololearn</a>. Je me suis ensuite inscrit au formations informatique à l&#39<a href="https://www.formation-ifp.com/">institut de formation professionnel</a> (Entretien &#38; Réparation D&#39ordinateur, Spécialiste Internet et Programmation JAVA).<br />Toussent terminer avec une note finale de plus de 80% ainsi j&#39ai aussi choisis de creer un site sans pour autant tout vous devoiler, car le net reste malgre tout un monde virtuel, et j&#39aime garder une petite part du mystere sur ma personalitée.<br /><br />Si vous appréciez mon contenu, pensez à soutenir ce que je fais.</p><br><br><b><a class="domAlink" style="color:darkgreen;font-size:2em;" onclick="linktree()">Linktr.ee</a></b>'; }
 function linktree() {window.open("https://linktr.ee/marcparadude");}
+//
 function siteConfig() {
-   O('content').innerHTML='<h2>Paramètres du site web</h2><hr><p>Couleur darriere plan<br>couleur des scroll bar<br>couleur du texte<br></p>'
+   O('content').innerHTML='<h2><a onclick="siteConfig()">Paramètres du site web</a></h2><hr>'+
+   '<li>Couleur des scroll bar</li><br>'+
+   '<h3><a onclick="paramBackground()">Background</a></h3>'+
+   '<h3><a onclick="paramNav()">Menu / Navigation</a></h3>'+
+   '<h3><a onclick="paramMouse()">Pointer / Mouse / souris</a></h3>';
+}
+function paramBackground() {
+   O('content').innerHTML='<h2><a onclick="siteConfig()">Paramètres du site web</a></h2><hr>'+
+   '<h3><a onclick="paramBackground()">Background</a></h3><br>'+
+   '<li>Couleur d.arriere plan</li>'+
+   '<li>Couleur du texte<br></li>'+
+   '<br>'+
+   '<h3><a onclick="paramNav()">Menu / Navigation</a></h3>'+
+   '<h3><a onclick="paramMouse()">Pointer / Mouse / souris</a></h3>';
+}
+function paramNav() {
+   O('content').innerHTML='<h2><a onclick="siteConfig()">Paramètres du site web</a></h2><hr>'+
+   '<h3><a onclick="paramBackground()">Background</a></h3><br>'+
+   '<h3><a onclick="paramNav()">Menu / Navigation</a></h3><br>'+
+   '<li>Couleur d.arriere plan</li>'+
+   '<li>Couleur du texte<br></li>'+
+   '<br>'+
+   '<h3><a onclick="paramMouse()">Pointer / Mouse / souris</a></h3>';
+}
+
+function paramMouse() {
+      const coordsDisplay = document.getElementById('coords');
+   window.addEventListener('mousemove', (event) => {
+            // 3. Extract X and Y coordinates
+            const x = event.clientX;
+            const y = event.clientY;
+
+            // 4. Update the text on the screen
+            coordsDisplay.textContent = `X: ${x}px, Y: ${y}px`;
+        });
+   O('content').innerHTML='<h2><a onclick="siteConfig()">Paramètres du site web</a></h2><hr>'+
+   '<h3><a onclick="paramBackground()">Background</a></h3><br>'+
+   '<h3><a onclick="paramNav()">Menu / Navigation</a></h3><br>'+
+   '<h3><a onclick="paramMouse()">Pointer / Mouse / souris</a></h3>'+
+   '<li id="coords">Move your mouse!</li>'+
+   '<li>coordsDisplay.textContent = `X: ${x}px, Y: ${y}px`;</li>';
 }
 //
 function article() {
