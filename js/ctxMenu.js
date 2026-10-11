@@ -12,8 +12,8 @@ oncontextmenu = (e) => {
   pilotCodeTool="<p onclick='window.open(`PilotTools`, `_self`)'>ParaGliding Pilot Coding Tool's</p>";
   opt="<p onclick='alert(`Option...`)'>Alert('Option...')</p>";
   webStorage="<p onclick='window.open(`storage.htm`, `_self`)'>Web Storage</p>";
-  mcbrady="<p onclick='window.open(`mcbrady`, `_self`)'>#MCbrady IRC Channel</p>";
-  esoGuild="<p onclick='window.open(`eso`, `_self`)'>ESO Guild</p>";
+  mcbrady="<p onclick='window.open(`mcbrady/index.html`, `_self`)'>#MCbrady IRC Channel</p>";
+  esoGuild="<p onclick='window.open(`eso/index.html`, `_self`)'>ESO Guild</p>";
   budgetTracker="<p onclick='window.open(`Budget`, `_self`)'>Budget Tracker</p>";
   pCustomDesign="<p onclick='showPageCustomDesign();'>Custom Page Design</p>";
   olderVersion="<p onclick='window.open(`olderVersion/wix-2021-12-30-13h13m.htm`, `_self`)'>Ancienne Version.</p>";

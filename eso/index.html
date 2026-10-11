@@ -159,7 +159,8 @@ Merci de partager vestige et bon jeux!</p>
 <h2>Nom des Grade(s)</h2>
 <ul><b>Rangs</b></ul>
 <ol>
-  <li><input type="text" placeholder="Maître de guilde (Pape)"></li>
+  <li><input type="text" placeholder="Maître de guilde (Pape)">
+  <input type="button" id="Pape" onclick="reply_click(this.id)"></li>
   <li><input type="text" placeholder="Pères Céleste"></li>
   <li><input type="text" placeholder="Patriarches"></li>
   <li><input type="text" placeholder="Archevêque"></li>
@@ -170,53 +171,66 @@ Merci de partager vestige et bon jeux!</p>
   <li><input type="text" placeholder="Asservisseurs"></li>
   <li><input type="text" placeholder="Mendiant (Mendi-Artisant)"></li>
 </ol>
+  <script type="text/javascript">
+    var box = document.querySelectorAll('[id="10"]');
+ function reply_click(clicked_id)
+  {
+  if (!box.checked) {box.checked=true;}box.checked;
+// Toggle the checked state
+//  box.checked = !box.checked;
+      console.log(clicked_id);
+      console.log(box);
+  }
+</script>
 <ul><b><h2>Privilèges, Permissions & définition des tâches.</h2></b></ul>
 <ul><b>Voix et Texte</b></ul>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Parler dans le canal de guilde</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label>Parler dans le canal des officiers</label><br>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Lire le canal des officiers</label>
 <ul><b>Membre</b></ul>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Gérer le candidatures</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Lire les notes des membres</label><br>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Inviter des membres</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Modifier les notes des membres</label><br>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Gérer la liste noire</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Promouvoir des membres</label><br>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Renvoyer des membres</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Rétrograder des membres</label><br>
 <ul><b>Commerce et banque de guilde</b></ul>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Retrait de la banque de guilde</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Retrait d'or de la banque de guilde</label><br>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Dépôt dans la banque de guilde</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Voir or dans la banque de guilde</label><br>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Vente dans la boutique de guilde</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Acheter des marchands de guilde</label>
 <ul><b>Information sur la guilde</b></ul>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Modifier le message du jour</label>
-<input type="checkbox">
-<label class="checkboxLabel">Modifier la description</label>
+<input type="checkbox" id="9">
+<label class="checkboxLabel">Modifier la description</label><br>
+<input type="checkbox" id="9">
+<label class="checkboxLabel">Gérer le courrier de guilde</label>
 <ul><b>Guerre d'alliances</b></ul>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Capturer ressource d'alliance</label>
-<input type="checkbox">
+<input type="checkbox" id="10">
 <label class="checkboxLabel">Libérer ressource d'alliance</label>
 <br></div><hr>
 <!-- -->
@@ -272,8 +286,9 @@ Merci de partager vestige et bon jeux!</p>
 <div id='GuildFriends'><h1>Guild Friend's (<u>Have access to our Guild Home</u>.)</h1>
   <ul>Argonauts INC</ul>
   <ul>Les Lames d'elsweyr</ul>
-  <ul>the Dawnguard of Tamriel</ul>
   <ul>Dovah Kaal</ul>
+  <ul>NORTHERN-BLIZZARD</ul>
+  <ul>the Dawnguard of Tamriel</ul>
   <ul>Hearthfire Homes</ul>
   <ul>DovahKing Slayers</ul>
   <ul>South Tamriel Bloodsheds</ul>
