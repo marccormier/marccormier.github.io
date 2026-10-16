@@ -160,77 +160,121 @@ Merci de partager vestige et bon jeux!</p>
 <ul><b>Rangs</b></ul>
 <ol>
   <li><input type="text" placeholder="Maître de guilde (Pape)">
-  <input type="button" id="Pape" onclick="reply_click(this.id)"></li>
-  <li><input type="text" placeholder="Pères Céleste"></li>
-  <li><input type="text" placeholder="Patriarches"></li>
-  <li><input type="text" placeholder="Archevêque"></li>
-  <li><input type="text" placeholder="Empereurs"></li>
-  <li><input type="text" placeholder="Roi - Fou"></li>
-  <li><input type="text" placeholder="Aristocrates"></li>
-  <li><input type="text" placeholder="Gladiateur"></li>
-  <li><input type="text" placeholder="Asservisseurs"></li>
-  <li><input type="text" placeholder="Mendiant (Mendi-Artisant)"></li>
+  <input type="button" id="10" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Pères Céleste">
+  <input type="button" id="9" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Patriarches">
+  <input type="button" id="8" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Archevêque">
+  <input type="button" id="7" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Empereurs">
+  <input type="button" id="6" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Roi - Fou">
+  <input type="button" id="5" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Aristocrates">
+  <input type="button" id="4" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Gladiateur">
+  <input type="button" id="3" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Asservisseurs">
+  <input type="button" id="2" onclick="reply_click(this.id)" value="X"></li>
+  <li><input type="text" placeholder="Mendiant (Mendi-Artisant)">
+  <input type="button" id="1" onclick="reply_click(this.id)" value="X"></li>
 </ol>
   <script type="text/javascript">
-    var box = document.querySelectorAll('[id="10"]');
  function reply_click(clicked_id)
   {
-  if (!box.checked) {box.checked=true;}box.checked;
-// Toggle the checked state
-//  box.checked = !box.checked;
-      console.log(clicked_id);
-      console.log(box);
-  }
+    switch (clicked_id) {
+      case "10":
+       const checkboxe = document.querySelectorAll('[id^="cb"]');
+       checkboxe.forEach(checkbox => {checkbox.checked = !checkbox.checked; });
+       break;
+      case "9":
+       higherLvl();
+        break;
+      case "8":
+        higherLvl();
+        break;
+      case "7":
+        higherLvl();
+        break;
+      case "6":
+        higherLvl();
+        break;
+      case "5": // ROI-FOU
+        higherLvl();
+        break;
+      case "4": 
+        higherLvl();
+        break;
+      case "3": // GLADIATEURS
+        higherLvl();
+        break;
+      case "2": 
+        higherLvl();
+        break;
+      case "1": 
+        higherLvl();
+        break;
+      default:
+        return;
+    }
+   // console.log(clicked_id);
+//
+    function higherLvl() {
+    const checkboxes = document.querySelectorAll('#cb' + (clicked_id));
+    checkboxes.forEach(checkbox => {checkbox.checked = true;}); }
+//
+}
 </script>
 <ul><b><h2>Privilèges, Permissions & définition des tâches.</h2></b></ul>
 <ul><b>Voix et Texte</b></ul>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Parler dans le canal de guilde</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb7">
 <label>Parler dans le canal des officiers</label><br>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb6">
 <label class="checkboxLabel">Lire le canal des officiers</label>
 <ul><b>Membre</b></ul>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Gérer le candidatures</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Lire les notes des membres</label><br>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Inviter des membres</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb5">
 <label class="checkboxLabel">Modifier les notes des membres</label><br>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb8">
 <label class="checkboxLabel">Gérer la liste noire</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb10">
 <label class="checkboxLabel">Promouvoir des membres</label><br>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb8">
 <label class="checkboxLabel">Renvoyer des membres</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb6">
 <label class="checkboxLabel">Rétrograder des membres</label><br>
 <ul><b>Commerce et banque de guilde</b></ul>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb2">
 <label class="checkboxLabel">Retrait de la banque de guilde</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb9">
 <label class="checkboxLabel">Retrait d'or de la banque de guilde</label><br>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Dépôt dans la banque de guilde</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Voir or dans la banque de guilde</label><br>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Vente dans la boutique de guilde</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Acheter des marchands de guilde</label>
 <ul><b>Information sur la guilde</b></ul>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb2">
 <label class="checkboxLabel">Modifier le message du jour</label>
-<input type="checkbox" id="9">
+<input type="checkbox" id="cb10">
 <label class="checkboxLabel">Modifier la description</label><br>
-<input type="checkbox" id="9">
+<input type="checkbox" id="cb9">
 <label class="checkboxLabel">Gérer le courrier de guilde</label>
 <ul><b>Guerre d'alliances</b></ul>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Capturer ressource d'alliance</label>
-<input type="checkbox" id="10">
+<input type="checkbox" id="cb1">
 <label class="checkboxLabel">Libérer ressource d'alliance</label>
 <br></div><hr>
 <!-- -->
