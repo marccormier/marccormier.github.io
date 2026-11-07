@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style> iframe{margin:1px;padding:1px;}</style>
+</head>
+<body style="margin:0px;padding:0px;">
+<label for="iframe">iFrame iT</label>
+<iframe src="https://www.broadcastify.com/listen/?coid=2" width="100%" height="400"></iframe>
+
+<audio controls>
+<!--
+<audio id="audioPlayer" controls preload="none">
+  <source id="audioSource" src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script type="text/javascript">
+	const feedId = "8787"; // Your specific feed ID
+
+// Example function to load the stream URL corresponding to the feed ID
+async function loadAudioFeed(id) {
+  try {
+    // Replace with your actual API endpoint that translates feed ID to stream URL
+    const response = await fetch(`https://www.broadcastify.com/listen/feed/popout.php?feedId=8787{id}/stream`);
+    const data = await response.json();
+    
+    const audioPlayer = document.getElementById('audioPlayer');
+    const audioSource = document.getElementById('audioSource');
+    
+    audioSource.src = data.streamUrl; // The direct .mp3 or stream URL
+    audioPlayer.load();
+    audioPlayer.play();
+  } catch (error) {
+    console.error("Failed to load audio feed:", error);
+  }
+}
+
+// Call the function when needed
+loadAudioFeed(feedId);
+</script>
+-->
+</body>
+</html>
