@@ -107,18 +107,3 @@ z-index:1;
 		transform: none;
 	}
 }
-.social {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px; /* Spacing between the icons */
-}
-.social a {
-  display: inline-block;
-  line-height: 0; /* Removes extra vertical space around images */
-}
-.social-icon { 
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
