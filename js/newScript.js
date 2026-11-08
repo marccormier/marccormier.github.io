@@ -271,7 +271,12 @@ function bientot() {
   return true;
 }
 //
-let introService="<center><h2>Services</h2><input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' /><input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /></center><hr>";
+let introService="<center><h2>Services</h2>"+
+
+"<a href='https://www.teamviewer.com/en/download/windows/'> <img src='img/logo/teamViewer.png' class='social-icon'> </a>"+
+"<p><b><u>190 557 546</u></b></p>"+
+
+"<input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='tarif()' value='Tarif' /><input style='margin:7px;padding:3px;font-weight:bold;' type='button' onclick='zone()' value='Zone de service' /></center><hr>";
 //function services() {window.open('Service')};
 function services() {O('content').innerHTML=
 introService+
