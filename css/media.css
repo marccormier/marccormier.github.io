@@ -3,7 +3,7 @@
     #picture {display:none;} 
     #construction{max-width:50vw;height:auto;}
     #imgGallery{min-height:200px;max-width:280px;}
-    .social a, .cssSnip, .htDomStyle, .htDom, .peridotCpattern, .htmlCompil, .binCompil, .jQuerySnip{
+    .social, .social a, .social-icon, .cssSnip, .htDomStyle, .htDom, .peridotCpattern, .htmlCompil, .binCompil, .jQuerySnip{
         max-height:320px;max-width:280px;
     }
 }
