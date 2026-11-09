@@ -8,7 +8,7 @@
     }
 }
 @media only screen and (max-width:320px) {
-    .social{gap:5;}
+    .social{gap:5px;}
     .social-icon{max-width:12px;height:auto;}
 }
 /**/
