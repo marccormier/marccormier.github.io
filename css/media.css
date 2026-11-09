@@ -6,10 +6,10 @@
     .cssSnip, .htDomStyle, .htDom, .peridotCpattern, .htmlCompil, .binCompil, .jQuerySnip{
         max-height:320px;max-width:280px;
     }
-    .social-icon{max-width:12px;height:auto;margin:0px;padding:3px;}
 }
 @media only screen and (max-width:320px) {
-    .social-icon{max-width:12px;height:auto;margin:0px;padding:3px;}
+    .social{gap:5;}
+    .social-icon{max-width:12px;height:auto;}
 }
 /**/
 @media only screen and (min-width:321px) {}
