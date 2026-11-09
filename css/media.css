@@ -6,7 +6,8 @@
     .cssSnip, .htDomStyle, .htDom, .peridotCpattern, .htmlCompil, .binCompil, .jQuerySnip{
         max-height:320px;max-width:280px;
     }
-    .social, .social a, .social-icon{max-width:12px;height:auto;}
+    .social{gap: 5px; /* Spacing between the icons */}
+    .social-icon{max-width:12px;height:auto;}
 }
 @media only screen and (max-width:320px) {}
 /**/
