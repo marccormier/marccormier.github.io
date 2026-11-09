@@ -17,12 +17,13 @@ oncontextmenu = (e) => {
   budgetTracker="<p onclick='window.open(`Budget`, `_self`)'>Budget Tracker</p>";
   pCustomDesign="<p onclick='showPageCustomDesign();'>Custom Page Design</p>";
   broadCastify="<p onclick='window.open(`broadCastify.htm`, `_self`)'>BroadCastify</p>";
+  lastModif="<p>Site was last updated on: <span>"+document.lastModified;"+</span></p>";
   olderVersion="<p onclick='window.open(`olderVersion/wix-2021-12-30-13h13m.htm`, `_self`)'>Ancienne Version.</p>";
   //extLinks="<p onclick='window.open(`extLinks.htm`, `_self`)'>Liens Externe</p>";
   //scopes="<p onclick='window.open(`scope.htm`, `_self`)'>Code Scopes</p>";
   //
   //codes="<p onclick='codes()'>Codes</p>";
   //alert="<p onclick='alert(`you click option alert`)'>alert</p>";
-  menu.innerHTML = mTitle+opt+pCustomDesign+mcbrady+esoGuild+broadCastify;
+  menu.innerHTML = mTitle+opt+pCustomDesign+mcbrady+esoGuild+broadCastify+"<hr>"+lastModif;
   document.body.appendChild(menu);
 }
