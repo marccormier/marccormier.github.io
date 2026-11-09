@@ -20,7 +20,7 @@ marquee{
     font-size:1em;
 }
 .contentDiv {
-	background-color:#CCEE00;
+	background-color: #CCEE00; /* opacity: 0.5; */
 	word-wrap:break-word;
 	box-shadow:4px 4px 11px grey;
 	margin:8px;margin-top:0px;padding:10px;
