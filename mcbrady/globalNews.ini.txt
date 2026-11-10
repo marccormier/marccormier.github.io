@@ -1,0 +1,132 @@
+; whant to run a script that would ..
+; manage global fishing and hunting news..
+; manage user's $lastSpo %uLvl
+https://
+;-------------------------------------
+; Global News Script
+; globalNews.ini
+;
+; *** ATTENTION ***
+; Ce script utilisera de la Mémoire Vive ( RAM ) pour fonctionner
+; puisqu'il sagit d'un script devant défénir le temps restant avant la fin du mois
+; et pour cela il faut donc que le script fonctionne en constante ..
+; 
+; Je précise au cas ou vous auriez moins de 3G de Méroire RAM (Barette)
+; installer sur l'ordinateur d'ou le script sera mis en marche.
+;
+; https://justpaste.it/ks6rp
+; https://pastebin.com/raw/DMiGkA6N
+; https://pastebin.com/zR8SUTe9
+; https://app.filejump.com/drive/s/zW2zD53tSqfXhGuDw5Hc7y6mmGR2dy
+; https://pastebin.com/vH4K9efX
+; https://www.shells.com/l/fr-FR/
+;-------------------------------------
+menu status {
+  Global News Script
+  .globalNews.ini
+  ..Enable:/enable #globalNews
+  ..Disable:/disable #globalNews
+}
+;
+alias globalNews { 
+Enable #globalNews |
+echo -a $time |
+echo -a $asctime(HH:nn:ss tt) |
+echo -a $date |
+echo -a $asctime(dddd) |
+echo -a $asctime(mmmm) |
+echo -a $date(yyyy) |
+set %joursParAnneeNonBissextile 365 |
+set %joursParAnneeBissextile 366 |
+set %anneeEntreAnneeBissextile 4 |
+set %derniereAnneeBissextile 2024 |
+set %prochaineAnneeBissextile 2028 |
+}
+;
+#globalNews ON
+; ON *:text:!Globalnews:#Chasse&Peche:{ globalNews }
+;
+; /auser [-a] <levels> <nick|address> [info]
+; ET
+; /ruser [levels] <nick | address> [type]
+; Sont déja des commandes incluse dans mIRC
+;
+; on <level>:TEXT:<matchtext>:<*><?><#[,#]>:<commands>
+; on 1:TEXT:*help*:#mirc,#irchelp:/msg $nick what is the problem?
+; on 999:TEXT:*help*:#mirc,#irchelp:/msg $nick what is the problem?
+;
+; Level 1 = Tout le monde.
+; les level peuvent etre des numero ou nommee.
+;
+; on *:text:!setnews*:#: { if ($ulevel >= 900) { ... } }
+; on 1:text:!setnews*:#: {  }
+; on OP:text:!setnews*:#: {  }
+; on VOICE:text:!setnews*:#: {  }
+; on 50:text:!setnews*:#: {  }
+; on 100:text:!setnews*:#: {  }
+; on 500:text:!setnews*:#: {  }
+; on $ME:text:!setnews*:#: {  }
+;
+; 
+on *:text:!setnews*:#: { 
+if ($address != uid191731@EauTerreCiel.users.undernet.org) { halt } 
+  if (!$2) { 
+    msg $chan 4,0.:.1 Syntaxe: !setnews n° news 4,0.:. 
+    halt 
+  } 
+  if (!$3) { 
+    msg $chan 4,0.:.1 Syntaxe: !setnews n° news 4,0.:. 
+    halt 
+  } 
+  if ($2 !isnum) { 
+    msg $chan 4,0.:.1 Syntaxe: !setnews n° news 4,0.:. 
+    halt 
+  } 
+  if ($2 > 1000) { 
+    msg $chan 4,0.:.1 Le n° doit être comprit entre 0 & 1000 4,0.:. 
+    halt 
+  } 
+  set %news [ $+ [ $chan ] $+ [ . ] $+ [ $round($2,0) ] ] $3- 
+  msg $chan 4,0.:.1 News n° $2 : %news [ $+ [ $chan ] $+ [ . ] $+ [ $round($2,0) ] ] 4,0.:. 
+} 
+
+on *:text:!delnews*:#: { 
+if ($address != uid191731@EauTerreCiel.users.undernet.org) { halt } 
+  if (!$2) { 
+    msg $chan 4,0.:.1 Syntaxe: !delnews n° 4,0.:. 
+    halt 
+  } 
+  if ($2 !isnum) { 
+    msg $chan 4,0.:.1 Syntaxe: !setnews n° news 4,0.:. 
+    halt 
+  } 
+  if ($2 > 1000) { 
+    msg $chan 4,0.:.1 Le n° doit être comprit entre 0 & 1000 4,0.:. 
+    halt 
+  } 
+  unset %news [ $+ [ $chan ] $+ [ . ] $+ [ $round($2,0) ] ] 
+  msg $chan 4,0.:.1 News n° $round($2,0) : supprimée 4,0.:. 
+} 
+
+on *:text:!news*:#: { 
+if ($address != uid191731@EauTerreCiel.users.undernet.org) { halt } 
+  if (!$2) { 
+    msg $chan 4,0.:.1 Syntaxe: !news n° 4,0.:. 
+    halt 
+  } 
+  if ($2 !isnum) { 
+    msg $chan 4,0.:.1 Syntaxe: !news n° 4,0.:. 
+    halt 
+  } 
+  if ($2 > 1000) { 
+    msg $chan 4,0.:.1 Le n° doit être comprit entre 0 & 1000 4,0.:. 
+    halt 
+  } 
+  if (!%news [ $+ [ $chan ] $+ [ . ] $+ [ $2 ] ]) { 
+    msg # 4,0.:.1 La news $2 : N'existe pas 4,0.:. 
+    halt 
+  } 
+  msg # 4,0.:.1 News $2 : %news [ $+ [ $chan ] $+ [ . ] $+ [ $2 ] ] 4,0.:. 
+}
+;--------------------------------------------------------------------------
+#globalNews end
