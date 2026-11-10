@@ -199,8 +199,7 @@ function winNav(){
 //
 function members() {
   O('content').innerHTML="<h2>Tableau de bord</h2>"+
-  "<img style='width:300px;height:auto;' src='img/enConstruction.jpg'><br>"+
-  "<center> <input type='button' value='inscription / connexion' onclick='')'> </center>";
+  "<center> <input type='button' value='inscription / connexion' onclick=''> </center>";
 let storedText;
 fetch('https://ipinfo.io/json?callback') .then(function(response) {
   response.text().then(function(text) {
