@@ -9,7 +9,11 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>Blog</h1>
+<h1 id="h1">Blog</h1>
+<script type="text/javascript"> const heading = document.getElementById("h1");
+heading.addEventListener("click", () => {if (heading.innerHTML === "Blog") {
+      heading.innerHTML = "MarcCormier.github.io";} else {heading.innerHTML = "Blog";}});
+</script>
 <nav>
 <form method="post">
     <nav>
