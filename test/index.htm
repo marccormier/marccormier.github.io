@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>let user create an object and save it to the github website localstorage</h1>
+<h2>reach the object from anywhere with username and password</h2>
+   <!-- Inputs to collect data -->
+    <input type="text" id="username" placeholder="Enter username">
+    <input type="email" id="useremail" placeholder="Enter email">
+
+    <!-- The trigger button -->
+    <input type="button" id="createObjBtn" value="Create Object">
+
+    <script>
+        // 1. Grab references to the HTML elements
+        const button = document.getElementById('createObjBtn');
+        const nameInput = document.getElementById('username');
+        const emailInput = document.getElementById('useremail');
+
+        // 2. Listen for the click event
+        button.addEventListener('click', () => {
+            
+            // 3. Create the object using the values from the inputs
+            const userObject = {
+                name: nameInput.value,
+                email: emailInput.value,
+                createdAt: new Date()
+            };
+
+            // 4. Output the object to verify it works
+            console.log("Object Created successfully:", userObject);
+        });
+    </script>
+</body>
+</html>

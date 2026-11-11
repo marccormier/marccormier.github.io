@@ -7,11 +7,12 @@ oncontextmenu = (e) => {
   let menu = document.createElement("div")
   menu.id = "ctxmenu"
   menu.style = `top:${e.pageY-10}px;left:${e.pageX-40}px`;
-  menu.onmouseleave = () => ctxmenu.outerHTML = ''
+  menu.onmouseleave = () => {ctxmenu.outerHTML = ''; menu.style='display:hidden;';};
   mTitle="<center><b>Menu</b></center><hr>";
   mcbrady="<p onclick='window.open(`mcbrady/index.htm`, `_self`)'>#MCbrady mIRC Channel (webPage)</p>";
   esoGuild="<p onclick='window.open(`eso/index.html`, `_self`)'>Elder Scroll Online Guild (webPage)</p>";
-  ufc="<p onclick='window.open(`ufc/index.html`, `_self`)'>UFC (webPage)</p>";
+  ufc="<p onclick='window.open(`ufc/index.htm`, `_self`)'>UFC (webPage)</p>";
+  jeux="";
   lastModif="<p>Site was last updated on: <span>"+document.lastModified;"+</span></p>";
   hardRefresh="<p>CTRL + F5 (<b>Hard Refresh</b>)</p>";
   menu.innerHTML = mTitle+mcbrady+esoGuild+ufc+"<hr>"+lastModif+hardRefresh;
