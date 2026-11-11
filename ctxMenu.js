@@ -14,7 +14,7 @@ oncontextmenu = (e) => {
   ufc="<p onclick='window.open(`ufc/index.htm`, `_self`)'>UFC (webPage)</p>";
   jeux="";
   lastModif="<p>Site was last updated on: <span>"+document.lastModified;"+</span></p>";
-  hardRefresh="<p>CTRL + F5 (<b>Hard Refresh</b>)</p>";
+  hardRefresh="<center><p>CTRL + F5 (<b>Hard Refresh</b>)</p></center>";
   menu.innerHTML = mTitle+mcbrady+esoGuild+ufc+"<hr>"+lastModif+hardRefresh;
   document.body.appendChild(menu);
 }
