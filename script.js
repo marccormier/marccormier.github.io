@@ -210,6 +210,9 @@ fetch('https://ipinfo.io/json?callback') .then(function(response) {
   });
 });
 O('content').innerHTML+=
+
+'<div style="border:2px solid black;padding:8px;float:right;margin-right:5vw;";> <center><h3><u>webMaster</u></h3></center><br><hr> <a href="https://supabase.com/">supaBase dataBase</a><br> <a href="storage.htm">github Storage</a><br> <a href="http://localhost:8080/">IIS localHost</a><br> </div>'+
+
 'cookiesEnabled'+navigator.cookieEnabled+"<br>"+
 'navigator-appName'+navigator.appName+"<br>"+
 'navigator-appCodeName'+navigator.appCodeName+"<br>"+
@@ -237,7 +240,6 @@ setTimeout(function(){
 //
 bientot();
 }
-//
 function bientot() {
   out = "Section en construction."+"\n";
   out += " \n";

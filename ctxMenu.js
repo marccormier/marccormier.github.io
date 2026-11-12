@@ -12,9 +12,10 @@ oncontextmenu = (e) => {
   mcbrady="<p onclick='window.open(`mcbrady/index.htm`, `_self`)'>#MCbrady mIRC Channel (webPage)</p>";
   esoGuild="<p onclick='window.open(`eso/index.html`, `_self`)'>Elder Scroll Online Guild (webPage)</p>";
   ufc="<p onclick='window.open(`ufc/index.htm`, `_self`)'>UFC (webPage)</p>";
+  twitchTheater=" <p onclick='window.open(`https://twitchtheater.tv/v=xpBFP_jlxVM/v=nD9t2DdlSvc/v=8MPTuJiwpGI/v=B4-L2nfGcuE/v=h_NkY62h7uM/v=soppZ2sWNlw`, `_self`)'>twitchTheater.tv</p> ";
   jeux="";
   lastModif="<p>Site was last updated on: <span>"+document.lastModified;"+</span></p>";
   hardRefresh="<center><p>CTRL + F5 (<b>Hard Refresh</b>)</p></center>";
-  menu.innerHTML = mTitle+mcbrady+esoGuild+ufc+"<hr>"+lastModif+hardRefresh;
+  menu.innerHTML = mTitle+mcbrady+esoGuild+ufc+twitchTheater+"<hr>"+lastModif+hardRefresh;
   document.body.appendChild(menu);
 }
