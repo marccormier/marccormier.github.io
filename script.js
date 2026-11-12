@@ -230,7 +230,7 @@ setTimeout(function(){
   let uName=sessionStorage.getItem('uFname');
 //if (uName!=null || uName!=""){uFname.innerHTML=uName;}
 //if (sessionStorage.uFname){uFname.innerHTML=sessionStorage.uFname;}
-  let person = prompt("S'il vous plaît entrez votre nom:", "");
+  let person = prompt("S'il vous plaît entrez votre nom:", "Harry Potter");
   if (person == null || person == "") {text = "Cancelled prompt.";}
   else if(person == "marc") {window.open("https://marccormier.github.io/storage.htm");}
    else {text = "Bonjour "+person+"!";}
