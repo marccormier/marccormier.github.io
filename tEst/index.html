@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>WM</h1>
+<h2>supaBase SQL Query</h2>
+<script>
+	// For cross-schema functions where type inference fails, use overrideTypes:
+const { data } = await supabase
+  .schema('schema_b')
+  .rpc('function_a', {})
+  .overrideTypes<{ id: string; user_id: string }[]>()
+</script>
+</body>
+</html>
