@@ -1,0 +1,210 @@
+/* Holiday CSS Style Design */
+:root {
+/* Jour de l'An */
+--newYear-OrFestif : #FFD700;
+--newYear-OrChampagne : #F7E7CE;
+--newYear-Argentee : #C0C0C0;
+--newYear-BleuNuit : #0A1128;
+--newYear-NoirChic : #111111;
+--newYear-BlancGlacee : #F8F9FA;
+/* saint-Valentin */
+/* vendredi Saint */
+/* Pâques */
+--paques-RoseBonbon #FFB6C1;
+--paques-JaunePoussin #FFFACD;
+--paques-VertMenthe #98FB98;
+--paques-BleuCiel #B0E0E6;
+--paques-Lavande #E6E6FA;
+--paques-PecheDoux #FFDAB9;
+--paques-Chocolat #5A3A22;
+/* lundi de Paque */
+/* Reine - Patriote */
+--patriotsDay-Vert : #009B48;
+--patriotsDay-Blanc : #FFFFFF;
+--patriotsDay-Rouge : #C8102E;
+--patriotsDay-VioletRoyal : #4B0082;
+--patriotsDay-OrJauneRoyal : #D4AF37;
+--patriotsDay-RougeCramoisi : #9B111E;
+/* St-Jean-Baptiste */
+--stJean-Bleu : #003DA5;
+--stJean-Blanc : #FFFFFF;
+--stJean-Vert : #005A30;
+/* CanadaDay */
+--canadaDay-red: #E60013;
+--canadaDay-white: #FFFFFF;
+--canadaDay-dark-red: #500603;
+/* TRAVAIL - Patriotique */
+--travail-BleuMarin : #1B365D;
+--travail-RougeVif : #C8102E;
+--travail-BlancCassee : #F8F9FA;
+--travail-BleuClair : #4A90E2;
+--travail-BleuJean : #2C5282;
+--travail-Rouille : #B84A27;
+--travail-GrisAcier : #4A5568;
+--travail-JauneCasque : #D69E2E;
+/* ACTION DE GRACE */
+--grace-citrouille: #DF6D14;
+--grace-orange-brulee: #CC5500;
+--grace-rouille: #985717;
+--grace-automne: #D99B26;
+--grace-chocolat: #5A3A22;
+--grace-creme: #FAF0E6;
+/* HALLOWEEN */
+--halloween-orange: #ff6600;
+--halloween-black: #000000;
+/* jour du Souvenir */
+/* NOEL */
+--noel-rouge: #BB2528;
+--noel-vert: #165B33;
+--noel-or: #F8B229;
+--noel-creme: #FBF6EE;
+/* } */
+/**/
+/* TEST */
+--test-rouge: red;
+--test-orange: orange;
+--test-jaune: yellow;
+--test-bleu: blue;
+--test-vert: green;
+--test-brun: brown;
+}
+.test-theme {
+  background-color: var(--newYear-OrFestif);
+  color: var(--newYear-OrChampagne);
+  border-bottom: 4px solid var(--newYear-Argentee);
+}
+.test-banner {
+  background-color: var(--newYear-BleuNuit);
+  color: var(--newYear-NoirChic);
+  border-bottom: 4px solid var(--newYear-BlancGlacee);
+}
+/**/
+/* Holiday-specific classes */
+/* Jour de l'An */
+.newYear-theme {
+  background-color: var(--newYear-OrFestif);
+  color: var(--newYear-OrChampagne);
+  border-bottom: 4px solid var(--newYear-Argentee);
+}
+.newYear-banner {
+  background-color: var(--newYear-BleuNuit);
+  color: var(--newYear-NoirChic);
+  border-bottom: 4px solid var(--newYear-BlancGlacee);
+}
+/* saint-Valentin */
+.-theme {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+.-banner {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+/* vendredi Saint */
+.-theme {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+.-banner {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+/* Pâques */
+.paques-theme {
+  background-color: var(--paques-VertMenthe);
+  color: var(--paques-RoseBonbon);
+  border-bottom: 4px solid var(--paques-Chocolat);
+}
+.paques-banner {
+  background-color: var(--paques-Lavande);
+  color: var(--paques-PecheDoux);
+  border-bottom: 4px solid var(--paques-BleuCiel);
+}
+/* lundi de Paque */
+.-theme {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+.-banner {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+/* Reine - Patriote */
+.patriotsDay-theme {
+  background-color: var(--patriotsDay-Vert);
+  color: var(--patriotsDay-Blanc);
+  border-bottom: 4px solid var(--patriotsDay-Rouge);
+}
+.patriotsDay-banner {
+  background-color: var(--patriotsDay-VioletRoyal);
+  color: var(--patriotsDay-OrJauneRoyal);
+  border-bottom: 4px solid var(--patriotsDay-RougeCramoisi);
+}
+/* St-Jean-Baptiste */
+.stJeanBaptiste-theme {
+  background-color: var(--stJean-Bleu);
+  color: var(--stJean-Blanc);
+  border-bottom: 4px solid var(--stJean-Vert);
+}
+/* CanadaDay */
+.canadaDay-theme {
+  background-color: var(--canadaDay-red);
+  color: var(--canadaDay-white);
+  border-bottom: 4px solid var(--canadaDay-dark-red);
+}
+/* TRAVAIL */
+.travail-theme {
+  background-color: var(--travail-BleuMarin);
+  color: var(--travail-RougeVif);
+  border-bottom: 4px solid var(--travail-BlancCassee);
+}
+.travail-banner {
+  background-color: var(--travail-BleuClair);
+  color: var(--travail-Rouille);
+  border-bottom: 4px solid var(--travail-GrisAcier);
+}
+/* ACTION DE GRACE */
+.actionGrace-theme {
+  background-color: var(--grace-citrouille);
+  color: var(--grace-creme);
+  border-bottom: 4px solid var(--grace-orange-brulee);
+}
+.actionGrace-banner {
+  background-color: var(--grace-rouille);
+  color: var(--grace-automne);
+  border-bottom: 4px solid var(--grace-chocolat);
+}
+/* HALLOWEEN */
+.halloween-theme {
+  background-color: var(--halloween-orange);
+  color: var(--halloween-black);
+  border-bottom: 4px solid var(--halloween-orange);
+}
+/* jour du Souvenir */
+.jourSouvenir-theme {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+.jourSouvenir-banner {
+  background-color: var();
+  color: var();
+  border-bottom: 4px solid var();
+}
+/* NOEL */
+.christmas-theme {
+  background-color: var(--noel-rouge);
+  color: var(--noel-creme);
+  border-bottom: 4px solid var(--noel-vert);
+}
+.christmas-banner {
+  background-color: var(--noel-vert);
+  color: var(--noel-creme);
+  border-bottom: 4px solid var(--noel-or);
+}

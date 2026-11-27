@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holiday Countdowns | MarcCormier.github.io</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .holiday-card { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+    .timer { font-size: 1.5em; font-weight: bold; color: #2c3e50; }
+  </style>
+</head>
+<body>
+  <div id="countdown-container"></div>
+  <p id="footer"></p>
+  <script>
+    const holidays = [
+      { 
+        name: "Noel", 
+        targetTime: new Date("2026-12-25T00:00:00").getTime() 
+      },
+      { 
+        name: "Nouvelle An", 
+        targetTime: new Date("2027-01-01T00:00:00").getTime() 
+      },
+      { 
+        name: "Saint-Valentin", 
+        targetTime: new Date("2027-02-14T00:00:00").getTime() 
+      },
+      { 
+        name: "Vendredi Saint", 
+        targetTime: new Date("2027-03-26T00:00:00").getTime() 
+      },
+      { 
+        name: "Pâques", 
+        targetTime: new Date("2027-03-28T00:00:00").getTime() 
+      },
+      { 
+        name: "Lundi de Pâques", 
+        targetTime: new Date("2027-03-29T00:00:00").getTime() 
+      },
+      { 
+        name: "Fête de la Reine / Fête des Patriotes", 
+        targetTime: new Date("2027-05-24T00:00:00").getTime() 
+      },
+      { 
+        name: "Saint-Jean Baptiste", 
+        targetTime: new Date("2027-06-24T00:00:00").getTime() 
+      },
+      { 
+        name: "Fête du Canada", 
+        targetTime: new Date("2027-07-01T00:00:00").getTime() 
+      },
+      { 
+        name: "Fête du Travail", 
+        targetTime: new Date("2027-09-06T00:00:00").getTime() 
+      },
+      { 
+        name: "Action de Grace", 
+        targetTime: new Date("2027-10-11T00:00:00").getTime() 
+      },
+      { 
+        name: "Halloween", 
+        targetTime: new Date("2027-10-31T00:00:00").getTime() 
+      },
+      { 
+        name: "Jour du Souvenir", 
+        targetTime: new Date("2027-11-11T00:00:00").getTime() 
+      }
+    ];
+    const container = document.getElementById("countdown-container");
+    holidays.forEach((holiday, index) => {
+      const card = document.createElement("div");
+      card.className = "holiday-card";
+      card.innerHTML = `
+        <h3><center>${holiday.name}</center></h3>
+        <div class="timer" id="timer-${index}">Loading...</div>
+      `;
+      container.appendChild(card);
+    });
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      holidays.forEach((holiday, index) => {
+        const distance = holiday.targetTime - now;
+        const timerElement = document.getElementById(`timer-${index}`);
+        if (distance < 0) {
+          timerElement.innerHTML = "Happy Holiday!";
+          return;
+        }
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      });
+    }, 1000);
+  </script>
+<script>
+  let year = new Date().getFullYear();
+  let footer=document.getElementById("footer");
+  footer.innerHTML="&#169 2012 - "+year+" MarcCormier.github.io<br>"+
+  "Conception et développement par Marc Cormier<br>"+
+  "Propulsé par JavaScript";
+</script>
+</body>
+</html>
